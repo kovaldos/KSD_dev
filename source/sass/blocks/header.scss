@@ -1,13 +1,31 @@
 .header {
-  padding: 28px 0;
-
-  background-color: $color-neon-blue;
-
-  .container {
-    display: flex;
+  &__container {
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--bottom {
+      display: flex;
+      align-items: center;
+    }
   }
-
-  &__logo {
-    color: $color-default-white;
+  &__top {
+    padding: 8px 0;
+    background-color: $color-bunting;
+    &-link {
+      color: $color-default-white;
+      font-size: 14px;
+      line-height: 160%;
+      &:not(:last-of-type) {
+        margin-right: 25px;
+      }
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+  }
+  &__bottom {
+    padding: 20px 0;
   }
 }
