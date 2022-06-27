@@ -13,10 +13,15 @@
       margin-right: 20px;
     }
   }
-
   &__link {
     color: $color-bunting;
-
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    text-transform: uppercase;
+    &::after {
+      background-color: $color-bunting;
+    }
     &.is-active {
       opacity: 0.6;
     }

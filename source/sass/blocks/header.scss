@@ -28,4 +28,25 @@
   &__bottom {
     padding: 20px 0;
   }
+  &__contacts {
+    &-link {
+      color: $color-bunting;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 160%;
+      &::after {
+        display: none;
+      }
+    }
+    &-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: $color-navy-blue;
+      margin: 0 0 0 27px;
+    }
+  }
 }

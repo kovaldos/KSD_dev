@@ -89,5 +89,5 @@ mixin header(headerMods, currentUrl)
                     a.link.main-nav__link(href=link.href)=link.text
         .header__contacts 
           a.link.header__contacts-link(href=data.headerContacts.href)=data.headerContacts.text
-            span
+            span.header__contacts-icon-wrap
               +icon(data.headerContacts.icon, 22, 22).header__contacts-icon
