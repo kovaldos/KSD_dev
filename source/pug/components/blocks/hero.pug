@@ -1,0 +1,41 @@
+mixin hero()
+	-
+		const data = {
+			title: "Quis scelerisque suspendisse risus arcu.",
+			subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
+			items: [
+				{
+					src: "slides",
+					img: "hero-bg-img-1",
+					alt: "slide-img-1",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-2",
+					alt: "slide-img-2",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-3",
+					alt: "slide-img-3",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-4",
+					alt: "slide-img-4",
+				},
+			],
+		}
+	section.hero 
+		.hero__bg
+			.swiper.swiper--01.hero__slider
+				.swiper-wrapper 
+					each item in data.items 
+						.swiper-slide 
+							.hero__slider-item 
+								+picture(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.hero__slider-pag
+		.container.hero__container
+			.hero__heading 
+				h1.title.title--h1.hero__title=data.title
+					span.hero__subtitle=data.subtitle

@@ -1,4 +1,14 @@
 .header {
+  transition: all $trans-default;
+  background-color: $color-default-white;
+  &--fixed & {
+    &__bottom {
+      position: fixed;
+    }
+  }
+  &--fixed + main {
+    padding: 40px 0 0;
+  }
   &__container {
     &--top {
       display: flex;
@@ -27,6 +37,11 @@
   }
   &__bottom {
     padding: 20px 0;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: $color-default-white;
+    width: 100%;
   }
   &__contacts {
     &-link {

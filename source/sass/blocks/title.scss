@@ -3,20 +3,17 @@
 	padding: 0;
 	color: $color-default-white;
 	transition: color $trans-default;
-	text-transform: uppercase;
 	line-height: 1.5;
 	font-family: inherit;
 	&--h1 {
-		font-weight: 700;
-		font-size: 80px;
-		line-height: 96px;
-		font-family: inherit;
+		font-weight: 800;
+		font-size: 44px;
+		line-height: 160%;
 	}
 	&--h2 {
 		font-weight: 500;
 		font-size: 40px;
 		line-height: 53px;
-		text-transform: uppercase;
 		text-align: center;
 	}
 	&--h3 {
