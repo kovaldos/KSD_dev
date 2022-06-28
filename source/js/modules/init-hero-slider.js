@@ -7,6 +7,7 @@ const initHeroSlider = () => {
     watchOverflow: true,
     loop: true,
     autoplay: true,
+    speed: 800,
     effect: 'fade',
     slidesPerView: 1,
     spaceBetween: 10,
