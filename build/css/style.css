@@ -1361,7 +1361,7 @@ html {
   font-size: 16px;
   line-height: 24px;
   font-family: "Montserrat", sans-serif;
-  color: #000000;
+  color: #2D3142;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -2227,6 +2227,7 @@ button,
   font-size: 18px;
   line-height: 22px;
   color: #FE603A;
+  margin: 0 0 7px;
 }
 
 .title--h3 {
@@ -2253,8 +2254,8 @@ button,
 }
 
 .text--sm {
-  font-size: 0.9em;
-  line-height: 1.1;
+  font-size: 14px;
+  line-height: 180%;
 }
 
 .text--md {
@@ -2490,10 +2491,6 @@ button,
   margin: 0 0 60px;
 }
 
-.directions__title {
-  margin: 0 0 7px;
-}
-
 .directions__cols {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2597,6 +2594,119 @@ button,
 .directions .swiper-pagination-total {
   font-size: 16px;
   line-height: 26px;
+}
+
+.about-company {
+  margin: 40px 0;
+  padding: 80px 0;
+  background-color: rgba(238, 238, 251, 0.3);
+}
+
+.about-company__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 60px;
+}
+
+.about-company__heading-col--01 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 370px;
+  flex: 0 0 370px;
+}
+
+.about-company__heading-col--02 {
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+.about-company__heading-col--02::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #116ACC;
+}
+
+.about-company__heading-desc {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 200%;
+  color: #2D3142;
+}
+
+.about-company__cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-company__col--01 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 370px;
+  flex: 0 0 370px;
+  margin: 0 30px 0 0;
+}
+
+.about-company__col--02 {
+  padding: 0 0 0 70px;
+}
+
+.about-company__pic-wrap {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+}
+
+.about-company__pic-wrap:hover .about-company__pic--main {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.about-company__pic-wrap:hover .about-company__pic--hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.about-company__pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.about-company__pic--main {
+  visibility: visible;
+  opacity: 1;
+}
+
+.about-company__pic--hover {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.about-company__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+  margin: 0 0 30px;
+}
+
+.about-company__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-company__list-item:not(:last-of-type) {
+  margin: 0 0 20px;
 }
 
 .footer__top {

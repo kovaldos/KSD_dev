@@ -1,0 +1,32 @@
+mixin about-company()
+	-
+		const data = {
+			title: "ГК 'КСД'",
+			subtitle: "О компании",
+			desc: "Мы — молодая, быстро растущая компания, предоставляем большой перечень услуг, связанных со строительством и сносом объектов.",
+			text: "В июле 2015 года в Москве начала свою производственную деятельность компания «Конструктив-СД». Основные задачи, которые мы перед собой поставили, были четко сформулированы в нашем названии",
+			items: [
+				"Конструктив означает отношение к работе — только конструктивное, т. е. созидающее, основополагающее и плодотворное.",
+				"С — строительство, разное, например, дорог из вторичного щебня, автомобильных стоянок, спортивных площадок, благоустройство парков и скверов и многих других объектов.",
+				"Д — демонтаж сложных сооружений и заводов, жилых домов, срок жизни которых закончился, освобождение территорий и подготовка площадок под новое строительство.",
+			],
+		}
+
+	section.section.about-company 
+		.container.about-company__container 
+			.about-company__heading
+				.about-company__heading-col.about-company__heading-col--01
+					h2.title.title--h2.about-company__title=data.title
+					h3.title.title--h3.about-company__subtitle=data.subtitle
+				.about-company__heading-col.about-company__heading-col--02
+					p.text.about-company__heading-desc=data.desc
+			.about-company__cols
+				.about-company__col.about-company__col--01
+					.about-company__pic-wrap 
+						+picture("content", "about-company-img-1", "jpg", "Экскаватор-разрушитель работает").about-company__pic.about-company__pic--main
+						+picture("content", "about-company-img-2", "jpg", "Дробилка работает").about-company__pic.about-company__pic--hover
+				.about-company__col.about-company__col--02
+					p.text.about-company__text=data.text
+					ul.about-company__list 
+						each item in data.items 
+							li.text.text--sm.about-company__list-item=item
