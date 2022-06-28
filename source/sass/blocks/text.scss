@@ -3,8 +3,6 @@
 	padding: 0;
 	transition: color $trans-default;
 	font-weight: 400;
-	font-size: 20px;
-	line-height: 24px;
 	&--sm {
 		// sm = small
 		font-size: 0.9em;
@@ -17,7 +15,9 @@
 	}
 	&--lg {
 		// lg = large
-		font-weight: 500;
-		font-size: 1.5em;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 38px;
+		color: $color-waikawa-grey;
 	}
 }

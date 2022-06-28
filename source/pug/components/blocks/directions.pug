@@ -1,0 +1,59 @@
+mixin directions()
+	-
+		const data = {
+			title: "Направления",
+			subtitle: "100% безотходное производство",
+			contentTitle: "Демонтаж зданий и сооружений",
+			text: "Полный комплекс услуг по демонтажу зданий и сооружений: от разработки исходно-разрешительной документации до вывоза строительных отходов.",
+			items: [
+				{					
+				src: "slides",
+				img: "directions-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "directions-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "directions-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "directions-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "directions-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+			],
+		}
+
+	section.section.directions 
+		.container.directions__container 
+			.directions__heading 
+				h2.title.title--h2.directions__title=data.title
+				h3.title.title--h3.directions__subtitle=data.subtitle
+			.directions__cols
+				.directions__col.directions__col--01
+					h4.title.title--h4.directions__content-title=data.contentTitle
+					p.text.text--lg.directions__text=data.text
+					.directions__slider-nav
+						.swiper-pagination.directions__slider-pag
+						.directions__slider-btns
+							.swiper-button-next.directions__slider-btn.directions__slider-btn--next
+								+icon("icon-chevron-right-black", 30, 30)
+							.swiper-button-prev.directions__slider-btn.directions__slider-btn--prev
+								+icon("icon-chevron-left-black", 30, 30)
+				.directions__col.directions__col--02
+					.swiper.swiper--02.directions__slider
+						.swiper-wrapper
+							each item in data.items
+								.swiper-slide
+									.directions__slider-item
+										+picture(item.src, item.img, "jpg", item.alt)

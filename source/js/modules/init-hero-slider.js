@@ -3,7 +3,7 @@
 // Hero-slider init -- Start --
 
 const initHeroSlider = () => {
-  const swiper01 = new Swiper('.hero__slider', {
+  const swiper01 = new Swiper('.swiper--01', {
     watchOverflow: true,
     loop: true,
     autoplay: true,
