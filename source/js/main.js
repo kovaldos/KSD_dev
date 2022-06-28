@@ -2,6 +2,9 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
+import {initHeroSlider} from './modules/init-hero-slider';
+import {initAccordions} from './modules/init-accordion';
+import {initDirectionsSlider} from './modules/init-directions-slider';
 
 // ---------------------------------
 
@@ -21,6 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
+    initHeroSlider();
+    initDirectionsSlider();
+    initAccordions();
   });
 });
 

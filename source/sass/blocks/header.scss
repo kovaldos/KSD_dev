@@ -1,13 +1,67 @@
 .header {
-  padding: 28px 0;
-
-  background-color: $color-neon-blue;
-
-  .container {
-    display: flex;
+  transition: all $trans-default;
+  background-color: $color-default-white;
+  &--fixed & {
+    &__bottom {
+      position: fixed;
+    }
   }
-
-  &__logo {
-    color: $color-default-white;
+  &--fixed + main {
+    padding: 40px 0 0;
+  }
+  &__container {
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--bottom {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__top {
+    padding: 8px 0;
+    background-color: $color-bunting;
+    &-link {
+      color: $color-default-white;
+      font-size: 14px;
+      line-height: 160%;
+      &:not(:last-of-type) {
+        margin-right: 25px;
+      }
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+  }
+  &__bottom {
+    padding: 20px 0;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: $color-default-white;
+    width: 100%;
+  }
+  &__contacts {
+    &-link {
+      color: $color-bunting;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 160%;
+      &::after {
+        display: none;
+      }
+    }
+    &-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: $color-navy-blue;
+      margin: 0 0 0 27px;
+    }
   }
 }
