@@ -1,0 +1,57 @@
+mixin principles()
+	-
+		const data = {
+			title: "Принципы компании",
+			//- subtitle: "Открытость и честность",
+			tabsNav: [
+				{
+					text: "Открытость и честность",
+					сlassName: "is-active",
+				},
+				{
+					text: "Взаимовыгодное сотрудничество",
+				},
+				{
+					text: "Ориентированность на результат",
+				},
+				{
+					text: "Ответственность и эффективность",
+				},
+			],
+			tabsContent: [
+				{
+					title: "Открытость и честность",
+					text: "В работе компания руководствуется принципом социальной ответственности. Мы открыты для своих сотрудников, партнеров и клиентов, соблюдаем все требования законодательства, а также общепринятые нормы цивилизованного ведения бизнеса.",
+				},
+				{
+					title: "Взаимовыгодное сотрудничество",
+					text: "Libero nihil aperiam, non nisi voluptates, at fuga illo temporibus laborum perspiciatis nesciunt optio consectetur eveniet amet aliquid, facere officia!",
+				},
+				{
+					title: "Ориентированность на результат",
+					text: "Esse dolores corrupti ab expedita laborum, quibusdam officiis ex consequuntur vel, deleniti sed laudantium rerum nobis provident numquam mollitia suscipit quos ipsa repellat dolore ipsum unde veritatis.",
+				},
+				{
+					title: "Ответственность и эффективность",
+					text: "Recusandae inventore nesciunt sed non nihil odit at est perspiciatis debitis molestiae eum quidem, vitae amet tempora porro velit quae similique temporibus?",
+				},
+			]
+		}
+	
+	section.section.principles 
+		.container.principles__container 
+			.principles__heading 
+				h2.title.title--h2.principles__title=data.title
+				//- h3.title.title--h3.principles__subtitle=data.subtitle
+			.tabs.principles__tabs(data-tabs="parent" data-delay="300" data-height="max")
+				nav.tabs__controls.principles__tabs-controls(data-tabs="controls")
+					each item, index in data.tabsNav
+						button.btn.principles__tabs-control(data-index=index, data-tabs="control", class!=item.className)
+							span.principles__tabs-control-value=item.text
+				.tabs__content.principles__tabs-content(data-tabs="content")
+					each item in data.tabsContent
+						.principles__tabs-wrap(data-tabs="element")
+							h3.title.title--h3.principles__tabs-title=item.title
+							p.text.text--lg.principles__tabs-text=item.text
+
+
