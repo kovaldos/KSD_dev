@@ -1,0 +1,32 @@
+mixin career()
+	-
+		const data = {
+			title: "Карьера",
+			subtitle: "Работа в КСД – это",
+			items: [
+				{	
+					classModifier: "career__item--01",
+					title: "Карьерный рост",
+					text: "Реальные примеры: от мастера до главного механика; от экскаваторщика до начальника участка; от производителя работ до руководителя автоколонны;",
+				},
+				{
+					classModifier: "career__item--02",
+					title: "Вовлеченность",
+					text: "Сотрудники вовлечены в разные процессы компании, а не только в процессы своих подразделений, обучаются у друг друга, работают сообща",
+				},
+			]
+		}
+
+	section.section.career 
+		.container.career__container
+			.career__heading 
+				h2.title.title--h2.career__title=data.title
+				h3.title.title--h3.career__subtitle=data.subtitle
+			.career__items
+				each item in data.items
+					.career__item(class=item.classModifier)
+						h4.title.career__item-title
+							span.career__item-title-span
+								+icon("icon-check-mark", 20, 20).career__item-icon
+							span.career__item-title-text=item.title
+						p.text.career__item-text=item.text
