@@ -7,6 +7,7 @@ import {initAccordions} from './modules/init-accordion';
 import {initDirectionsSlider} from './modules/init-directions-slider';
 import {initTabs} from './modules/init-tabs';
 import {initTeamSlider} from './modules/init-team-slider';
+import {initBtnToTop} from './modules/scroll-to-top';
 
 // ---------------------------------
 
@@ -31,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initTabs();
     initTeamSlider();
+    initBtnToTop();
   });
 });
 

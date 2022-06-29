@@ -1,0 +1,11 @@
+mixin btn-to-top()
+   -
+      const data = {
+         text: "Вверх Сайта",
+         icon: "icon-arrow-up",
+      }
+   button.btn.btn-to-top(type="button")
+      if data.icon
+         +icon(data.icon, 26, 51).btn-to-top__icon
+      if data.text
+         span.btn-to-top__span=data.text
