@@ -1,1 +1,1 @@
-https://kovaldos.github.io/KSD_dev/sitemap.html
+https://kovaldos.github.io/KSD_dev/build/sitemap.html
