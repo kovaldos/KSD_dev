@@ -5,6 +5,7 @@ import {initFormValidate} from './modules/form/init-form-validate';
 import {initHeroSlider} from './modules/init-hero-slider';
 import {initAccordions} from './modules/init-accordion';
 import {initDirectionsSlider} from './modules/init-directions-slider';
+import {initTabs} from './modules/init-tabs';
 
 // ---------------------------------
 
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initDirectionsSlider();
     initAccordions();
+    initTabs();
   });
 });
 
