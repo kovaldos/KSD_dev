@@ -6,6 +6,7 @@ import {initHeroSlider} from './modules/init-hero-slider';
 import {initAccordions} from './modules/init-accordion';
 import {initDirectionsSlider} from './modules/init-directions-slider';
 import {initTabs} from './modules/init-tabs';
+import {initTeamSlider} from './modules/init-team-slider';
 
 // ---------------------------------
 
@@ -29,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initDirectionsSlider();
     initAccordions();
     initTabs();
+    initTeamSlider();
   });
 });
 

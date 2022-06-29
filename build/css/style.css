@@ -3092,6 +3092,7 @@ button,
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  margin-bottom: 23px;
 }
 
 .principles__tabs-title {
@@ -3101,6 +3102,53 @@ button,
 .principles__tabs-text {
   max-width: 670px;
   color: #636B87;
+}
+
+.team__heading {
+  margin: 0 0 40px;
+}
+
+.team__slider-btns {
+  position: relative;
+  left: calc(100% - 82px);
+  width: 82px;
+  top: -40px;
+}
+
+.team__slider-btn {
+  color: #2D3142;
+}
+
+.team__slider-btn::after {
+  display: none;
+}
+
+.team__slider-btn--next {
+  right: 0;
+}
+
+.team__slider-btn--prev {
+  left: 0;
+}
+
+.team__slider-item {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgba(238, 238, 251, 0.3);
+}
+
+.team__slider-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #2D3142;
+  margin: 20px 0 5px 0;
+}
+
+.team__slider-item-text {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(45, 49, 66, 0.6);
 }
 
 .footer__top {
