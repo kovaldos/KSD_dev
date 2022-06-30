@@ -1,0 +1,61 @@
+mixin snos-hero()
+	-
+		const data = {
+			title: "Демонтаж зданий и сооружений",
+			subtitle: "Mauris egestas pellentesque nulla at massa. Laoreet et pretium arcu orci. Lectus justo ullamcorper et.",
+			items: [
+				{
+					src: "slides",
+					img: "hero-bg-img-1",
+					alt: "slide-img-1",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-2",
+					alt: "slide-img-2",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-3",
+					alt: "slide-img-3",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-4",
+					alt: "slide-img-4",
+				},
+			],
+			numbers: [
+				{
+					num: "6",
+					text: "Лет опыта",
+				},
+				{
+					num: "150",
+					text: "Единиц техники",
+				},
+				{
+					num: "120",
+					text: "Сотрудников",
+				},
+			]
+		}
+	section.snos-hero
+		.container.snos-hero__container
+			.snos-hero__col.snos-hero__col--01
+				.snos-hero__heading 
+					h1.title.title--h1.snos-hero__title=data.title
+						span.snos-hero__subtitle=data.subtitle
+				.snos-hero__numbers
+					each item in data.numbers
+						.snos-hero__numbers-item
+							strong.snos-hero__numbers-num=item.num 
+							p.text.snos-hero__numbers-text=item.text
+		.snos-hero__col.snos-hero__col--02
+			.swiper.swiper--01.snos-hero__slider
+				.swiper-wrapper 
+					each item in data.items 
+						.swiper-slide 
+							.snos-hero__slider-item 
+								+picture(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.snos-hero__slider-pag

@@ -52,16 +52,27 @@
       &::after {
         display: none;
       }
-    }
-    &-icon-wrap {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background-color: $color-navy-blue;
-      margin: 0 0 0 27px;
+      &:hover,
+      &:focus-visible {
+        color: $color-orange-red;
+      }
+      &:hover &,
+      &:focus-visible & {
+        &-wrap-icon {
+          background-color: $color-orange-red;
+        }
+      }
+      &-wrap-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: $color-navy-blue;
+        margin: 0 0 0 27px;
+        transition: background-color $trans-default;
+      }
     }
   }
 }

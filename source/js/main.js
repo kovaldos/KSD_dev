@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-
+  initHeroSlider();
   // Modules
   // ---------------------------------
 
@@ -27,7 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
-    initHeroSlider();
     initDirectionsSlider();
     initAccordions();
     initTabs();

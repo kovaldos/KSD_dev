@@ -78,7 +78,7 @@ mixin contact-us()
 								+custom-input(data.form.name)(data-validate-type="text")
 								+custom-input(data.form.email)(data-validate-type="email")
 								+custom-textarea(data.form.message)
-								+btn(data.form.btn).contact-us__form-submit
+								+btn(data.form.btn).btn--orange.contact-us__form-submit
 					.contact-us__agreement 
 						span=data.form.agree 
 						a.link.contact-us__agreement-link(href=data.form.linkAgree.href)=data.form.linkAgree.text 

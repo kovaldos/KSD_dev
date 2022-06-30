@@ -36,6 +36,21 @@
 			}
 		}
 	}
+	.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-horizontal {
+		bottom: 30px;
+	}
+	.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0 14px;
+		background-color: rgba($color-default-white, 0.6);
+		// backdrop-filter: blur(7px);
+		width: 12px;
+		height: 12px;
+		opacity: 1;
+	}
+	.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+		background-color: $color-default-white;
+		box-shadow: 0 0 0 6px rgba($color-default-white, 0.5);
+	}
 	&__heading {
 		padding: 70px 0 30px;
 		text-align: center;
