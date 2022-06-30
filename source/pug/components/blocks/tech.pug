@@ -32,6 +32,9 @@ mixin tech()
 				alt: "экскаватор-разрушитель",
 				},
 			],
+			title3: "Senectus quam venen bibend euisod enim.",
+			text2: "Elit venenatis sociis aliquet nam diam massa lacus. Magna commodo id lectus fringilla id gravida. Amet facilisi augue. ",
+
 		}
 	section.section.tech 
 		.container.tech__container
@@ -56,3 +59,14 @@ mixin tech()
 								+icon("icon-chevron-right-black", 30, 30)
 							.swiper-button-prev.tech__slider-btn.tech__slider-btn--prev
 								+icon("icon-chevron-left-black", 30, 30)
+		.tech__bottom 
+			.container.tech__container.tech__container--bottom
+				.tech__bottom-cols
+					.tech__bottom-col.tech__bottom-col--01
+						h3.title.title--h3.tech__bottom-title=data.title3 
+						p.text.text--lg.tech__bottom-text=data.text2
+					.tech__bottom-col.tech__bottom-col--02
+						.tech__bottom-video
+							button(type="button").btn.btn--orange.tech__bottom-video-btn
+								+icon("icon-play", 14, 14)
+							video(src="https://cdn.videvo.net/videvo_files/video/premium/video0237/large_watermarked/02_day_Stockholm_99_rotate_sun_crane_preview.mp4", type="video/mp4", controls muted preload="none" poster="./img/content/tech-video-poster.jpg")
