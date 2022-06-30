@@ -8,16 +8,16 @@ const initPartnersSlider = () => {
       // Optional parameters
       loop: true,
       loopedSlides: 6,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 0,
+      //   disableOnInteraction: false,
+      // },
       speed: 2000,
       freeMode: true,
       watchOverflow: true,
       slidesPerView: 'auto',
       slidesPerGroup: 1,
-      spaceBetween: 20,
+      spaceBetween: 0,
     });
   }
 
