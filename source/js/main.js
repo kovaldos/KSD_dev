@@ -9,6 +9,7 @@ import {initTabs} from './modules/init-tabs';
 import {initTeamSlider} from './modules/init-team-slider';
 import {initBtnToTop} from './modules/scroll-to-top';
 import {initPartnersSlider} from './modules/init-partners-slider';
+import {initTechSlider} from './modules/init-tech-slider';
 
 // ---------------------------------
 
@@ -34,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTeamSlider();
     initBtnToTop();
     initPartnersSlider();
+    initTechSlider();
   });
 });
 

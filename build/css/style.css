@@ -3789,6 +3789,11 @@ button,
   color: #ffffff;
 }
 
+.partners {
+  margin: 0 0 40px;
+  background-color: rgba(238, 238, 251, 0.3);
+}
+
 .partners__slider {
   height: 120px;
 }
@@ -3816,6 +3821,120 @@ button,
 
 .partners__slider .swiper-slide {
   width: auto;
+}
+
+.tech__heading {
+  margin: 0 0 50px;
+}
+
+.tech__cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tech__col {
+  width: 50%;
+  overflow: hidden;
+}
+
+.tech__col--01 {
+  width: calc(50% - 85px);
+}
+
+.tech__col--02 {
+  margin: 0 0 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.tech__slider-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.tech__slider-nav {
+  position: relative;
+}
+
+.tech__slider-btns {
+  position: absolute;
+  width: 75px;
+  left: 100px;
+  bottom: 20px;
+}
+
+.tech__slider-btn {
+  color: #2D3142;
+}
+
+.tech__slider-btn::after {
+  display: none;
+}
+
+.tech__slider-btn svg {
+  color: #2D3142;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+
+.tech__slider-btn.swiper-button-disabled {
+  opacity: 1;
+}
+
+.tech__slider-btn.swiper-button-disabled svg {
+  color: #D2D7E8;
+}
+
+.tech__slider-btn--next {
+  right: 0;
+}
+
+.tech__slider-btn--prev {
+  left: 0;
+}
+
+.tech__content-title {
+  color: #F33C12;
+}
+
+.tech__text {
+  margin: 25px 0 auto 0;
+  line-height: 220%;
+}
+
+.tech .swiper-pagination-fraction {
+  right: auto;
+  bottom: 0;
+  width: 70px;
+  left: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
+.tech .swiper-pagination-current {
+  display: inline-block;
+  width: 33%;
+}
+
+.tech .swiper-pagination-total {
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .footer__top {
