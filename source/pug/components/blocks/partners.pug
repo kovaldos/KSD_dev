@@ -1,0 +1,29 @@
+mixin partners()
+	//- -
+	//- 	const data = {
+	//- 		items: [
+	//- 			{
+	//- 				src:"../../../img/svg/partners-slider-img-1.svg",
+	//- 			}
+	//- 		]
+	//- 	}
+
+	.partners 
+		.swiper.swiper--04.partners__slider 
+			.swiper-wrapper
+				- for(let i = 0; i < 3; i++)
+					.swiper-slide 
+						a.partners__slider-item(href="https://vwfs.ru/", target="_blank", rel="noopener noreferrer") 
+							include ../../../img/svg/partners-slider-img-1.svg
+					.swiper-slide 
+						a.partners__slider-item(href="https://www.cat.com/ru_RU.html", target="_blank", rel="noopener noreferrer")
+							include ../../../img/svg/partners-slider-img-2.svg
+					.swiper-slide 
+						a.partners__slider-item(href="https://www.pik.ru/", target="_blank", rel="noopener noreferrer")
+							include ../../../img/svg/partners-slider-img-3.svg
+					.swiper-slide 
+						a.partners__slider-item(href="https://www.cnhindustrial.com/en-us", target="_blank", rel="noopener noreferrer")
+							include ../../../img/svg/partners-slider-img-4.svg
+					.swiper-slide 
+						a.partners__slider-item(href="https://donstroy.moscow/", target="_blank", rel="noopener noreferrer")
+							include ../../../img/svg/partners-slider-img-5.svg
