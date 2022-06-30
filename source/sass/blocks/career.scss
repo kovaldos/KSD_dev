@@ -1,6 +1,16 @@
 .career {
 	&__heading {
 		margin: 0 0 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__link-btn {
+		padding: 16px 20.5px;
+		border-radius: 7px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
 	}
 	&__items {
 		display: flex;
