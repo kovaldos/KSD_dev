@@ -3789,6 +3789,35 @@ button,
   color: #ffffff;
 }
 
+.partners__slider {
+  height: 120px;
+}
+
+.partners__slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.partners__slider-item {
+  width: 170px;
+  height: 120px;
+}
+
+.partners__slider-item svg path {
+  -webkit-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
+.partners__slider-item:hover svg .path-hover {
+  fill: rgba(255, 255, 255, 0);
+}
+
+.partners__slider .swiper-slide {
+  width: auto;
+}
+
 .footer__top {
   border-top: 1px solid #D2D7E8;
   background-color: rgba(255, 255, 255, 0.6);

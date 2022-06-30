@@ -1,0 +1,29 @@
+.partners {
+	&__slider {
+		// width: 100%;
+		// max-width: 1240px;
+		height: 120px;
+		.swiper-wrapper {
+			transition-timing-function: linear;
+		}
+		&-item {
+			width: 170px;
+			height: 120px;
+				svg {
+					path {
+						transition: fill $trans-default;
+					}
+				}
+			&:hover {
+				svg {
+					.path-hover {
+						fill: $color-transparent
+					}
+				}
+			}
+		}
+		.swiper-slide {
+			width: auto;
+		}
+	}
+}
