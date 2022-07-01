@@ -1,0 +1,62 @@
+.our-science {
+	margin: 20px 0 0 0;
+	&__heading {
+		margin: 0 0 30px;
+	}
+	&__cols {
+		display: flex;
+	}
+	&__col {
+		width: 50%;
+		&--01 {
+			margin: 0 30px 0 0;
+		}
+		&--02 {
+			margin: -80px 0 0;
+		}
+	}
+	&__head-text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 200%;
+		color: $color-bunting;
+		margin: 0 0 20px;
+	}
+	&__text {
+		max-width: 470px;
+		font-size: 16px;
+		line-height: 200%;
+		color: $color-waikawa-grey;
+		&:not(:last-of-type) {
+			margin: 0 0 30px;
+		}
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-position: inside;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 40px;
+		&-item {
+			position: relative;
+			padding: 80px 0 0;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 160%;
+			color: $color-bunting;
+		}
+		&-icon {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&-text {
+			margin: 15px 0 0;
+			font-size: 14px;
+			line-height: 180%;
+			color: $color-waikawa-grey;
+		}
+	}
+}
