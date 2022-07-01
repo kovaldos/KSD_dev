@@ -10,6 +10,9 @@ import {initTeamSlider} from './modules/init-team-slider';
 import {initBtnToTop} from './modules/scroll-to-top';
 import {initPartnersSlider} from './modules/init-partners-slider';
 import {initTechSlider} from './modules/init-tech-slider';
+import {initVideoBtn} from './modules/init-video-btn';
+import {initTechnicSlider} from './modules/init-technic-slider';
+import {initProjectsSlider} from './modules/init-projects-slider';
 
 // ---------------------------------
 
@@ -36,6 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initBtnToTop();
     initPartnersSlider();
     initTechSlider();
+    initVideoBtn();
+    initTechnicSlider();
+    initProjectsSlider();
   });
 });
 

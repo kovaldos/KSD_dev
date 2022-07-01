@@ -66,7 +66,7 @@ mixin tech()
 						h3.title.title--h3.tech__bottom-title=data.title3 
 						p.text.text--lg.tech__bottom-text=data.text2
 					.tech__bottom-col.tech__bottom-col--02
-						.tech__bottom-video
-							button(type="button").btn.btn--orange.tech__bottom-video-btn
+						.tech__bottom-video(data-video-block)
+							button(type="button" data-video-btn).btn.btn--orange.tech__bottom-video-btn
 								+icon("icon-play", 14, 14)
 							video(src="https://cdn.videvo.net/videvo_files/video/premium/video0237/large_watermarked/02_day_Stockholm_99_rotate_sun_crane_preview.mp4", type="video/mp4", controls muted preload="none" poster="./img/content/tech-video-poster.jpg")
