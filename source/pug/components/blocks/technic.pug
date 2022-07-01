@@ -1,0 +1,69 @@
+mixin technic()
+	-
+		const data = {
+			title: "Техника",
+			items: [
+				{
+					subtitle: "Экскаватор - Погрузчик",
+					name: "4CX ECO",
+					text: "Новая машина JCB 4CX ECO рассчитана на тяжелую работу.",
+					src: "slides",
+					img: "technic-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+				{					
+					subtitle: "Экскаватор - Погрузчик",
+					name: "4CX ECO",
+					text: "Новая машина JCB 4CX ECO рассчитана на тяжелую работу.",
+					src: "slides",
+					img: "technic-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+				{
+					subtitle: "Экскаватор - Погрузчик",
+					name: "4CX ECO",
+					text: "Новая машина JCB 4CX ECO рассчитана на тяжелую работу.",
+					src: "slides",
+					img: "technic-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+				{
+					subtitle: "Экскаватор - Погрузчик",
+					name: "4CX ECO",
+					text: "Новая машина JCB 4CX ECO рассчитана на тяжелую работу.",
+					src: "slides",
+					img: "technic-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+				{
+					subtitle: "Экскаватор - Погрузчик",
+					name: "4CX ECO",
+					text: "Новая машина JCB 4CX ECO рассчитана на тяжелую работу.",
+					src: "slides",
+					img: "technic-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+			],
+		}
+	section.section.technic 
+		.container.technic__container
+			.technic__heading
+				h2.title.title--h2=data.title 
+			.swiper.swiper--06.technic__slider
+				.swiper-wrapper
+					each item in data.items
+						.swiper-slide
+							.technic__slider-item
+								.technic__slider-item-col.technic__slider-item-col--01
+									h3.title.title--h3.technic__subtitle=item.subtitle
+									h4.title.technic__slider-name=item.name
+									p.text.technic__slider-text=item.text
+								.technic__slider-item-col.technic__slider-item-col--02
+									+picture(item.src, item.img, "png", item.alt).technic__slider-pic
+				button.swiper-button-next.btn.btn--orange.technic__slider-btn.technic__slider-btn--next(type="button")
+					span.technic__slider-btn-text JS 305
+					+icon("icon-arrow-right", 35, 20)
+				button.swiper-button-prev.btn.btn--orange.technic__slider-btn.technic__slider-btn--prev(type="button")
+					span.technic__slider-btn-text
+					+icon("icon-arrow-left", 35, 20)
+
