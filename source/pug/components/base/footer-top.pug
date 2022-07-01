@@ -37,7 +37,7 @@ mixin footer-top()
 			ul.footer__list 
 				each item in data.items
 					li.footer__list-item(class=item.classModifier)
-						a(href=item.href)
+						a.footer__list-link(href=item.href)
 							+icon(item.icon, 60, 60).footer__list-icon
 							h2.footer__list-title=item.title 
 							p.footer__list-text=item.text
