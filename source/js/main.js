@@ -13,6 +13,7 @@ import {initTechSlider} from './modules/init-tech-slider';
 import {initVideoBtn} from './modules/init-video-btn';
 import {initTechnicSlider} from './modules/init-technic-slider';
 import {initProjectsSlider} from './modules/init-projects-slider';
+import {initProjTechSlider} from './modules/init-proj-tech-slider';
 
 // ---------------------------------
 
@@ -42,6 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initVideoBtn();
     initTechnicSlider();
     initProjectsSlider();
+    initProjTechSlider();
   });
 });
 
