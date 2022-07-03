@@ -1,0 +1,82 @@
+mixin project-hero()
+	-
+		const data = {
+			title: "Проект",
+			subtitle: "СК «Олимпийский»",
+			img: "projects-img-1",
+			alt: "projects-img-1",
+			head: {
+				title: "Спортивный комплекс",
+				subtitle: "«Олимпийский»",
+				volume: {
+					text: "Объемы работ: ",
+					num: " 250 569 м3 со",
+				},
+				items: [
+					{
+						icon: "project-hero-icon-1",
+						text: {
+							key: "Адрес: ",
+							value: "г. Москва, пр-кт Олимпийский, 16, стр.1, 2",
+						}
+					},
+					{
+						icon: "project-hero-icon-2",
+						text: {
+							key: "Вид работ: ",
+							value: "Снос строений",
+						}
+					},
+					{
+						icon: "project-hero-icon-3",
+						text: {
+							key: "Срок выполнения: ",
+							value: "25.02.2021  -  30.07.2021",
+						}
+					},
+				],
+			},
+			next: {
+				href: "#",
+				icon: "icon-arrow-right-50x25",
+				title: "Далее",
+			},
+			text: [
+				"СК «Олимпийский» является одной из главных достопримечательностей Москвы. На его аренах проходили мероприятия крупнейших масштабов — концерты мировых звезд, спортивные мероприятия и т. д.",
+				"Но со временем сооружение устарело морально и физически, поэтому было принято решение обновить облик знаменитого спорткомплекса. После реконструкции СК «Олимпийский» не изменит свое предназначение, а только обретет новые функции и обновленный внешний вид.",
+				"Компания «Конструктив-СД» принимает активное участие в реконструкции спорткомплекса. Наша компания осуществляет снос и демонтаж некоторых сооружений. На объекте работает 6 экскаваторов, из них: 1 экскаватор-разрушитель; 2 экскаватора с гидромолотами; 1 экскаватор с гидроножницами; 2 экскаватора со скальными ковшами.",
+				"Вывоз строительного мусора от сноса осуществляем собственными самосвалами с объемами кузовов 25 м³."
+			]
+		}
+
+	section.section.project-hero
+		.container.project-hero__container 
+			.project-hero__heading 
+				h2.title.title--h2.project-hero__title=data.title
+				h3.title.title--h3.project-hero__subtitle=data.subtitle
+			.project-hero__head
+				.project-hero__col.project-hero__col--01
+					.project-hero__head-bg
+						+picture("slides", data.img, "jpg", data.alt)
+					.project-hero__head-row
+						.project-hero__head-heading
+							h4.title.project-hero__head-title=data.head.title
+							h5.title.project-hero__head-subtitle=data.head.subtitle
+						.project-hero__head-volume
+							span.volume-text=data.head.volume.text
+							span.volume-value=data.head.volume.num
+					ul.project-hero__head-list
+						each item in data.head.items 
+							li.project-hero__head-list-item 
+								+icon(item.icon, 36, 36)
+								p.text.project-hero__head-list-text
+									span=item.text.key
+									span=item.text.value
+
+				.project-hero__col.project-hero__col--02
+					a.project-hero__next(href=data.next.href)
+						+icon(data.next.icon, 50, 25)
+						h4.title.next-title
+			.project-hero__text 
+				each item in data.text 
+					p.text.text--lg.project-hero__text-item=item
