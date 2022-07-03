@@ -1,0 +1,25 @@
+mixin video()
+	-
+		const data = {
+			title: "Видео",
+			items: [
+				{
+					src: "https://cdn.videvo.net/videvo_files/video/premium/video0237/large_watermarked/02_day_Stockholm_99_rotate_sun_crane_preview.mp4",
+					poster: "project-video-poster-1.jpg",
+				},
+				{
+					src: "https://cdn.videvo.net/videvo_files/video/premium/video0237/large_watermarked/02_day_Stockholm_99_rotate_sun_crane_preview.mp4",
+					poster: "project-video-poster-1.jpg",
+				},
+			],
+		}
+	section.section.video
+		.container.video__container 
+			.h2.title.title--h3.video__title=data.title
+			.video__wrapper
+				each item in data.items
+					.video__item 
+						.video__item-video(data-video-block)
+							button(type="button" data-video-btn).btn.btn--orange.video__item-video-btn
+								+icon("icon-play", 14, 14)
+							video(src=item.src, type="video/mp4", controls muted preload="none" poster="./img/content/tech-video-poster.jpg")
