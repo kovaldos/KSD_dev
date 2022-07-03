@@ -14,6 +14,7 @@ import {initVideoBtn} from './modules/init-video-btn';
 import {initTechnicSlider} from './modules/init-technic-slider';
 import {initProjectsSlider} from './modules/init-projects-slider';
 import {initProjTechSlider} from './modules/init-proj-tech-slider';
+import {initSimilarProjectsSlider} from './modules/init-similar-projects-slider';
 
 // ---------------------------------
 
@@ -44,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTechnicSlider();
     initProjectsSlider();
     initProjTechSlider();
+    initSimilarProjectsSlider();
   });
 });
 

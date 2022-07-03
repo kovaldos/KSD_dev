@@ -1,0 +1,65 @@
+mixin similar-projects()
+	-
+		const data = {
+			title: "Похожие проекты",
+			items: [
+				{
+					src: "slides",
+					img: "similar-projects-img-1",
+					alt: "similar-projects-img-1",
+					title: "Спортивный комплекс",
+					subtitle: "«Олимпийский»",
+					link: {
+						href: "#",
+						text: "Смотреть",
+						icon: "icon-chevron-right",
+					},
+				},
+				{
+					src: "slides",
+					img: "similar-projects-img-3",
+					alt: "similar-projects-img-3",
+					title: "Нежилые здания",
+					subtitle: "АО «Главстрой»",
+					link: {
+						href: "#",
+						text: "Смотреть",
+						icon: "icon-chevron-right",
+					},
+				},
+				{
+					src: "slides",
+					img: "similar-projects-img-4",
+					alt: "similar-projects-img-4",
+					title: "Жилой комплекс",
+					subtitle: "Волоколамское шоссе",
+					link: {
+						href: "#",
+						text: "Смотреть",
+						icon: "icon-chevron-right",
+					},
+				},
+			],
+		}
+	section.section.similar-projects 
+		.container.similar-projects__container
+			.similar-projects__heading
+				h2.title.title--h3=data.title 
+				.similar-projects__slider-btns
+					.swiper-button-next.similar-projects__slider-btn.similar-projects__slider-btn--next
+						+icon("icon-chevron-right-black", 25, 25)
+					.swiper-button-prev.similar-projects__slider-btn.similar-projects__slider-btn--prev
+						+icon("icon-chevron-left-black", 25, 25)
+			.swiper.swiper--09.similar-projects__slider
+				.swiper-wrapper
+					- for(let i = 0; i < 2; i++)
+						each item in data.items
+							.swiper-slide
+								.similar-projects__slider-item
+									.similar-projects__slider-item-bg
+										+picture(item.src, item.img, "jpg", item.alt)
+									h3.title.similar-projects__slider-item-title=item.title
+									h4.title.similar-projects__slider-item-subtitle=item.subtitle
+									a.btn.btn--orange.similar-projects__slider-item-link(href=item.link.href)
+										span=item.link.text 
+										+icon(item.link.icon, 16, 16).similar-projects__slider-item-link-icon
