@@ -5182,6 +5182,58 @@ button,
   color: #2D3142;
 }
 
+.video__title {
+  margin: 0 0 30px;
+}
+
+.video__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+}
+
+.video__item-video {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.video__item-video-btn {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  padding: 0 0 0 2px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 5;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.video__item-video-btn.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.video__item-video-btn svg {
+  pointer-events: none;
+}
+
 .footer {
   margin: 60px 0 0 0;
 }
