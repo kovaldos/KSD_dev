@@ -5830,6 +5830,120 @@ button,
   color: #636B87;
 }
 
+.technic-and-methods__heading {
+  margin: 0 0 40px;
+}
+
+.technic-and-methods__heading__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+  color: #636B87;
+}
+
+.technic-and-methods__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+  color: #636B87;
+  max-width: 870px;
+  margin: 0 0 40px;
+}
+
+.technic-and-methods__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.technic-and-methods__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #2D3142;
+  border-radius: 5px;
+  margin: 0 30px 0 0;
+  padding: 20px 0;
+}
+
+.technic-and-methods__items-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 200%;
+  color: #2D3142;
+  margin: 0 0 30px;
+}
+
+.technic-and-methods__item {
+  position: relative;
+  padding: 10px 30px;
+}
+
+.technic-and-methods__item:not(:last-of-type) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.technic-and-methods__item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.technic-and-methods__item-num {
+  position: absolute;
+  top: -13px;
+  right: 30px;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.technic-and-methods__item-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.technic-and-methods__all-link {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 270px;
+  flex: 0 0 270px;
+  padding: 25px 40px 25px 30px;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 160%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #FE603A;
+  border-radius: 5px;
+}
+
+.technic-and-methods__all-link-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .footer {
   margin: 60px 0 0 0;
 }
