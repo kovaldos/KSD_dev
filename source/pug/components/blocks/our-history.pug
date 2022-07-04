@@ -1,0 +1,41 @@
+mixin our-history()
+	-
+		const data = {
+			title: "«Конструктив-СД»",
+			subtitle: "Наша история",
+			desc: "Мы — молодая, быстро растущая компания, предоставляем большой перечень услуг, связанных со строительством и сносом объектов.",
+			items: [
+				{
+					year: "2015",
+					textHead: "В июле 2015 года в Москве начала свою производственную деятельность компания «Конструктив-СД». Основные задачи, которые мы перед собой поставили, были четко сформулированы в нашем названии.",
+					text1: "Конструктив означает отношение к работе — только конструктивное, т. е. созидающее, основополагающее и плодотворное.",
+					text2: "С — строительство, разное, например, дорог из вторичного щебня, автомобильных стоянок, спортивных площадок, благоустройство парков и скверов и многих других объектов.",
+					text3: "Д — демонтаж сложных сооружений и заводов, жилых домов, срок жизни которых закончился, освобождение территорий и подготовка площадок под новое строительство.",
+				},
+				{
+					year: "20??",
+					textHead: "Enim viverra consectetur commodo pharetra sollicitudin nisl in. Cras massa id nisi, a. Felis mattis lectus sapien diam, quam suspendisse enim. Enim lectus orci leo, et lorem purus scelerisque sit. Adipiscing massa netus pellentesque odio semper lacus. Augue odio euismod parturient est libero, amet. Cras posuere a arcu auctor viverra.",
+					text1: "Integer malesuada amet, ultrices sit sed urna, nulla. Tempus urna est amet, facilisis aliquam. Ultricies ullamcorper posuere ut convallis non nunc. Eu risus massa, sed felis interdum elit, odio. Augue id in eu volutpat eget quam.",
+					text2: "Nisl maecenas risus turpis vitae netus malesuada. Leo tempor orci odio nulla ultrices. Tristique viverra quis pulvinar dictum. Nec, non molestie faucibus enim, faucibus. Quis sagittis tellus nam faucibus dolor. Eu quis arcu.",
+					text3: "",
+				},
+			]
+		}
+	section.section.our-history 
+		.container.our-history__container 
+			.our-history__heading
+				.our-history__heading-col.our-history__heading-col--01
+					h2.title.title--h2.our-history__title=data.title
+					h3.title.title--h3.our-history__subtitle=data.subtitle
+				.our-history__heading-col.our-history__heading-col--02
+					p.text.our-history__heading-desc=data.desc
+			.our-history__years
+				each item in data.items
+					.our-history__years-row
+						.our-history__year
+							span.our-history__year-num=item.year
+						.our-history__year-text 
+							p.text.our-history__year-text-head=item.textHead
+							p.text.our-history__year-text-item=item.text1
+							p.text.our-history__year-text-item=item.text2
+							p.text.our-history__year-text-item=item.text3
