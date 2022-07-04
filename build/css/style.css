@@ -5694,6 +5694,72 @@ button,
   color: rgba(255, 255, 255, 0.6);
 }
 
+.achievements__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 50px;
+}
+
+.achievements__heading-col--01 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 370px;
+  flex: 0 0 370px;
+}
+
+.achievements__heading-col--02 {
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+.achievements__heading-col--02::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #116ACC;
+}
+
+.achievements__heading-desc {
+  max-width: 640px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 200%;
+  color: #636B87;
+}
+
+.achievements__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  padding: 0 0 40px;
+}
+
+.achievements__item-num {
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 160%;
+  color: #FE603A;
+}
+
+.achievements__item-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2D3142;
+  margin: 0 0 10px;
+}
+
+.achievements__item-text {
+  line-height: 171%;
+  color: #636B87;
+}
+
 .footer {
   margin: 60px 0 0 0;
 }

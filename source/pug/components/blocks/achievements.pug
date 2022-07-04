@@ -1,0 +1,43 @@
+mixin achievements()
+	-
+		const data = {
+			title: "Достижения",
+			subtitle: "О нас в цифрах",
+			desc: "У нас большие амбиции и перспективы. Мы с оптимизмом смотрим в будущее, потому что мы сами делаем жизнь краше.",
+			items: [
+				{
+					num: "50 +",
+					title: "Проектов выполнено",
+					text: "Компания за время работы выполнила более 50 проектов.",
+				},
+				{
+					num: "30 +",
+					title: "Едениц  техники",
+					text: "Технический потенциал – более 30 единиц собственной спецтехники.",
+				},
+				{
+					num: "50",
+					title: "Профессионалов в штате",
+					text: "Сотрудники предприятия – это наш золотой фонд.",
+				},
+				{
+					num: "10 +",
+					title: "Крупных партнеров",
+					text: "С которыми у нас сложились взаимовыгодные отношения.",
+				},
+			]
+		}
+	section.section.achievements
+		.container.achievements__container 
+			.achievements__heading
+				.achievements__heading-col.achievements__heading-col--01
+					h2.title.title--h2.achievements__title=data.title
+					h3.title.title--h3.achievements__subtitle=data.subtitle
+				.achievements__heading-col.achievements__heading-col--02
+					p.text.achievements__heading-desc=data.desc
+			.achievements__items 
+				each item in data.items
+					.achievements__item
+						span.achievements__item-num=item.num
+						h2.title.title--h2.achievements__item-title=item.title
+						p.text.text--sm.achievements__item-text=item.text
