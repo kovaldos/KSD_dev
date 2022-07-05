@@ -2424,6 +2424,44 @@ button,
   background-color: #ffbbcc;
 }
 
+.breadcrumbs {
+  padding: 30px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9ca1bb;
+}
+
+.breadcrumbs__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.breadcrumbs__separator {
+  font-size: 25px;
+  line-height: 68%;
+  display: inline-block;
+  padding: 0 0 3px 0;
+}
+
+.breadcrumbs__link {
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.breadcrumbs__link--current {
+  color: #636B87;
+}
+
+.breadcrumbs__link:hover:not(.breadcrumbs__link--current) {
+  text-decoration: underline;
+}
+
 .header {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -4618,6 +4656,10 @@ button,
   color: #636B87;
 }
 
+.projects-page {
+  padding: 20px 0 40px;
+}
+
 .projects-page__heading {
   margin: 0 0 30px;
 }
@@ -4825,6 +4867,10 @@ button,
   font-weight: 800;
   font-size: 18px;
   line-height: 160%;
+}
+
+.project-hero {
+  padding: 20px 0 40px;
 }
 
 .project-hero__container {
@@ -5488,7 +5534,7 @@ button,
 }
 
 .our-history {
-  padding: 10px 0 40px 0;
+  padding: 20px 0 40px 0;
 }
 
 .our-history__heading {
@@ -5877,6 +5923,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 0 20px;
 }
 
 .technic-and-methods__items {
