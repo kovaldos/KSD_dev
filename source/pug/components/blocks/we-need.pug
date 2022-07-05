@@ -1,0 +1,91 @@
+mixin we-need()
+	-
+		const data = {
+			title: "Компании нужны",
+			items: [
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Инженеры-строители",
+					available: {
+						num: "3",
+						text: " вакансии доступно",
+					},
+				},
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Производители работ",
+					available: {
+						num: "1",
+						text: " вакансия доступна",
+					},
+				},
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Машинисты экскаваторов",
+					available: {
+						num: "6",
+						text: " вакансий доступно",
+					},
+				},
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Водители самосвалов",
+					available: {
+						num: "3",
+						text: " вакансии доступно",
+					},
+				},
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Механики",
+					available: {
+						num: "7",
+						text: " вакансий доступно",
+					},
+				},
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Разнорабочие",
+					available: {
+						num: "12",
+						text: " вакансий доступно",
+					},
+				},
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Слесари",
+					available: {
+						num: "2",
+						text: " вакансии доступно",
+					},
+				},
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Инженеры-строители",
+					available: {
+						num: "3",
+						text: " вакансии доступно",
+					},
+				},
+			]
+		}
+	section.section.we-need
+		.container.we-need__container 
+			h4.title.title--h4.we-need__title=data.title
+			.we-need__items
+				each item in data.items
+					a(href=item.href).we-need__item
+						.we-need__item-row
+							+icon(item.icon, 50, 50)
+							.we-need__item-title=item.title
+						.we-need__item-available 
+							span.we-need__item-available-num=item.available.num
+							span.we-need__item-available-text=item.available.text
