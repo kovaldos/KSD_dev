@@ -1,0 +1,67 @@
+.we-need {
+	padding: 80px 0 50px;
+	background-color: rgba($color-lavender, 0.3);
+	margin: 0 0 20px;
+	&__title {
+		text-align: center;
+		margin: 0 0 20px;
+	}
+	&__items {
+		padding: 30px 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+	}
+	&__item {
+		display: block;
+		background-color: $color-default-white;
+		box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+		border-radius: 10px;
+		padding: 15px;
+		transition: background-color $trans-default;
+		&-row {
+			display: flex;
+			align-items: center;
+			margin: 0 0 15px;
+			svg {
+				flex: 0 0 50px;
+				color: $color-bunting;
+				margin: 0 15px 0 0;
+				transition: color $trans-default;
+			}
+		}
+		&-title {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 24px;
+			color: $color-bunting;
+			transition: color $trans-default;
+		}
+		&-available {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 180%;
+			color: $color-waikawa-grey;
+			transition: color $trans-default;
+		}
+		&:hover,
+		&:focus-visible {
+			background-color: $color-bunting;
+		}
+		&:hover &,
+		&:focus-visible & {
+			&-row {
+				svg {
+					color: $color-default-white;
+				}
+			}
+			&-title {
+				color: $color-default-white;
+			}
+			&-available {
+				color: rgba($color-default-white, 0.6);
+			}
+		}
+	}
+}
