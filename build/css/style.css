@@ -2291,22 +2291,45 @@ button,
 
 .btn-to-top {
   max-width: 104px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 160%;
-  color: #2D3142;
   margin: 0;
   padding: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: color ease;
+  -o-transition: color ease;
+  transition: color ease;
 }
 
-.btn-to-top svg {
+.btn-to-top__span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #2D3142;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.btn-to-top__icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 0 19px 0 0;
+  color: #B7BCD1;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.btn-to-top:hover .btn-to-top__span,
+.btn-to-top:focus-visible .btn-to-top__span {
+  color: #F33C12;
+}
+
+.btn-to-top:hover .btn-to-top__icon,
+.btn-to-top:focus-visible .btn-to-top__icon {
+  color: #F33C12;
 }
 
 [data-tabs="parent"] {

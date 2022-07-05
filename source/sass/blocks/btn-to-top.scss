@@ -1,15 +1,30 @@
 .btn-to-top {
 	max-width: 104px;
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 160%;
-	color: $color-bunting;
 	margin: 0;
 	padding: 0;
 	align-items: center;
 	background-color: $color-transparent;
-	svg {
+	transition: color $tf-default;
+	&__span {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 160%;
+		color: $color-bunting;
+		transition: color $trans-default;
+	}
+	&__icon {
 		flex-shrink: 0;
 		margin: 0 19px 0 0;
+		color: $color-lavender-grey;
+		transition: color $trans-default;
+	}
+	&:hover &,
+	&:focus-visible & {
+		&__span {
+			color: $color-orange-red;
+		}
+		&__icon {
+			color: $color-orange-red;
+		}
 	}
 }
