@@ -2291,22 +2291,45 @@ button,
 
 .btn-to-top {
   max-width: 104px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 160%;
-  color: #2D3142;
   margin: 0;
   padding: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: color ease;
+  -o-transition: color ease;
+  transition: color ease;
 }
 
-.btn-to-top svg {
+.btn-to-top__span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #2D3142;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.btn-to-top__icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 0 19px 0 0;
+  color: #B7BCD1;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.btn-to-top:hover .btn-to-top__span,
+.btn-to-top:focus-visible .btn-to-top__span {
+  color: #F33C12;
+}
+
+.btn-to-top:hover .btn-to-top__icon,
+.btn-to-top:focus-visible .btn-to-top__icon {
+  color: #F33C12;
 }
 
 [data-tabs="parent"] {
@@ -5944,6 +5967,56 @@ button,
   justify-content: space-between;
 }
 
+.reviews__heading {
+  margin: 0 0 40px;
+}
+
+.reviews__slider-btns {
+  position: relative;
+  left: calc(100% - 82px);
+  width: 82px;
+  top: -40px;
+}
+
+.reviews__slider-btn {
+  color: #2D3142;
+}
+
+.reviews__slider-btn::after {
+  display: none;
+}
+
+.reviews__slider-btn--next {
+  right: 0;
+}
+
+.reviews__slider-btn--prev {
+  left: 0;
+}
+
+.reviews__slider-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: 1px solid #EEEEFB;
+  overflow: hidden;
+  background-color: rgba(238, 238, 251, 0.3);
+}
+
+.reviews__slider-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #2D3142;
+  margin: 20px 0 5px 0;
+}
+
+.reviews__slider-item-text {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(45, 49, 66, 0.6);
+}
+
 .footer {
   margin: 60px 0 0 0;
 }
@@ -6144,6 +6217,7 @@ button,
 
 .footer__contact-us-link::after {
   background-color: #ffffff;
+  bottom: 5px;
 }
 
 .footer__address {

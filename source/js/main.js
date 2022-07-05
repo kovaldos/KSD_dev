@@ -15,6 +15,7 @@ import {initTechnicSlider} from './modules/init-technic-slider';
 import {initProjectsSlider} from './modules/init-projects-slider';
 import {initProjTechSlider} from './modules/init-proj-tech-slider';
 import {initSimilarProjectsSlider} from './modules/init-similar-projects-slider';
+import {initReviewsSlider} from './modules/init-reviews-slider';
 
 // ---------------------------------
 
@@ -46,6 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initProjectsSlider();
     initProjTechSlider();
     initSimilarProjectsSlider();
+    initReviewsSlider();
   });
 });
 

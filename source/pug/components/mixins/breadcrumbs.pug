@@ -1,0 +1,10 @@
+mixin breadcrumbs(name, secondLevel, thirdLevel)
+	.breadcrumbs
+		.container
+			.breadcrumbs__wrapper
+				a.breadcrumbs__link(href="main.html")=name
+				span &nbsp;/&nbsp;
+				a.breadcrumbs__link(href="#")=secondLevel
+				if(thirdLevel)
+					span &nbsp;/&nbsp;
+					a.breadcrumbs__link(href="#")=thirdLevel
