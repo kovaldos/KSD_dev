@@ -1,0 +1,105 @@
+.work-with-us {
+	&__heading {
+		margin: 0 0 30px;
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 200%;
+		color: $color-waikawa-grey;
+		max-width: 870px;
+		&:not(:last-of-type) {
+			margin: 0 0 30px;
+		}
+		&-head {
+			max-width: 770px;
+			margin: 0 0 30px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 200%;
+			color: $color-bunting;
+		}
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 30px;
+		grid-row-gap: 40px;
+		padding: 30px 0 20px;
+		&-title {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 200%;
+			color: $color-bunting;
+			margin: 60px 0 0;
+		}
+	}
+	&__item {
+		&-row {
+			display: flex;
+			align-items: center;
+			margin: 0 0 10px;
+		}
+		&-icon {
+			margin: 0 10px 0 0;
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 26px;
+			color: $color-bunting;
+			margin: 0;
+		}
+		&-text {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 24px;
+			color: $color-waikawa-grey;
+		}
+	}
+	&__questionnaire {
+		position: relative;
+		padding: 38px 40px 40px 40px;
+		margin: 140px 0 0;
+		border-radius: 20px;
+		background-color: $color-outrageous-orange;
+		&-title {
+			font-weight: 800;
+			line-height: 46px;
+			color: $color-default-white;
+			width: 49%;
+			margin: 0 0 38px;
+		}
+		&-btn {
+			padding: 16px 48px;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			color: $color-bunting;
+			border-radius: 7px;
+			background-color: $color-default-white;
+			margin: 0;
+			&:hover,
+			&:focus-visible {
+				color: $color-orange-red;
+			}
+		}
+		&-sheet {
+			position: absolute;
+			bottom: 0;
+			right: 70px;
+			left: auto;
+			width: 230px;
+			height: 300px;
+			background-color: $color-lavender;
+			border-radius: 10px 10px 0px 0px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 26px;
+			color: $color-bunting;
+		}
+	}
+}
