@@ -1705,8 +1705,8 @@ button,
   background-color: #FE603A;
 }
 
-.btn--red {
-  background-color: #ff1553;
+.btn--transp {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .btn:disabled {
@@ -6455,8 +6455,7 @@ button,
 }
 
 .vacancies {
-  padding: 20px 0;
-  margin: 0 0 10px;
+  padding: 20px 0 40px;
 }
 
 .vacancies__subtitle {
@@ -6469,13 +6468,12 @@ button,
 }
 
 .vacancies__form {
-  margin: 0 auto;
-  max-width: 830px;
-  padding: 30px 0;
+  padding: 15px 0 30px;
 }
 
 .vacancies__form-form {
-  padding: 5px;
+  width: 100%;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6483,28 +6481,57 @@ button,
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  border: 1px solid #EEEEFB;
-  border-radius: 64px;
+}
+
+.vacancies__form-field {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 270px;
+  flex: 0 0 270px;
+  height: 100%;
+}
+
+.vacancies__form-field:not(:last-of-type) {
+  margin: 0 30px 0 0;
+}
+
+.vacancies__form-field--01 {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  max-width: 570px;
+}
+
+.vacancies__form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .vacancies__form-input {
-  padding: 0;
   max-width: 100%;
+  padding: 0;
+  height: 100%;
 }
 
 .vacancies__form-input label {
-  border-right: 1px solid #EEEEFB;
+  height: 100%;
 }
 
 .vacancies__form-input label input {
-  height: 30px;
+  height: 100%;
   margin-left: 0;
   border: 0;
-  padding: 10px 10px 10px 25px;
+  padding: 18px 75px 19px 20px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 26px;
-  color: #2D3142;
+  line-height: 23px;
+  color: #636B87;
+  background-color: rgba(238, 238, 251, 0.5);
+  border-radius: 5px;
 }
 
 .vacancies__form-input label input::-webkit-input-placeholder {
@@ -6558,27 +6585,36 @@ button,
 }
 
 .vacancies__form .custom-input__error {
-  right: 10px;
+  right: 75px;
 }
 
 .vacancies__form-select {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 245px;
-  flex: 0 0 245px;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(238, 238, 251, 0.5);
+  border-radius: 5px;
 }
 
 .vacancies__form-select .custom-select__placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  color: rgba(99, 107, 135, 0.6);
-  left: 15px;
+  color: #636B87;
+  left: 60px;
 }
 
 .vacancies__form-select .custom-select__button {
   border: 0;
-  padding: 5px;
+  padding: 18px 17px 19px 60px;
+  height: 100%;
+}
+
+.vacancies__form-select .custom-select__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #636B87;
 }
 
 .vacancies__form-select .custom-select__icon {
@@ -6602,12 +6638,11 @@ button,
 
 .vacancies__form-submit {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 50px;
-  flex: 0 0 50px;
-  width: 50px;
-  height: 50px;
-  margin: 0 0 0 10px;
-  border-radius: 50%;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  margin: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -6615,6 +6650,290 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.vacancies__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.vacancies__available-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
+.vacancies__available-num {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  color: #636B87;
+}
+
+.vacancies__sort {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.vacancies__sort-text {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #636B87;
+}
+
+.vacancies__sort-select {
+  padding: 0;
+  border: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 128px;
+}
+
+.vacancies__sort-select .custom-select__placeholder {
+  color: #FE603A;
+}
+
+.vacancies__sort-select .custom-select__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #FE603A;
+  border: 0;
+}
+
+.vacancies__sort-select .custom-select__icon {
+  background-color: #636B87;
+}
+
+.vacancies__sort-select .custom-select__list {
+  bottom: 0;
+  border-width: 1px;
+  border-color: #636B87;
+}
+
+.vacancies__cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0 0;
+}
+
+.vacancies__col--01 {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  margin: 0 30px 0 0;
+}
+
+.vacancies__col--02 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 270px;
+  flex: 0 0 270px;
+}
+
+.vacancies__card {
+  background-color: #ffffff;
+  border: 1px solid #EEEEFB;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.vacancies__card:not(:last-of-type) {
+  margin: 0 0 30px;
+}
+
+.vacancies__card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vacancies__card-row--01 {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 15px;
+}
+
+.vacancies__card-row--02 {
+  margin: 0 0 25px;
+}
+
+.vacancies__card-row--03 {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.vacancies__card-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.vacancies__card-date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: #636B87;
+}
+
+.vacancies__card-experience {
+  margin: 0 40px 0 0;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.vacancies__card-experience-text {
+  font-weight: 400;
+}
+
+.vacancies__card-experience-value {
+  font-weight: 500;
+}
+
+.vacancies__card-employment {
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.vacancies__card-employment-text {
+  font-weight: 400;
+}
+
+.vacancies__card-employment-value {
+  font-weight: 500;
+}
+
+.vacancies__card-tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vacancies__card-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background: rgba(17, 106, 204, 0.1);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #116ACC;
+}
+
+.vacancies__card-tag:not(:last-of-type) {
+  margin: 0 20px 0 0;
+}
+
+.vacancies__card-payment-value {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
+.vacancies__card-payment-currency {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
+.vacancies__card-payment-time {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #9ca1bb;
+}
+
+.vacancies__send {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.vacancies__send-wrap-icon {
+  background-color: rgba(210, 215, 232, 0.5);
+  border-radius: 10px;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 0 20px;
+}
+
+.vacancies__send-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2D3142;
+  margin: 0 0 15px;
+}
+
+.vacancies__send-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #636B87;
+  margin: 0 0 30px;
+}
+
+.vacancies__send-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 16px 39px;
+  border-radius: 7px;
 }
 
 .footer {
