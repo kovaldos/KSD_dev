@@ -33,19 +33,145 @@ mixin vacancies()
 						},
 					],
 				},
-				btn: {
-					icon: "icon-chevron-right"
+				select2: {
+					placeholder: "Опыт работы",
+					name: "job-experience",
+					optionsList: [
+						{
+							value: "option-01",
+							text: "Опция 01",
+						},
+						{
+							value: "option-02",
+							text: "Опция 02",
+						},
+						{
+							value: "option-03",
+							text: "Опция 03",
+						},
+						{
+							value: "option-04",
+							text: "Опция 04",
+						},
+					],
 				},
-			}
+				btn: {
+					icon: "icon-search"
+				},
+			},
+			available: {
+				text: "Доступно вакансий ",
+				num: "6",
+			},
+			sortText: "Сортировать по ",
+			sort: {
+				placeholder: "новизне",
+				name: "vacancies-sort",
+				optionsList: [
+					{
+						value: "option-01",
+						text: "новизне",
+					},
+					{
+						value: "option-02",
+						text: "опции 02",
+					},
+					{
+						value: "option-03",
+						text: "опции 03",
+					},
+					{
+						value: "option-04",
+						text: "опции 04",
+					},
+					{
+						value: "option-05",
+						text: "длинному слову",
+					},
+				],
+			},
+			card: {
+				title: "Машинист экскаватора Kocurek KUHR-45-34",
+				date: "16 Октября",
+				expText: "Опыт работы: ",
+				expValue: "5 – 6 лет",
+				emplText: "Занятость: ",
+				emplValue: "Полная",
+				tags: [
+					"категории В",
+					"категории C",
+					"управление гидромолотом",
+				],
+				payment: {
+					value: "400 ",
+					currency: "₽",
+					time: "час",
+				}
+			},
+			send: {
+				title: "Не нашли подходящую вакансию?",
+				text: "Оставьте свое резюме",
+				btn: {
+					href: "#",
+					text: "Оставить резюме",
+				},
+			},
 		}
 	section.section.vacancies
 		.container.vacancies__container 
 			h2.title.title--h2.vacancies__title=data.title
 			h3.title.title--h3.vacancies__subtitle=data.subtitle
-			p.text.text--sm.vacancies__text=data.text
 			.vacancies__form(data-validate data-callback="searchVacanciesForm")
 				form.vacancies__form-form(action="#")
-					+custom-input(data.form.input)(data-validate-type="text").vacancies__form-input
-					+custom-select(data.form.select)(data-select).custom-select.vacancies__form-select
-					button.btn.btn--orange.vacancies__form-submit(type="submit")
-						+icon(data.form.btn.icon, 26, 26)
+					.vacancies__form-field.vacancies__form-field--01
+						+custom-input(data.form.input)(data-validate-type="text").vacancies__form-input
+						button.btn.btn--transp.vacancies__form-submit(type="submit")
+							+icon(data.form.btn.icon, 26, 26)
+					.vacancies__form-field.vacancies__form-field--02
+						+icon("icon-suitcase", 26, 26).vacancies__form-field-icon
+						+custom-select(data.form.select)(data-select).custom-select.vacancies__form-select
+					.vacancies__form-field.vacancies__form-field--03
+						+icon("icon-calendar", 26, 26).vacancies__form-field-icon
+						+custom-select(data.form.select2)(data-select).custom-select.vacancies__form-select
+			.vacancies__row 
+				.vacancies__available
+					span.vacancies__available-text=data.available.text
+					span.vacancies__available-num=data.available.num
+				.vacancies__sort
+					span.vacancies__sort-text=data.sortText
+					+custom-select(data.sort)(data-select).custom-select.vacancies__sort-select
+			.vacancies__cols
+				.vacancies__col.vacancies__col--01
+					- for (let i = 0; i < 6; i++)
+						.vacancies__card
+							.vacancies__card-row.vacancies__card-row--01
+								h2.title.title--h4.vacancies__card-title=data.card.title
+								.vacancies__card-date=data.card.date
+							.vacancies__card-row.vacancies__card-row--02
+								.vacancies__card-experience
+									span.vacancies__card-experience-text=data.card.expText
+									span.vacancies__card-experience-value=data.card.expValue
+								.vacancies__card-employment
+									span.vacancies__card-employment-text=data.card.emplText
+									span.vacancies__card-employment-value=data.card.emplValue
+							.vacancies__card-row.vacancies__card-row--03
+								ul.vacancies__card-tags.vacancy__tags 
+									each tag in data.card.tags 
+										li.vacancies__card-tag.vacancy__tag
+											span=tag
+								.vacancies__card-payment 
+									span.vacancies__card-payment-value=data.card.payment.value
+									span.vacancies__card-payment-currency=data.card.payment.currency
+									span.vacancies__card-payment-time &nbsp;/&nbsp;
+									span.vacancies__card-payment-time=data.card.payment.time
+				.vacancies__col.vacancies__col--02
+					.vacancies__send
+						.vacancies__send-wrap-icon
+							+icon("icon-paper-plane", 26, 26).vacancies__send-icon
+						h2.title.vacancies__send-title=data.send.title
+						p.text.vacancies__send-text=data.send.text
+						+btn(data.send.btn).btn--orange.vacancies__send-btn
+					.vacancies__send-plug
+
+
+
