@@ -1,0 +1,51 @@
+mixin vacancies()
+	-
+		const data = {
+			title: "Вакансии",
+			subtitle: "Машинисты экскаваторов",
+			form: {
+				input: {
+					inputPlaceholder: "Поиск...",
+					inputError: "Не менее 3 знаков!",
+					inputId: "search-vacancies-2",
+					inputName: "search-vacancies-2",
+					inputMinLength: 3,
+				},
+				select: {
+					placeholder: "Категория",
+					name: "job-category",
+					optionsList: [
+						{
+							value: "option-01",
+							text: "Опция 01",
+						},
+						{
+							value: "option-02",
+							text: "Опция 02",
+						},
+						{
+							value: "option-03",
+							text: "Опция 03",
+						},
+						{
+							value: "option-04",
+							text: "Опция 04",
+						},
+					],
+				},
+				btn: {
+					icon: "icon-chevron-right"
+				},
+			}
+		}
+	section.section.vacancies
+		.container.vacancies__container 
+			h2.title.title--h2.vacancies__title=data.title
+			h3.title.title--h3.vacancies__subtitle=data.subtitle
+			p.text.text--sm.vacancies__text=data.text
+			.vacancies__form(data-validate data-callback="searchVacanciesForm")
+				form.vacancies__form-form(action="#")
+					+custom-input(data.form.input)(data-validate-type="text").vacancies__form-input
+					+custom-select(data.form.select)(data-select).custom-select.vacancies__form-select
+					button.btn.btn--orange.vacancies__form-submit(type="submit")
+						+icon(data.form.btn.icon, 26, 26)
