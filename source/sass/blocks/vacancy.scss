@@ -1,0 +1,35 @@
+.vacancy {
+	padding: 20px 0;
+	&__subtitle {
+		margin: 0 0 40px;
+	}
+	&__text {
+	}
+	&__cols {
+		display: flex;
+	}
+	&__form {
+		max-width: 670px;
+		&-form {
+			width: 100%;
+			background-color: $color-default-white;
+			padding: 40px;
+			box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+			border-radius: 10px;
+		}
+		&-title {
+			font-size: 26px;
+		}
+		&-row {
+			display: flex;
+		}
+	}
+	&__die {
+		background-color: $color-default-white;
+		box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+		border-radius: 10px;
+		padding: 30px 20px 20px;
+		position: sticky;
+		top: 100px;
+	}
+}

@@ -1,0 +1,165 @@
+mixin vacancy()
+	-
+		const data = {
+			title: "Вакансия",
+			subtitle: "Машинист экскаватора Kocurek KUHR-45-34",
+			headText: "Mollis dolor, aenean at amet ac quis diam. Facilisis porttitor eros, nulla lorem odio lobortis duis massa sed. Sagittis, tempus lectus aenean mi ac amet pretium.",
+			headSubtext: "Fames ipsum congue et tristique lorem phasellus volutpat, vitae, venenatis. Turpis imperdiet amet etiam lorem sed. Placerat fusce arcu varius non nunc. Egestas vivamus est senectus.",
+			lists: [
+				{
+					descModifier: "vacancy__desc--response",
+					title: "Обязанности:",
+					listModifier: "vacancy__list--response",
+					items: [
+						"Управление экскаватором",
+						"Контроль за техническим состоянием ТС",
+					],
+				},
+				{
+					descModifier: "vacancy__desc--requirements",
+					title: "Требования:",
+					listModifier: "vacancy__list--requirements",
+					items: [
+						"Наличие удостоверения об обучении на машиниста экскаватора, УТМ",
+						"Опыт демонтажа высотных объектов от 5 лет",
+						"Умение управлять гидромолотом",
+					],
+				},
+				{
+					descModifier: "vacancy__desc--terms",
+					title: "Условия:",
+					listModifier: "vacancy__list--terms",
+					items: [
+						"Вахта 90/30",
+						"Работа на объекте сноса КСД",
+						"Официальное трудоустройство, выплата заработной платы без задержек",
+						"Оплата проезда, предоставление проживания, спецодежды",
+					],
+				},
+				{
+					descModifier: "vacancy__desc--skills",
+					title: "Навыки:",
+					listModifier: "vacancy__list--skills",
+					items: [
+						"категории В",
+						"категории C",
+						"управление гидромолотом",
+					],
+				},
+			],
+			form: {
+				title: "Откликнетесь на вакансию",
+				name: {
+					inputPlaceholder: "Имя",
+					inputError: "Не менее 2-х знаков!",
+					inputId: "first-name",
+					inputName: "first-name",
+					inputMinLength: 2,
+				},
+				surname: {
+					inputPlaceholder: "Фамилия",
+					inputId: "first-name",
+					inputName: "first-name",
+				},
+				phone: {
+					inputType: "phone",
+					inputPlaceholder: "Телефон",
+					inputError: "Пожалуйста введите номер телефона",
+					inputId: "phone-number",
+					inputName: "phone-number",
+				},
+				email: {
+					inputType: "email",
+					inputPlaceholder: "Эл. почта",
+					inputError: "Пожалуйста введите корректный email",
+					inputId: "email",
+					inputName: "email",
+				},
+				message: {
+					inputPlaceholder: "Сообщение",
+					inputId: "message",
+					inputName: "message",
+
+				},
+				upload: {
+					icon: "icon-clip",
+					text: "Прикрепить резюме",
+				},
+				btn: {
+					type: "submit",
+					text: "Откликнуться",
+				},
+				agree: {
+					href: "#",
+					textBefore: "Оставляя свои контактные данные вы даете свое ",
+					textLink: "согласие на обработку ",
+					textAfter: "персональных данных",
+
+				}
+			},
+			die: {
+				payment: {
+					value: "400 ",
+					currency: "₽",
+					time: "час",
+				},
+				expText: "Требуемый опыт: ",
+				expValue: "3–6 лет",
+				emplText: "Тип занятости: ",
+				emplValue: "Полный",
+				btn: {
+					href: "#",
+					text: "Откликнуться",
+				},
+			},
+		}
+	section.section.vacancy
+		.container.vacancy__container 
+			h1.title.title--h2.vacancy__title=data.title
+			h2.title.title--h3.vacancy__subtitle=data.subtitle
+			.vacancy__cols
+				.vacancy__col.vacancy__col--01
+					p.text.vacancy__head-text=data.headText
+					p.text.vacancy__head-subtext=data.headSubtext
+					each list in data.lists
+						.vacancy__desc(class=list.descModifier)
+							h2.title.title--h5.vacancy__desc-title=list.title
+							ul.vacancy__list(class=list.listModifier)
+								each item in list.items
+									li.vacancy__list-item=item
+					.vacancy__form#vacancy-form(data-validate data-callback="vacancyForm")
+						form.vacancy__form-form(action="#", method="post")
+							h2.title.title--h3.vacancy__form-title=data.form.title
+							.vacancy__form-row
+								+custom-input(data.form.name).vacancy__form-field.vacancy__form-field--name
+								+custom-input(data.form.surname).vacancy__form-field.vacancy__form-field--surname
+							.vacancy__form-row
+								+custom-input(data.form.phone).vacancy__form-field.vacancy__form-field--phone
+								+custom-input(data.form.email).vacancy__form-field.vacancy__form-field--email
+							+custom-textarea(data.form.message)
+							input#vacancy-form-upload(type="file", name="cv-upload")
+							+btn(data.form.btn).btn--orange.vacancy__form-submit
+						.vacancy__form-agree
+							span.vacancy__form-agree-text=data.form.agree.textBefore
+							a(href=data.form.agree.href).vacancy__form-agree-link=data.form.agree.textLink
+							span.vacancy__form-agree-text=data.form.agree.textAfter
+
+				.vacancy__col.vacancy__col--02
+					.vacancy__die
+						.vacancy__die-payment 
+							span.vacancy__die-payment-value=data.die.payment.value
+							span.vacancy__die-payment-currency=data.die.payment.currency
+							span.vacancy__die-payment-time &nbsp;/&nbsp;
+							span.vacancy__die-payment-time=data.die.payment.time
+						.vacancy__die-experience
+							span.vacancy__die-experience-text=data.die.expText
+							span.vacancy__die-experience-value=data.die.expValue
+						.vacancy__die-employment
+							span.vacancy__die-employment-text=data.die.emplText
+							span.vacancy__die-employment-value=data.die.emplValue
+						p.text.vacancy__die-text
+						+btn(data.die.btn)(data-target="vacancy-form").btn--orange.vacancy__die-btn
+					.vacancy__die-plug
+
+
+

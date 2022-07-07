@@ -2245,6 +2245,13 @@ button,
   color: #2D3142;
 }
 
+.title--h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
 .text {
   margin: 0;
   padding: 0;
@@ -6934,6 +6941,53 @@ button,
   line-height: 20px;
   padding: 16px 39px;
   border-radius: 7px;
+}
+
+.vacancy {
+  padding: 20px 0;
+}
+
+.vacancy__subtitle {
+  margin: 0 0 40px;
+}
+
+.vacancy__cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vacancy__form {
+  max-width: 670px;
+}
+
+.vacancy__form-form {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px;
+  -webkit-box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  border-radius: 10px;
+}
+
+.vacancy__form-title {
+  font-size: 26px;
+}
+
+.vacancy__form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vacancy__die {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  border-radius: 10px;
+  padding: 30px 20px 20px;
+  position: sticky;
+  top: 100px;
 }
 
 .footer {
