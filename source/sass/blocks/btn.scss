@@ -18,6 +18,11 @@
   &--transp {
     background-color: $color-transparent;
   }
+  &--reset {
+    border: 0;
+    background-color: $color-transparent;
+    
+  }
 
   &:disabled {
     opacity: 0.5;

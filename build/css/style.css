@@ -1709,6 +1709,11 @@ button,
   background-color: rgba(255, 255, 255, 0);
 }
 
+.btn--reset {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -1754,9 +1759,8 @@ button,
   -ms-flex-positive: 1;
   flex-grow: 1;
   min-height: 40px;
-  margin-left: 30px;
   padding: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   outline: none;
   -webkit-transition: border 0.3s ease;
@@ -1768,14 +1772,14 @@ button,
 .custom-input label textarea:hover,
 .custom-textarea label input:hover,
 .custom-textarea label textarea:hover {
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .custom-input label input:focus,
 .custom-input label textarea:focus,
 .custom-textarea label input:focus,
 .custom-textarea label textarea:focus {
-  border: 2px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 .custom-input__error,
@@ -1792,14 +1796,14 @@ button,
 
 .custom-input.is-invalid input,
 .custom-textarea.is-invalid input {
-  border: 2px solid #ff1553;
+  border: 1px solid #ff1553;
 }
 
 .custom-input.is-invalid input:focus,
 .custom-input.is-invalid input:hover,
 .custom-textarea.is-invalid input:focus,
 .custom-textarea.is-invalid input:hover {
-  border: 2px solid rgba(255, 21, 83, 0.5);
+  border: 1px solid rgba(255, 21, 83, 0.5);
 }
 
 .custom-input.is-invalid .custom-input__error,
@@ -2242,6 +2246,13 @@ button,
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
+  color: #2D3142;
+}
+
+.title--h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
   color: #2D3142;
 }
 
@@ -6934,6 +6945,382 @@ button,
   line-height: 20px;
   padding: 16px 39px;
   border-radius: 7px;
+}
+
+.vacancy {
+  padding: 20px 0 0;
+}
+
+.vacancy__subtitle {
+  margin: 0 0 40px;
+}
+
+.vacancy__cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vacancy__col--01 {
+  margin: 0 116px 0 0;
+}
+
+.vacancy__col--02 {
+  -webkit-transform: translateY(-80px);
+  -ms-transform: translateY(-80px);
+  transform: translateY(-80px);
+}
+
+.vacancy__head-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 200%;
+  margin: 0 0 30px;
+}
+
+.vacancy__head-subtext {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+  color: #636B87;
+  margin: 0 0 50px;
+}
+
+.vacancy__desc-title {
+  margin: 0 0 20px;
+}
+
+.vacancy__desc-list {
+  margin: 0 0 50px;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.vacancy__desc-list-item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #636B87;
+}
+
+.vacancy__desc-list-item::marker {
+  color: rgba(255, 255, 255, 0);
+}
+
+.vacancy__desc-list-item::before {
+  content: "";
+  display: block;
+  margin: 0 5px 0 0;
+  width: 18px;
+  height: 1px;
+  background-color: #636B87;
+}
+
+.vacancy__desc-list-item:not(:last-of-type) {
+  margin: 0 0 20px;
+}
+
+.vacancy__desc-list--skills {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vacancy__desc-list--skills .vacancy__desc-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background: rgba(17, 106, 204, 0.1);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #116ACC;
+}
+
+.vacancy__desc-list--skills .vacancy__desc-list-item:not(:last-of-type) {
+  margin: 0 20px 0 0;
+}
+
+.vacancy__desc-list--skills .vacancy__desc-list-item::before {
+  display: none;
+}
+
+.vacancy__form {
+  max-width: 670px;
+  padding: 40px 0 0;
+}
+
+.vacancy__form-form {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px;
+  -webkit-box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  border-radius: 10px;
+}
+
+.vacancy__form-title {
+  font-size: 26px;
+  margin: 0 0 15px;
+}
+
+.vacancy__form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vacancy__form-field {
+  max-width: 100%;
+  padding: 15px 0;
+}
+
+.vacancy__form-field:not(:last-of-type) {
+  margin: 0 30px 0 0;
+}
+
+.vacancy__form-field label input {
+  padding: 16px;
+  border-color: #B7BCD1;
+  border-width: 0.5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3142;
+}
+
+.vacancy__form-field label input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #636B87;
+}
+
+.vacancy__form-field label input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #636B87;
+}
+
+.vacancy__form-field label input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #636B87;
+}
+
+.vacancy__form-field label input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #636B87;
+}
+
+.vacancy__form-field label input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #636B87;
+}
+
+.vacancy__form-field--message label textarea {
+  min-height: 132px;
+  border-color: #B7BCD1;
+  border-width: 0.5px;
+}
+
+.vacancy__form-field--file label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 14px 22px 14px 14px;
+  border-radius: 5px;
+  background-color: rgba(238, 238, 251, 0.5);
+  cursor: pointer;
+}
+
+.vacancy__form-field--file label svg {
+  margin: 0 26px 0 0;
+}
+
+.vacancy__form-field--file label input {
+  position: absolute;
+  width: 0;
+  font-size: 0;
+  visibility: hidden;
+}
+
+.vacancy__form-field--file.is-invalid label {
+  border: 0.5px solid #ff1553;
+}
+
+.vacancy__form-field .custom-input__error {
+  font-size: 12px;
+}
+
+.vacancy__form-btn-del {
+  color: #2D3142;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0.3s ease;
+  -o-transition: visibility 0.3s ease;
+  transition: visibility 0.3s ease;
+}
+
+.vacancy__form-btn-del.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.vacancy__form-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 35px 0 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  border-radius: 7px;
+  padding: 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.vacancy__form-agree {
+  padding: 20px 40px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 180%;
+  color: #636B87;
+}
+
+.vacancy__form-agree-link {
+  font-size: 13px;
+  line-height: 180%;
+  color: #FE603A;
+  font-weight: 600;
+}
+
+.vacancy__form-agree-link::after {
+  background-color: #FE603A;
+}
+
+.vacancy__die {
+  min-width: 270px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+  border-radius: 10px;
+  padding: 30px 20px 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.vacancy__die-payment {
+  margin: 0 0 25px;
+}
+
+.vacancy__die-payment-value {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
+.vacancy__die-payment-currency {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
+.vacancy__die-payment-time {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #9ca1bb;
+}
+
+.vacancy__die-experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.vacancy__die-experience-text {
+  font-weight: 400;
+}
+
+.vacancy__die-experience-value {
+  font-weight: 500;
+}
+
+.vacancy__die-employment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0 40px 0;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.vacancy__die-employment-text {
+  font-weight: 400;
+}
+
+.vacancy__die-employment-value {
+  font-weight: 500;
+}
+
+.vacancy__die-btn {
+  padding: 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 7px;
+  width: 100%;
 }
 
 .footer {

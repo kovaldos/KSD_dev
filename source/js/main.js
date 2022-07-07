@@ -16,6 +16,7 @@ import {initProjectsSlider} from './modules/init-projects-slider';
 import {initProjTechSlider} from './modules/init-proj-tech-slider';
 import {initSimilarProjectsSlider} from './modules/init-similar-projects-slider';
 import {initReviewsSlider} from './modules/init-reviews-slider';
+import {initScrollToAnchor} from './modules/scroll-to-anchor';
 
 // ---------------------------------
 
@@ -48,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initProjTechSlider();
     initSimilarProjectsSlider();
     initReviewsSlider();
+    initScrollToAnchor();
   });
 });
 
