@@ -1,0 +1,68 @@
+mixin projects-page()
+	-
+		const data = {
+			title: "Проекты",
+			subtitle: "Завершенные объекты",
+			acBtn: {
+				btnText: "28 объектов",
+				btnIcon: "icon-map",
+				textClose: "На карте",
+				textOpen: "Скрыть",
+			},
+			acTitle: "Объекты на карте",
+			items: [
+				{
+					img: "projects-catalog-img-1",
+					alt: "projects-catalog-img-1",
+					title: "Спортивный комплекс",
+					subtitle: "«Олимпийский»",
+					link: {
+						href: "#",
+						text: "Смотреть",
+						icon: "icon-chevron-right",
+					},
+					volume: {
+						text: "Объемы работ: ",
+						num: " 250 569 м3 со",
+					},
+				},
+			],
+			btn: {
+				text: "<span>Еще<span/><span class='more-num'> 18 <span/><span>объектов<span/>",
+			}
+		}
+	section.section.projects-page
+		.container.projects-page__container 
+			.projects-page__heading 
+				h2.title.title--h2.projects-page__title=data.title
+				h3.title.title--h3.projects-page__subtitle=data.subtitle
+			.projects-page__ac(data-accordion="parent")
+				.projects-page__ac-el(data-accordion="element")
+					.projects-page__ac-btn(data-accordion="button")
+						span.projects-page__ac-btn-text=data.acBtn.btnText
+						button.btn.btn--orange(type="button")
+							+icon(data.acBtn.btnIcon, 25, 25).projects-page__ac-btn-icon
+							span.projects-page__ac-btn-text.projects-page__ac-btn-text--closed=data.acBtn.textClose
+							span.projects-page__ac-btn-text.projects-page__ac-btn-text--opened=data.acBtn.textOpen
+					.projects-page__ac-content(data-accordion="content")
+						.projects-page__ac-content-wrap
+							h4.title.title--h4.projects-page__ac-content-title=data.acTitle
+							.projects-page__ac-map#map01
+								iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A404158a0e384c3510381ac152bab6310fa2c23c0eddbadcce358b45f39151426&amp;source=constructor" width="1110" height="500" frameborder="0")
+			.projects-page__catalog.catalog
+				- for(let i = 0; i < 10; i++)
+					each item in data.items
+						.projects-page__card.catalog__card
+							.catalog__card-bg
+								+picture("content", item.img, "jpg", item.alt)
+							.catalog__card-title=item.title
+							.catalog__card-subtitle=item.subtitle
+							.catalog__card-row
+								a.btn.btn--orange.catalog__card-link(href=item.link.href)
+									span=item.link.text 
+									+icon(item.link.icon, 16, 16).catalog__card-link-icon
+								.catalog__card-vol 
+									span.catalog__card-vol-text=item.volume.text
+									span.catalog__card-vol-num=item.volume.num
+			+btn(data.btn).btn--orange.projects-page__btn-more.catalog__btn-more
+
