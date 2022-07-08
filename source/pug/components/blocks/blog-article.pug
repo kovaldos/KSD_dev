@@ -1,0 +1,17 @@
+mixin blog-article()
+	-
+		const data = {
+			title: "Блог",
+			subtitle: "Вторичный щебень",
+			author: "Автор: Марина Порошина",
+		}
+	section.section.blog-article
+		.container.blog-article__container
+			.blog-article__cols
+				.blog-article__col.blog-article__col--01
+					.blog-article__heading 
+						h2.title.title--h2.blog-article__title=data.title
+						h3.title.title--h3.blog-article__subtitle=data.subtitle
+				.blog-article__col.blog-article__col--02
+
+
