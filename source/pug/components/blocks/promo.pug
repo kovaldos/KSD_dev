@@ -1,0 +1,20 @@
+mixin promo()
+	-
+		const data = {
+			title: "Аренда техники тут рекламный текст",
+			text: "Nulla dictum urna magna varius porttitor.",
+			btn: {
+				href: "#",
+				text: "Подробнее",
+			},
+		}
+	section.section.promo 
+		.container.promo__container
+			.promo__wrapper
+				.promo__wrapper-col.promo__wrapper-col--01
+					h2.title.title--h3.promo__title=data.title
+					p.text.promo__text=data.text
+					+btn(data.btn).btn--orange.promo__btn
+				.promo__wrapper-col.promo__wrapper-col--02
+					.promo__pic 
+						+picture("content", "promo-img", "png", "Экскаватор")
