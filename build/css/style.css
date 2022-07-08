@@ -7323,6 +7323,17 @@ button,
   width: 100%;
 }
 
+.vehicle-park__subtitle {
+  margin: 0 0 20px;
+}
+
+.vehicle-park__head-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 200%;
+  margin: 0 0 50px;
+}
+
 .footer {
   margin: 60px 0 0 0;
 }

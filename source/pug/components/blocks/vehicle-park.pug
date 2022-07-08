@@ -1,0 +1,17 @@
+mixin vehicle-park()
+	-
+		const data = {
+			title: "Техника",
+			subtitle: "Парк техники",
+			headText: "Integer vitae ipsum pharetra viverra lectus vitae condimentum. Auctor in convallis a cursus at in placerat nulla. Morbi nec porta vulputate turpis nunc at egestas. Magna arcu et tincidunt nibh sit a lectus rhoncus.",
+			title2: "Категории",
+			tags: [
+				"Экскаватор",
+				
+			]
+		}
+	section.section.vehicle-park
+		.container.vehicle-park__container
+			h1.title.title--h2.vehicle-park__title=data.title
+			h2.title.title--h3.vehicle-park__subtitle=data.subtitle
+			p.text.vehicle-park__head-text=data.headText
