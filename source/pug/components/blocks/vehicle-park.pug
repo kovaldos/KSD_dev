@@ -1,0 +1,108 @@
+mixin vehicle-park()
+	-
+		const data = {
+			title: "Техника",
+			subtitle: "Парк техники",
+			headText: "Integer vitae ipsum pharetra viverra lectus vitae condimentum. Auctor in convallis a cursus at in placerat nulla. Morbi nec porta vulputate turpis nunc at egestas. Magna arcu et tincidunt nibh sit a lectus rhoncus.",
+			title2: "Категории",
+			links: [
+				{
+					href: "#",
+					text: "Экскаватор",
+				},
+				{
+					href: "#",
+					text: "Бульдозер",
+				},
+				{
+					href: "#",
+					text: "Погрузчик",
+					classModifier: "vehicle-park__catalog-link--current"
+				},
+				{
+					href: "#",
+					text: "Самосвал",
+				
+				},
+				{
+					href: "#",
+					text: "Шредер",
+				
+				},
+				{
+					href: "#",
+					text: "Дробилка",
+				
+				},
+				{
+					href: "#",
+					text: "Кран",
+				},
+			],
+			items: [
+				{
+					img: "technic-catalog-img-1",
+					alt: "technic-catalog-img-1",
+					title: "Экскаватор - Погрузчик",
+					model: "4CX ECO",
+				},
+				{
+					img: "technic-catalog-img-2",
+					alt: "technic-catalog-img-2",
+					title: "Гусеничный Экскаватор",
+					model: "JS 305",
+				},
+				{
+					img: "technic-catalog-img-3",
+					alt: "technic-catalog-img-3",
+					title: "Телескопические Погрузчики",
+					model: "540 - I70",
+				},
+				{
+					img: "technic-catalog-img-2",
+					alt: "technic-catalog-img-2",
+					title: "Гусеничный Экскаватор",
+					model: "JS 305",
+				},
+				{
+					img: "technic-catalog-img-3",
+					alt: "technic-catalog-img-3",
+					title: "Телескопические Погрузчики",
+					model: "540 - I70",
+				},
+				{
+					img: "technic-catalog-img-1",
+					alt: "technic-catalog-img-1",
+					title: "Экскаватор - Погрузчик",
+					model: "4CX ECO",
+				},
+			],
+			banner: {
+				title: "Аренда техники тут рекламный текст",
+				text: "Nulla dictum urna magna varius porttitor.",
+				btn: {
+					href: "#",
+					text: "Подробнее",
+				},
+			},
+		}
+	section.section.vehicle-park
+		.container.vehicle-park__container
+			h1.title.title--h2.vehicle-park__title=data.title
+			h2.title.title--h3.vehicle-park__subtitle=data.subtitle
+			p.text.vehicle-park__head-text=data.headText
+			.vehicle-park__catalog 
+				h3.title.title--h4.vehicle-park__catalog-title=data.title2
+				nav.vehicle-park__catalog-nav(data-simplebar) 
+					ul.vehicle-park__catalog-list 
+						each link in data.links
+							li.vehicle-park__catalog-list-item
+								a.vehicle-park__catalog-link(href=link.href class!=link.classModifier)=link.text
+				.vehicle-park__catalog-items
+					- for (let i = 0; i < 2; i++)
+						each item in data.items 
+							.vehicle-park__catalog-item
+								.vehicle-park__catalog-item-pic
+									+picture("content", item.img, "png", item.alt)
+								h4.title.vehicle-park__catalog-item-title=item.title
+								span.title.vehicle-park__catalog-item-model=item.model
