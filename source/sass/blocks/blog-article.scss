@@ -1,0 +1,22 @@
+.blog-article {
+	&__heading {
+		margin: 0 0 15px;
+		padding: 0 0 15px;
+		border-bottom: 1px solid $color-hawkes-blue;
+	}
+	&__title {
+		color: $color-outrageous-orange;
+	}
+	&__cols {
+		display: flex;
+	}
+	&__col {
+		&--01 {
+			flex: 1 1 auto;
+			margin: 0 130px 0 0;
+		}
+		&--02 {
+			flex: 0 0 270px;
+		}
+	}
+}

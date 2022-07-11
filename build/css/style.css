@@ -7811,6 +7811,35 @@ button,
   display: flex;
 }
 
+.blog-article__heading {
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+  border-bottom: 1px solid #D2D7E8;
+}
+
+.blog-article__title {
+  color: #FE603A;
+}
+
+.blog-article__cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blog-article__col--01 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin: 0 130px 0 0;
+}
+
+.blog-article__col--02 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 270px;
+  flex: 0 0 270px;
+}
+
 .footer {
   margin: 60px 0 0 0;
 }
