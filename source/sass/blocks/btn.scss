@@ -12,6 +12,11 @@
     color: $color-outrageous-orange;
     background-color: $color-transparent;
   }
+  &--drk-orange {
+    border: 1px solid $color-dark-orange;
+    color: $color-dark-orange;
+    background-color: $color-transparent;
+  }
   &--orange {
     background-color: $color-outrageous-orange;
   }
