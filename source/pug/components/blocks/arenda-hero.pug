@@ -1,0 +1,48 @@
+mixin arenda-hero()
+	-
+		const data = {
+			title: "Аренда спецтехники от ведущих экспертов",
+			subtitle: "Весь спект профессиональной строительной техники “ООО Конструктив - СД”",
+			btn: {
+				href: "arenda-katalog.html",
+				text: "Смотреть каталог",
+			},
+			items: [
+				{
+					src: "slides",
+					img: "hero-bg-img-1",
+					alt: "slide-img-1",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-2",
+					alt: "slide-img-2",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-3",
+					alt: "slide-img-3",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-4",
+					alt: "slide-img-4",
+				},
+			],
+
+		}
+	section.arenda-hero
+		.container.arenda-hero__container
+			.arenda-hero__col.arenda-hero__col--01
+				.arenda-hero__heading 
+					h1.title.title--h1.arenda-hero__title=data.title
+						span.arenda-hero__subtitle=data.subtitle
+				+btn(data.btn).btn.btn--orange.arenda-hero__btn
+		.arenda-hero__col.arenda-hero__col--02
+			.swiper.swiper--01.arenda-hero__slider
+				.swiper-wrapper 
+					each item in data.items 
+						.swiper-slide 
+							.arenda-hero__slider-item 
+								+picture(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.arenda-hero__slider-pag
