@@ -19,5 +19,9 @@
 		font-size: 18px;
 		line-height: 38px;
 		color: $color-waikawa-grey;
+		@include vp-767 {
+			font-size: 14px;
+			line-height: 28px;
+		}
 	}
 }

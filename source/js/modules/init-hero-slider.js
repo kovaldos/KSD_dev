@@ -39,7 +39,7 @@ const initHeroSlider = () => {
      //    prevEl: '.destinations__slider-nav--prev',
      //  },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.hero__slider-pag',
         type: 'bullets',
       },
     });

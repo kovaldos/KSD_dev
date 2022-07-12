@@ -1,6 +1,16 @@
 .hero {
 	height: 648px;
 	position: relative;
+	background-color: $color-bunting;
+	@include vp-1279 {
+		height: 550px;
+	}
+	@include vp-1023 {
+		height: 450px;
+	}
+	@include vp-767 {
+		height: auto;
+	}
 	&__bg {
 		position: absolute;
 		width: 100%;
@@ -9,7 +19,11 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		z-index: -1;
+		z-index: 0;
+		@include vp-767 {
+			position: relative;
+			height: 260px;
+		}
 		&::before {
 			content: "";
 			position: absolute;
@@ -35,28 +49,40 @@
 				vertical-align: top;
 			}
 		}
-	}
-	.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-horizontal {
-		bottom: 30px;
-	}
-	.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-		margin: 0 14px;
-		background-color: rgba($color-default-white, 0.6);
-		// backdrop-filter: blur(7px);
-		width: 12px;
-		height: 12px;
-		opacity: 1;
-	}
-	.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
-		background-color: $color-default-white;
-		box-shadow: 0 0 0 6px rgba($color-default-white, 0.5);
+		&-pag.swiper-pagination-bullets.swiper-pagination-horizontal {
+			position: absolute;
+			bottom: 30px;
+			text-align: center;
+			@include vp-767 {
+				text-align: left;
+			}
+			.swiper-pagination-bullet {
+				margin: 0 14px;
+				background-color: rgba($color-default-white, 0.6);
+				// backdrop-filter: blur(7px);
+				width: 12px;
+				height: 12px;
+				opacity: 1;
+				box-shadow: none;
+				transition: background-color $trans-default, box-shadow $trans-default;
+			}
+			.swiper-pagination-bullet-active {
+				background-color: $color-default-white;
+				box-shadow: 0 0 0 6px rgba($color-default-white, 0.5);
+			}
+		}
 	}
 	&__heading {
+		position: relative;
+		z-index: 5;
 		padding: 70px 0 30px;
 		text-align: center;
+		@include vp-767 {
+			padding: 26px 0 56px;
+			text-align: left;
+		}
 	}
-	&__title {
-	}
+
 	&__subtitle {
 		display: block;
 		margin: 10px auto 0;
@@ -64,5 +90,11 @@
 		font-size: 18px;
 		line-height: 200%;
 		max-width: 770px;
+		@include vp-767 {
+			margin: 10px 0 0 0;
+			font-weight: 400;
+			font-size: 14px;
+			color: rgba($color-default-white, 0.5);
+		}
 	}
 }
