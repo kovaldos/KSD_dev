@@ -17,6 +17,7 @@ import {initProjTechSlider} from './modules/init-proj-tech-slider';
 import {initSimilarProjectsSlider} from './modules/init-similar-projects-slider';
 import {initReviewsSlider} from './modules/init-reviews-slider';
 import {initScrollToAnchor} from './modules/scroll-to-anchor';
+import {initArendaHeroSlider} from './modules/init-arenda-hero-slider';
 
 // ---------------------------------
 
@@ -50,6 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initSimilarProjectsSlider();
     initReviewsSlider();
     initScrollToAnchor();
+    initArendaHeroSlider();
   });
 });
 

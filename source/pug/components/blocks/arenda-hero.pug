@@ -10,23 +10,23 @@ mixin arenda-hero()
 			items: [
 				{
 					src: "slides",
-					img: "hero-bg-img-1",
+					img: "arenda-hero-img-1",
 					alt: "slide-img-1",
 				},
 				{
 					src: "slides",
-					img: "hero-bg-img-2",
-					alt: "slide-img-2",
+					img: "arenda-hero-img-1",
+					alt: "slide-img-1",
 				},
 				{
 					src: "slides",
-					img: "hero-bg-img-3",
-					alt: "slide-img-3",
+					img: "arenda-hero-img-1",
+					alt: "slide-img-1",
 				},
 				{
 					src: "slides",
-					img: "hero-bg-img-4",
-					alt: "slide-img-4",
+					img: "arenda-hero-img-1",
+					alt: "slide-img-1",
 				},
 			],
 
@@ -39,7 +39,9 @@ mixin arenda-hero()
 						span.arenda-hero__subtitle=data.subtitle
 				+btn(data.btn).btn.btn--orange.arenda-hero__btn
 		.arenda-hero__col.arenda-hero__col--02
-			.swiper.swiper--01.arenda-hero__slider
+			.arenda-hero__col-bg 
+				+picture("slides", "arenda-bg-img-1", "jpg", "arenda-bg-img")
+			.swiper.swiper--11.arenda-hero__slider
 				.swiper-wrapper 
 					each item in data.items 
 						.swiper-slide 
