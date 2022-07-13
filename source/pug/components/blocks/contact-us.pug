@@ -65,6 +65,13 @@ mixin contact-us()
 					href: "#",
 				},
 			],
+			modalCall: {
+				title: "Свяжитесь с нами",
+				btn: {
+					href: "#",
+					text: "Связаться",
+				},
+			},
 		}
 
 	section.section.contact-us 
@@ -75,9 +82,9 @@ mixin contact-us()
 						form(action="" method="post" enctype="multipart/form-data")
 							fieldset.contact-us__form-fieldset 
 								legend.contact-us__form-title=data.form.title
-								+custom-input(data.form.name)(data-validate-type="text")
-								+custom-input(data.form.email)(data-validate-type="email")
-								+custom-textarea(data.form.message)
+								+custom-input(data.form.name).contact-us__form-field.contact-us__form-field--input(data-validate-type="text")
+								+custom-input(data.form.email).contact-us__form-field.contact-us__form-field--input(data-validate-type="email")
+								+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
 								+btn(data.form.btn).btn--orange.contact-us__form-submit
 					.contact-us__agreement 
 						span=data.form.agree 
@@ -97,4 +104,7 @@ mixin contact-us()
 							li.contact-us__socials-list-item 
 								a.contact-us__socials-link(href=item.href target="_blank" rel="noopener noreferrer")
 									+icon(item.icon, 16, 16)
+					.contact-us__modal-call
+						h3.title.title--h5.contact-us__modal-call-title=data.modalCall.title
+						+btn(data.modalCall.btn).btn--drk-orange.contact-us__modal-call-btn(data-open-modal="contact-us")
 					+btn-to-top()

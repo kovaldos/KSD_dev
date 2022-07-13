@@ -1,6 +1,7 @@
 mixin footer-top()
 	-
 		const data = {
+			title: "Дополнительные услуги",
 			items: [
 				{
 					href: "#",
@@ -34,6 +35,7 @@ mixin footer-top()
 		}
 	.footer__top
 		.container.footer__container
+			h2.title.footer__top-title=data.title
 			ul.footer__list 
 				each item in data.items
 					li.footer__list-item(class=item.classModifier)

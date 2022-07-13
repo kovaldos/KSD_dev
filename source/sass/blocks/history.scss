@@ -1,6 +1,9 @@
 .history {
 	&__heading {
 		margin: 0 0 40px;
+		@include vp-767 {
+			text-align: center;
+		}
 	}
 	&__container {
 		&--rel {
@@ -14,6 +17,10 @@
 				border-style: solid;
 				border-width: 0 10px 10px 10px;
 				border-color: transparent transparent #2d3142 transparent;
+				@include vp-767 {
+					left: 50%;
+					transform: translateX(-50%);
+				}
 			}
 		}
 	}
@@ -49,6 +56,9 @@
 			margin: 0 0 30px;
 			padding: 15px 0 0 0;
 			justify-content: space-between;
+			@include vp-767 {
+				margin: 0 0 2px;
+			}
 		}
 		&-control {
 			position: relative;
@@ -159,11 +169,20 @@
 		}
 		&-cols {
 			display: flex;
+			@include vp-767 {
+				flex-direction: column;
+			}
 		}
 		&-col {
 			width: calc(50% - 15px);
+			@include vp-767 {
+				width: 100%;
+			}
 			&--01 {
 				margin: 0 30px 0 0;
+				@include vp-767 {
+					margin: 0;
+				}
 			}
 		}
 		&-title {
@@ -189,6 +208,7 @@
 			font-weight: 800;
 			font-size: 48px;
 			line-height: 140%;
+			white-space: nowrap;
 		}
 		&-text {
 			font-weight: 500;

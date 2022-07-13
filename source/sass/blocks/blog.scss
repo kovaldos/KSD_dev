@@ -1,9 +1,24 @@
 .blog {
+	position: relative;
+	@include vp-767 {
+		padding: 0 0 77px;
+	}
 	&__heading {
 		margin: 0 0 40px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@include vp-767 {
+			margin: 0 0 20px;
+		}
+		&-col {
+			&--01 {
+				@include vp-767 {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
 	}
 	&__link-btn {
 		padding: 16px 48px;
@@ -11,11 +26,22 @@
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 20px;
+		@include vp-767 {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			margin: 0;
+		}
 	}
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-column-gap: 30px;
+		grid-row-gap: 15px;
+		@include vp-767 {
+			grid-template-columns: auto;
+		}
 	}
 	&__item {
 		position: relative;
@@ -27,6 +53,10 @@
 		border: 1px solid $color-hawkes-blue;
 		border-radius: 5px;
 		transition: background-color $trans-default;
+		@include vp-767 {
+			padding: 20px;
+			height: 125px;
+		}
 		&:hover, 
 		&:focus-visible {
 			background-color: $color-transparent;
@@ -99,6 +129,11 @@
 			font-size: 14px;
 			line-height: 17px;
 			color: rgba($color-waikawa-grey, 0.5);
+			transition: color $trans-default;
+			@include vp-767 {
+				font-size: 12px;
+				line-height: 15px;
+			}
 		}
 		&-title {
 			margin: 29px 0 15px;
@@ -110,6 +145,11 @@
 			-webkit-line-clamp: 2;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
+			transition: color $trans-default;
+			@include vp-767 {
+				font-size: 14px;
+				margin: 20px 0 0;
+			}
 		}
 		&-text {
 			font-weight: 400;
@@ -120,6 +160,10 @@
 			-webkit-line-clamp: 3;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
+			transition: color $trans-default;
+			@include vp-767 {
+				display: none;
+			}
 		}
 	}
 }

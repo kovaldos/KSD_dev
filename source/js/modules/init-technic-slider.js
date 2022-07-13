@@ -42,9 +42,6 @@ const initTechnicSlider = () => {
       },
     });
     swiper06.el.querySelector('.technic__slider-btn-text--next').textContent = swiper06.el.querySelector('.swiper-slide-next .technic__slider-name').textContent;
-    // swiper06.on('afterInit', () => {
-    //   swiper06.el.querySelector('.technic__slider-btn-text--next').textContent = swiper06.el.querySelector('.swiper-slide-next .technic__slider-name').textContent;
-    // });
     swiper06.on('slideChangeTransitionEnd', () => {
       swiper06.el.querySelector('.technic__slider-btn-text--next').textContent = swiper06.el.querySelector('.swiper-slide-next .technic__slider-name').textContent;
       swiper06.el.querySelector('.technic__slider-btn-text--prev').textContent = swiper06.el.querySelector('.swiper-slide-prev .technic__slider-name').textContent;

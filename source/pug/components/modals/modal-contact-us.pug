@@ -1,0 +1,50 @@
+mixin modal-contact-us()
+	-
+		const data = {
+			form: {
+				title: "Свяжитесь с нами",
+				name: {
+					inputPlaceholder: "Укажите имя...",
+					inputError: "Введите Ваше имя",
+					inputId: "first-name",
+					inputName: "first-name",
+					inputMinLength: 2,
+					inputMaxLength: 20,
+				},
+				email: {
+					inputPlaceholder: "Укажите email...",
+					inputError: "Введите корректный email",
+					inputId: "email",
+					inputName: "email",
+				},
+				message: {
+					inputPlaceholder: "Сообщение",
+					inputError: "Введите Ваше сообщение",
+					inputId: "message",
+					inputName: "message",
+					inputMinLength: 10,
+				},
+				btn: {
+					type: "submit",
+					text: "Отправить",
+				},
+				agree: "Оставляя свои контактные данные вы даете свое ",
+				linkAgree: {
+					href: "#",
+					text: "согласие на обработку",
+				},
+				agree2: " персональных данных",
+			},
+		}
+	.contact-us__form(data-validate data-callback="contactUsForm")
+		form(action="" method="post" enctype="multipart/form-data")
+			fieldset.contact-us__form-fieldset 
+				legend.contact-us__form-title=data.form.title
+				+custom-input(data.form.name).contact-us__form-field.contact-us__form-field--input(data-validate-type="text")
+				+custom-input(data.form.email).contact-us__form-field.contact-us__form-field--input(data-validate-type="email")
+				+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
+				+btn(data.form.btn).btn--drk-orange.contact-us__form-submit
+		.contact-us__agreement 
+			span=data.form.agree 
+			a.link.contact-us__agreement-link(href=data.form.linkAgree.href)=data.form.linkAgree.text 
+			span=data.form.agree2

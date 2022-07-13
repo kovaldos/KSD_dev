@@ -2,11 +2,11 @@ mixin principles()
 	-
 		const data = {
 			title: "Принципы компании",
-			//- subtitle: "Открытость и честность",
+			subtitle: "Открытость и честность",
 			tabsNav: [
 				{
-					text: "Открытость и честность",
-					сlassName: "is-active",
+					text: "Открытость и честность",
+					//- сlassName: "is-active",
 				},
 				{
 					text: "Взаимовыгодное сотрудничество",
@@ -15,12 +15,12 @@ mixin principles()
 					text: "Ориентированность на результат",
 				},
 				{
-					text: "Ответственность и эффективность",
+					text: "Ответственность и эффективность",
 				},
 			],
 			tabsContent: [
 				{
-					title: "Открытость и честность",
+					title: "Открытость и честность",
 					text: "В работе компания руководствуется принципом социальной ответственности. Мы открыты для своих сотрудников, партнеров и клиентов, соблюдаем все требования законодательства, а также общепринятые нормы цивилизованного ведения бизнеса.",
 				},
 				{
@@ -32,14 +32,14 @@ mixin principles()
 					text: "Esse dolores corrupti ab expedita laborum, quibusdam officiis ex consequuntur vel, deleniti sed laudantium rerum nobis provident numquam mollitia suscipit quos ipsa repellat dolore ipsum unde veritatis.",
 				},
 				{
-					title: "Ответственность и эффективность",
+					title: "Ответственность и эффективность",
 					text: "Recusandae inventore nesciunt sed non nihil odit at est perspiciatis debitis molestiae eum quidem, vitae amet tempora porro velit quae similique temporibus?",
 				},
-			]
+			],
 		}
 	
 	section.section.principles 
-		.container.principles__container 
+		.container.principles__container.principles__container--desktop 
 			.principles__heading 
 				h2.title.title--h2.principles__title=data.title
 				//- h3.title.title--h3.principles__subtitle=data.subtitle
@@ -53,5 +53,19 @@ mixin principles()
 						.principles__tabs-wrap(data-tabs="element")
 							h3.title.title--h3.principles__tabs-title=item.title
 							p.text.text--lg.principles__tabs-text=item.text
+		.container.principles__container.principles__container--mobile
+			.principles__heading 
+				h2.title.title--h2.principles__title=data.title
+				h3.title.title--h3.principles__subtitle=data.subtitle
+			.principles__ac(data-accordion='parent' data-single)
+				each item in data.tabsContent
+					.principles__ac-el(data-accordion='element')
+						.principles__ac-btn(data-accordion='button')
+							span.principles__ac-btn-text=item.title
+							span.principles__ac-btn-icon
+								+icon("icon-chevron-down-circle", 30, 30)
+						.principles__ac-content(data-accordion='content')
+							.principles__ac-wrap
+								p.text.text--lg.principles__ac-text=item.text
 
 

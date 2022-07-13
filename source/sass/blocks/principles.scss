@@ -1,4 +1,13 @@
 .principles {
+	&__title {
+		@include vp-767 {
+			text-align: center;
+		}
+	}
+	&__subtitle {
+		margin: 0 0 22px;
+		text-align: center;
+	}
 	&__tabs {
 		display: flex;
 		flex-direction: row-reverse;
@@ -39,10 +48,62 @@
 		}
 		&-title {
 			margin: 0 0 40px;
+			@include vp-1023 {
+				font-size: 26px;
+			}
 		}
 		&-text {
 			max-width: 670px;
 			color: $color-waikawa-grey;
+		}
+	}
+	&__container {
+		&--desktop {
+			@include vp-767 {
+				display: none;
+			}
+		}
+		&--mobile {
+			display: none;
+			@include vp-767 {
+				display: block;
+			}
+		}
+	}
+	&__ac {
+		&-el {
+			&:not(:last-of-type) {
+				margin: 0 0 16px;
+			}
+			&.is-active {
+				.principles__ac-btn-icon {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		&-btn {
+			border-radius: 10px;
+			background-color: $color-ghost-white;
+			padding: 12px 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			&-text {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+				color: $color-east-bay;
+			}
+			&-icon {
+				width: 30px;
+				height: 30px;
+				transition: transform $trans-default;
+				transform: rotate(0);
+			}
+		}
+		&-wrap {
+			padding: 20px 0 25px;
 		}
 	}
 }

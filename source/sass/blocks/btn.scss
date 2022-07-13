@@ -12,10 +12,13 @@
     color: $color-outrageous-orange;
     background-color: $color-transparent;
   }
-  &--drk-orange {
+  &--stroke-drk-orange {
     border: 1px solid $color-dark-orange;
     color: $color-dark-orange;
     background-color: $color-transparent;
+  }
+  &--drk-orange {
+    background-color: $color-dark-orange;;
   }
   &--orange {
     background-color: $color-outrageous-orange;
@@ -49,6 +52,19 @@
       }
       &:active {
         background-color: rgba($color-outrageous-orange, 0.2);
+        color: $color-harley-davidson-orange;
+        border-color: $color-harley-davidson-orange;
+      }
+    }
+    &--stroke-drk-orange {
+      &:hover,
+      &:focus-visible {
+        background-color: rgba($color-dark-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:active {
+        background-color: rgba($color-dark-orange, 0.2);
         color: $color-harley-davidson-orange;
         border-color: $color-harley-davidson-orange;
       }
