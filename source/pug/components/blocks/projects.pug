@@ -69,14 +69,14 @@ mixin projects()
 							text: "Открыть",
 						}
 					},
-					next: {
-						href: "#",
-						icon: "icon-arrow-right-50x25",
-						title: "Следующий проект",
-						subtitle: "Проект #3",
-					}
 				},
 			],
+			next: {
+				href: "#",
+				icon: "icon-arrow-right-50x25",
+				title: "Следующий проект",
+				subtitle: "Проект #3",
+			}
 		}
 
 	section.section.projects
@@ -84,45 +84,46 @@ mixin projects()
 			.projects__heading 
 				h2.title.title--h2.projects__title=data.title
 				h3.title.title--h3.projects__subtitle=data.subtitle
-			.swiper.swiper--07.projects__slider 
-				.swiper-wrapper 
-					- for(let i = 0; i < 10; i++)
-						each item in data.slides 
-							.swiper-slide 
-								.projects__slider-item
-									.projects__slider-item-col.projects__slider-item-col--01
-										+picture("slides", item.img, "jpg", item.alt)
-										.projects__slider-item-row
-											.projects__slider-item-heading
-												h4.title.projects__slider-item-title=item.title
-												h5.title.projects__slider-item-subtitle=item.subtitle
-											.projects__slider-item-volume
-												span.volume-text=item.volume.text
-												span.volume-value=item.volume.num
-										.projects__slider-item-die
-											.die-title
-												+icon(item.die.icon, 20, 20).die-title__icon
-												span.die-title__text=item.die.title
-											.die-address
-												span.die-address__text=item.die.address.text
-												span.die-address__value=item.die.address.value
-											.die-work
-												span.die-work__text=item.die.work.text
-												span.die-work__value=item.die.work.value
-											.die-term
-												span.die-term__text=item.die.term.text
-												span.die-term__value=item.die.term.value
-											a.btn.btn--orange.die-link-btn(href=item.die.btn.href)=item.die.btn.text
-									.projects__slider-item-col.projects__slider-item-col--02
-										a.projects__slider-item-next(href=item.next.href)
-											+icon(item.next.icon, 50, 25)
-											h4.title.next-title
-												span.next-title__title=item.next.title
-												span.next-title__subtitle=item.next.subtitle
-				.projects__slider-nav
-					.swiper-pagination.projects__slider-pag
-					.projects__slider-btns
-						.swiper-button-next.projects__slider-btn.projects__slider-btn--next
-							+icon("icon-chevron-right-black", 30, 30)
-						.swiper-button-prev.projects__slider-btn.projects__slider-btn--prev
-							+icon("icon-chevron-left-black", 30, 30)
+			.projects__cols
+				.projects__col.projects__col--01
+					.swiper.swiper--07.projects__slider 
+						.swiper-wrapper 
+							- for(let i = 0; i < 10; i++)
+								each item in data.slides 
+									.swiper-slide 
+										.projects__slider-item
+											+picture("slides", item.img, "jpg", item.alt)
+											.projects__slider-item-row
+												.projects__slider-item-heading
+													h4.title.projects__slider-item-title=item.title
+													h5.title.projects__slider-item-subtitle=item.subtitle
+												.projects__slider-item-volume
+													span.volume-text=item.volume.text
+													span.volume-value=item.volume.num
+											.projects__slider-item-die
+												.die-title
+													+icon(item.die.icon, 20, 20).die-title__icon
+													span.die-title__text=item.die.title
+												.die-address
+													span.die-address__text=item.die.address.text
+													span.die-address__value=item.die.address.value
+												.die-work
+													span.die-work__text=item.die.work.text
+													span.die-work__value=item.die.work.value
+												.die-term
+													span.die-term__text=item.die.term.text
+													span.die-term__value=item.die.term.value
+												a.btn.btn--orange.die-link-btn(href=item.die.btn.href)=item.die.btn.text
+						.projects__slider-nav
+							.swiper-pagination.projects__slider-pag
+							.projects__slider-btns
+								.swiper-button-next.projects__slider-btn.projects__slider-btn--next
+									+icon("icon-chevron-right-black", 30, 30)
+								.swiper-button-prev.projects__slider-btn.projects__slider-btn--prev
+									+icon("icon-chevron-left-black", 30, 30)
+				.projects__col.projects__col--02
+					a.projects__slider-item-next(href=data.next.href)
+						+icon(data.next.icon, 50, 25)
+						h4.title.next-title
+							span.next-title__title=data.next.title
+							span.next-title__subtitle=data.next.subtitle

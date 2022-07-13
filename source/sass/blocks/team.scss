@@ -1,6 +1,9 @@
 .team {
 	&__heading {
 		margin: 0 0 40px;
+		@include vp-767 {
+			text-align: center;
+		}
 	}
 	&__slider {
 		&-btns {
@@ -8,7 +11,9 @@
 			left: calc(100% - 82px);
 			width: 82px;
 			top: -40px;
-
+			@include vp-1023 {
+				display: none;
+			}
 		}
 		&-btn {
 			color: $color-bunting;
@@ -26,17 +31,22 @@
 			border-radius: 5px;
 			overflow: hidden;
 			background-color: rgba($color-lavender, 0.3);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			&-title {
 				font-weight: 700;
 				font-size: 18px;
 				line-height: 26px;
 				color: $color-bunting;
 				margin: 20px 0 5px 0;
+				align-self: flex-start;
 			}
 			&-text {
 				font-size: 14px;
 				line-height: 24px;
-				color: rgba($color-bunting, 0.6)
+				color: rgba($color-bunting, 0.6);
+				align-self: flex-start;
 			}
 		}
 	}

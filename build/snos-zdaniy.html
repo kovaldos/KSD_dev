@@ -150,6 +150,9 @@
 </symbol><symbol id="icon-check" viewBox="0 0 26 26">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6369 16.4023L21.2015 5.83765L23.7085 8.34466L10.6369 21.4164L5.83789 16.6174L8.34491 14.1104L10.6369 16.4023Z" fill="#FE603A"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20819 9.97388L6.57182 12.3375L4.06481 14.8445L1.70117 12.4809L4.20819 9.97388Z" fill="#FE603A"/>
+</symbol><symbol id="icon-chevron-down-circle" viewBox="0 0 30 30">
+<circle cx="15" cy="15" r="15" transform="rotate(90 15 15)" fill="white"/>
+<path d="M9.46793 12.6905L9.46784 12.6904C9.32933 12.5531 9.32945 12.3326 9.46776 12.1956L9.46793 12.1954C9.60857 12.056 9.83852 12.056 9.97912 12.1954L9.97913 12.1954L14.6484 16.8253L15.0004 17.1744L15.3525 16.8253L20.0215 12.1956C20.0215 12.1956 20.0216 12.1956 20.0216 12.1955C20.1624 12.056 20.3923 12.0562 20.5329 12.1955L20.533 12.1956C20.6713 12.3327 20.6714 12.5533 20.5329 12.6906L20.5329 12.6906L15.256 17.923C15.256 17.923 15.2559 17.9231 15.2559 17.9231C15.1859 17.9924 15.0945 18.0276 15.0005 18.0276C14.9064 18.0276 14.8148 17.9923 14.7448 17.9229L9.46793 12.6905Z" fill="white" stroke="#2D3142"/>
 </symbol><symbol id="icon-chevron-left-black" viewBox="0 0 10 16">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.232422 8.00009L8.11631 0.116211L9.88407 1.88398L3.76796 8.00009L9.88407 14.1162L8.1163 15.884L0.232422 8.00009Z" fill="currentColor"/>
 </symbol><symbol id="icon-chevron-right-black" viewBox="0 0 10 16">
@@ -880,7 +883,7 @@
                 <h3 class="title title--h3 blog__subtitle">Новости компании</h3>
               </div>
               <div class="blog__heading-col blog__heading-col--02">
-                <a class="btn btn--out-orange blog__link-btn" href="news.html">Читать весь блог</a>
+                <a class="btn btn--stroke-drk-orange blog__link-btn" href="news.html">Читать весь блог</a>
               </div>
             </div>
             <div class="blog__items"><a class="blog__item blog__item--01" href="#">
@@ -917,644 +920,513 @@
               <h2 class="title title--h2 projects__title">Проекты</h2>
               <h3 class="title title--h3 projects__subtitle">Наши последние объекты</h3>
             </div>
-            <div class="swiper swiper--07 projects__slider"> 
-              <div class="swiper-wrapper"> 
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+            <div class="projects__cols">
+              <div class="projects__col projects__col--01">
+                <div class="swiper swiper--07 projects__slider"> 
+                  <div class="swiper-wrapper"> 
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
                         </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
                         </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
                       </div>
                     </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                      <div class="projects__slider-item">
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
+                        </picture>
+                        <div class="projects__slider-item-row">
+                          <div class="projects__slider-item-heading">
+                            <h4 class="title projects__slider-item-title">Нежилые здания</h4>
+                            <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
+                          </div>
+                          <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                        </div>
+                        <div class="projects__slider-item-die">
+                          <div class="die-title">
+                            <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
+                              <use xlink:href="#icon-place"></use>
+                            </svg><span class="die-title__text">Московская область</span>
+                          </div>
+                          <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
+                          <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
+                          <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
+                  <div class="projects__slider-nav">
+                    <div class="swiper-pagination projects__slider-pag"></div>
+                    <div class="projects__slider-btns">
+                      <div class="swiper-button-next projects__slider-btn projects__slider-btn--next">
+                        <svg width="30" height="30" aria-hidden="true">
+                          <use xlink:href="#icon-chevron-right-black"></use>
+                        </svg>
                       </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
+                      <div class="swiper-button-prev projects__slider-btn projects__slider-btn--prev">
+                        <svg width="30" height="30" aria-hidden="true">
+                          <use xlink:href="#icon-chevron-left-black"></use>
+                        </svg>
                       </div>
                     </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-1.webp, img/slides/projects-img-1@2x.webp 2x"><img src="img/slides/projects-img-1.jpg" srcset="img/slides/projects-img-1@2x.jpg 2x" alt="projects-img-1">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">АО «Главстрой»</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #2</span></h4></a></div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="projects__slider-item">
-                    <div class="projects__slider-item-col projects__slider-item-col--01">
-                      <picture>
-                        <source type="image/webp" srcset="img/slides/projects-img-2.webp, img/slides/projects-img-2@2x.webp 2x"><img src="img/slides/projects-img-2.jpg" srcset="img/slides/projects-img-2@2x.jpg 2x" alt="projects-img-2">
-                      </picture>
-                      <div class="projects__slider-item-row">
-                        <div class="projects__slider-item-heading">
-                          <h4 class="title projects__slider-item-title">Нежилые здания</h4>
-                          <h5 class="title projects__slider-item-subtitle">Проект #2</h5>
-                        </div>
-                        <div class="projects__slider-item-volume"><span class="volume-text">Объемы работ: </span><span class="volume-value"> 250 569 м3 со</span></div>
-                      </div>
-                      <div class="projects__slider-item-die">
-                        <div class="die-title">
-                          <svg class="die-title__icon" width="20" height="20" aria-hidden="true">
-                            <use xlink:href="#icon-place"></use>
-                          </svg><span class="die-title__text">Московская область</span>
-                        </div>
-                        <div class="die-address"><span class="die-address__text">Адрес: </span><span class="die-address__value">г. Москва, пр-кт Рязанский, вл.26/1</span></div>
-                        <div class="die-work"><span class="die-work__text">Вид работ: </span><span class="die-work__value">Снос строений</span></div>
-                        <div class="die-term"><span class="die-term__text">Срок выполнения: </span><span class="die-term__value">25.02.2021  -  30.07.2021</span></div><a class="btn btn--orange die-link-btn" href="">Открыть</a>
-                      </div>
-                    </div>
-                    <div class="projects__slider-item-col projects__slider-item-col--02"><a class="projects__slider-item-next" href="#">
-                        <svg width="50" height="25" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right-50x25"></use>
-                        </svg>
-                        <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
                   </div>
                 </div>
               </div>
-              <div class="projects__slider-nav">
-                <div class="swiper-pagination projects__slider-pag"></div>
-                <div class="projects__slider-btns">
-                  <div class="swiper-button-next projects__slider-btn projects__slider-btn--next">
-                    <svg width="30" height="30" aria-hidden="true">
-                      <use xlink:href="#icon-chevron-right-black"></use>
-                    </svg>
-                  </div>
-                  <div class="swiper-button-prev projects__slider-btn projects__slider-btn--prev">
-                    <svg width="30" height="30" aria-hidden="true">
-                      <use xlink:href="#icon-chevron-left-black"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+              <div class="projects__col projects__col--02"><a class="projects__slider-item-next" href="#">
+                  <svg width="50" height="25" aria-hidden="true">
+                    <use xlink:href="#icon-arrow-right-50x25"></use>
+                  </svg>
+                  <h4 class="title next-title"><span class="next-title__title">Следующий проект</span><span class="next-title__subtitle">Проект #3</span></h4></a></div>
             </div>
           </div>
         </section>
@@ -1605,6 +1477,7 @@
       <footer class="footer">
         <div class="footer__top">
           <div class="container footer__container">
+            <h2 class="title footer__top-title">Дополнительные услуги</h2>
             <ul class="footer__list"> 
               <li class="footer__list-item footer__list-item--01"><a class="footer__list-link" href="#">
                   <svg class="footer__list-icon" width="60" height="60" aria-hidden="true">

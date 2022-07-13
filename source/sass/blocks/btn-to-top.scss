@@ -5,6 +5,9 @@
 	align-items: center;
 	background-color: $color-transparent;
 	transition: color $tf-default;
+	@include vp-1023 {
+		display: none;
+	}
 	&__span {
 		font-weight: 500;
 		font-size: 18px;

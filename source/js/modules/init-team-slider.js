@@ -6,23 +6,22 @@ const initTeamSlider = () => {
   const swiper03 = new Swiper('.swiper--03', {
     watchOverflow: true,
     speed: 800,
-    slidesPerView: 1,
+    slidesPerView: 1.5,
     spaceBetween: 10,
     breakpoints: {
-      // 425: {
-      //   spaceBetween: 20,
-      // },
-      // 768: {
-      //   loop: true,
-      //   slidesPerView: 1.7,
-      //   spaceBetween: 40,
-      // },
-      // 1024: {
-      //   loop: true,
-      //   slidesPerView: 1.745,
-      //   spaceBetween: 60,
-      //   initialSlide: 1,
-      // },
+      425: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+        initialSlide: 1,
+      },
       1600: {
         slidesPerView: 4,
         spaceBetween: 30,
