@@ -153,6 +153,13 @@
       }
       &__agreement {
         margin: 0;
+        padding: 0 15px;
+        font-size: 12px;
+        line-height: 180%;
+        &-link {
+          font-size: 12px;
+          line-height: 180%;
+        }
       }
     }
   }
@@ -163,6 +170,16 @@
       justify-content: center;
       width: auto;
       background-color: $color-transparent;
+      @include vp-767 {
+        padding: 0;
+      }
+    }
+    &__close-btn {
+      top: 10px;
+      right: 10px;
+      svg {
+        color: $color-navy-blue;
+      }
     }
   }
 }

@@ -6,25 +6,31 @@ mixin history()
 			tabsNav: [
 				{
 					text: "2015",
+					classMode: "history__tabs-control--odd",
 				},
 				{
 					text: "2016",
+					classMode: "history__tabs-control--even",
 				},
 				{
 					text: "2017",
+					classMode: "history__tabs-control--odd",
 				},
 				{
 					text: "2018",
-					className: "is-active",
+					classMode: "history__tabs-control--even is-active",
 				},
 				{
 					text: "2019",
+					classMode: "history__tabs-control--odd",
 				},
 				{
 					text: "2020",
+					classMode: "history__tabs-control--even",
 				},
 				{
 					text: "2021",
+					classMode: "history__tabs-control--odd",
 				},
 			],
 			tabsContent: [
@@ -108,13 +114,14 @@ mixin history()
 				h3.title.title--h3.history__subtitle=data.subtitle
 		.history__wrapper 
 			.container.history__container.history__container--rel
-				.tabs.history__tabs(data-tabs="parent" data-delay="300" data-height="max")
-					.history__tabs-progressbar
-						.history__tabs-progress
-					nav.tabs__controls.history__tabs-controls(data-tabs="controls")
-						each item, index in data.tabsNav
-							button.btn.history__tabs-control(data-index=index, data-tabs="control", class!=item.className)
-								span.history__tabs-control-value=item.text
+				.tabs.history__tabs(data-tabs="parent" data-delay="300")
+					.history__tabs-nav-wrapper#history-nav(data-simplebar)
+						.history__tabs-progressbar
+							.history__tabs-progress
+						nav.tabs__controls.history__tabs-controls(data-tabs="controls")
+							each item, index in data.tabsNav
+								button.btn.history__tabs-control(data-index=index data-tabs="control" class=item.classMode)
+									span.history__tabs-control-value=item.text
 					.tabs__content.history__tabs-content(data-tabs="content")
 						each item in data.tabsContent
 							.history__tabs-cols(data-tabs="element")

@@ -56,6 +56,10 @@
 			}
 			@include vp-767 {
 				width: 100%;
+				flex: 0 0 435px;
+			}
+			@include vp-424 {
+				flex: auto;
 			}
 		}
 		&--02 {
@@ -79,6 +83,13 @@
 		@include vp-767 {
 			margin: 0 auto;
 		}
+		@include vp-424 {
+			height: 320px;
+			margin: 0 auto 24px;
+		}
+		@include vp-374 {
+			height: 220px;
+		}
 		&:hover {
 			.about-company {
 				&__pic {
@@ -101,6 +112,11 @@
 		transition: all $trans-default;
 		img {
 			border-radius: 5px;
+			@include vp-424 {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 		&--main {
 			visibility: visible;

@@ -29,6 +29,13 @@
 			left: 50%;
 			transform: translateX(-50%);
 			margin: 0;
+			width: calc(100% - 2 * 15px);
+			align-items: center;
+			justify-content: center;
+			max-width: 50%;
+		}
+		@include vp-639 {
+			max-width: unset;
 		}
 	}
 	&__items {

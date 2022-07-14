@@ -57,6 +57,7 @@ mixin footer-middle()
 						.footer__col-accordion-btn(data-accordion='button')
 							span.footer__col-heading=item.title
 							span.footer__col-accordion-btn-icon
+								+icon("icon-chevron-down", 14, 14)
 						ul.footer__col-list(data-accordion='content')
 							li.footer__col-list-item
 								a.footer__col-link(href=item.href)=item.link1
@@ -75,7 +76,7 @@ mixin footer-middle()
 								form.subscribe-block__form
 									+custom-input(data.subs.input).subscribe-block__form-input(data-validate-type="email")
 									button.btn.subscribe-block__form-submit(type=data.subs.btn)
-										+icon(data.subs.btn.icon, 24, 24)
+										+icon(data.subs.btn.icon, 14, 14)
 					.footer__contact-us-wrapper
 						.footer__contact-us
 							a.footer__contact-us-social.footer__contact-us-social--whatsapp(href='#')
