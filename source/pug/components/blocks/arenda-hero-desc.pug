@@ -1,0 +1,55 @@
+mixin arenda-hero-desc()
+	-
+		const data = {
+			desc: [
+				{
+					icon: "icon-arenda-hero-desc-1",
+					text1: "Аренда ",
+					link1: {
+						href: "#",
+						text: "“под ключ” ",
+					},
+					text2: "с топливом, оператором и тд. ",
+					link2: {
+						href: "#",
+						text: "Скорая помощь ",
+					},
+					text3: "в случае поломки выезд механиков за 1 час", 
+				},
+				{
+					icon: "icon-arenda-hero-desc-2",
+					text1: "Все машины ",
+					link1: {
+						href: "#",
+						text: "новые ",
+					},
+					text2: "и имеют паспорт технического осмотра. В наличии ",
+					link2: {
+						href: "#",
+						text: "редкие ",
+					},
+					text3: "модели спецтехники.", 
+				},
+			]
+		}
+	.arenda-hero-desc
+		.container.arenda-hero__container.arenda-hero__container--rel
+			.arenda-hero-desc__slider.swiper.swiper--12
+				.swiper-wrapper
+					each item in data.desc
+						.swiper-slide
+							.arenda-hero-desc__item
+								+icon(item.icon, 60, 60).arenda-hero-desc__item-icon
+								p.text.arenda-hero-desc__item-text
+									span=item.text1 
+									a.link.arenda-hero-desc__item-link(href=item.link1.href)=item.link1.text 
+									span=item.text2
+									a.link.arenda-hero-desc__item-link(href=item.link2.href)=item.link2.text
+									span=item.text3
+				.arenda-hero-desc__slider-nav
+					.swiper-pagination.arenda-hero-desc__slider-pag
+					.arenda-hero-desc__slider-btns
+						.swiper-button-next.arenda-hero-desc__slider-btn.arenda-hero-desc__slider-btn--next
+							+icon("icon-chevron-right-black", 30, 30)
+						.swiper-button-prev.arenda-hero-desc__slider-btn.arenda-hero-desc__slider-btn--prev
+							+icon("icon-chevron-left-black", 30, 30)

@@ -8366,6 +8366,11 @@ button,
   height: 640px;
   position: relative;
   background-color: #fafafe;
+  margin: 0 0 60px;
+}
+
+.arenda-hero__container--rel {
+  position: relative;
 }
 
 .arenda-hero__col--01 {
@@ -8419,22 +8424,38 @@ button,
   z-index: 5;
 }
 
-.arenda-hero .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 30px;
+.arenda-hero__slider-pag {
+  text-align: left;
 }
 
-.arenda-hero .swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.arenda-hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 58px;
+  left: 40px;
+}
+
+.arenda-hero__slider-pag.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 14px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #D2D7E8;
   width: 12px;
   height: 12px;
   opacity: 1;
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.arenda-hero__slider-pag.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #2D3142;
+  -webkit-box-shadow: 0 0 0 6px #D2D7E8;
+  box-shadow: 0 0 0 6px #D2D7E8;
 }
 
 .arenda-hero .swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
+  background-color: #2D3142;
+  -webkit-box-shadow: 0 0 0 6px #D2D7E8;
+  box-shadow: 0 0 0 6px #D2D7E8;
 }
 
 .arenda-hero__container {
@@ -8468,6 +8489,108 @@ button,
 .arenda-hero__btn {
   border-radius: 7px;
   margin: 20px 0 10px 0;
+}
+
+.arenda-hero-desc {
+  padding: 0 0 40px;
+}
+
+.arenda-hero-desc__item {
+  padding: 22px 30px 22px 40px;
+  border-radius: 7px;
+  background-color: rgba(238, 238, 251, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.arenda-hero-desc__item-icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0 40px 0 0;
+}
+
+.arenda-hero-desc__item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+}
+
+.arenda-hero-desc__item-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 180%;
+  color: #2D3142;
+  margin: -5px 0 -5px -5px;
+}
+
+.arenda-hero-desc__slider-nav {
+  position: relative;
+}
+
+.arenda-hero-desc__slider-btns {
+  position: absolute;
+  width: 75px;
+  left: 100px;
+  bottom: 20px;
+}
+
+.arenda-hero-desc__slider-btn {
+  color: #2D3142;
+}
+
+.arenda-hero-desc__slider-btn::after {
+  display: none;
+}
+
+.arenda-hero-desc__slider-btn svg {
+  color: #2D3142;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+
+.arenda-hero-desc__slider-btn.swiper-button-disabled {
+  opacity: 1;
+}
+
+.arenda-hero-desc__slider-btn.swiper-button-disabled svg {
+  color: #D2D7E8;
+}
+
+.arenda-hero-desc__slider-btn--next {
+  right: 0;
+}
+
+.arenda-hero-desc__slider-btn--prev {
+  left: 0;
+}
+
+.arenda-hero-desc__slider-pag .swiper-pagination-fraction {
+  right: auto;
+  bottom: 0;
+  width: 70px;
+  left: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
+.arenda-hero-desc__slider-pag .swiper-pagination-current {
+  display: inline-block;
+  width: 33%;
+}
+
+.arenda-hero-desc__slider-pag .swiper-pagination-total {
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .footer {

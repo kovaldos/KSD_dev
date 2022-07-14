@@ -16,28 +16,58 @@ mixin arenda-hero()
 				{
 					src: "slides",
 					img: "arenda-hero-img-1",
-					alt: "slide-img-1",
+					alt: "slide-img-2",
 				},
 				{
 					src: "slides",
 					img: "arenda-hero-img-1",
-					alt: "slide-img-1",
+					alt: "slide-img-3",
 				},
 				{
 					src: "slides",
 					img: "arenda-hero-img-1",
-					alt: "slide-img-1",
+					alt: "slide-img-4",
 				},
 			],
-
+			desc: [
+				{
+					icon: "icon-arenda-hero-1",
+					text1: "Аренда ",
+					link1: {
+						href: "#",
+						text: "“под ключ” ",
+					},
+					text2: "с топливом, оператором и тд. ",
+					link2: {
+						href: "#",
+						text: "Скорая помощь ",
+					},
+					text3: "в случае поломки выезд механиков за 1 час", 
+				},
+				{
+					icon: "icon-arenda-hero-2",
+					text1: "Все машины ",
+					link1: {
+						href: "#",
+						text: "новые ",
+					},
+					text2: "и имеют паспорт технического осмотра. В наличии ",
+					link2: {
+						href: "#",
+						text: "редкие ",
+					},
+					text3: "модели спецтехники.", 
+				},
+			]
 		}
 	section.arenda-hero
-		.container.arenda-hero__container
+		.container.arenda-hero__container.arenda-hero__container--rel
 			.arenda-hero__col.arenda-hero__col--01
 				.arenda-hero__heading 
 					h1.title.title--h1.arenda-hero__title=data.title
 						span.arenda-hero__subtitle=data.subtitle
 				+btn(data.btn).btn.btn--orange.arenda-hero__btn
+			.swiper-pagination.arenda-hero__slider-pag
 		.arenda-hero__col.arenda-hero__col--02
 			.arenda-hero__col-bg 
 				+picture("slides", "arenda-bg-img-1", "jpg", "arenda-bg-img")
@@ -47,4 +77,3 @@ mixin arenda-hero()
 						.swiper-slide 
 							.arenda-hero__slider-item 
 								+picture(item.src, item.img, "jpg", item.alt)
-				.swiper-pagination.arenda-hero__slider-pag
