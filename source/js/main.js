@@ -19,6 +19,7 @@ import {initSimilarProjectsSlider} from './modules/init-similar-projects-slider'
 import {initReviewsSlider} from './modules/init-reviews-slider';
 import {initScrollToAnchor} from './modules/scroll-to-anchor';
 import {initArendaHeroSlider} from './modules/init-arenda-hero-slider';
+import {initArendaDescSlider} from './modules/init-arenda-desc-slider';
 // import {initHistorySimplebar} from './modules/init-history-simplebar';
 
 // ---------------------------------
@@ -55,6 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initReviewsSlider();
     initScrollToAnchor();
     initArendaHeroSlider();
+    initArendaDescSlider();
     // initHistorySimplebar();
   });
 });

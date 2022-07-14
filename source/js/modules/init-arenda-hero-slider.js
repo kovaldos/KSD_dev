@@ -9,7 +9,7 @@ const initArendaHeroSlider = () => {
       loop: true,
       autoplay: true,
       speed: 800,
-      effect: 'fade',
+      // effect: 'fade',
       slidesPerView: 1,
       spaceBetween: 10,
      //  breakpoints: {
@@ -39,7 +39,7 @@ const initArendaHeroSlider = () => {
      //    prevEl: '.destinations__slider-nav--prev',
      //  },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.arenda-hero__slider-pag',
         type: 'bullets',
       },
     });
