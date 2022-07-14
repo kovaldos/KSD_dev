@@ -56,11 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initReviewsSlider();
     initScrollToAnchor();
     initArendaHeroSlider();
-<<<<<<< HEAD
     initArendaDescSlider();
-=======
     // initHistorySimplebar();
->>>>>>> 1c7c9a6d80ec0664cce478bb730885aa4dcab79f
   });
 });
 
