@@ -88,6 +88,9 @@
   &__middle {
     background-color: $color-bunting;
     padding: 50px 0;
+    @include vp-767 {
+      padding: 25px 0 30px;
+    }
   }
   &__columns {
     display: grid;
@@ -95,7 +98,7 @@
     grid-column-gap: 30px;
     @include vp-1023 {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   }
   &__col {
@@ -115,6 +118,7 @@
       @include vp-1023 {
         display: flex;
         flex-direction: column-reverse;
+        order: -1;
       }
     }
     &-accordion-btn {
@@ -127,36 +131,24 @@
         max-width: 485px;
       }
       &-icon {
-        &::before,
-        &::after {
-          visibility: hidden;
-          opacity: 0;
+        display: none;
+        @include vp-1023 {
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           position: absolute;
-          content: "";
-          top: 25%;
+          top: 0;
           left: auto;
           right: 8px;
-          background-color: $color-default-white;
-          @include vp-1023 {
-            visibility: visible;
-            opacity: 1;
-          }
-        }
-        &::before {
-          width: 16px;
-          height: 2px;
-          transform: translate(50%, -50%);
-        }
-        &::after {
-          width: 2px;
-          height: 16px;
-          transform: translate(50%, -50%);
+          transition: transform $trans-default;
         }
       }
     }
     &.is-active {
-      .footer__col-accordion-btn-icon::after {
-        height: 0;
+      .footer__col-accordion-btn-icon {
+        transform: rotate(-180deg);
       }
     }
     &-heading {
@@ -164,6 +156,11 @@
       font-weight: bold;
       color: $color-default-white;
       margin: 0 0 20px;
+      @include vp-1023 {
+        font-size: 16px;
+        line-height: 160%;
+        font-weight: 600;
+      }
     }
     &-list {
       list-style: none;
@@ -171,7 +168,7 @@
       margin: 0;
       min-height: 100%;
       @include vp-1023 {
-        padding-left: 20px;
+        padding-left: 0;
         &--contacts {
           padding-left: 0;
         }
@@ -210,7 +207,9 @@
         opacity: 0.8;
       }
       @include vp-1023 {
-        margin: 0 0 20px;
+        margin: 0 0 25px;
+        font-size: 14px;
+        color: rgba($color-default-white, 0.6);
       }
     }
   }
@@ -251,10 +250,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include vp-767 {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   }
   &__logo {
     flex-shrink: 0;
+    margin: 0 30 0 0px;
+    @include vp-767 {
+      margin: 0 0 15px;
+    }
     svg {
       color: $color-default-white;
     }
@@ -264,6 +271,17 @@
     line-height: 180%;
     color: $color-logan;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &__subscribe {
+    @include vp-1023 {
+      margin: 25px -24px;
+      background-color: rgba($color-blue-zodiac, 0.3);
+      padding: 15px 24px;
+    }
+    @include vp-767 {
+      margin: 25px -15px;
+      padding: 15px;
+    }
   }
 }
 

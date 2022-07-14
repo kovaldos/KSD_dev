@@ -24,6 +24,9 @@
 			position: relative;
 			height: 260px;
 		}
+		@include vp-374 {
+			height: 200px;
+		}
 		&::before {
 			content: "";
 			position: absolute;
