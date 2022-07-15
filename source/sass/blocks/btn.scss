@@ -78,5 +78,14 @@
         background-color: $color-harley-davidson-orange;
       }
     }
+    &--drk-orange {
+      &:hover,
+      &:focus-visible {
+        background-color: $color-outrageous-orange;
+      }
+      &:active {
+        background-color: $color-harley-davidson-orange;
+      }
+    }
   }
 }

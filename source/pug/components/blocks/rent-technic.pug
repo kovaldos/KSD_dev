@@ -1,0 +1,81 @@
+mixin rent-technic()
+	-
+		const data = {
+			title: "Техника",
+			subtitle: "Большой выбор спецтехники",
+			headText: "Принимая во внимание показатели успешности, экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса глубокомысленных рассуждений.",
+			links: [
+				{
+					href: "#",
+					text: "Популярное",
+				},
+				{
+					href: "#",
+					text: "Новинки",
+					classModifier: "rent-technic__catalog-link--current"
+				},
+				{
+					href: "#",
+					text: "Техника",
+
+				},
+				{
+					href: "#",
+					text: "Услуги",
+
+				},
+				{
+					href: "#",
+					text: "Длительная аренда",
+
+				},
+			],
+			title2: "Новинки",
+			subtext: "Принимая во внимание показатели успешности, экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный план целого ряда внеочередных",
+			items: [
+				{
+					href: "#",
+					title: "Техника",
+					img: "rent-technic-img-1",
+					alt: "rent-technic-img-1",
+					name: "Экскаватор-погрузчик Volvo BL71B",
+					price: {
+						num: "35 000",
+						currency: " ₽ ",
+						time: "/ смена",
+					},
+				},
+			],
+			btn: {
+				href: "#",
+				text: "Смотреть все товары",
+			}
+		}
+	section.section.rent-technic
+		.container.rent-technic__container
+			h1.title.title--h2.rent-technic__title=data.title
+			h2.title.title--h3.rent-technic__subtitle=data.subtitle
+			p.text.rent-technic__head-text=data.headText
+			nav.rent-technic__catalog-nav(data-simplebar) 
+				ul.rent-technic__catalog-list 
+					each link in data.links
+						li.rent-technic__catalog-list-item
+							a.link.rent-technic__catalog-link(href=link.href class!=link.classModifier)=link.text
+			.rent-technic__catalog 
+				h3.title.title--h4.rent-technic__catalog-title=data.title2
+				p.text.text--sm.rent-technic__catalog-subtext=data.subtext
+				.rent-technic__catalog-items
+					- for (let i = 0; i < 8; i++)
+						each item in data.items 
+							a(href=item.href).rent-technic__catalog-item
+								h4.title.rent-technic__catalog-item-title=item.title
+								.rent-technic__catalog-item-pic
+									+picture("content", item.img, "png", item.alt)
+								span.rent-technic__catalog-item-model=item.name
+								.rent-technic__catalog-item-price
+									span=item.price.num
+									span=item.price.currency
+									span=item.price.time
+								button(type="button").btn.btn--drk-orange.rent-technic__catalog-item-add
+									+icon("icon-plus", 23, 23)
+			+btn(data.btn).btn--drk-orange.rent-technic__catalog-btn
