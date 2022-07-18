@@ -1,0 +1,79 @@
+mixin rent-hero()
+	-
+		const data = {
+			title: "Аренда спецтехники от ведущих экспертов",
+			subtitle: "Весь спектр профессиональной строительной техники “ООО Конструктив - СД”",
+			btn: {
+				href: "rent-catalog.html",
+				text: "Смотреть каталог",
+			},
+			items: [
+				{
+					src: "slides",
+					img: "rent-hero-img-1",
+					alt: "slide-img-1",
+				},
+				{
+					src: "slides",
+					img: "rent-hero-img-1",
+					alt: "slide-img-2",
+				},
+				{
+					src: "slides",
+					img: "rent-hero-img-1",
+					alt: "slide-img-3",
+				},
+				{
+					src: "slides",
+					img: "rent-hero-img-1",
+					alt: "slide-img-4",
+				},
+			],
+			//- desc: [
+			//- 	{
+			//- 		icon: "icon-rent-hero-1",
+			//- 		text1: "Аренда ",
+			//- 		link1: {
+			//- 			href: "#",
+			//- 			text: "“под ключ” ",
+			//- 		},
+			//- 		text2: "с топливом, оператором и тд. ",
+			//- 		link2: {
+			//- 			href: "#",
+			//- 			text: "Скорая помощь ",
+			//- 		},
+			//- 		text3: "в случае поломки выезд механиков за 1 час", 
+			//- 	},
+			//- 	{
+			//- 		icon: "icon-rent-hero-2",
+			//- 		text1: "Все машины ",
+			//- 		link1: {
+			//- 			href: "#",
+			//- 			text: "новые ",
+			//- 		},
+			//- 		text2: "и имеют паспорт технического осмотра. В наличии ",
+			//- 		link2: {
+			//- 			href: "#",
+			//- 			text: "редкие ",
+			//- 		},
+			//- 		text3: "модели спецтехники.", 
+			//- 	},
+			//- ]
+		}
+	section.rent-hero
+		.container.rent-hero__container.rent-hero__container--rel
+			.rent-hero__col.rent-hero__col--01
+				.rent-hero__heading 
+					h1.title.title--h1.rent-hero__title=data.title
+						span.rent-hero__subtitle=data.subtitle
+				+btn(data.btn).btn.btn--orange.rent-hero__btn
+			.swiper-pagination.rent-hero__slider-pag
+		.rent-hero__col.rent-hero__col--02
+			.rent-hero__col-bg 
+				+picture("slides", "rent-bg-img-1", "jpg", "rent-bg-img")
+			.swiper.swiper--11.rent-hero__slider
+				.swiper-wrapper 
+					each item in data.items 
+						.swiper-slide 
+							.rent-hero__slider-item 
+								+picture(item.src, item.img, "jpg", item.alt)

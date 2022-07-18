@@ -18,8 +18,8 @@ import {initProjTechSlider} from './modules/init-proj-tech-slider';
 import {initSimilarProjectsSlider} from './modules/init-similar-projects-slider';
 import {initReviewsSlider} from './modules/init-reviews-slider';
 import {initScrollToAnchor} from './modules/scroll-to-anchor';
-import {initArendaHeroSlider} from './modules/init-arenda-hero-slider';
-import {initArendaDescSlider} from './modules/init-arenda-desc-slider';
+import {initRentHeroSlider} from './modules/init-rent-hero-slider';
+import {initRentDescSlider} from './modules/init-rent-desc-slider';
 import {initRentAboutUsSlider} from './modules/init-rent-about-us-slider';
 
 
@@ -56,8 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initSimilarProjectsSlider();
     initReviewsSlider();
     initScrollToAnchor();
-    initArendaHeroSlider();
-    initArendaDescSlider();
+    initRentHeroSlider();
+    initRentDescSlider();
     initRentAboutUsSlider();
   });
 });
