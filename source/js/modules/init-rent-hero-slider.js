@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 // Hero-slider init -- Start --
 
-const initArendaHeroSlider = () => {
+const initRentHeroSlider = () => {
   let swiper11 = document.querySelector('.swiper--11');
   if (swiper11) {
     swiper11 = new Swiper(swiper11, {
@@ -34,18 +34,15 @@ const initArendaHeroSlider = () => {
      //      initialSlide: 1,
      //    },
      //  },
-     //  navigation: {
-     //    nextEl: '.destinations__slider-nav--next',
-     //    prevEl: '.destinations__slider-nav--prev',
-     //  },
+
       pagination: {
-        el: '.arenda-hero__slider-pag',
+        el: '.rent-hero__slider-pag',
         type: 'bullets',
       },
     });
   }
 };
 
-export {initArendaHeroSlider};
+export {initRentHeroSlider};
 
 // Hero-slider init -- Finish --

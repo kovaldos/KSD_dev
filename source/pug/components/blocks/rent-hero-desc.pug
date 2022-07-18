@@ -1,9 +1,9 @@
-mixin arenda-hero-desc()
+mixin rent-hero-desc()
 	-
 		const data = {
 			desc: [
 				{
-					icon: "icon-arenda-hero-desc-1",
+					icon: "icon-rent-hero-desc-1",
 					text1: "Аренда ",
 					link1: {
 						href: "#",
@@ -17,7 +17,7 @@ mixin arenda-hero-desc()
 					text3: "в случае поломки выезд механиков за 1 час", 
 				},
 				{
-					icon: "icon-arenda-hero-desc-2",
+					icon: "icon-rent-hero-desc-2",
 					text1: "Все машины ",
 					link1: {
 						href: "#",
@@ -32,24 +32,24 @@ mixin arenda-hero-desc()
 				},
 			]
 		}
-	.arenda-hero-desc
-		.container.arenda-hero__container.arenda-hero__container--rel
-			.arenda-hero-desc__slider.swiper.swiper--12
+	.rent-hero-desc
+		.container.rent-hero__container.rent-hero__container--rel
+			.rent-hero-desc__slider.swiper.swiper--12
 				.swiper-wrapper
 					each item in data.desc
 						.swiper-slide
-							.arenda-hero-desc__item
-								+icon(item.icon, 60, 60).arenda-hero-desc__item-icon
-								p.text.arenda-hero-desc__item-text
+							.rent-hero-desc__item
+								+icon(item.icon, 60, 60).rent-hero-desc__item-icon
+								p.text.rent-hero-desc__item-text
 									span=item.text1 
-									a.link.arenda-hero-desc__item-link(href=item.link1.href)=item.link1.text 
+									a.link.rent-hero-desc__item-link(href=item.link1.href)=item.link1.text 
 									span=item.text2
-									a.link.arenda-hero-desc__item-link(href=item.link2.href)=item.link2.text
+									a.link.rent-hero-desc__item-link(href=item.link2.href)=item.link2.text
 									span=item.text3
-				.arenda-hero-desc__slider-nav
-					.swiper-pagination.arenda-hero-desc__slider-pag
-					.arenda-hero-desc__slider-btns
-						.swiper-button-next.arenda-hero-desc__slider-btn.arenda-hero-desc__slider-btn--next
+				.rent-hero-desc__slider-nav
+					.swiper-pagination.rent-hero-desc__slider-pag
+					.rent-hero-desc__slider-btns
+						.swiper-button-next.rent-hero-desc__slider-btn.rent-hero-desc__slider-btn--next
 							+icon("icon-chevron-right-black", 30, 30)
-						.swiper-button-prev.arenda-hero-desc__slider-btn.arenda-hero-desc__slider-btn--prev
+						.swiper-button-prev.rent-hero-desc__slider-btn.rent-hero-desc__slider-btn--prev
 							+icon("icon-chevron-left-black", 30, 30)

@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 // Hero-slider init -- Start --
 
-const initArendaDescSlider = () => {
+const initRentDescSlider = () => {
   let swiper12 = document.querySelector('.swiper--12');
   if (swiper12) {
     swiper12 = new Swiper(swiper12, {
@@ -16,17 +16,17 @@ const initArendaDescSlider = () => {
         },
       },
       navigation: {
-        nextEl: '.arenda-hero-desc__slider-btn--next',
-        prevEl: '.arenda-hero-desc__slider-btn--prev',
+        nextEl: '.rent-hero-desc__slider-btn--next',
+        prevEl: '.rent-hero-desc__slider-btn--prev',
       },
       pagination: {
-        el: '.arenda-hero-desc__slider-pag',
+        el: '.rent-hero-desc__slider-pag',
         type: 'fraction',
       },
     });
   }
 };
 
-export {initArendaDescSlider};
+export {initRentDescSlider};
 
 // Hero-slider init -- Finish --
