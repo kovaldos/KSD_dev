@@ -1,0 +1,61 @@
+mixin rent-about-us()
+	-
+		const data = {
+			title: "О компании",
+			subtitle: "“ООО Конструктив - СД”",
+			titleText: "«Конструктив-СД» — это компания ведущих специалистов по демантажу зданий, строительству дорог и облагораживанию территории. По аренде строительной техники мы предлагаем машины, которые используются для сноса зданий, создания дорожных покрытий, планировке, очистке рек и водоемов и т. д. В наличии имеются редкие модели техники с универсальными возможностями.",
+			title2: "СК “Олимпийский”",
+			text: "Компания «Конструктив-СД» принимает активное участие в реконструкции спорткомплекса. Наша компания осуществляет снос и демонтаж некоторых сооружений. На объекте работает 6 экскаваторов, из них: 1 экскаватор-разрушитель; 2 экскаватора с гидромолотами; 1 экскаватор с гидроножницами; 2 экскаватора со скальными ковшами.",
+			items: [
+				{					
+				src: "slides",
+				img: "rent-about-us-img-1",
+				alt: "Красные грузовики",
+				},
+				{					
+				src: "slides",
+				img: "rent-about-us-img-2",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "rent-about-us-img-3",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "rent-about-us-img-4",
+				alt: "экскаватор-разрушитель",
+				},
+			],
+			btn: {
+				href: "#",
+				text: "Больше о компании",
+			},
+		}
+	section.section.rent-about-us 
+		.container.rent-about-us__container
+			.rent-about-us__heading
+				h2.title.title--h2.rent-about-us__title=data.title 
+				h3.title.title--h3.rent-about-us__subtitle=data.subtitle
+				p.text.text--md.rent-about-us__heading-text=data.titleText
+		.rent-about-us__wrapper
+			.container.rent-about-us__container
+				.rent-about-us__cols 
+					.rent-about-us__col.rent-about-us__col--01
+						.swiper.swiper--13.rent-about-us__slider
+							.swiper-wrapper
+								each item in data.items
+									.swiper-slide
+										.rent-about-us__slider-item
+											+picture(item.src, item.img, "jpg", item.alt)
+					.rent-about-us__col.rent-about-us__col--02
+						h4.title.title--h4.rent-about-us__content-title=data.title2
+						p.text.text--md.rent-about-us__text=data.text
+						.rent-about-us__slider-nav
+							.rent-about-us__slider-btns
+								.swiper-button-next.rent-about-us__slider-btn.rent-about-us__slider-btn--next
+									+icon("icon-arrow-right", 20, 12)
+								.swiper-button-prev.rent-about-us__slider-btn.rent-about-us__slider-btn--prev
+									+icon("icon-arrow-left", 20, 12)
+				+btn(data.btn).btn--drk-orange.btn--cntrd.rent-about-us__btn-more
