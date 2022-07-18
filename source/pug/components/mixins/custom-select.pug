@@ -3,8 +3,9 @@ mixin custom-select(options = {})
   - const selectError = options.error ? options.error : false
   - const selectPlaceholder = options.placeholder ? options.placeholder : false
   - const buttonAriaLabel = options.buttonAriaLabel ? options.buttonAriaLabel : "Выберите одну из опций"
+  -const simpleBar = options.simplebar ? options.simplebar : false
 
-  div&attributes(attributes)
+  .custom-select&attributes(attributes)
     if selectLabel
       span.custom-select__label=selectLabel
     if selectError
@@ -14,7 +15,13 @@ mixin custom-select(options = {})
     button.custom-select__button(type="button", aria-label=buttonAriaLabel)
       span.custom-select__text
       span.custom-select__icon
-    ul.custom-select__list(role="listbox")
-      each item in options.optionsList
-        - const ariaSelected = item.isActive ? "true" : "false"
-        li.custom-select__item(class=itemClass, tabindex="0", data-select-value=item.value, aria-selected=ariaSelected, role="option")=item.text
+    if simpleBar
+      ul.custom-select__list(role="listbox" data-simplebar=simpleBar)
+        each item in options.optionsList
+          - const ariaSelected = item.isActive ? "true" : "false"
+          li.custom-select__item(class=itemClass, tabindex="0", data-select-value=item.value, aria-selected=ariaSelected, role="option")=item.text
+    else
+      ul.custom-select__list(role="listbox")
+        each item in options.optionsList
+          - const ariaSelected = item.isActive ? "true" : "false"
+          li.custom-select__item(class=itemClass, tabindex="0", data-select-value=item.value, aria-selected=ariaSelected, role="option")=item.text

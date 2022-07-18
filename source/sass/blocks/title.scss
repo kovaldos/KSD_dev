@@ -51,15 +51,10 @@
 	}
 
 }
-// .wrapper--main {
-// 	.title {
-// 		&--h2 {
-// 			color: $color-dark-orange;
-// 		}
-// 		&--h4 {
-// 			@include vp-767 {
-// 				color: $color-dark-orange;
-// 			}
-// 		}
-// 	}
-// }
+.wrapper--rent-catalog {
+	.title {
+		&--h2 {
+			color: $color-bunting;
+		}
+	}
+}

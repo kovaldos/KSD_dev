@@ -1,0 +1,49 @@
+mixin rent-catalog()
+	-
+		const data = {
+			title: "Каталог",
+			navRow: {
+				quantity: {
+					num: "28 ",
+					text: "единиц техники",
+				},
+				select: {
+					placeholder: "Сначала популярные",
+					name: "rent-catalog-sort-select",
+					//- simplebar: "data-simplebar",
+					optionsList: [
+						{
+							value: "option-01",
+							text: "Сначала популярные",
+						},
+						{
+							value: "option-02",
+							text: "Сначала подешевле",
+						},
+						{
+							value: "option-03",
+							text: "Сначала подороже",
+						},
+					],
+				},
+			} 
+
+		}
+	section.section.rent-catalog 
+		.container.rent-catalog__container 
+			h1.title.title--h2.rent-catalog__title=data.title
+			nav.rent-catalog__nav
+				.rent-catalog__nav-quantity 
+					span.rent-catalog__nav-quantity-num=data.navRow.quantity.num
+					span.rent-catalog__nav-quantity-text=data.navRow.quantity.text
+				+custom-select(data.navRow.select).rent-catalog__nav-select(data-select)
+				.rent-catalog__nav-view-btns 
+					button.rent-catalog__nav-btn.rent-catalog__nav-btn--stripes.is-active
+						span
+						span
+						span
+					button.rent-catalog__nav-btn.rent-catalog__nav-btn--squares
+						span
+						span
+						span
+						span

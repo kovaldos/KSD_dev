@@ -2374,7 +2374,6 @@ button,
   max-height: 100px;
   margin: 0;
   padding: 0;
-  overflow-y: auto;
   list-style: none;
   background-color: #ffffff;
   border: 2px solid #000000;
@@ -2602,6 +2601,10 @@ button,
   font-weight: 700;
   font-size: 18px;
   line-height: 160%;
+  color: #2D3142;
+}
+
+.wrapper--rent-catalog .title--h2 {
   color: #2D3142;
 }
 
@@ -3724,7 +3727,7 @@ button,
 
 .principles__ac-btn {
   border-radius: 10px;
-  background-color: #fafafe;
+  background-color: #F7F7FD;
   padding: 12px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5371,7 +5374,7 @@ button,
   align-items: center;
   padding: 10px;
   border-radius: 5px;
-  background-color: #fafafe;
+  background-color: #F7F7FD;
   cursor: pointer;
   font-weight: 400;
   font-size: 16px;
@@ -8044,7 +8047,7 @@ button,
   justify-content: center;
   padding: 16px 32px;
   border-radius: 10px;
-  background-color: #fafafe;
+  background-color: #F7F7FD;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   -o-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -8396,7 +8399,7 @@ button,
 .rent-hero {
   height: 640px;
   position: relative;
-  background-color: #fafafe;
+  background-color: #F7F7FD;
   margin: 0 0 60px;
 }
 
@@ -8662,7 +8665,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgba(250, 250, 254, 0.7);
+  background-color: rgba(247, 247, 253, 0.7);
   border-radius: 10px;
 }
 
@@ -9007,7 +9010,7 @@ button,
 }
 
 .rent-about-us__wrapper {
-  background-color: #fafafe;
+  background-color: #F7F7FD;
   padding: 40px 0;
   border-radius: 5px;
 }
@@ -9133,6 +9136,127 @@ button,
   line-height: 20px;
   padding: 16px 48px;
   border-radius: 7px;
+}
+
+.rent-catalog {
+  padding: 20px 0 40px;
+}
+
+.rent-catalog__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #F7F7FD;
+}
+
+.rent-catalog__nav-quantity {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.rent-catalog__nav-select {
+  padding: 0;
+  width: 100%;
+  max-width: 214px;
+  margin: 0 20px 0 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.rent-catalog__nav-view-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #EEEEFB;
+  border-radius: 5px;
+  width: 92px;
+  height: 35px;
+  padding: 2px;
+}
+
+.rent-catalog__nav-btn {
+  border-radius: 4px;
+  width: 43px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  outline: none;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  padding: 0;
+  cursor: pointer;
+}
+
+.rent-catalog__nav-btn.is-active {
+  background-color: #ffffff;
+}
+
+.rent-catalog__nav-btn.is-active span {
+  border-color: #2D3142;
+}
+
+.rent-catalog__nav-btn--stripes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.rent-catalog__nav-btn--stripes span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  border: 1px solid #D2D7E8;
+  -webkit-transition: border-color 0.3s ease;
+  -o-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+
+.rent-catalog__nav-btn--stripes span:not(:last-of-type) {
+  margin: 0 0 4px;
+}
+
+.rent-catalog__nav-btn--squares {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  padding: 7px 12px;
+}
+
+.rent-catalog__nav-btn--squares span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #D2D7E8;
+  border-radius: 1px;
 }
 
 .footer {
@@ -9709,7 +9833,7 @@ button,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: rgba(250, 250, 254, 0.5);
+    background-color: rgba(247, 247, 253, 0.5);
     border-radius: 5px;
     border: 1px solid #D2D7E8;
   }
