@@ -20,7 +20,8 @@ import {initReviewsSlider} from './modules/init-reviews-slider';
 import {initScrollToAnchor} from './modules/scroll-to-anchor';
 import {initArendaHeroSlider} from './modules/init-arenda-hero-slider';
 import {initArendaDescSlider} from './modules/init-arenda-desc-slider';
-// import {initHistorySimplebar} from './modules/init-history-simplebar';
+import {initRentAboutUsSlider} from './modules/init-rent-about-us-slider';
+
 
 // ---------------------------------
 
@@ -57,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initScrollToAnchor();
     initArendaHeroSlider();
     initArendaDescSlider();
-    // initHistorySimplebar();
+    initRentAboutUsSlider();
   });
 });
 
