@@ -53,6 +53,7 @@
     "webpack-stream": "5.2.1"
   },
   "dependencies": {
+    "nouislider": "^15.6.0",
     "simplebar": "^5.3.8"
   }
 }

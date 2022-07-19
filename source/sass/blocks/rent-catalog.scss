@@ -1,23 +1,46 @@
 .rent-catalog {
 	padding: 20px 0 40px;
+	&__title {
+		margin: 0 0 20px;
+	}
 	&__nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 10px;
+		margin: 0 0 30px;
 		border-radius: 5px;
 		background-color: $color-ghost-white;
 		&-quantity {
 			flex-grow: 1;
+			font-size: 14px;
+			line-height: 23px;
+			color: $color-waikawa-grey;
 		}
 		&-select {
 			padding: 0;
 			width: 100%;
-			max-width: 214px;
+			max-width: 220px;
 			margin: 0 20px 0 0;
 			flex-shrink: 0;
 			.custom-select {
 				&__button {
+					border: 0;
+				}
+				&__list {
+					bottom: 0;
+					border-width: 1px;
+					border-color: $color-blue-zodiac;
+				}
+				&__text,
+				&__placeholder {
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 17px;
+				}
+				&__icon {
+					width: 14px;
+					height: 8px;
 				}
 			}
 		}
@@ -53,6 +76,7 @@
 				justify-content: center;
 				flex-direction: column;
 				span {
+					pointer-events: none;
 					display: block;
 					width: 16px;
 					height: 2px;
@@ -70,6 +94,7 @@
 				grid-row-gap: 2px;
 				padding: 7px 12px;
 				span {
+					pointer-events: none;
 					display: block;
 					width: 8px;
 					height: 8px;
@@ -77,6 +102,13 @@
 					border-radius: 1px;
 				}
 			}
+		}
+	}
+	&__wrapper {
+		&-cols {
+			display: grid;
+			grid-template-columns: 270px 1fr;
+			grid-column-gap: 30px;
 		}
 	}
 }

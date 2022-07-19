@@ -21,6 +21,8 @@ import {initScrollToAnchor} from './modules/scroll-to-anchor';
 import {initRentHeroSlider} from './modules/init-rent-hero-slider';
 import {initRentDescSlider} from './modules/init-rent-desc-slider';
 import {initRentAboutUsSlider} from './modules/init-rent-about-us-slider';
+import {initRentCatalogViewSwitch} from './modules/init-rent-catalog-view-switch';
+import {initRangeSlider} from './modules/init-range-slider';
 
 
 // ---------------------------------
@@ -59,6 +61,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initRentHeroSlider();
     initRentDescSlider();
     initRentAboutUsSlider();
+    initRentCatalogViewSwitch();
+    initRangeSlider();
   });
 });
 

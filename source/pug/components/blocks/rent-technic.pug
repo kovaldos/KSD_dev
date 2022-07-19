@@ -34,7 +34,6 @@ mixin rent-technic()
 			subtext: "Принимая во внимание показатели успешности, экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный план целого ряда внеочередных",
 			items: [
 				{
-					href: "#",
 					title: "Техника",
 					img: "rent-technic-img-1",
 					alt: "rent-technic-img-1",
@@ -67,7 +66,7 @@ mixin rent-technic()
 				.rent-technic__catalog-items
 					- for (let i = 0; i < 8; i++)
 						each item in data.items 
-							a(href=item.href).rent-technic__catalog-item
+							.rent-technic__catalog-item
 								h4.title.rent-technic__catalog-item-title=item.title
 								.rent-technic__catalog-item-pic
 									+picture("content", item.img, "png", item.alt)
