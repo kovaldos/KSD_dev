@@ -184,6 +184,7 @@ mixin rent-filter()
 			price: {
 				title: "Цена",
 				from: "от",
+				span: "-",
 				to: "до"
 			},
 		}
@@ -209,9 +210,13 @@ mixin rent-filter()
 				span.rent-filter__ac-btn-icon 
 					+icon("icon-chevron-down", 14, 14)
 			.rent-filter__ac-content(data-accordion="content")
-				.rent-filter__inputs 
-					input.rent-filter__input.rent-filter__input--from#price-from(type="number", name="price-from" placeholder=data.price.from)
-					span -
-					input.rent-filter__input.rent-filter__input--to#price-to(type="number", name="price-to" placeholder=data.price.to)
+				.rent-filter__inputs
+					label.rent-filter__inputs-label
+						span.rent-filter__input-label=data.price.from
+						input.rent-filter__input.rent-filter__input--from#price-from(type="number" name="price-from")
+					span.stripe=data.price.span
+					label.rent-filter__inputs-label
+						span.rent-filter__input-label=data.price.to
+						input.rent-filter__input.rent-filter__input--to#price-to(type="number" name="price-to")
 				.rent-filter__price
 					.rent-filter__price-range#noui-1

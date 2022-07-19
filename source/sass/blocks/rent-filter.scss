@@ -128,7 +128,16 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 20px 0;
-		span {
+		&-label {
+			width: 100%;
+			height: 45px;
+			position: relative;
+			padding: 0;
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+		}
+		.stripe {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -138,15 +147,23 @@
 		}
 	}
 	&__input {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
-		flex-grow: 1;
-		padding: 14px;
+		padding: 14px 14px 14px 37px;
 		color: $color-bunting;
 		outline: none;
-		border: 1px solid rgba($color-default-black, 0.1);
-		border-radius: 10px;
 		font-size: 14px;
 		line-height: 17px;
+		border: 1px solid rgba($color-default-black, 0.1);
+		z-index: 1;
+		border-radius: 10px;
+		&-label {
+			position: absolute;
+			left: 14px;
+			z-index: 2;
+		}
 	}
 	&__price {
 		width: 100%;
