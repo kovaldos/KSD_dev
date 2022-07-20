@@ -10552,6 +10552,129 @@ button,
   color: #2D3142;
 }
 
+.rent-card-similar__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0 30px;
+}
+
+.rent-card-similar__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  color: #FF8700;
+}
+
+.rent-card-similar__link::after {
+  background-color: #FF8700;
+}
+
+.rent-card-similar__list {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}
+
+.rent-card-similar__card {
+  -webkit-box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
+  box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.rent-card-similar__card-pic {
+  width: 100%;
+  height: 160px;
+  position: relative;
+  margin: 0 0 15px;
+}
+
+.rent-card-similar__card-pic img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.rent-card-similar__card-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 122%;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+  color: #FF8700;
+}
+
+.rent-card-similar__card-model {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 180%;
+  color: #2D3142;
+  margin: 0 0 25px;
+}
+
+.rent-card-similar__card-price {
+  padding: 0 0 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.rent-card-similar__card-add {
+  position: absolute;
+  width: 56px;
+  height: 44px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin: 0;
+  bottom: 20px;
+  right: 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.rent-card-similar__card-add-text {
+  display: none;
+}
+
+.rent-card-similar__card-add-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .footer {
   margin: 60px 0 0 0;
 }
@@ -10947,6 +11070,13 @@ button,
 
   .rent-catalog__cards--grid .rent-catalog__card:hover .rent-catalog__card-add,
   .rent-catalog__cards--grid .rent-catalog__card:focus-visible .rent-catalog__cards--grid .rent-catalog__card .rent-catalog__card-add {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .rent-card-similar__card:hover .rent-catalog__card-add,
+  .rent-card-similar__card:focus-visible .rent-card-similar__card .rent-catalog__card-add {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
