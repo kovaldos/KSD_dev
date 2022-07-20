@@ -1,0 +1,42 @@
+mixin rent-card-description()
+	-
+		const data = {
+			title: "Описание",
+			text: [
+				"Volutpat elementum, leo eleifend dui. Elit dictumst at laoreet velit sed ornare scelerisque aliquam velit. Hendrerit tortor, magna aenean porttitor eu. Semper vel tincidunt pellentesque natoque volutpat integer leo quam. Consectetur neque sit non turpis ridiculus mi massa mattis adipiscing. Mi felis arcu aliquet tincidunt. Ut in dictum amet id sem interdum tempus porta. Blandit tempus, purus adipiscing elementum magna nisi adipiscing arcu. Tempor massa lectus velit mauris. Egestas nunc curabitur diam eget a.",
+
+				"Pretium tortor consectetur id et. Eget nibh viverra mattis venenatis in eleifend. Id et elementum duis pretium amet habitant. Imperdiet enim sed consequat purus, enim. Nisi sed tellus orci commodo sodales platea sollicitudin vel. Sapien nibh erat pretium nisl diam ut.",
+			],
+			//- items: [
+			//- 	{
+			//- 		name: "Грузоподъемность: ",
+			//- 		value: "25 тонн",
+			//- 	},
+			//- 	{
+			//- 		name: "Грузоподъемность: ",
+			//- 		value: "25 тонн",
+			//- 	},
+			//- 	{
+			//- 		name: "Объем кузова: ",
+			//- 		value: "20 кубов",
+			//- 	},
+			//- 	{
+			//- 		name: "Объем кузова: ",
+			//- 		value: "20 кубов",
+			//- 	},
+			//- 	{
+			//- 		name: "Колесная формула: ",
+			//- 		value: "6x4",
+			//- 	},
+			//- 	{
+			//- 		name: "Колесная формула: ",
+			//- 		value: "6x4",
+			//- 	},
+			//- ],
+		}
+
+	section.section.rent-card-description 
+		.container
+			h2.title.title--h3.rent-card-description__title=data.title
+			each item in data.text
+				p.text.text--md.rent-card-description__text=item

@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+	- const title = "KSD - Аренда Карточка техники" //- на страницах кроме главной используйте О нас — ProjectName
+	- const wrapperMods = ""
+	- const hasHeader = true
+	- const headerMods = ""
+	- const hasFooter = true
+	- const footerMods = ""
+	- const currentUrl = "arenda-kartochka.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+	main
+		//- на странице запрещен "голый" код
+		//- все блоки вставляются из папки pug/components/blocks
+		+breadcrumbs("Главная", "Каталог", "Экскаваторы", "Экскаватор-погрузчик Volvo BL71B")
+		+rent-card()
+		+rent-card-description()
+
+block modals
