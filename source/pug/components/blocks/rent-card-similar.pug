@@ -1,0 +1,42 @@
+mixin rent-card-similar()
+	-
+		const data = {
+			title: "Похожая техника",
+			link: {
+				href: "arenda-katalog.html",
+				text: "Посмотреть все",
+			},
+			items: [
+				{
+					title: "Техника",
+					img: "rent-technic-img-1",
+					alt: "rent-technic-img-1",
+					name: "Экскаватор-погрузчик Volvo BL71B",
+					price: {
+						num: "35 000",
+						currency: " ₽ ",
+						time: "/ смена",
+					},
+				},
+			],
+		}
+
+	section.section.rent-card-similar 
+		.container
+			.rent-card-similar__heading
+				h2.title.title--h3.rent-card-similar__title=data.title
+				a.link.rent-card-similar__link(href=data.link.href)=data.link.text 
+			ul.rent-card-similar__list
+				- for (let i = 0; i < 4; i++)
+					each item in data.items 
+						li.rent-technic__catalog-item
+							h4.title.rent-technic__catalog-item-title=item.title
+							.rent-technic__catalog-item-pic
+								+picture("content", item.img, "png", item.alt)
+							span.rent-technic__catalog-item-model=item.name
+							.rent-technic__catalog-item-price
+								span=item.price.num
+								span=item.price.currency
+								span=item.price.time
+							button(type="button").btn.btn--drk-orange.rent-technic__catalog-item-add
+								+icon("icon-plus", 23, 23)
