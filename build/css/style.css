@@ -10683,6 +10683,7 @@ button,
   height: 550px;
   position: relative;
   background-color: #2D3142;
+  margin: 0 0 40px;
 }
 
 .sale-hero__col--01 {
@@ -10818,6 +10819,52 @@ button,
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+}
+
+.sale-goods-types {
+  margin: 0 0 20px;
+}
+
+.sale-goods-types__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}
+
+.sale-goods-types__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: rgba(238, 238, 251, 0.3);
+  border-radius: 7px;
+  -webkit-transition: background-color 0.3s ease, border-radius 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, border-radius 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.sale-goods-types__link-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  color: #2D3142;
+  margin: 0 0 18px;
 }
 
 .footer {
@@ -11225,6 +11272,14 @@ button,
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+  }
+
+  .sale-goods-types__link:hover,
+  .sale-goods-types__link:focus-visible {
+    border-radius: 10px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
+    box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
   }
 }
 
