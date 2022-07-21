@@ -142,3 +142,14 @@
     }
   }
 }
+.wrapper {
+  &--sale {
+    .header {
+      &__logo {
+        svg {
+          color: $color-apple;
+        }
+      }
+    }
+  }
+}
