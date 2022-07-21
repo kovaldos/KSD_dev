@@ -1,4 +1,5 @@
 .sale-selections {
+	margin: 0 0 20px;
 	&__tabs {
 		&-controls {
 			padding: 30px 0;
@@ -6,7 +7,7 @@
 			grid-template-columns: repeat(3, 1fr);
 			grid-column-gap: 30px;
 			grid-row-gap: 30px;
-			margin: 0 0 20px;
+			margin: 0 0 70px;
 			list-style: none;
 		}
 		&-control {
@@ -43,7 +44,7 @@
 			&.is-active {
 				border-color: $color-lavender-grey;
 				svg {
-					color: $color-dark-orange;
+					color: $color-apple;
 				}
 			}
 		}

@@ -1,0 +1,31 @@
+mixin sale-about-us()
+	-
+		const data = {
+			title: "О компании",
+			subtitle: "“ООО Конструктив - СД” ",
+			headText: "«Конструктив-СД» — это компания ведущих специалистов по демонтажу зданий, строительству дорог и облагораживанию территории. Наша компания ведет продажу вторичных строительных материалов на территории Москвы и Московской области. Накопив опыт ликвидации зданий, мы поняли — отходы сноса объектов — хорошее сырье в новом строительстве и выбрасывать их совершенно не рационально.",
+			video: {
+				src: "https://cdn.videvo.net/videvo_files/video/premium/video0237/large_watermarked/02_day_Stockholm_99_rotate_sun_crane_preview.mp4",
+				poster: "./img/content/project-video-poster-1.jpg",
+			},
+			text: "В Москве от общего объема городского мусора доля отходов строительства и демонтажа составляет 22 — 24%. Вторичные строительные материалы получают в процессе переработки строительных отходов. Их стоимость гораздо меньше, чем новых, а служить они могут еще такой же и более срок, но на других объектах. Использовать их очень выгодно. Например, цена вторичного щебня втрое ниже, чем щебня, покупаемого из карьера. Или прием на переработку лома от сноса дешевле в 2 раза, чем на его захоронение.",
+			info: "Применив переработку и используя вторичные материалы в собственных строительных работах, заказчик экономит до 50 — 60% бюджета на демонтаж своих объектов;",
+		}
+	section.section.sale-about-us
+		.container.sale-about-us__container 
+			h2.title.title--h2.sale-about-us__title=data.title
+			h3.title.title--h3.sale-about-us__subtitle=data.subtitle
+			p.text.text--md.sale-about-us__text=data.headText
+			.sale-about-us__cols
+				.sale-about-us__col.sale-about-us__col--01
+					.sale-about-us__video(data-video-block)
+						button(type="button" data-video-btn).btn.btn--apple.sale-about-us__video-btn
+							+icon("icon-play", 14, 14)
+						video(src=data.video.src, type="video/mp4", controls muted preload="none" poster=data.video.poster)
+				.sale-about-us__col.sale-about-us__col--02
+					.sale-about-us__content
+						h4.title.title--h4.sale-about-us__content-title=data.subtitle
+						p.text.text--sm.sale-about-us__content-text=data.text
+			p.text.text--md.sale-about-us__info=data.info
+
+		
