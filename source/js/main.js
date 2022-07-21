@@ -24,6 +24,7 @@ import {initRentAboutUsSlider} from './modules/init-rent-about-us-slider';
 import {initRentCatalogViewSwitch} from './modules/init-rent-catalog-view-switch';
 import {initRangeSlider} from './modules/init-range-slider';
 import {initRentCardSlider} from './modules/init-rent-card-slider';
+import {initCalcRangeSlider} from './modules/init-calc-range-slider';
 
 
 // ---------------------------------
@@ -65,6 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initRentCatalogViewSwitch();
     initRangeSlider();
     initRentCardSlider();
+    initCalcRangeSlider();
   });
 });
 
