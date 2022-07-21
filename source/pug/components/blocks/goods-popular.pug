@@ -1,8 +1,9 @@
-mixin goods-popular()
+mixin goods-popular(classMode)
 	-
 		const data = {
 			title: "Товары",
 			subtitle: "Популярное",
+			subtitle2: "Для строительства дорог",
 			link: {
 				href: "sale-katalog.html",
 				text: "Смотреть все товары",
@@ -55,11 +56,14 @@ mixin goods-popular()
 			],
 		}
 
-	section.section.goods-popular 
+	section.section.goods-popular(class=classMode)
 		.container
 			.goods-popular__heading
 				h2.title.title--h2.goods-popular__title=data.title
-				h3.title.title--h3.goods-popular__subtitle=data.subtitle
+				if (classMode === "goods-popular--roads")
+					h3.title.title--h3.goods-popular__subtitle=data.subtitle2
+				else
+					h3.title.title--h3.goods-popular__subtitle=data.subtitle
 			ul.goods-popular__list
 				each item in data.items 
 					li.goods-popular__list-item
