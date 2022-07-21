@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер под секцией Hero на странице аренды -- Начало --
+// Rent description slider -- Start --
 
 const initRentDescSlider = () => {
   let swiper12 = document.querySelector('.swiper--12');
@@ -28,5 +29,5 @@ const initRentDescSlider = () => {
 };
 
 export {initRentDescSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер под секцией Hero на странице аренды -- Конец --
+// Rent description slider -- Finish --

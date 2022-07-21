@@ -1,3 +1,4 @@
+// Переключения вида в каталоге аренды -- Начало --
 // Switch view in rent-catalog -- Start --
 const initRentCatalogViewSwitch = () => {
   const catalogWrap = document.querySelector('.rent-catalog');
@@ -23,4 +24,5 @@ const initRentCatalogViewSwitch = () => {
   }
 };
 export {initRentCatalogViewSwitch};
+// Переключения вида в каталоге аренды -- Конец --
 // Switch view in rent-catalog -- End --

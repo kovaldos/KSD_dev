@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер в секции О нас -- Начало --
+// About us slider -- Start --
 
 const initRentAboutUsSlider = () => {
   let swiper13 = document.querySelector('.swiper--13');
@@ -50,5 +51,5 @@ const initRentAboutUsSlider = () => {
 };
 
 export {initRentAboutUsSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер в секции О нас -- Конец --
+// About us slider -- Finish --

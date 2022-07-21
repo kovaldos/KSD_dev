@@ -1,4 +1,5 @@
-// Button to top of the viewport - Start -
+// Кнопка наверх -- Начало --
+// Button to top of the viewport -- Start --
 import {scrollTo} from '../utils/scroll-to';
 const initBtnToTop = () => {
   const btnToTop = document.querySelector('.btn-to-top');
@@ -24,4 +25,5 @@ const initBtnToTop = () => {
 };
 export {initBtnToTop};
 
-// Button to top of the viewport - Finish -
+// Кнопка наверх -- Конец --
+// Button to top of the viewport -- End --

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер в карточке товара аренды -- Начало --
+// Rent card slider -- Start --
 
 const initRentCardSlider = () => {
   let swiper15 = document.querySelector('.swiper--15');
@@ -10,14 +11,6 @@ const initRentCardSlider = () => {
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
-      // navigation: {
-      //   nextEl: '.rent-about-us__slider-btn--next',
-      //   prevEl: '.rent-about-us__slider-btn--prev',
-      // },
-      // pagination: {
-      //   el: '.rent-about-us__slider-pag',
-      //   type: 'fraction',
-      // },
     });
   }
   let swiper14 = document.querySelector('.swiper--14');
@@ -41,5 +34,5 @@ const initRentCardSlider = () => {
 };
 
 export {initRentCardSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер в карточке товара аренды -- Конец --
+// Rent card slider -- Finish --

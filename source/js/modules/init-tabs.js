@@ -1,3 +1,5 @@
+// Инициализация табов -- Начало --
+// Tabs init -- Start --
 import {Tabs} from './tabs';
 
 let tabs;
@@ -9,3 +11,5 @@ const initTabs = () => {
 };
 
 export {initTabs, tabs};
+// Инициализация табов -- Конец --
+// Tabs init -- End --

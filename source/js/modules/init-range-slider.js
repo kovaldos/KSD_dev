@@ -1,4 +1,5 @@
 /* eslint-disable no-invalid-this */
+// Ползунок диапазона цен в фильтре каталога аренды -- Начало --
 // Range slider on rent-catalog filter -- Start --
 import noUiSlider from 'nouislider';
 
@@ -19,7 +20,7 @@ const initRangeSlider = () => {
         'max': 60000,
       },
     });
-
+    // const ru = new Intl.NumberFormat('ru').format(amount);
     priceRange.noUiSlider.on('update', function (values, handle) {
       inputs[handle].value = values[handle];
     });
@@ -32,4 +33,5 @@ const initRangeSlider = () => {
   }
 };
 export {initRangeSlider};
+// Ползунок диапазона цен в фильтре каталога аренды -- Конец --
 // Range slider on rent-catalog filter -- End --

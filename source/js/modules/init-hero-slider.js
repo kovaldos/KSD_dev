@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер в секции Hero на главной -- Начало --
+// Hero slider -- Start --
 
 const initHeroSlider = () => {
   let swiper01 = document.querySelector('.swiper--01');
@@ -34,10 +35,6 @@ const initHeroSlider = () => {
      //      initialSlide: 1,
      //    },
      //  },
-     //  navigation: {
-     //    nextEl: '.destinations__slider-nav--next',
-     //    prevEl: '.destinations__slider-nav--prev',
-     //  },
       pagination: {
         el: '.hero__slider-pag',
         type: 'bullets',
@@ -47,5 +44,5 @@ const initHeroSlider = () => {
 };
 
 export {initHeroSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер в секции Hero на главной -- Конец --
+// Hero slider -- Finish --
