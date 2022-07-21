@@ -1,0 +1,68 @@
+mixin sale-selections()
+	-
+		const data = {
+			title: "Подборки",
+			subtitle: "Сортировка материалов по категориям",
+			navItems: [
+				{
+					href: "#",
+					icon: "rent-selections-icon-1",
+					title: "Строительство домов",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-2",
+					title: "Перевоз материалов",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-3",
+					title: "Облагораживание территории",
+				},
+			],
+			items: [
+				{
+					img: "sale-selections-img-1",
+					alt: "sale-selections-img-1",
+					title: "Экология",
+					subtitle: "Переработка отходов для их вторичного использования помогает уменьшить:",
+					list: [
+						"Неблагоприятное воздействие на территорию города и его пригородов за счет уменьшения кол-ва и объемов свалок;",
+						"Снизить количество отходов для захоронения до 1/3 — 1/4 от их общей массы;",
+						"Уровень экологической нагрузки и энергозатрат за счет уже проведенных работ по добыче, доставке и переработке сырья в стройматериалы;",
+						"Снизить экологический налог на предприятие.",
+					],
+				},
+			],
+		}
+	section.section.sale-selections
+		.container.sale-selections__container 
+			h2.title.title--h2.sale-selections__title=data.title
+			h3.title.title--h3.sale-selections__title=data.subtitle
+		.tabs.sale-selections__tabs(data-tabs="parent" data-delay="300")
+			.sale-selections__tabs-controls-wrap
+				.container
+					ul.tabs__controls.sale-selections__tabs-controls(data-tabs="controls")
+						each item in data.navItems
+							li.sale-selections__controls-item
+								button.tabs__control.sale-selections__tabs-control(type="button" data-index=index, data-tabs="control",)
+									span.sale-selections__tabs-control-title=item.title
+									+icon(item.icon, 80, 80)
+			.tabs__content.sale-selections__tabs-content-wrap
+				.tabs__content.sale-selections__tabs-content(data-tabs="content")
+					.container.sale-selections__tabs-content-container
+						- for (let i = 0; i < 3; i++)
+							.sale-selections__tabs-el(data-tabs="element")
+								each item in data.items
+									.sale-selections__item
+										.sale-selections__item-head
+											.sale-selections__item-pic
+												+picture("content", item.img, "png", item.alt)
+											.sale-selections__item-titles
+												h2.title.title--h2.sale-selections__item-title=item.title
+												h3.title.title--h3.sale-selections__item-subtitle=item.subtitle
+										ul.sale-selections__item-list
+											each listItem in item.list
+												li.sale-selections__item-list-item
+													+icon("icon-check", 26, 26).sale-selections__item-list-item-icon
+													span.sale-selections__item-list-item-text=listItem
