@@ -48,7 +48,7 @@ mixin sale-selections()
 								button.tabs__control.sale-selections__tabs-control(type="button" data-index=index, data-tabs="control",)
 									span.sale-selections__tabs-control-title=item.title
 									+icon(item.icon, 80, 80)
-			.tabs__content.sale-selections__tabs-content-wrap
+			.sale-selections__tabs-content-wrap
 				.tabs__content.sale-selections__tabs-content(data-tabs="content")
 					.container.sale-selections__tabs-content-container
 						- for (let i = 0; i < 3; i++)

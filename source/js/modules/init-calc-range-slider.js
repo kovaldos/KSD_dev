@@ -25,6 +25,6 @@ const initCalcRangeSlider = () => {
     });
   }
 };
-export { initCalcRangeSlider };
+export {initCalcRangeSlider};
 // Ползунок калькулятора расчета доставки -- Конец --
 // Delivery calc range slider -- End --
