@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер в секции Направления -- Начало --
+// Directions slider -- Start --
 
 const initDirectionsSlider = () => {
   let swiper02 = document.querySelector('.swiper--02');
@@ -40,5 +41,5 @@ const initDirectionsSlider = () => {
 };
 
 export {initDirectionsSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер в секции Направления -- Конец --
+// Directions slider -- Finish --

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер в секции проекты -- Начало --
+// Projects slider -- Start --
 
 const initProjectsSlider = () => {
   let swiper07 = document.querySelector('.swiper--07');
@@ -51,5 +52,5 @@ const initProjectsSlider = () => {
 };
 
 export {initProjectsSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер в секции проекты -- Конец --
+// Projects slider -- Finish --

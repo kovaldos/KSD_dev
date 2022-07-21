@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-
-// partners slider -- Start --
+// Слайдер бегущая строка с логотипами партнеров -- Начало --
+// Partners slider -- Start --
 const initPartnersSlider = () => {
   let swiper04 = document.querySelector('.swiper--04');
   if (swiper04) {
@@ -23,5 +23,5 @@ const initPartnersSlider = () => {
 
 };
 export {initPartnersSlider};
-
-// partners slider -- End --
+// Слайдер бегущая строка с логотипами партнеров -- Начало --
+// Partners slider -- End --

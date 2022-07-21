@@ -1,4 +1,5 @@
-// Script for smooth scrolling only because of MacOS and ios - Start -
+// Скрипт для плавного скролла в MacOS и ios -- Начало --
+// Script for smooth scrolling only because of MacOS and ios -- Start --
 import {scrollTo} from '../utils/scroll-to';
 const initScrollToAnchor = () => {
   const anchorLinks = document.querySelectorAll('[data-target]');
@@ -14,4 +15,5 @@ const initScrollToAnchor = () => {
   }
 };
 export {initScrollToAnchor};
-// Script for smooth scrolling only because of MacOS and ios - End -
+// Скрипт для плавного скролла в MacOS и ios -- Конец --
+// Script for smooth scrolling only because of MacOS and ios -- End --

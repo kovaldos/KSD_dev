@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер в секции Команда -- Начало --
+// Team slider -- Start --
 
 const initTeamSlider = () => {
   const swiper03 = new Swiper('.swiper--03', {
@@ -39,5 +40,5 @@ const initTeamSlider = () => {
 };
 
 export {initTeamSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер в секции Команда -- Конец --
+// Team slider -- End --

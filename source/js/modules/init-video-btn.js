@@ -1,5 +1,5 @@
+// Кастомная кнопка видеоплеера -- Начало --
 // Custom video button -- Start --
-
 
 const initVideoBtn = () => {
   const videoBlocks = document.querySelectorAll('[data-video-block]');
@@ -24,4 +24,6 @@ const initVideoBtn = () => {
   }
 };
 export {initVideoBtn};
+// Кастомная кнопка видеоплеера -- Начало --
 // Custom video button -- End --
+

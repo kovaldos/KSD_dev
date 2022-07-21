@@ -14,7 +14,15 @@
   main {
     flex-grow: 1;
   }
-
+  &--sale {
+    .header {
+      &__logo {
+        svg {
+          color: $color-apple;
+        }
+      }
+    }
+  }
 }
 
 .section {

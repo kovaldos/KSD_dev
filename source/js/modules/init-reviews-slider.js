@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер с отзывами -- Начало --
+// Reviews slider -- Start --
 
 const initReviewsSlider = () => {
   let swiper10 = document.querySelector('.swiper--10');
@@ -34,14 +35,10 @@ const initReviewsSlider = () => {
         nextEl: '.reviews__slider-btn--next',
         prevEl: '.reviews__slider-btn--prev',
       },
-      // pagination: {
-      //   el: '.swiper-pagination',
-      //   type: 'bullets',
-      // },
     });
   }
 };
 
 export {initReviewsSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер с отзывами -- Конец --
+// Reviews slider -- End --

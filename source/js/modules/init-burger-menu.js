@@ -1,4 +1,5 @@
-// Burger menu Start
+// Меню бургер -- Начало --
+// Burger menu -- Start --
 const initBurgerMenu = () => {
   const burgerBtns = document.querySelectorAll('[data-burger-btn]');
   if (burgerBtns.length) {
@@ -20,4 +21,5 @@ const initBurgerMenu = () => {
   }
 };
 export {initBurgerMenu};
-// Burger menu End
+// Меню бургер -- Конец --
+// Burger menu -- End --

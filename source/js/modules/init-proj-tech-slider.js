@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// Hero-slider init -- Start --
+// Слайдер техника на странице проекта -- Начало --
+// Project-page technic slider -- Start --
 
 const initProjTechSlider = () => {
   let swiper08 = document.querySelector('.swiper--08');
@@ -43,5 +44,5 @@ const initProjTechSlider = () => {
 };
 
 export {initProjTechSlider};
-
-// Hero-slider init -- Finish --
+// Слайдер техника на странице проекта -- Конец --
+// Project-page technic slider -- Finish --
