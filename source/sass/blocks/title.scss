@@ -64,3 +64,10 @@
 		}
 	}
 }
+.wrapper--sale {
+	.title {
+		&--h2 {
+			color: $color-apple;
+		}
+	}
+}

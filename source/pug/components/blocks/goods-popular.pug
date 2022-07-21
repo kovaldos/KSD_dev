@@ -1,0 +1,77 @@
+mixin goods-popular()
+	-
+		const data = {
+			title: "Товары",
+			subtitle: "Популярное",
+			link: {
+				href: "sale-katalog.html",
+				text: "Смотреть все товары",
+			},
+			items: [
+				{
+					img: "goods-popular-img-1",
+					alt: "goods-popular-img-1",
+					title: "Вторичный бетонный щебень фракция 20-40",
+					price: {
+						num: "600",
+						currency: " ₽",
+						capacity: "/м",
+						sup: "3"
+					},
+				},
+				{
+					img: "goods-popular-img-2",
+					alt: "goods-popular-img-2",
+					title: "Вторичный бетонный щебень фракция 20-40",
+					price: {
+						num: "600",
+						currency: " ₽",
+						capacity: "/м",
+						sup: "3"
+					},
+				},
+				{
+					img: "goods-popular-img-3",
+					alt: "goods-popular-img-3",
+					title: "Вторичный бетонный щебень фракция 20-40",
+					price: {
+						num: "600",
+						currency: " ₽",
+						capacity: "/м",
+						sup: "3"
+					},
+				},
+				{
+					img: "goods-popular-img-4",
+					alt: "goods-popular-img-4",
+					title: "Вторичный бетонный щебень фракция 20-40",
+					price: {
+						num: "600",
+						currency: " ₽",
+						capacity: "/м",
+						sup: "3"
+					},
+				},
+			],
+		}
+
+	section.section.goods-popular 
+		.container
+			.goods-popular__heading
+				h2.title.title--h2.goods-popular__title=data.title
+				h3.title.title--h3.goods-popular__subtitle=data.subtitle
+			ul.goods-popular__list
+				each item in data.items 
+					li.goods-popular__list-item
+						.goods-popular__list-item-pic
+							+picture("content", item.img, "png", item.alt)
+						span.goods-popular__list-item-title=item.title
+						.goods-popular__list-item-price
+							span=item.price.num
+							span=item.price.currency
+							span=item.price.capacity
+							sup
+								small=item.price.sup
+						button(type="button").btn.btn--apple.goods-popular__list-item-add
+							+icon("icon-plus", 23, 23)
+			a.btn.btn--apple.btn--cntrd.goods-popular__btn(href=data.link.href)=data.link.text 
