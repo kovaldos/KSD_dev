@@ -4978,6 +4978,10 @@ button,
   width: auto;
 }
 
+.wrapper--sale .partners {
+  margin: 60px 0 0 0;
+}
+
 .tech__heading {
   margin: 0 0 50px;
 }
@@ -11717,6 +11721,10 @@ button,
   top: 17px;
   left: auto;
   right: 2px;
+}
+
+.wrapper--sale .footer {
+  margin: 0;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

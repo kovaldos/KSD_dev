@@ -5,6 +5,7 @@ block variables
 	- const wrapperMods = "wrapper--sale"
 	- const hasHeader = true
 	- const headerMods = ""
+	- const classMode = "goods-popular--roads"
 	- const hasFooter = true
 	- const footerMods = ""
 	- const currentUrl = "prodazha-materialov.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
@@ -19,5 +20,7 @@ block main
 		+delivery-calc()
 		+sale-selections()
 		+sale-about-us()
+		+goods-popular(classMode)
+		+partners()
 
 block modals
