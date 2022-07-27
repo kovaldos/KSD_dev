@@ -3,28 +3,11 @@ mixin sale-hero()
 		const data = {
 			title: "Строительные материалы от ведущих экспертов",
 			subtitle: "Производство вторичных стройматериалов компанией «ООО Конструктив — СД»",
-			items: [
-				{
+			pic: {
 					src: "slides",
 					img: "hero-bg-img-1",
 					alt: "slide-img-1",
-				},
-				{
-					src: "slides",
-					img: "hero-bg-img-2",
-					alt: "slide-img-2",
-				},
-				{
-					src: "slides",
-					img: "hero-bg-img-3",
-					alt: "slide-img-3",
-				},
-				{
-					src: "slides",
-					img: "hero-bg-img-4",
-					alt: "slide-img-4",
-				},
-			],
+			},
 			numbers: [
 				{
 					num: "1 час",
@@ -36,22 +19,17 @@ mixin sale-hero()
 				},
 			],
 		}
-	section.sale-hero
-		.container.sale-hero__container
-			.sale-hero__col.sale-hero__col--01
-				.sale-hero__heading 
-					h1.title.title--h1.sale-hero__title=data.title
-						span.sale-hero__subtitle=data.subtitle
-				.sale-hero__numbers
+	section.hero-section.hero-section--sale.sale-hero
+		.container.hero-section__container
+			.hero-section__col.hero-section__col--01
+				.hero-section__heading 
+					h1.title.title--h1.hero-section__title=data.title
+						span.hero-section__subtitle=data.subtitle
+				.hero-section__numbers
 					each item in data.numbers
-						.sale-hero__numbers-item
-							strong.sale-hero__numbers-num=item.num 
-							p.text.sale-hero__numbers-text=item.text
-		.sale-hero__col.sale-hero__col--02
-			.swiper.swiper--01.sale-hero__slider
-				.swiper-wrapper 
-					each item in data.items 
-						.swiper-slide 
-							.sale-hero__slider-item 
-								+picture(item.src, item.img, "jpg", item.alt)
-				.swiper-pagination.hero__slider-pag
+						.hero-section__numbers-item
+							strong.hero-section__numbers-num=item.num 
+							p.text.hero-section__numbers-text=item.text
+		.hero-section__col.hero-section__col--02
+			.hero-section__pic 
+				+picture(data.pic.src, data.pic.img, "jpg", data.pic.alt)

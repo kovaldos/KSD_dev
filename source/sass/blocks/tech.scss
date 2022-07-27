@@ -155,4 +155,16 @@
 			}
 		}
 	}
+	&--road {
+		.tech {
+			&__content {
+				&-title {
+					color: $color-cobalt;
+				}
+			}
+			&__bottom {
+				margin: 80px 0;
+			}
+		}
+	}
 }

@@ -1,16 +1,15 @@
-.snos-hero {
+.hero-section {
 	height: 550px;
 	position: relative;
 	background-color: $color-bunting;
 	&__col {
 		&--01 {
-			width: 50%;
+			width: 100%;
 			height: 100%;
-			padding: 30px 30px 30px 0;
 		}
 		&--02 {
 			position: absolute;
-			width: 50%;
+			width: calc(50% - 15px);
 			height: 100%;
 			top: 0;
 			left: auto;
@@ -64,7 +63,7 @@
 		height: 100%;
 	}
 	&__heading {
-		padding: 50px 0 40px;
+		padding: 80px 0 80px;
 		text-align: left;
 		max-width: 570px;
 		position: relative;
@@ -98,8 +97,9 @@
 				top: 34px;
 				left: 0;
 				width: 100%;
-				height: 100%;
+				height: 80px;
 				background-color: rgba($color-lavender, 0.05);
+				z-index: -1;
 			}
 		}
 		&-num {
@@ -109,12 +109,70 @@
 			line-height: 68px;
 			color: $color-outrageous-orange;
 			margin: 0 0 11px;
+			white-space: nowrap;
 		}
 		&-text {
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 20px;
 			color: $color-default-white;
+		}
+	}
+	&__pic {
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			vertical-align: top;
+		}
+	}
+	&--sale {
+		margin: 0 0 40px;
+		.hero-section {
+			&__heading {
+				padding: 80px 0 48px;
+			}
+			&__title {
+				letter-spacing: -0.02em;
+			}
+			&__subtitle {
+				margin: 15px 0 0;
+			}
+			&__numbers {
+				grid-template-columns: repeat(2, 1fr);
+				&-item {
+					&::after {
+						top: 40px;
+						height: 111px;
+					}
+				}
+				&-num {
+					color: $color-apple;
+					margin: 0 0 14px;
+				}
+			}
+		}
+	}
+	&--road {
+		.hero-section {
+			&__heading {
+				padding: 80px 0 62px;
+			}
+			&__title {
+				line-height: 150%;			
+				letter-spacing: -0.018em;
+			}
+			&__numbers {
+				grid-template-columns: repeat(2, 1fr);
+				&-num {
+					font-size: 50px;
+					line-height: 61px;
+					color: $color-cobalt;
+					margin: 0 0 12px;
+				}
+			}
 		}
 	}
 }

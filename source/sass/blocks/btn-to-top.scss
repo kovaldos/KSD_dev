@@ -21,13 +21,35 @@
 		color: $color-lavender-grey;
 		transition: color $trans-default;
 	}
-	&:hover &,
-	&:focus-visible & {
-		&__span {
-			color: $color-orange-red;
+	&:focus {
+		outline: none;
+	}
+	@media (hover: hover), screen and (min-width: 0\0) {
+		&:hover &,
+		&:focus-visible & {
+			&__span {
+				color: $color-orange-red;
+			}
+			&__icon {
+				color: $color-orange-red;
+			}
 		}
-		&__icon {
-			color: $color-orange-red;
+	}
+}
+.wrapper--road {
+	.btn-to-top {
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover ,
+			&:focus-visible {
+				.btn-to-top {
+					&__span {
+						color: $color-cobalt;
+					}
+					&__icon {
+						color: $color-cobalt;
+					}
+				}
+			}
 		}
 	}
 }

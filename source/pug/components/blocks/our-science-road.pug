@@ -1,0 +1,47 @@
+mixin our-science-road()
+	-
+		const data = {
+			title: "Наша наука",
+			subtitle: "Обновление дорожного полотна",
+			text: "Высокотехнологичный подход с использованием современного оборудования",
+			text2: "Мы заботимся об экологии. Группа компаний КСД имеет собственные процессы рециклинга и регламенты для защиты окружающей среды",
+			text3: "Более 150 сертифицированных специалистов КСД имеют многолетний опыт для качественного решения поставленных задач",
+			items: [
+				{
+					icon: "icon-our-science-1",
+					title: "Документация на снос",
+					text: "Разработка исходно разрешительной документации. Согласование с департаментом строительства",
+				},
+				{
+					icon: "icon-our-science-2",
+					title: "Организация",
+					text: "Мобилизация, временные постройки на объекте, распределение рабочих процессов",
+				},
+				{
+					icon: "icon-our-science-3",
+					title: "Снос и демонтаж",
+					text: "Механизированный и ручной демонтаж зданий. С расчетом мер безопасности для окружения",
+				},
+				{
+					icon: "icon-our-science-4",
+					title: "Вывоз и переработка",
+					text: "КСД Групп имеет собственный перерабатывающий завод, что позволяет переиспользовать до 99% строительного мусора",
+				},
+			],
+		}
+	section.section.our-science.our-science--road
+		.container.our-science__container 
+			.our-science__heading 
+				h2.title.title--h2.our-science__title=data.title
+				h3.title.title--h3.our-science__subtitle=data.subtitle
+			.our-science__cols
+				.our-science__col.our-science__col--01
+					p.text.our-science__head-text=data.text
+					p.text.our-science__text=data.text2
+					p.text.our-science__text=data.text3
+				.our-science__col.our-science__col--02
+					ol.our-science__list 
+						each item in data.items
+							li.our-science__list-item=item.title
+								+icon(item.icon, 60, 60).our-science__list-icon
+								p.text.our-science__list-text=item.text
