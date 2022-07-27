@@ -71,3 +71,10 @@
 		}
 	}
 }
+.wrapper--road {
+	.title {
+		&--h2 {
+			color: $color-cobalt;
+		}
+	}
+}

@@ -40,22 +40,22 @@ mixin snos-hero()
 				},
 			]
 		}
-	section.snos-hero
-		.container.snos-hero__container
-			.snos-hero__col.snos-hero__col--01
-				.snos-hero__heading 
-					h1.title.title--h1.snos-hero__title=data.title
-						span.snos-hero__subtitle=data.subtitle
-				.snos-hero__numbers
+	section.hero-section.hero-section--snos.snos-hero
+		.container.hero-section__container
+			.hero-section__col.hero-section__col--01
+				.hero-section__heading 
+					h1.title.title--h1.hero-section__title=data.title
+						span.hero-section__subtitle=data.subtitle
+				.hero-section__numbers
 					each item in data.numbers
-						.snos-hero__numbers-item
-							strong.snos-hero__numbers-num=item.num 
-							p.text.snos-hero__numbers-text=item.text
-		.snos-hero__col.snos-hero__col--02
-			.swiper.swiper--01.snos-hero__slider
+						.hero-section__numbers-item
+							strong.hero-section__numbers-num=item.num 
+							p.text.hero-section__numbers-text=item.text
+		.hero-section__col.hero-section__col--02
+			.swiper.swiper--01.hero-section__slider
 				.swiper-wrapper 
 					each item in data.items 
 						.swiper-slide 
-							.snos-hero__slider-item 
+							.hero-section__slider-item 
 								+picture(item.src, item.img, "jpg", item.alt)
-				.swiper-pagination.snos-hero__slider-pag
+				.swiper-pagination.hero__slider-pag

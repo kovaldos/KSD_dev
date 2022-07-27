@@ -1,57 +1,36 @@
 mixin road-build-hero()
 	-
 		const data = {
-			title: "Строительные материалы от ведущих экспертов",
-			subtitle: "Производство вторичных стройматериалов компанией «ООО Конструктив — СД»",
-			items: [
-				{
+			title: "Строительство дорог из вторичных материалов",
+			subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
+			pic: {
 					src: "slides",
 					img: "hero-bg-img-1",
 					alt: "slide-img-1",
-				},
-				{
-					src: "slides",
-					img: "hero-bg-img-2",
-					alt: "slide-img-2",
-				},
-				{
-					src: "slides",
-					img: "hero-bg-img-3",
-					alt: "slide-img-3",
-				},
-				{
-					src: "slides",
-					img: "hero-bg-img-4",
-					alt: "slide-img-4",
-				},
-			],
+			},
+			
 			numbers: [
 				{
-					num: "1 час",
-					text: "Срок до вывоза с момента отправки заявки",
+					num: "5000 км",
+					text: "Дорог обновлено",
 				},
 				{
-					num: "100%",
-					text: "Гарантия качества на материалы",
+					num: "80 000",
+					text: "Кг. пластика использовано",
 				},
 			],
 		}
-	section.road-build-hero
-		.container.road-build-hero__container
-			.road-build-hero__col.road-build-hero__col--01
-				.road-build-hero__heading 
-					h1.title.title--h1.road-build-hero__title=data.title
-						span.road-build-hero__subtitle=data.subtitle
-				.road-build-hero__numbers
+	section.hero-section.hero-section--road.road-build-hero
+		.container.hero-section__container
+			.hero-section__col.hero-section__col--01
+				.hero-section__heading 
+					h1.title.title--h1.hero-section__title=data.title
+						span.hero-section__subtitle=data.subtitle
+				.hero-section__numbers
 					each item in data.numbers
-						.road-build-hero__numbers-item
-							strong.road-build-hero__numbers-num=item.num 
-							p.text.road-build-hero__numbers-text=item.text
-		.road-build-hero__col.road-build-hero__col--02
-			.swiper.swiper--01.road-build-hero__slider
-				.swiper-wrapper 
-					each item in data.items 
-						.swiper-slide 
-							.road-build-hero__slider-item 
-								+picture(item.src, item.img, "jpg", item.alt)
-				.swiper-pagination.hero__slider-pag
+						.hero-section__numbers-item
+							strong.hero-section__numbers-num=item.num 
+							p.text.hero-section__numbers-text=item.text
+		.hero-section__col.hero-section__col--02
+			.hero-section__pic 
+				+picture(data.pic.src, data.pic.img, "jpg", data.pic.alt)

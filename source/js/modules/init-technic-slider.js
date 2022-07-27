@@ -42,15 +42,26 @@ const initTechnicSlider = () => {
         type: 'fraction',
       },
     });
+
     swiper06.el.querySelector('.technic__slider-btn-text--next').textContent = swiper06.el.querySelector('.swiper-slide-next .technic__slider-name').textContent;
+
     swiper06.on('slideChangeTransitionEnd', () => {
-      swiper06.el.querySelector('.technic__slider-btn-text--next').textContent = swiper06.el.querySelector('.swiper-slide-next .technic__slider-name').textContent;
-      swiper06.el.querySelector('.technic__slider-btn-text--prev').textContent = swiper06.el.querySelector('.swiper-slide-prev .technic__slider-name').textContent;
+      if (swiper06.activeIndex === 0) {
+        swiper06.el.querySelector('.technic__slider-btn-text--prev').textContent = '';
+      } else {
+        swiper06.el.querySelector('.technic__slider-btn-text--prev').textContent = swiper06.el.querySelector('.swiper-slide-prev .technic__slider-name').textContent;
+      }
+
+      if (swiper06.activeIndex + 1 === swiper06.slides.length) {
+        swiper06.el.querySelector('.technic__slider-btn-text--next').textContent = '';
+      } else {
+        swiper06.el.querySelector('.technic__slider-btn-text--next').textContent = swiper06.el.querySelector('.swiper-slide-next .technic__slider-name').textContent;
+      }
     });
   }
 };
-
 export {initTechnicSlider};
 
 // Слайдер в секции Техника -- Конец --
 // Technic slider -- End --
+

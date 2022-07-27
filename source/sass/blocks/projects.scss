@@ -154,6 +154,7 @@
 					margin: 0 0 20px;
 					&__icon {
 						margin: 0 10px 0 0;
+						color: $color-dark-orange;
 					}
 					&__text {
 						font-weight: 700;
@@ -341,5 +342,32 @@
 	.swiper-pagination-total {
 		font-size: 16px;
 		line-height: 26px;
+	}
+	&--road {
+		.projects {
+			&__slider {
+				&-item {
+					&-next {
+						background-color: $color-cobalt;
+					}
+				}
+			}
+		}
+		.die {
+			&-title {
+				&__icon {
+					color: $color-cobalt;
+				}
+			}
+			&-link-btn {
+				color: $color-cobalt;
+				padding: 7px;
+				margin: -7px;
+				&::after {
+					background-color: $color-cobalt;
+				}
+			}
+		}
+
 	}
 }

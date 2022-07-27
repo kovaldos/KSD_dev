@@ -189,12 +189,17 @@
 				color: $color-bunting;
 				transition: color $trans-default;
 			}
-			&:hover,
-			&:focus-visible {
-				background-color: $color-outrageous-orange;
-				border-color: $color-outrageous-orange;
-				svg {
-					color: $color-default-white;
+			&:focus {
+				outline: none;
+			}
+			@media (hover: hover), screen and (min-width: 0\0) {
+				&:hover,
+				&:focus-visible {
+					background-color: $color-cobalt;
+					border-color: $color-cobalt;
+					svg {
+						color: $color-default-white;
+					}
 				}
 			}
 		}
@@ -224,6 +229,22 @@
 				line-height: 17px;
 				padding: 14px 42px;
 				margin: 20px 0 0;
+			}
+		}
+	}
+	&--road {
+		.contact-us {
+			&__socials {
+				&-link {
+				}
+			}
+			&__agreement {
+				&-link {
+					color: $color-cobalt;
+					&::after {
+						background-color: $color-cobalt;
+					}
+				}
 			}
 		}
 	}

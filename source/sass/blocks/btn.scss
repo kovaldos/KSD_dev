@@ -19,6 +19,11 @@
     color: $color-dark-orange;
     background-color: $color-transparent;
   }
+  &--stroke-cobalt {
+    border: 1px solid $color-cobalt;
+    color: $color-cobalt;
+    background-color: $color-transparent;
+  }
   &--drk-orange {
     background-color: $color-dark-orange;
   }
@@ -27,6 +32,9 @@
   }
   &--apple {
     background-color: $color-apple;
+  }
+  &--cobalt {
+    background-color: $color-cobalt;
   }
   &--transp {
     background-color: $color-transparent;
@@ -79,6 +87,17 @@
         border-color: $color-harley-davidson-orange;
       }
     }
+    &--stroke-cobalt {
+      &:hover,
+      &:focus-visible {
+        background-color: rgba($color-cobalt, 0.5);
+        color: $color-default-white;
+      }
+      &:active {
+        background-color: rgba($color-cobalt, 0.3);
+        color: $color-default-white;
+      }
+    }
     &--orange {
       &:hover,
       &:focus-visible {
@@ -95,6 +114,15 @@
       }
       &:active {
         background-color: rgba($color-apple, 0.5);
+      }
+    }
+    &--cobalt {
+      &:hover,
+      &:focus-visible {
+        background-color: rgba($color-cobalt, 0.8);
+      }
+      &:active {
+        background-color: rgba($color-cobalt, 0.5);
       }
     }
     &--drk-orange {

@@ -152,4 +152,13 @@
       }
     }
   }
+  &--road {
+    .header {
+      &__logo {
+        svg {
+          color: $color-cobalt;
+        }
+      }
+    }
+  }
 }
