@@ -1,4 +1,4 @@
-mixin blog()
+mixin blog(mods)
 	-
 		const data = {
 			title: "Блог",
@@ -38,14 +38,17 @@ mixin blog()
 			]
 		}
 
-	section.section.blog 
+	section.section.blog(class=mods)
 		.container.blog__container
 			.blog__heading
 				.blog__heading-col.blog__heading-col--01
 					h2.title.title--h2.blog__title=data.title
 					h3.title.title--h3.blog__subtitle=data.subtitle
 				.blog__heading-col.blog__heading-col--02
-					+btn(data.link).btn--stroke-drk-orange.blog__link-btn
+					if !mods
+						+btn(data.link).btn--stroke-drk-orange.blog__link-btn
+					else if mods === "blog--pits"
+						+btn(data.link).btn--stroke-cobalt.blog__link-btn
 			.blog__items
 				each item in data.items
 					a.blog__item(href=item.href class=item.classModifier)
