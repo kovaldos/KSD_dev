@@ -232,10 +232,18 @@
 			}
 		}
 	}
-	&--road {
+	&--road,
+	&--pits {
 		.contact-us {
 			&__socials {
 				&-link {
+					@media (hover: hover), screen and (min-width: 0\0) {
+						&:hover,
+						&:focus-visible {
+							background-color: $color-cobalt;
+							border-color: $color-cobalt;
+						}
+					}
 				}
 			}
 			&__agreement {
@@ -243,6 +251,19 @@
 					color: $color-cobalt;
 					&::after {
 						background-color: $color-cobalt;
+					}
+				}
+			}
+		}
+		.btn-to-top {
+			@media (hover: hover), screen and (min-width: 0\0) {
+				&:hover,
+				&:focus-visible {
+					.btn-to-top__icon {
+						color: $color-cobalt;
+					}
+					.btn-to-top__span {
+						color: $color-cobalt;
 					}
 				}
 			}

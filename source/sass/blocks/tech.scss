@@ -26,6 +26,7 @@
 		}
 		&-nav {
 			position: relative;
+			left: 50%;
 		}
 		&-btns {
 			position: absolute;
@@ -156,6 +157,18 @@
 		}
 	}
 	&--road {
+		.tech {
+			&__content {
+				&-title {
+					color: $color-cobalt;
+				}
+			}
+			&__bottom {
+				margin: 80px 0;
+			}
+		}
+	}
+	&--pits {
 		.tech {
 			&__content {
 				&-title {

@@ -3053,7 +3053,8 @@ button,
   color: #74C447;
 }
 
-.wrapper--road .title--h2 {
+.wrapper--road .title--h2,
+.wrapper--pits .title--h2 {
   color: #0452A0;
 }
 
@@ -3633,6 +3634,20 @@ button,
 .hero-section__col--01 {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 50px 0;
 }
 
 .hero-section__col--02 {
@@ -3701,7 +3716,7 @@ button,
 }
 
 .hero-section__heading {
-  padding: 80px 0 80px;
+  padding: 30px 0 80px;
   text-align: left;
   max-width: 570px;
   position: relative;
@@ -3784,7 +3799,7 @@ button,
 }
 
 .hero-section--sale .hero-section__heading {
-  padding: 80px 0 48px;
+  padding: 30px 0 48px;
 }
 
 .hero-section--sale .hero-section__title {
@@ -3801,8 +3816,8 @@ button,
 }
 
 .hero-section--sale .hero-section__numbers-item::after {
-  top: 40px;
-  height: 111px;
+  top: 35px;
+  height: 110px;
 }
 
 .hero-section--sale .hero-section__numbers-num {
@@ -3811,7 +3826,7 @@ button,
 }
 
 .hero-section--road .hero-section__heading {
-  padding: 80px 0 62px;
+  padding: 30px 0 62px;
 }
 
 .hero-section--road .hero-section__title {
@@ -3836,6 +3851,21 @@ button,
 }
 
 .hero-section--recycling .hero-section__numbers-text {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+}
+
+.hero-section--pits .hero-section__numbers-item {
+  padding: 0 5px 0 15px;
+}
+
+.hero-section--pits .hero-section__numbers-num {
+  color: #0452A0;
+}
+
+.hero-section--pits .hero-section__numbers-text {
+  font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: -0.02em;
@@ -5380,11 +5410,13 @@ button,
   margin: 20px 0 0;
 }
 
-.contact-us--road .contact-us__agreement-link {
+.contact-us--road .contact-us__agreement-link,
+.contact-us--pits .contact-us__agreement-link {
   color: #0452A0;
 }
 
-.contact-us--road .contact-us__agreement-link::after {
+.contact-us--road .contact-us__agreement-link::after,
+.contact-us--pits .contact-us__agreement-link::after {
   background-color: #0452A0;
 }
 
@@ -5483,6 +5515,7 @@ button,
 
 .tech__slider-nav {
   position: relative;
+  left: 50%;
 }
 
 .tech__slider-btns {
@@ -5650,6 +5683,14 @@ button,
 }
 
 .tech--road .tech__bottom {
+  margin: 80px 0;
+}
+
+.tech--pits .tech__content-title {
+  color: #0452A0;
+}
+
+.tech--pits .tech__bottom {
   margin: 80px 0;
 }
 
@@ -6362,21 +6403,25 @@ button,
   line-height: 26px;
 }
 
-.projects--road .projects__slider-item-next {
+.projects--road .projects__slider-item-next,
+.projects--pits .projects__slider-item-next {
   background-color: #0452A0;
 }
 
-.projects--road .die-title__icon {
+.projects--road .die-title__icon,
+.projects--pits .die-title__icon {
   color: #0452A0;
 }
 
-.projects--road .die-link-btn {
+.projects--road .die-link-btn,
+.projects--pits .die-link-btn {
   color: #0452A0;
   padding: 7px;
   margin: -7px;
 }
 
-.projects--road .die-link-btn::after {
+.projects--road .die-link-btn::after,
+.projects--pits .die-link-btn::after {
   background-color: #0452A0;
 }
 
@@ -12563,6 +12608,28 @@ button,
   .contact-us__socials-link:hover svg,
   .contact-us__socials-link:focus-visible svg {
     color: #ffffff;
+  }
+
+  .contact-us--road .contact-us__socials-link:hover,
+  .contact-us--road .contact-us__socials-link:focus-visible,
+  .contact-us--pits .contact-us__socials-link:hover,
+  .contact-us--pits .contact-us__socials-link:focus-visible {
+    background-color: #0452A0;
+    border-color: #0452A0;
+  }
+
+  .contact-us--road .btn-to-top:hover .btn-to-top__icon,
+  .contact-us--road .btn-to-top:focus-visible .btn-to-top__icon,
+  .contact-us--pits .btn-to-top:hover .btn-to-top__icon,
+  .contact-us--pits .btn-to-top:focus-visible .btn-to-top__icon {
+    color: #0452A0;
+  }
+
+  .contact-us--road .btn-to-top:hover .btn-to-top__span,
+  .contact-us--road .btn-to-top:focus-visible .btn-to-top__span,
+  .contact-us--pits .btn-to-top:hover .btn-to-top__span,
+  .contact-us--pits .btn-to-top:focus-visible .btn-to-top__span {
+    color: #0452A0;
   }
 
   .wrapper--recycling .contact-us__form-submit:hover,
