@@ -3054,6 +3054,7 @@ button,
 }
 
 .wrapper--road .title--h2,
+.wrapper--improvement .title--h2,
 .wrapper--pits .title--h2 {
   color: #0452A0;
 }
@@ -3693,22 +3694,53 @@ button,
   vertical-align: top;
 }
 
-.hero-section .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 30px;
+.hero-section__slider-pag {
+  padding: 12px 65px;
+  position: absolute;
 }
 
-.hero-section .swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 14px;
-  background-color: rgba(255, 255, 255, 0.6);
-  width: 12px;
-  height: 12px;
+.hero-section__slider-pag.swiper-pagination-horizontal.swiper-pagination-bullets {
+  text-align: left;
+  bottom: 41px;
+}
+
+.hero-section__slider-pag.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  position: relative;
   opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 12px;
+  background: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
 }
 
-.hero-section .swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+.hero-section__slider-pag.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet .progress-ring {
+  color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+  -ms-transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.hero-section__slider-pag.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet .progress-ring__circle {
+  stroke-dasharray: 212px;
+  stroke-dashoffset: 212px;
+}
+
+.hero-section__slider-pag.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
   background-color: #ffffff;
-  -webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.hero-section__slider-pag.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active .progress-ring__circle {
+  -webkit-transition: stroke-dashoffset 5000ms linear;
+  -o-transition: stroke-dashoffset 5000ms linear;
+  transition: stroke-dashoffset 5000ms linear;
+  stroke-dashoffset: 106px;
 }
 
 .hero-section__container {
@@ -3856,14 +3888,17 @@ button,
   letter-spacing: -0.02em;
 }
 
+.hero-section--improvement .hero-section__numbers-item,
 .hero-section--pits .hero-section__numbers-item {
   padding: 0 5px 0 15px;
 }
 
+.hero-section--improvement .hero-section__numbers-num,
 .hero-section--pits .hero-section__numbers-num {
   color: #0452A0;
 }
 
+.hero-section--improvement .hero-section__numbers-text,
 .hero-section--pits .hero-section__numbers-text {
   font-weight: 400;
   font-size: 12px;
