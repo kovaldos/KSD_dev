@@ -1,0 +1,108 @@
+mixin numbers()
+	-
+		const data = {
+			title: "Некоторые цифры",
+			subtitle: "Полный цикл переработки",
+			tabsNav: [
+				{
+					icon: "icon-numbers-1",
+					classMode: "numbers__tabs-control--odd",
+				},
+				{
+					icon: "icon-numbers-2",
+					classMode: "numbers__tabs-control--even is-active",
+				},
+				{
+					icon: "icon-numbers-3",
+					classMode: "numbers__tabs-control--odd",
+				},
+				{
+					icon: "icon-numbers-4",
+					classMode: "numbers__tabs-control--even",
+				},
+			],
+			tabsContent: [
+				{
+					title: "Перевозка",
+					text: "Libero nihil aperiam, non nisi voluptates, at fuga illo temporibus laborum perspiciatis nesciunt optio consectetur eveniet amet aliquid, facere officia!",
+					numb1: "80 +",
+					numb2: "20 +",
+					numb3: "1.75м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "Очищение и сортировка",
+					text: "Компания приобрела свой первый экскаватор-разрушитель с высотой поднятия стрелы — 21 метр. Снос зданий и сооружений в рамках проектов: ЖК «Шереметьевский», ЖК «Лучи», ЖК «Резиденции Композиторов», выполнены работы по вертикальной планировке и благоустройству в рамках строительства парка развлечений «Остров Мечты».",
+					numb1: "90 +",
+					numb2: "25 +",
+					numb3: "2 м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "Переработка",
+					text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur accusamus numquam culpa aperiam beatae, at saepe facere quaerat harum amet quas inventore! Laudantium quos, doloribus voluptates placeat blanditiis cumque eveniet amet beatae aspernatur quibusdam et in. Optio fugiat sunt possimus dolorum esse consectetur voluptas, hic consequuntur necessitatibus illo adipisci nisi?",
+					numb1: "100 +",
+					numb2: "30 +",
+					numb3: "2.5м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "Вторичное использование",
+					text: "Recusandae inventore nesciunt sed non nihil odit at est perspiciatis debitis molestiae eum quidem, vitae amet tempora porro velit quae similique temporibus?",
+					numb1: "110 +",
+					numb2: "35 +",
+					numb3: "3 м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+			]
+		}
+	
+	section.section.numbers 
+		.container.numbers__container 
+			.numbers__heading 
+				h2.title.title--h2.numbers__title=data.title
+				h3.title.title--h3.numbers__subtitle=data.subtitle
+		.numbers__wrapper 
+			.container.numbers__container.numbers__container--rel
+				.tabs.numbers__tabs(data-tabs="parent" data-delay="300")
+					.numbers__tabs-nav-wrapper#numbers-nav(data-simplebar)
+						.numbers__tabs-progressbar
+							.numbers__tabs-progress
+						nav.tabs__controls.numbers__tabs-controls(data-tabs="controls")
+							each item, index in data.tabsNav
+								button.btn.numbers__tabs-control(data-index=index data-tabs="control" class=item.classMode)
+									span.numbers__tabs-control-icon
+										+icon(item.icon, 42, 42)
+					.tabs__content.numbers__tabs-content(data-tabs="content")
+						each item in data.tabsContent
+							.numbers__tabs-cols(data-tabs="element")
+								.numbers__tabs-col.numbers__tabs-col--01
+									h4.title.numbers__tabs-title=item.title
+									p.text.text--sm.numbers__tabs-text=item.text
+								.numbers__tabs-col.numbers__tabs-col--02
+									.numbers__numbers 
+										.numbers__numbers-item
+											.numbers__numbers-num
+												span=item.numb1
+											.numbers__numbers-text
+												span=item.numbText1
+										.numbers__numbers-item
+											.numbers__numbers-num
+												span=item.numb2
+											.numbers__numbers-text
+												span=item.numbText2
+										.numbers__numbers-item
+											.numbers__numbers-num
+												span=item.numb3
+											.numbers__numbers-text
+												span=item.numbText3
+
+

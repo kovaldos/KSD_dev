@@ -29,11 +29,11 @@ const initDirectionsSlider = () => {
         },
       },
       navigation: {
-        nextEl: '.directions__slider-btn--next',
-        prevEl: '.directions__slider-btn--prev',
+        nextEl: '.custom__slider-btn-next',
+        prevEl: '.custom__slider-btn-prev',
       },
       pagination: {
-        el: '.directions__slider-pag',
+        el: '.custom-pagination',
         type: 'fraction',
       },
     });

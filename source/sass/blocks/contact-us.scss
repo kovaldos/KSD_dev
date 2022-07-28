@@ -249,3 +249,53 @@
 		}
 	}
 }
+.wrapper--recycling {
+	.contact-us {
+		&__form {
+			&-submit {
+				background-color: $color-apple;
+				@media (hover: hover), screen and (min-width: 0\0) {
+					&:hover,
+					&:focus-visible {
+						background-color: rgba($color-apple, 0.8);
+					}
+					&:active {
+						background-color: rgba($color-apple, 0.5);
+					}
+				}
+			}
+		}
+		&__socials {
+			&-link {
+				@media (hover: hover), screen and (min-width: 0\0) {
+					&:hover,
+					&:focus-visible {
+						background-color: $color-apple;
+						border-color: $color-apple;
+					}
+				}
+			}
+		}
+		&__agreement {
+			&-link {
+				color: $color-apple;
+				&::after {
+					background-color: $color-apple;
+				}
+			}
+		}
+	}
+	.btn-to-top {
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover,
+			&:focus-visible {
+				.btn-to-top__icon {
+					color: $color-apple;
+				}
+				.btn-to-top__span {
+					color: $color-apple;
+				}
+			}
+		}
+	}
+}

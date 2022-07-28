@@ -25,6 +25,7 @@ import {initRentCatalogViewSwitch} from './modules/init-rent-catalog-view-switch
 import {initRangeSlider} from './modules/init-range-slider';
 import {initRentCardSlider} from './modules/init-rent-card-slider';
 import {initCalcRangeSlider} from './modules/init-calc-range-slider';
+import {initTechparkSlider} from './modules/init-techpark-slider';
 
 
 // ---------------------------------
@@ -67,6 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initRangeSlider();
     initRentCardSlider();
     initCalcRangeSlider();
+    initTechparkSlider();
   });
 });
 

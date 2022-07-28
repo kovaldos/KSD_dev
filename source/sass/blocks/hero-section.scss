@@ -161,7 +161,7 @@
 				padding: 80px 0 62px;
 			}
 			&__title {
-				line-height: 150%;			
+				line-height: 150%;
 				letter-spacing: -0.018em;
 			}
 			&__numbers {
@@ -171,6 +171,20 @@
 					line-height: 61px;
 					color: $color-cobalt;
 					margin: 0 0 12px;
+				}
+			}
+		}
+	}
+	&--recycling {
+		.hero-section {
+			&__numbers {
+				&-num {
+					color: $color-apple;
+				}
+				&-text {
+					font-size: 12px;
+					line-height: 15px;
+					letter-spacing: -0.02em;
 				}
 			}
 		}
