@@ -38,8 +38,9 @@ const initTechnicSlider = () => {
         prevEl: '.technic__slider-btn--prev',
       },
       pagination: {
-        el: '.technic__slider-pag',
-        type: 'fraction',
+        el: '.custom-pagination',
+        type: 'bullets',
+        dynamicBullets: false,
       },
     });
 

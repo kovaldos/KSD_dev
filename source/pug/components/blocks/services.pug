@@ -1,0 +1,60 @@
+mixin services()
+	-
+		const data = {
+			title: "Услуги",
+			subtitle: "Эффективное обращение с отходами строительства и сноса",
+			items: [
+				{
+					title: "Утилизация строительного мусора",
+					text: "Утилизация строительного мусора, происходит максимально экологичным способом. Используем современные подходы.",
+					src: "content",
+					img: "services-img-1",
+					alt: "services-img-background",
+				},
+				{		
+					title: "Вывоз боя бетона/ЖБИ изделий",			
+					src: "content",
+					img: "services-img-2",
+					alt: "services-img-background",
+				},
+				{			
+					title: "Вывоз боя кирпича",		
+					src: "content",
+					img: "services-img-3",
+					alt: "services-img-background",
+				},
+				{		
+					title: "Вывоз и прием ОССиГ",			
+					src: "content",
+					img: "services-img-4",
+					alt: "services-img-background",
+				},
+			],
+			title2: "Утилизация и переработка",
+			text: "Переработка полного цикла отходов строительства и сноса",
+		}
+	section.section.services 
+		.container.services__container
+			.services__heading
+				h2.title.title--h2=data.title 
+				h3.title.title--h3=data.subtitle
+			.services__top 
+				ul.services__list
+					each item in data.items
+						li.services__list-item
+							.services__list-item-pic
+								+picture(item.src, item.img, "jpg", item.alt)
+							h4.title.title--h6.services__list-item-title=item.title
+							if item.text
+								p.text.text--md.services__list-item-text=item.text
+		.services__bottom 
+			.container.services__container.services__container--bottom
+				.services__bottom-cols
+					.services__bottom-col.services__bottom-col--01
+						h3.title.title--h3.services__bottom-title=data.title2 
+						p.text.text--lg.services__bottom-text=data.text
+					.services__bottom-col.services__bottom-col--02
+						.services__bottom-video(data-video-block)
+							button(type="button" data-video-btn).btn.btn--apple.services__bottom-video-btn
+								+icon("icon-play", 14, 14)
+							video(src="https://cdn.videvo.net/videvo_files/video/premium/video0237/large_watermarked/02_day_Stockholm_99_rotate_sun_crane_preview.mp4", type="video/mp4", controls muted preload="none" poster="./img/content/tech-video-poster.jpg")

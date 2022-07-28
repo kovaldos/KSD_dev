@@ -1,4 +1,4 @@
-mixin contact-us()
+mixin contact-us(mods)
 	-
 		const data = {
 			form: {
@@ -74,7 +74,7 @@ mixin contact-us()
 			},
 		}
 
-	section.section.contact-us 
+	section.section.contact-us(class=mods)
 		.container.contact-us__container
 			.contact-us__cols 
 				.contact-us__col.contact-us__col--01

@@ -24,6 +24,11 @@
     color: $color-cobalt;
     background-color: $color-transparent;
   }
+  &--stroke-apple {
+    border: 1px solid $color-apple;
+    color: $color-apple;
+    background-color: $color-transparent;
+  }
   &--drk-orange {
     background-color: $color-dark-orange;
   }
@@ -95,6 +100,17 @@
       }
       &:active {
         background-color: rgba($color-cobalt, 0.3);
+        color: $color-default-white;
+      }
+    }
+    &--stroke-apple {
+      &:hover,
+      &:focus-visible {
+        background-color: rgba($color-apple, 0.5);
+        color: $color-default-white;
+      }
+      &:active {
+        background-color: rgba($color-apple, 0.3);
         color: $color-default-white;
       }
     }

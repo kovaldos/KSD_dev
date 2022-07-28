@@ -46,7 +46,11 @@ const initProjectsSlider = () => {
     const nextBtn = swiper07.el.closest('.projects__cols').querySelector('.next-title__subtitle');
     nextBtn.textContent = swiper07.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
     swiper07.on('slideChangeTransitionEnd', () => {
-      nextBtn.textContent = swiper07.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
+      if (swiper07.activeIndex + 1 === swiper07.slides.length) {
+        nextBtn.textContent = '';
+      } else {
+        nextBtn.textContent = swiper07.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
+      }
     });
   }
 };
