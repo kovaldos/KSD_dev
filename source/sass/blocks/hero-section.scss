@@ -48,21 +48,45 @@
 				vertical-align: top;
 			}
 		}
-	}
-	.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-horizontal {
-		bottom: 30px;
-	}
-	.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-		margin: 0 14px;
-		background-color: rgba($color-default-white, 0.6);
-		// backdrop-filter: blur(7px);
-		width: 12px;
-		height: 12px;
-		opacity: 1;
-	}
-	.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
-		background-color: $color-default-white;
-		box-shadow: 0 0 0 6px rgba($color-default-white, 0.5);
+		&-pag {
+			padding: 12px 65px;
+			position: absolute;
+			&.swiper-pagination-horizontal.swiper-pagination-bullets {
+				text-align: left;
+				bottom: 41px;
+				.swiper-pagination-bullet {
+					position: relative;
+					opacity: 1;
+					width: 10px;
+					height: 10px;
+					margin: 0 12px;
+					background: none;
+					background-color: rgba($color-default-white, 0.7);
+					transition: background-color $trans-600;
+					.progress-ring {
+						color: $color-transparent;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%) rotate(-90deg);
+						&__circle {
+							stroke-dasharray: 212px;
+							stroke-dashoffset: 212px;
+							// transition: stroke-dashoffset 5000ms linear;
+						}
+					}
+					&-active {
+						background-color: $color-default-white;
+						.progress-ring {
+							&__circle {
+								transition: stroke-dashoffset 5000ms linear;
+								stroke-dashoffset: 106px;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	&__container {
 		height: 100%;
@@ -194,6 +218,7 @@
 			}
 		}
 	}
+	&--improvement,
 	&--pits {
 		.hero-section {
 			&__numbers {

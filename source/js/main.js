@@ -26,6 +26,7 @@ import {initRangeSlider} from './modules/init-range-slider';
 import {initRentCardSlider} from './modules/init-rent-card-slider';
 import {initCalcRangeSlider} from './modules/init-calc-range-slider';
 import {initTechparkSlider} from './modules/init-techpark-slider';
+import {initHeroSectionSlider} from './modules/init-hero-section-slider';
 
 
 // ---------------------------------
@@ -38,6 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   initBurgerMenu();
   initHeroSlider();
+  initHeroSectionSlider();
   // Modules
   // ---------------------------------
 

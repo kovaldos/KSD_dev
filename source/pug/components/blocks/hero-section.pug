@@ -1,0 +1,234 @@
+mixin hero-section(mods)
+	-
+		const data = {
+			demolition: {
+				title: "Демонтаж зданий и сооружений",
+				subtitle: "Mauris egestas pellentesque nulla at massa. Laoreet et pretium arcu orci. Lectus justo ullamcorper et.",
+				items: [
+					{
+						src: "slides",
+						img: "hero-bg-img-1",
+						alt: "slide-img-1",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-2",
+						alt: "slide-img-2",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-3",
+						alt: "slide-img-3",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-4",
+						alt: "slide-img-4",
+					},
+				],
+				numbers: [
+					{
+						num: "6",
+						text: "Лет опыта",
+					},
+					{
+						num: "150",
+						text: "Единиц техники",
+					},
+					{
+						num: "120",
+						text: "Сотрудников",
+					},
+				],
+			},
+			recycling: {
+				title: "Вывоз и утилизация строительных отходов",
+				subtitle: "Транспортировка, сбор, размещение и утилизация отходов строительства и сноса",
+				items: [
+					{
+						src: "slides",
+						img: "hero-bg-img-1",
+						alt: "slide-img-1",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-2",
+						alt: "slide-img-2",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-3",
+						alt: "slide-img-3",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-4",
+						alt: "slide-img-4",
+					},
+				],
+				numbers: [
+					{
+						num: "1",
+						text: "Завод по сортировке ",
+					},
+					{
+						num: "!",
+						text: "АИС ОССиГ",
+					},
+					{
+						num: "34",
+						text: "Самосвала",
+					},
+				],
+			},
+			improvement: {
+				title: "Благоустройство территорий",
+				subtitle: "Комплексные работы по облагораживанию территорий",
+				items: [
+					{
+						src: "slides",
+						img: "improvement-bg-1",
+						alt: "slide-img-1",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-2",
+						alt: "slide-img-2",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-3",
+						alt: "slide-img-3",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-4",
+						alt: "slide-img-4",
+					},
+				],
+				numbers: [
+					{
+						num: "8",
+						text: "Лет опыта",
+					},
+					{
+						num: "50",
+						text: "Га благоустроенных территорий",
+					},
+					{
+						num: "10+",
+						text: "Выполненных проектов",
+					},
+				],
+			},
+			pits: {
+				title: "Разработка котлованов",
+				subtitle: "с вывозом и утилизацией грунта",
+				items: [
+					{
+						src: "slides",
+						img: "hero-pits-img-1",
+						alt: "slide-img-1",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-2",
+						alt: "slide-img-2",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-3",
+						alt: "slide-img-3",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-4",
+						alt: "slide-img-4",
+					},
+				],
+				numbers: [
+					{
+						num: "8",
+						text: "Лет опыта",
+					},
+					{
+						num: "1+",
+						text: "Млн. м<sup>3</sup> земляных работ",
+					},
+					{
+						num: "30+",
+						text: "Выполненных проектов",
+					},
+				],
+			},
+		}
+	section.hero-section(class="hero-section--" + mods)
+		.container.hero-section__container
+			.hero-section__col.hero-section__col--01
+				.hero-section__heading 
+					if mods === "demolition"
+						h1.title.title--h1.hero-section__title=data.demolition.title
+							span.hero-section__subtitle=data.demolition.subtitle
+					else if mods === "recycling"
+						h1.title.title--h1.hero-section__title=data.recycling.title
+							span.hero-section__subtitle=data.recycling.subtitle
+					else if mods === "improvement"
+						h1.title.title--h1.hero-section__title=data.improvement.title
+							span.hero-section__subtitle=data.improvement.subtitle
+					else if mods === "pits"
+						h1.title.title--h1.hero-section__title=data.pits.title
+							span.hero-section__subtitle=data.pits.subtitle
+				.hero-section__numbers
+					if mods === "demolition"
+						each item in data.demolition.numbers
+							.hero-section__numbers-item
+								strong.hero-section__numbers-num=item.num 
+								p.text.hero-section__numbers-text=item.text
+					else if mods === "recycling"
+						each item in data.recycling.numbers
+							.hero-section__numbers-item
+								strong.hero-section__numbers-num=item.num 
+								p.text.hero-section__numbers-text=item.text
+					else if mods === "improvement"
+						each item in data.improvement.numbers
+							.hero-section__numbers-item
+								strong.hero-section__numbers-num=item.num 
+								p.text.hero-section__numbers-text=item.text
+					else if mods === "pits"
+						each item in data.pits.numbers
+							.hero-section__numbers-item
+								strong.hero-section__numbers-num=item.num 
+								p.text.hero-section__numbers-text!=item.text
+		.hero-section__col.hero-section__col--02
+			if mods === "demolition"
+				.swiper.hero-section__slider
+					.swiper-wrapper 
+						each item in data.demolition.items
+							.swiper-slide 
+								.hero-section__slider-item 
+									+picture(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.hero-section__slider-pag
+			else if mods === "recycling"
+				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
+					.swiper-wrapper 
+						each item in data.recycling.items
+							.swiper-slide 
+								.hero-section__slider-item 
+									+picture(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.hero-section__slider-pag
+			else if mods === "improvement"
+				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
+					.swiper-wrapper 
+						each item in data.improvement.items
+							.swiper-slide 
+								.hero-section__slider-item 
+									+picture(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.hero-section__slider-pag
+			else if mods === "pits"
+				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
+					.swiper-wrapper 
+						each item in data.pits.items
+							.swiper-slide 
+								.hero-section__slider-item 
+									+picture(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.hero-section__slider-pag

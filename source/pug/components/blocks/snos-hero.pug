@@ -52,10 +52,10 @@ mixin snos-hero()
 							strong.hero-section__numbers-num=item.num 
 							p.text.hero-section__numbers-text=item.text
 		.hero-section__col.hero-section__col--02
-			.swiper.swiper--01.hero-section__slider
+			.swiper.hero-section__slider
 				.swiper-wrapper 
 					each item in data.items 
 						.swiper-slide 
 							.hero-section__slider-item 
 								+picture(item.src, item.img, "jpg", item.alt)
-				.swiper-pagination.hero__slider-pag
+				.swiper-pagination.hero-section__slider-pag
