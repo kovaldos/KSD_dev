@@ -5525,12 +5525,11 @@ button,
 }
 
 .tech__col--01 {
-  padding: 0 85px 40px 0;
-  position: relative;
+  width: calc(50% - 85px);
 }
 
 .tech__col--02 {
-  padding: 0 0 0 15px;
+  margin: 0 0 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5547,12 +5546,13 @@ button,
   width: 100%;
   overflow: hidden;
   border-radius: 5px;
+  position: relative;
 }
 
 .tech__slider-die {
   position: absolute;
-  right: 45px;
-  bottom: 10px;
+  right: 35px;
+  bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5658,7 +5658,8 @@ button,
 }
 
 .tech__bottom {
-  margin: 75px 0 176px;
+  min-height: 370px;
+  margin: 80px 0;
   padding: 50px 0 58px 0;
   background-color: #2D3142;
 }
@@ -5688,7 +5689,7 @@ button,
 .tech__bottom-video {
   position: absolute;
   left: auto;
-  right: 0;
+  right: 40px;
   top: 0;
   width: 670px;
   height: 396px;
@@ -5740,6 +5741,28 @@ button,
 
 .tech__bottom-video-btn svg {
   pointer-events: none;
+}
+
+.tech--demolition .tech__col {
+  width: 50%;
+}
+
+.tech--demolition .tech__col--01 {
+  position: relative;
+  padding: 0 85px 40px 0;
+}
+
+.tech--demolition .tech__col--02 {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+.tech--demolition .tech__slider-nav {
+  bottom: 40px;
+}
+
+.tech--demolition .tech__bottom {
+  margin: 75px 0 95px;
 }
 
 .tech--road .tech__content-title {
