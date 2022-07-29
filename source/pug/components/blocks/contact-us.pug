@@ -87,7 +87,7 @@ mixin contact-us(mods)
 								+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
 								if !mods
 									+btn(data.form.btn).btn--orange.contact-us__form-submit
-								else if mods === "contact-us--pits"
+								else if mods === "pits"
 									+btn(data.form.btn).btn--cobalt.contact-us__form-submit
 					.contact-us__agreement 
 						span=data.form.agree 
