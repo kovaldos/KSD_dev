@@ -213,15 +213,18 @@
 			}
 		}
 	}
-	&--pits {
-		.tech {
-			&__content {
-				&-title {
-					color: $color-cobalt;
-				}
+	&--pits & {
+		&__content {
+			&-title {
+				color: $color-cobalt;
 			}
-			&__bottom {
-				margin: 80px 0;
+		}
+		&__bottom {
+			margin: 100px 0 80px;
+			&-col {
+				&--01 {
+					padding: 0 30px 0 0;
+				}
 			}
 		}
 	}

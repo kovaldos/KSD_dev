@@ -2140,7 +2140,7 @@ button,
 }
 
 .section {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .rouble {
@@ -5215,10 +5215,6 @@ button,
   transition: color 0.3s ease;
 }
 
-.contact-us {
-  margin: 20px 0 0 0;
-}
-
 .contact-us__cols {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5468,7 +5464,6 @@ button,
 }
 
 .partners {
-  margin: 0 0 40px;
   background-color: rgba(238, 238, 251, 0.3);
 }
 
@@ -5501,12 +5496,17 @@ button,
   width: auto;
 }
 
-.wrapper--sale .partners {
-  margin: 60px 0 0 0;
+.partners--demolition {
+  margin: 0 0 30px;
 }
 
-.wrapper--road .partners {
+.partners--pits,
+.partners--road {
   margin: 0;
+}
+
+.wrapper--sale .partners {
+  margin: 60px 0 0 0;
 }
 
 .tech__heading {
@@ -5778,7 +5778,11 @@ button,
 }
 
 .tech--pits .tech__bottom {
-  margin: 80px 0;
+  margin: 100px 0 80px;
+}
+
+.tech--pits .tech__bottom-col--01 {
+  padding: 0 30px 0 0;
 }
 
 .services__heading {
@@ -6109,10 +6113,6 @@ button,
   background-color: #2D3142;
   -webkit-box-shadow: 0px 0px 0px 7px #D2D7E8;
   box-shadow: 0px 0px 0px 7px #D2D7E8;
-}
-
-.projects {
-  margin: 20px 0 0 0;
 }
 
 .projects__heading {
@@ -6510,10 +6510,6 @@ button,
 .projects--road .die-link-btn::after,
 .projects--pits .die-link-btn::after {
   background-color: #0452A0;
-}
-
-.our-science {
-  margin: 20px 0 0 0;
 }
 
 .our-science__heading {
@@ -13510,10 +13506,6 @@ button,
     display: none;
   }
 
-  .contact-us {
-    margin: 0;
-  }
-
   .contact-us__title {
     font-size: 20px;
   }
@@ -13544,10 +13536,6 @@ button,
     border-radius: 10px;
     background-color: rgba(238, 238, 251, 0.5);
     margin: 10px 0 25px;
-  }
-
-  .projects {
-    margin: 0;
   }
 
   .projects__heading {
