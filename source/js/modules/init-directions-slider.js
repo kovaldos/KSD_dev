@@ -4,13 +4,24 @@
 // Directions slider -- Start --
 
 const initDirectionsSlider = () => {
-  let swiper02 = document.querySelector('.swiper--02');
-  if (swiper02) {
-    swiper02 = new Swiper(swiper02, {
+  let directionsTextSlider = document.querySelector('.directions__text-slider');
+  if (directionsTextSlider) {
+    directionsTextSlider = new Swiper(directionsTextSlider, {
+      slidesPerView: 1,
+      enabled: false,
+    });
+  }
+  let directionSlider = document.querySelector('.directions__slider');
+  if (directionSlider) {
+    directionSlider = new Swiper(directionSlider, {
       watchOverflow: true,
       loop: false,
       speed: 800,
       effect: 'cards',
+      controller: {
+        control: directionsTextSlider,
+        by: 'slide',
+      },
       cardsEffect: {
         rotate: false,
         slideShadows: false,
@@ -29,11 +40,11 @@ const initDirectionsSlider = () => {
         },
       },
       navigation: {
-        nextEl: '.custom__slider-btn-next',
-        prevEl: '.custom__slider-btn-prev',
+        nextEl: '.directions__slider-btn--next',
+        prevEl: '.directions__slider-btn--prev',
       },
       pagination: {
-        el: '.custom-pagination',
+        el: '.directions__slider-pag',
         type: 'fraction',
       },
     });

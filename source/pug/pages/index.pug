@@ -14,15 +14,15 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     +hero()
-    +directions()
+    +directions("main")
     +about-company()
     +history()
     +principles()
     +team()
     +career()
-    +projects()
+    +projects("main")
     +blog("main")
-    +contact-us()
+    +contact-us("main")
 
 block modals
   +modal("modal--contact-us")(data-modal="contact-us")

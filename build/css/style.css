@@ -3907,7 +3907,7 @@ button,
 }
 
 .directions {
-  margin: 40px 0 0;
+  margin: 30px 0 0;
 }
 
 .directions__heading {
@@ -3945,6 +3945,15 @@ button,
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin: 30px 0;
+}
+
+.directions__text-slider {
+  width: 100%;
+}
+
+.directions__text-slider-item {
+  padding: 0 5px 0 0;
+  overflow: hidden;
 }
 
 .directions__slider-item {
@@ -4135,7 +4144,7 @@ button,
 }
 
 .about-company {
-  margin: 40px 0;
+  margin: 30px 0;
   padding: 80px 0;
   background-color: rgba(238, 238, 251, 0.3);
 }
@@ -12684,8 +12693,8 @@ button,
 
   .contact-us__socials-link:hover,
   .contact-us__socials-link:focus-visible {
-    background-color: #0452A0;
-    border-color: #0452A0;
+    background-color: #FE603A;
+    border-color: #FE603A;
   }
 
   .contact-us__socials-link:hover svg,
