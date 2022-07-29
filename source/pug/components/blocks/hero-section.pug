@@ -121,6 +121,46 @@ mixin hero-section(mods)
 					},
 				],
 			},
+			pits: {
+				title: "Разработка котлованов",
+				subtitle: "с вывозом и утилизацией грунта",
+				items: [
+					{
+						src: "slides",
+						img: "hero-pits-img-1",
+						alt: "slide-img-1",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-2",
+						alt: "slide-img-2",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-3",
+						alt: "slide-img-3",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-4",
+						alt: "slide-img-4",
+					},
+				],
+				numbers: [
+					{
+						num: "8",
+						text: "Лет опыта",
+					},
+					{
+						num: "1+",
+						text: "Млн. м<sup>3</sup> земляных работ",
+					},
+					{
+						num: "30+",
+						text: "Выполненных проектов",
+					},
+				],
+			},
 		}
 	section.hero-section(class="hero-section--" + mods)
 		.container.hero-section__container
@@ -135,6 +175,9 @@ mixin hero-section(mods)
 					else if mods === "improvement"
 						h1.title.title--h1.hero-section__title=data.improvement.title
 							span.hero-section__subtitle=data.improvement.subtitle
+					else if mods === "pits"
+						h1.title.title--h1.hero-section__title=data.pits.title
+							span.hero-section__subtitle=data.pits.subtitle
 				.hero-section__numbers
 					if mods === "demolition"
 						each item in data.demolition.numbers
@@ -151,6 +194,11 @@ mixin hero-section(mods)
 							.hero-section__numbers-item
 								strong.hero-section__numbers-num=item.num 
 								p.text.hero-section__numbers-text=item.text
+					else if mods === "pits"
+						each item in data.pits.numbers
+							.hero-section__numbers-item
+								strong.hero-section__numbers-num=item.num 
+								p.text.hero-section__numbers-text!=item.text
 		.hero-section__col.hero-section__col--02
 			if mods === "demolition"
 				.swiper.hero-section__slider
@@ -172,6 +220,14 @@ mixin hero-section(mods)
 				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
 					.swiper-wrapper 
 						each item in data.improvement.items
+							.swiper-slide 
+								.hero-section__slider-item 
+									+picture(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.hero-section__slider-pag
+			else if mods === "pits"
+				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
+					.swiper-wrapper 
+						each item in data.pits.items
 							.swiper-slide 
 								.hero-section__slider-item 
 									+picture(item.src, item.img, "jpg", item.alt)

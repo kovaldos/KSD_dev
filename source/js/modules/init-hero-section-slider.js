@@ -23,11 +23,11 @@ const initHeroSectionSlider = () => {
         type: 'bullets',
         renderBullet(index, className) {
           return `
-          <span class=${className}><svg class="progress-ring" width="34" height="34">
-          <circle class="progress-ring__circle" stroke="white" stroke-width="2" cx="17" cy="17" r="16" fill="currentColor"></circle>
-          </svg>
-          </span>
-  
+            <span class=${className}>
+              <svg class="progress-ring" width="34" height="34">
+                <circle class="progress-ring__circle" stroke="white" stroke-width="2" cx="17" cy="17" r="16" fill="currentColor"></circle>
+              </svg>
+            </span>
           `;
         },
       },
