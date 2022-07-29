@@ -1,9 +1,6 @@
 .partners {
-	margin: 0 0 40px;
 	background-color: rgba($color-lavender, 0.3);
 	&__slider {
-		// width: 100%;
-		// max-width: 1240px;
 		height: 120px;
 		.swiper-wrapper {
 			transition-timing-function: linear;
@@ -28,16 +25,18 @@
 			width: auto;
 		}
 	}
+	&--demolition {
+		margin: 0 0 30px;
+	}
+	&--pits,
+	&--road {
+		margin: 0;
+	}
 }
 .wrapper {
 	&--sale {
 		.partners {
 			margin: 60px 0 0 0;
-		}
-	}
-	&--road {
-		.partners {
-			margin: 0;
 		}
 	}
 }

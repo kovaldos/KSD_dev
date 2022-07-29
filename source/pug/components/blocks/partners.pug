@@ -1,14 +1,5 @@
-mixin partners()
-	//- -
-	//- 	const data = {
-	//- 		items: [
-	//- 			{
-	//- 				src:"../../../img/svg/partners-slider-img-1.svg",
-	//- 			}
-	//- 		]
-	//- 	}
-
-	.partners 
+mixin partners(mods)
+	.partners(class="partners--" + mods)
 		.swiper.swiper--04.partners__slider 
 			.swiper-wrapper
 				- for(let i = 0; i < 3; i++)
