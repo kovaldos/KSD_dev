@@ -85,7 +85,7 @@ mixin contact-us(mods)
 								+custom-input(data.form.name).contact-us__form-field.contact-us__form-field--input(data-validate-type="text")
 								+custom-input(data.form.email).contact-us__form-field.contact-us__form-field--input(data-validate-type="email")
 								+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
-								if !mods
+								if mods === "main" || mods === "about-us" 
 									+btn(data.form.btn).btn--orange.contact-us__form-submit
 								else if mods === "pits"
 									+btn(data.form.btn).btn--cobalt.contact-us__form-submit

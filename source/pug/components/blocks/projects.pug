@@ -8,7 +8,7 @@ mixin projects(mods)
 				title: "Следующий проект",
 				subtitle: "",
 			},
-			demolition: {
+			main: {
 				subtitle: "Наши последние объекты",
 				slides: [
 					{
@@ -146,11 +146,11 @@ mixin projects(mods)
 				h3.title.title--h3.projects__subtitle=data.subtitle
 			.projects__cols
 				.projects__col.projects__col--01
-					.swiper.swiper--07.projects__slider 
+					.swiper.projects__slider 
 						.swiper-wrapper 
-							if mods === "demolition"
+							if mods === "main" || mods === "demolition" 
 								- for(let i = 0; i < 10; i++)
-									each item in data.demolition.slides 
+									each item in data.main.slides 
 										.swiper-slide 
 											.projects__slider-item
 												+picture("slides", item.img, "jpg", item.alt)
