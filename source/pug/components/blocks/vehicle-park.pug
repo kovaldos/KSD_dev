@@ -93,7 +93,7 @@ mixin vehicle-park()
 				.vehicle-park__catalog-items
 					- for (let i = 0; i < 2; i++)
 						each item in data.items 
-							.vehicle-park__catalog-item
+							a.vehicle-park__catalog-item(href="#" data-open-modal="vehicle-card")
 								.vehicle-park__catalog-item-pic
 									+picture("content", item.img, "png", item.alt)
 								h4.title.vehicle-park__catalog-item-title=item.title

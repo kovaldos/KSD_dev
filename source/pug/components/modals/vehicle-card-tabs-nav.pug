@@ -1,0 +1,20 @@
+mixin vehicle-card-tabs-nav()
+	-
+		const data = {
+			tabsNav: [
+				{
+					text: "Характеристики",
+					className: "is-active",
+				},
+				{
+					text: "Описание",
+				},
+			],
+		}
+	nav.tabs__controls.vehicle-card__tabs-controls(data-tabs="controls")
+		.vehicle-card__cols
+			.vehicle-card__col.vehicle-card__col--nav1
+			.vehicle-card__col.vehicle-card__col--nav2
+				each item in data.tabsNav
+					button.btn.btn--reset.vehicle-card__tabs-control(data-tabs="control", class!=item.className)
+						span.vehicle-card__tabs-control-value=item.text

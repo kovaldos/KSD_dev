@@ -1,0 +1,20 @@
+mixin modal-vehicle-card()
+	-
+		const data = {
+			title: "Гусеничный Экскаватор",
+			model: "JS 305",
+			btn: "JS 304",
+		}
+	.vehicle-card 
+		.vehicle-card__header 
+			.cars__name 
+				h2.title.title--h4.vehicle-card__name=data.title 
+				h3.title.vehicle-card__model=data.model
+			button.btn.vehicle-card__btn-next(type="button")
+				.vehicle-card__btn-next-text=data.btn 
+				+icon("icon-arrow-right", 40, 20).vehicle-card__btn-next-icon
+		.tabs.vehicle-card__tabs(data-tabs="parent" data-delay="300")
+			+vehicle-card-tabs-nav()
+			.tabs__content.vehicle-card__tabs-content(data-tabs="content")
+				+vehicle-card-tabs-el("01")
+				+vehicle-card-tabs-el("02")

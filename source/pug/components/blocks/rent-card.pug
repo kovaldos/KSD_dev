@@ -47,7 +47,7 @@ mixin rent-card()
 			charact: {
 				title: "Характеристики:",
 				link: {
-					href: "#characteristics",
+					href: "#",
 					text: "Посмотреть все",
 				},
 				items: [
@@ -119,7 +119,7 @@ mixin rent-card()
 					.rent-card__charact
 						.rent-card__charact-head
 							h2.title.title--h6.rent-card__charact-title=data.charact.title
-							a.link.rent-card__charact-link(href=data.charact.link.href data-target)=data.charact.link.text
+							a.link.rent-card__charact-link(href=data.charact.link.href data-target="characteristics")=data.charact.link.text
 						ul.rent-card__charact-items
 							each item in data.charact.items 
 								li.rent-card__charact-items-item 
