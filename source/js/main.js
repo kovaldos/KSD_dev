@@ -27,6 +27,7 @@ import {initRentCardSlider} from './modules/init-rent-card-slider';
 import {initCalcRangeSlider} from './modules/init-calc-range-slider';
 import {initTechparkSlider} from './modules/init-techpark-slider';
 import {initHeroSectionSlider} from './modules/init-hero-section-slider';
+import {initVehicleCardSlider} from './modules/init-vehicle-card-slider';
 
 
 // ---------------------------------
@@ -71,6 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initRentCardSlider();
     initCalcRangeSlider();
     initTechparkSlider();
+    initVehicleCardSlider();
   });
 });
 

@@ -16,9 +16,7 @@
   visibility: hidden;
   opacity: 0;
 
-  transition: opacity $trans-modal,
-    transform $trans-modal,
-    visibility $trans-modal;
+  transition: opacity $trans-modal, transform $trans-modal, visibility $trans-modal;
 
   pointer-events: none;
 
@@ -180,6 +178,20 @@
       svg {
         color: $color-navy-blue;
       }
+    }
+  }
+  &--vehicle-card & {
+    &__content {
+      padding: 60px 100px;
+      border-radius: 20px;
+      max-width: 1170px;
+      width: 100%;
+      @include vp-1279 {
+        padding: 50px 70px;
+      }
+    }
+    &__close-btn {
+      display: none;
     }
   }
 }

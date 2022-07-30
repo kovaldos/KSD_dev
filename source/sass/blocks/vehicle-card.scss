@@ -1,0 +1,348 @@
+.vehicle-card {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 40px;
+	}
+	&__name {
+		line-height: 36px;
+		font-weight: 800;
+		margin: 0 0 10px;
+	}
+	&__model {
+		color: $color-bunting;
+		font-weight: 800;
+		font-size: 40px;
+		line-height: 54px;
+	}
+	&__btn-next {
+		padding: 25px 50px 25px 25px;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 30px;
+		text-transform: uppercase;
+		min-width: 270px;
+		justify-content: space-between;
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover,
+			&:focus-visible {
+				background-color: $color-dark-orange;
+			}
+		}
+	}
+	&__tabs {
+		position: relative;
+		&-controls {
+			margin: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 5;
+		}
+		&-control {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 34px;
+			color: $color-logan;
+			cursor: pointer;
+			@media (hover: hover), screen and (min-width: 0\0) {
+				&:hover,
+				&:focus-visible {
+					color: $color-orange-red;
+				}
+			}
+			@include vp-1279 {
+				font-size: 16px;
+				line-height: 125%;
+			}
+			&:not(:last-of-type) {
+				margin: 0 60px 0 0;
+				@include vp-1279 {
+					margin: 0 30px 0 0;
+				}
+			}
+			&.is-active {
+				color: $color-outrageous-orange;
+			}
+		}
+		&-content {
+			margin-bottom: 0;
+		}
+		&-el {
+			width: 100%;
+			&--02 {
+				.vehicle-card__col {
+					&--01 {
+						max-width: 470px;
+						padding: 0;
+					}
+					&--02 {
+						margin: 0 0 0 130px;
+						@include vp-1279 {
+							margin: 0 0 0 70px;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__cols {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__col {
+		&--01 {
+			padding: 0 7px 0 0;
+		}
+		&--02 {
+			margin: 0 0 0 70px;
+			padding: 64px 0 0 0;
+			flex-grow: 1;
+			@include vp-1279 {
+				margin: 0 0 0 35px;
+			}
+		}
+		&--nav2 {
+			padding: 0 50px 0 0;
+			@include vp-1279 {
+				padding: 0;
+			}
+		}
+	}
+	&__pic-wrap {
+		display: flex;
+		position: relative;
+	}
+	&__view {
+		position: absolute;
+		right: 15px;
+		display: flex;
+		align-items: center;
+		&-icon {
+			margin: 0 10px 0 0;
+		}
+		&-text {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 22px;
+			color: $color-logan;
+		}
+	}
+	&__pic {
+		position: relative;
+		flex-grow: 1;
+		padding: 17px 0;
+		img {
+			position: relative;
+			z-index: 1;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: calc(50% - 35px);
+			height: 100%;
+			background-color: rgba($color-lavender, 0.5);
+			z-index: 0;
+		}
+		&-name {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			font-weight: 800;
+			font-size: 65px;
+			line-height: 160%;
+			color: rgba($color-lavender, 0.5);
+		}
+	}
+	&__height {
+		display: flex;
+		align-items: center;
+		writing-mode: vertical-rl;
+		flex-shrink: 0;
+		width: 16px;
+		border-top: 1px solid $color-hawkes-blue;
+		border-bottom: 1px solid $color-hawkes-blue;
+		padding: 0 7px;
+		margin: 0 0 0 37px;
+		hr {
+			flex-grow: 1;
+			width: 1px;
+			border: 0;
+			background-color: $color-hawkes-blue;
+		}
+		&-value {
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 18px;
+			color: $color-waikawa-grey;
+			padding: 11px 6px;
+			border-radius: 5px;
+			border: 1px solid $color-hawkes-blue;
+		}
+	}
+	&__width {
+		margin: 37px 0 0;
+		width: calc(100% - 53px);
+		height: 16px;
+		padding: 7px 0;
+		border-right: 1px solid $color-hawkes-blue;
+		border-left: 1px solid $color-hawkes-blue;
+		display: flex;
+		align-items: center;
+		hr {
+			flex-grow: 1;
+			height: 1px;
+			border: 0;
+			background-color: $color-hawkes-blue;
+		}
+		&-value {
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 18px;
+			color: $color-waikawa-grey;
+			padding: 6px 11px;
+			border-radius: 5px;
+			border: 1px solid $color-hawkes-blue;
+		}
+	}
+	&__acs {
+		display: flex;
+		width: calc(100% - 53px);
+		margin: 45px 0 0 0;
+		background-color: rgba($color-lavender, 0.5);
+		padding: 23px 23px 23px 128px;
+		border-radius: 5px;
+		position: relative;
+		img {
+			width: 120px;
+			height: 120px;
+			flex-shrink: 0;
+			position: absolute;
+			top: -30px;
+			left: 0;
+		}
+		&-name {
+			font-weight: 800;
+			font-size: 20px;
+			line-height: 22px;
+			margin: 0 0 10px;
+		}
+		&-desc {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 22px;
+			color: $color-waikawa-grey;
+		}
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		&-item {
+			display: flex;
+			&:not(:last-of-type) {
+				margin: 0 0 15px;
+			}
+			span {
+				&:first-of-type {
+					padding: 0 10px 0 0;
+				}
+			}
+		}
+		&--characts {
+			.vehicle-card__list-item {
+				span {
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 22px;
+					&:first-of-type {
+						flex-grow: 1;
+					}
+				}
+			}
+		}
+		&--params {
+			.vehicle-card__list-item {
+				span {
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 22px;
+					&:first-of-type {
+						flex-grow: 1;
+						color: $color-waikawa-grey;
+					}
+				}
+			}
+		}
+	}
+	&__params-title {
+		margin: 40px 0 20px;
+		line-height: 22px;
+	}
+	&__slider {
+		height: 390px;
+		border-radius: 10px;
+		margin: 0 0 30px;
+		&-item {
+			height: 100%;
+			overflow: hidden;
+			border-radius: 10px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&-nav {
+			width: 90px;
+			height: 50px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		&-btn {
+			background-color: $color-bunting;
+			color: $color-default-white;
+			width: 45px;
+			height: 50px;
+			transition: opacity $trans-default;
+			&--prev {
+				left: 0;
+				border-top-left-radius: 10px;
+			}
+			&--next {
+				right: 0;
+				border-bottom-right-radius: 10px;
+			}
+			&::after {
+				font-size: 16px;
+			}
+		}
+		&-thumbs {
+			height: 100px;
+			.vehicle-card__slider {
+
+			}
+		}
+	}
+	&__desc {
+		&-title {
+			line-height: 22px;
+			margin: 0 0 15px;
+			&--02 {
+				margin: 40px 0 0;
+			}
+		}
+		&-text {
+			line-height: 28px;
+			color: $color-waikawa-grey;
+			&:not(:last-of-type) {
+				margin: 0 0 20px;
+			}
+		}
+	}
+}

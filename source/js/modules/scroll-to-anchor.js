@@ -6,7 +6,7 @@ const initScrollToAnchor = () => {
   if (anchorLinks.length) {
     anchorLinks.forEach((link) => {
       link.addEventListener('click', (e) => {
-        const currentBlock = link.getAttribute('data-target');
+        const currentBlock = link.dataset.target;
         const blockTop = document.getElementById(currentBlock).offsetTop;
         e.preventDefault();
         scrollTo(blockTop, 400);
