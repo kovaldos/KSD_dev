@@ -13,6 +13,7 @@ const initHeroSlider = () => {
       effect: 'fade',
       slidesPerView: 1,
       spaceBetween: 10,
+      lazy: false,
       //  breakpoints: {
 
       //  },

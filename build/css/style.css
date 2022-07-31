@@ -3967,6 +3967,21 @@ button,
   overflow: hidden;
 }
 
+.directions__slider .swiper-slide {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition-property: -webkit-transform, -webkit-filter;
+  transition-property: -webkit-transform, -webkit-filter;
+  -o-transition-property: transform, filter;
+  transition-property: transform, filter;
+  transition-property: transform, filter, -webkit-transform, -webkit-filter;
+}
+
+.directions__slider .swiper-slide-active {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
 .directions__slider-item {
   width: calc(100% - 40px);
   overflow: hidden;
@@ -4894,6 +4909,8 @@ button,
 }
 
 .team__slider-item {
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   overflow: hidden;
   background-color: rgba(238, 238, 251, 0.3);

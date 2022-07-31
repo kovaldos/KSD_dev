@@ -17,17 +17,21 @@ const initDirectionsSlider = () => {
       watchOverflow: true,
       loop: false,
       speed: 800,
-      effect: 'cards',
       controller: {
         control: directionsTextSlider,
         by: 'slide',
       },
-      cardsEffect: {
-        rotate: false,
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: false,
+      slidesPerView: 1,
+      coverflowEffect: {
+        rotate: -2,
+        stretch: -500,
+        depth: 215,
+        modifier: -1,
         slideShadows: false,
       },
-      grabCursor: true,
-      slidesPerView: 1,
       breakpoints: {
         425: {
           spaceBetween: 15,
