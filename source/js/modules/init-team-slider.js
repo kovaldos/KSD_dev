@@ -9,6 +9,7 @@ const initTeamSlider = () => {
     speed: 800,
     slidesPerView: 1.5,
     spaceBetween: 10,
+    lazy: true,
     breakpoints: {
       425: {
         slidesPerView: 2,

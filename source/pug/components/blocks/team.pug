@@ -64,6 +64,6 @@ mixin team()
 					each item in data.items
 						.swiper-slide
 							.team__slider-item
-								+picture(item.src, item.img, "jpg", item.alt)
+								+picture-swiper-lazy(item.src, item.img, "jpg", item.alt)
 								h4.title.team__slider-item-title=item.title
 								span.text.team__slider-item-text=item.exp

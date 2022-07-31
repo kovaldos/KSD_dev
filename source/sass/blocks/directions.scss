@@ -65,6 +65,13 @@
 		}
 	}
 	&__slider {
+		.swiper-slide {
+			filter: blur(3px);
+			transition-property: transform, filter;
+		}
+		.swiper-slide-active {
+			filter: blur(0);
+		}
 		&-item {
 			width: calc(100% - 40px);
 			overflow: hidden;
