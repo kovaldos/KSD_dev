@@ -12,7 +12,7 @@ const initHeroSectionSlider = () => {
         delay: 5000,
       },
       effect: 'fade',
-      speed: 1000,
+      speed: 800,
       slidesPerView: 1,
       spaceBetween: 10,
       //  breakpoints: {

@@ -1,14 +1,24 @@
 .technic {
 	&__slider {
 		height: 520px;
+		@include vp-1023 {
+			height: auto;
+		}
 		&-item {
 			display: flex;
 			width: 100%;
 			height: 100%;
 			position: relative;
+			@include vp-1023 {
+				flex-direction: column;
+				position: static;
+			}
 			&-col {
 				width: 50%;
 				height: 100%;
+				@include vp-1023 {
+					width: 100%;
+				}
 				&--02 {
 					width: calc(100% - 430px);
 					position: absolute;
@@ -26,6 +36,20 @@
 						background-color: rgba($color-lavender, 0.5);
 						z-index: -1;
 					}
+					@include vp-1023 {
+						position: relative;
+						padding: 15px 0;
+						&::after {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+		&-pic {
+			img {
+				@include vp-1023 {
+					width: 100%;
 				}
 			}
 		}
@@ -34,6 +58,9 @@
 			font-size: 80px;
 			line-height: 100%;
 			color: rgba($color-lavender, 0.7);
+			@include vp-767 {
+				font-size: 60px;
+			}
 		}
 		&-text {
 			font-weight: 500;
@@ -41,7 +68,21 @@
 			line-height: 200%;
 			color: $color-waikawa-grey;
 			max-width: 320px;
-			margin: 1em 0 0
+			margin: 1em 0 0;
+			&--mobile {
+				display: none;
+			}
+			@include vp-1023 {
+				&--desktop {
+					display: none;
+				}
+				&--mobile {
+					display: block;
+				}
+			}
+			@include vp-767 {
+				font-size: 14px;
+			}
 		}
 		&-nav {
 			width: 100%;
@@ -52,6 +93,10 @@
 			z-index: 5;
 			display: flex;
 			align-items: center;
+			@include vp-1023 {
+				position: static;
+				margin: 25px 0 0;
+			}
 		}
 		&-btn {
 			position: initial;
@@ -61,6 +106,7 @@
 			justify-content: center;
 			border-radius: 5px;
 			width: 100%;
+			height: 100%;
 			max-width: fit-content;
 			transition: max-width $trans-600, background-color $trans-600, color $trans-600;
 			overflow: hidden;

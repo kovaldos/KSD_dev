@@ -206,7 +206,7 @@ mixin hero-section(mods)
 						each item in data.demolition.items
 							.swiper-slide 
 								.hero-section__slider-item 
-									+picture(item.src, item.img, "jpg", item.alt)
+									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.hero-section__slider-pag
 			else if mods === "recycling"
 				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
@@ -214,7 +214,7 @@ mixin hero-section(mods)
 						each item in data.recycling.items
 							.swiper-slide 
 								.hero-section__slider-item 
-									+picture(item.src, item.img, "jpg", item.alt)
+									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.hero-section__slider-pag
 			else if mods === "improvement"
 				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
@@ -222,7 +222,7 @@ mixin hero-section(mods)
 						each item in data.improvement.items
 							.swiper-slide 
 								.hero-section__slider-item 
-									+picture(item.src, item.img, "jpg", item.alt)
+									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.hero-section__slider-pag
 			else if mods === "pits"
 				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
@@ -230,5 +230,5 @@ mixin hero-section(mods)
 						each item in data.pits.items
 							.swiper-slide 
 								.hero-section__slider-item 
-									+picture(item.src, item.img, "jpg", item.alt)
+									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.hero-section__slider-pag

@@ -9,22 +9,22 @@ mixin our-science()
 			items: [
 				{
 					icon: "icon-our-science-1",
-					title: "Документация на снос",
+					title: "1. Документация на снос",
 					text: "Разработка исходно разрешительной документации. Согласование с департаментом строительства",
 				},
 				{
 					icon: "icon-our-science-2",
-					title: "Организация",
+					title: "2. Организация",
 					text: "Мобилизация, временные постройки на объекте, распределение рабочих процессов",
 				},
 				{
 					icon: "icon-our-science-3",
-					title: "Снос и демонтаж",
+					title: "3. Снос и демонтаж",
 					text: "Механизированный и ручной демонтаж зданий. С расчетом мер безопасности для окружения",
 				},
 				{
 					icon: "icon-our-science-4",
-					title: "Вывоз и переработка",
+					title: "4. Вывоз и переработка",
 					text: "КСД Групп имеет собственный перерабатывающий завод, что позволяет переиспользовать до 99% строительного мусора",
 				},
 			],
@@ -40,8 +40,11 @@ mixin our-science()
 					p.text.our-science__text=data.text2
 					p.text.our-science__text=data.text3
 				.our-science__col.our-science__col--02
-					ol.our-science__list 
+					ol.our-science__list(data-accordion="parent" data-single)
 						each item in data.items
-							li.our-science__list-item=item.title
-								+icon(item.icon, 60, 60).our-science__list-icon
-								p.text.our-science__list-text=item.text
+							li.our-science__list-item(data-accordion="element")
+								button.btn.btn--reset.our-science__list-btn(type="button" data-accordion="button")
+									+icon(item.icon, 60, 60).our-science__list-icon
+									span.our-science__list-title=item.title
+									+icon("icon-chevron-down", 12, 7).our-science__acc-icon
+								p.text.our-science__list-text(data-accordion="content")=item.text
