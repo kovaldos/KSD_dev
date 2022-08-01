@@ -1998,6 +1998,7 @@ html {
 
 body {
   width: 100%;
+  min-width: 320px;
   height: 100%;
   background-color: #ffffff;
 }
@@ -3023,7 +3024,7 @@ button,
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
-  color: #FE603A;
+  color: #FF8700;
   margin: 0 0 7px;
 }
 
@@ -3615,6 +3616,10 @@ button,
   transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
+.hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet .progress-ring {
+  display: none;
+}
+
 .hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
@@ -3748,9 +3753,9 @@ button,
 }
 
 .hero-section__slider-pag.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active .progress-ring__circle {
-  -webkit-transition: stroke-dashoffset 5000ms linear;
-  -o-transition: stroke-dashoffset 5000ms linear;
-  transition: stroke-dashoffset 5000ms linear;
+  -webkit-transition: stroke-dashoffset 6000ms linear;
+  -o-transition: stroke-dashoffset 6000ms linear;
+  transition: stroke-dashoffset 6000ms linear;
   stroke-dashoffset: 106px;
 }
 
@@ -3925,6 +3930,11 @@ button,
   margin: 0 0 60px;
 }
 
+.directions__content-title {
+  color: #FF8700;
+  text-align: left;
+}
+
 .directions__cols {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4051,7 +4061,6 @@ button,
 
 .directions .swiper-pagination-total {
   font-size: 16px;
-  line-height: 26px;
 }
 
 .techpark {
@@ -5519,6 +5528,11 @@ button,
   height: 120px;
 }
 
+.partners__slider-item svg {
+  width: 100%;
+  height: 100%;
+}
+
 .partners__slider-item svg path {
   -webkit-transition: fill 0.3s ease;
   -o-transition: fill 0.3s ease;
@@ -5558,15 +5572,15 @@ button,
 
 .tech__col {
   width: 50%;
-  overflow: hidden;
 }
 
 .tech__col--01 {
-  width: calc(50% - 85px);
+  position: relative;
+  padding: 0 0 40px 0;
 }
 
 .tech__col--02 {
-  margin: 0 0 0 100px;
+  padding: 0 0 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5574,9 +5588,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .tech__slider-item {
@@ -5587,6 +5598,9 @@ button,
 }
 
 .tech__slider-die {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: absolute;
   right: 35px;
   bottom: 5px;
@@ -5617,6 +5631,7 @@ button,
 .tech__slider-nav {
   position: relative;
   left: 50%;
+  bottom: 40px;
 }
 
 .tech__slider-btns {
@@ -5664,7 +5679,7 @@ button,
 }
 
 .tech__text {
-  margin: 25px 0 auto 0;
+  margin: 25px 0 0;
   line-height: 220%;
 }
 
@@ -5696,7 +5711,7 @@ button,
 
 .tech__bottom {
   min-height: 370px;
-  margin: 80px 0;
+  margin: 75px 0;
   padding: 50px 0 58px 0;
   background-color: #2D3142;
 }
@@ -5728,7 +5743,8 @@ button,
   left: auto;
   right: 40px;
   top: 0;
-  width: 670px;
+  width: 100%;
+  max-width: 670px;
   height: 396px;
   background: #ffffff;
   -webkit-box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
@@ -5778,28 +5794,6 @@ button,
 
 .tech__bottom-video-btn svg {
   pointer-events: none;
-}
-
-.tech--demolition .tech__col {
-  width: 50%;
-}
-
-.tech--demolition .tech__col--01 {
-  position: relative;
-  padding: 0 85px 40px 0;
-}
-
-.tech--demolition .tech__col--02 {
-  margin: 0;
-  padding: 0 0 0 15px;
-}
-
-.tech--demolition .tech__slider-nav {
-  bottom: 40px;
-}
-
-.tech--demolition .tech__bottom {
-  margin: 75px 0 95px;
 }
 
 .tech--road .tech__content-title {
@@ -6041,6 +6035,10 @@ button,
   margin: 1em 0 0;
 }
 
+.technic__slider-text--mobile {
+  display: none;
+}
+
 .technic__slider-nav {
   width: 100%;
   height: 52px;
@@ -6068,6 +6066,7 @@ button,
   justify-content: center;
   border-radius: 5px;
   width: 100%;
+  height: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -6590,10 +6589,14 @@ button,
   margin: 0 0 30px;
 }
 
+.our-science__text:not(:last-of-type) {
+  margin: 0 0 20px;
+}
+
 .our-science__list {
   margin: 0;
   padding: 0;
-  list-style-position: inside;
+  list-style: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -6604,17 +6607,40 @@ button,
 
 .our-science__list-item {
   position: relative;
-  padding: 80px 0 0;
+}
+
+.our-science__list-item.is-active .our-science__acc-icon {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.our-science__list-btn {
   font-weight: 700;
   font-size: 18px;
   line-height: 160%;
   color: #2D3142;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  pointer-events: none;
 }
 
 .our-science__list-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0 0 20px;
+}
+
+.our-science__list-title {
+  text-align: left;
 }
 
 .our-science__list-text {
@@ -6622,6 +6648,19 @@ button,
   font-size: 14px;
   line-height: 180%;
   color: #636B87;
+  max-height: 100%;
+}
+
+.our-science__acc-icon {
+  display: none;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .projects-page {
@@ -13257,6 +13296,23 @@ button,
     height: 550px;
   }
 
+  .hero-section__heading {
+    max-width: 500px;
+  }
+
+  .hero-section__numbers {
+    grid-column-gap: 10px;
+    max-width: 500px;
+  }
+
+  .hero-section__numbers-num {
+    font-size: 48px;
+  }
+
+  .hero-section__numbers-text {
+    font-size: 14px;
+  }
+
   .directions__col--01 {
     padding: 0 75px 0 0;
   }
@@ -13275,6 +13331,47 @@ button,
 
   .about-company__list {
     margin: 0 0 0 50px;
+  }
+
+  .tech__slider-nav {
+    bottom: -10px;
+  }
+
+  .tech__text {
+    margin: 20px 0 0;
+  }
+
+  .tech__bottom {
+    padding: 50px 0;
+    margin: 75px 0 50px;
+  }
+
+  .tech__bottom-cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .tech__bottom-col--01 {
+    padding: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    text-align: center;
+  }
+
+  .tech__bottom-col--02 {
+    margin: 25px 0 -100px;
+  }
+
+  .tech__bottom-video {
+    position: relative;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   .vehicle-card__tabs-control {
@@ -13335,6 +13432,43 @@ button,
 
   .hero {
     height: 450px;
+  }
+
+  .hero-section {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .hero-section__col--01 {
+    padding: 16px 0 12px;
+  }
+
+  .hero-section__col--02 {
+    width: 100%;
+    position: initial;
+  }
+
+  .hero-section__slider {
+    height: 345px;
+  }
+
+  .hero-section__slider-pag.swiper-pagination-horizontal.swiper-pagination-bullets {
+    padding: 0 15px;
+    bottom: 26px;
+  }
+
+  .hero-section__heading {
+    padding: 10px 0 72px;
+  }
+
+  .hero-section__numbers {
+    display: none;
   }
 
   .directions__col--01 {
@@ -13428,6 +13562,114 @@ button,
     display: none;
   }
 
+  .partners--demolition {
+    margin: 0 0 5px;
+  }
+
+  .tech__heading {
+    text-align: center;
+  }
+
+  .tech__cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .tech__col {
+    width: 100%;
+    padding: 0 100px;
+  }
+
+  .tech__col--02 {
+    margin: 48px 0 0 0;
+  }
+
+  .tech__slider-item img {
+    width: 100%;
+  }
+
+  .tech__slider-die {
+    padding: 15px;
+    left: 50%;
+    bottom: -35px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .tech__slider-die-icon {
+    margin: 0 15px 0 0;
+  }
+
+  .tech__slider-die-name {
+    font-size: 14px;
+  }
+
+  .tech__slider-nav {
+    bottom: 0;
+    margin: 40px 0 0;
+    width: 100%;
+    height: 39px;
+    left: 85px;
+  }
+
+  .tech__bottom-title {
+    margin: 0 0 15px;
+  }
+
+  .tech__bottom-video {
+    height: auto;
+    max-width: calc(70% - 2 * 15px);
+  }
+
+  .tech__bottom-video video {
+    height: auto;
+  }
+
+  .technic__slider {
+    height: auto;
+  }
+
+  .technic__slider-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: static;
+  }
+
+  .technic__slider-item-col {
+    width: 100%;
+  }
+
+  .technic__slider-item-col--02 {
+    position: relative;
+    padding: 15px 0;
+  }
+
+  .technic__slider-item-col--02::after {
+    width: 50%;
+  }
+
+  .technic__slider-pic img {
+    width: 100%;
+  }
+
+  .technic__slider-text--desktop {
+    display: none;
+  }
+
+  .technic__slider-text--mobile {
+    display: block;
+  }
+
+  .technic__slider-nav {
+    position: static;
+    margin: 25px 0 0;
+  }
+
   .projects__col--02 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 140px;
@@ -13444,6 +13686,45 @@ button,
 
   .projects__slider-item-next {
     padding: 25px;
+  }
+
+  .our-science__cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .our-science__col {
+    width: 100%;
+  }
+
+  .our-science__col--01 {
+    margin: 0;
+  }
+
+  .our-science__col--02 {
+    margin: 30px 0 0;
+  }
+
+  .our-science__list {
+    grid-row-gap: 35px;
+  }
+
+  .our-science__list-btn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .our-science__list-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px 0 0;
   }
 
   .footer {
@@ -13522,6 +13803,7 @@ button,
   .footer__col-accordion-btn-icon {
     width: 26px;
     height: 26px;
+    color: #ffffff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -13646,7 +13928,43 @@ button,
   }
 
   .hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: calc(100% - 2 * 22px);
+    bottom: 22px;
+    left: 15px;
     text-align: left;
+  }
+
+  .hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+    position: relative;
+  }
+
+  .hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet .progress-ring {
+    display: block;
+    color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet .progress-ring__circle {
+    stroke-dasharray: 212px;
+    stroke-dashoffset: 212px;
+  }
+
+  .hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .hero__slider-pag.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active .progress-ring__circle {
+    -webkit-transition: stroke-dashoffset 4000ms linear;
+    -o-transition: stroke-dashoffset 4000ms linear;
+    transition: stroke-dashoffset 4000ms linear;
+    stroke-dashoffset: 106px;
   }
 
   .hero__heading {
@@ -13659,6 +13977,11 @@ button,
     font-weight: 400;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  .hero-section__subtitle {
+    margin: 10px 0 0 0;
+    font-size: 14px;
   }
 
   .directions {
@@ -13689,7 +14012,7 @@ button,
 
   .directions__col--01 {
     margin: 0;
-    height: 250px;
+    height: auto;
   }
 
   .directions__col--02 {
@@ -13702,6 +14025,19 @@ button,
 
   .directions__slider-item {
     width: 100%;
+  }
+
+  .directions__slider-nav {
+    margin: 50px 0 0 0;
+  }
+
+  .directions .swiper-pagination-fraction {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .directions .swiper-pagination-total {
+    font-size: 14px;
   }
 
   .techpark {
@@ -13759,6 +14095,12 @@ button,
     text-align: center;
   }
 
+  .about-company__desc {
+    padding: 0 0 0 20px;
+    font-size: 14px;
+    color: #636B87;
+  }
+
   .about-company__cols {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -13774,6 +14116,11 @@ button,
 
   .about-company__pic-wrap {
     margin: 0 auto;
+  }
+
+  .about-company__text {
+    font-size: 14px;
+    margin: 0 0 20px;
   }
 
   .history__heading {
@@ -14013,6 +14360,45 @@ button,
     margin: 10px 0 25px;
   }
 
+  .partners__slider {
+    height: 80px;
+  }
+
+  .partners__slider-item {
+    width: 120px;
+    height: 80px;
+  }
+
+  .tech__heading {
+    margin: 0 0 20px;
+  }
+
+  .tech__col {
+    padding: 0;
+  }
+
+  .tech__slider-nav {
+    margin: 30px 0 0;
+    padding: 0;
+    left: 0;
+  }
+
+  .tech .swiper-pagination-fraction {
+    text-align: left;
+  }
+
+  .tech__bottom-video {
+    max-width: calc(90% - 2 * 15px);
+  }
+
+  .technic__slider-name {
+    font-size: 60px;
+  }
+
+  .technic__slider-text {
+    font-size: 14px;
+  }
+
   .projects__heading {
     text-align: center;
   }
@@ -14068,16 +14454,48 @@ button,
   }
 
   .projects__slider-item-next .next-title__subtitle {
-    font-size: 24px;
+    font-size: 18px;
   }
 
-  .footer__top-title {
+  .our-science__head-text {
+    font-size: 14px;
+  }
+
+  .our-science__text {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .our-science__list {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+
+  .our-science__list-btn {
+    width: 100%;
+    max-width: 60%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    pointer-events: all;
+  }
+
+  .our-science__list-title {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
+  .our-science__list-text {
+    max-width: 60%;
+    max-height: 0;
+  }
+
+  .our-science__acc-icon {
     display: block;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    margin: 0 0 30px;
-    color: #2D3142;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin: 0 0 0 20px;
   }
 
   .footer__list {
@@ -14130,6 +14548,21 @@ button,
     max-width: unset;
   }
 
+  .tech__bottom {
+    padding: 30px 0;
+    margin: 50px 0 155px;
+    min-height: 314px;
+  }
+
+  .tech__bottom-col--02 {
+    margin: 25px 0 -200px;
+  }
+
+  .tech__bottom-video {
+    max-width: 100%;
+    padding: 5px;
+  }
+
   .projects__slider-item-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -14151,9 +14584,22 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
+  .our-science__list-btn {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .our-science__list-text {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 424px) {
+  .hero-section__slider {
+    height: 250px;
+  }
+
   .directions__col {
     width: 100%;
   }
@@ -14179,6 +14625,14 @@ button,
     -o-object-fit: cover;
     object-fit: cover;
   }
+
+  .tech__bottom {
+    margin: 50px 0 135px;
+  }
+
+  .tech__bottom-video video {
+    min-height: 200px;
+  }
 }
 
 @media (max-width: 374px) {
@@ -14186,7 +14640,15 @@ button,
     height: 200px;
   }
 
+  .hero-section__slider {
+    height: 188px;
+  }
+
   .about-company__pic-wrap {
     height: 220px;
+  }
+
+  .tech__bottom {
+    margin: 50px 0 115px;
   }
 }

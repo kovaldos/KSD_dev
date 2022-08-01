@@ -10,6 +10,12 @@
 			text-align: center;
 		}
 	}
+	&__content {
+		&-title {
+			color: $color-dark-orange;
+			text-align: left;
+		}
+	}
 	&__cols {
 		display: flex;
 		@include vp-767 {
@@ -41,7 +47,7 @@
 			}
 			@include vp-767 {
 				margin: 0;
-				height: 250px;
+				height: auto;
 			}
 		}
 		&--02 {
@@ -82,6 +88,9 @@
 		}
 		&-nav {
 			position: relative;
+			@include vp-767 {
+				margin: 50px 0 0 0;
+			}
 		}
 		&-btns {
 			position: absolute;
@@ -124,6 +133,10 @@
 		font-size: 24px;
 		line-height: 160%;
 		color: $color-bunting;
+		@include vp-767 {
+			font-size: 20px;
+			text-align: left;
+		}
 	}
 	.swiper-pagination-current {
 		display: inline-block;
@@ -131,6 +144,8 @@
 	}
 	.swiper-pagination-total {
 		font-size: 16px;
-		line-height: 26px;
+		@include vp-767 {
+			font-size: 14px;
+		}
 	}
 }

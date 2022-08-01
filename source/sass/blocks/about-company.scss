@@ -29,6 +29,11 @@
 		@include vp-1023 {
 			margin: 0 0 30px;
 		}
+		@include vp-767 {
+			padding: 0 0 0 20px;
+			font-size: 14px;
+			color: $color-waikawa-grey;
+		}
 		&::before {
 			content: "";
 			position: absolute;
@@ -137,6 +142,10 @@
 		}
 		@include vp-1023 {
 			margin: 0;
+		}
+		@include vp-767 {
+			font-size: 14px;
+			margin: 0 0 20px;
 		}
 	}
 	&__list {

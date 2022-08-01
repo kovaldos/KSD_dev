@@ -73,9 +73,10 @@ mixin technic(mods)
 										.technic__slider-item-col.technic__slider-item-col--01
 											h3.title.title--h3.technic__subtitle=item.subtitle
 											h4.title.technic__slider-name=item.name
-											p.text.technic__slider-text=item.text
+											p.text.technic__slider-text.technic__slider-text--desktop=item.text
 										.technic__slider-item-col.technic__slider-item-col--02
 											+picture(item.src, item.img, "png", item.alt).technic__slider-pic
+										p.text.technic__slider-text.technic__slider-text--mobile=item.text
 						else if mods === "pits"
 							each item in data.pits.items
 								.swiper-slide
@@ -83,9 +84,10 @@ mixin technic(mods)
 										.technic__slider-item-col.technic__slider-item-col--01
 											h3.title.title--h3.technic__subtitle=item.subtitle
 											h4.title.technic__slider-name=item.name
-											p.text.technic__slider-text=item.text
+											p.text.technic__slider-text.technic__slider-text--desktop=item.text
 										.technic__slider-item-col.technic__slider-item-col--02
 											+picture(item.src, item.img, "png", item.alt).technic__slider-pic
+										p.text.technic__slider-text.technic__slider-text--mobile=item.text
 				.technic__slider-nav
 					if mods === "demolition"
 						button.swiper-button-prev.btn.btn--orange.technic__slider-btn.technic__slider-btn--prev(type="button")
