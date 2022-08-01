@@ -6854,6 +6854,9 @@ button,
   padding: 14.5px 14px 14.5px 28px;
   border-radius: 7px;
   margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .catalog__card-link-icon {
@@ -13727,6 +13730,10 @@ button,
     margin: 0 20px 0 0;
   }
 
+  .catalog__card-vol {
+    display: none;
+  }
+
   .footer {
     margin: 0;
   }
@@ -14498,6 +14505,45 @@ button,
     margin: 0 0 0 20px;
   }
 
+  .projects-page__ac {
+    margin: 0 -15px;
+  }
+
+  .projects-page__ac-btn {
+    padding: 10px 15px;
+  }
+
+  .projects-page__ac-btn-text {
+    margin: 0;
+  }
+
+  .projects-page__ac-content-wrap {
+    padding: 15px 0 0 0;
+  }
+
+  .projects-page__ac-content-title {
+    padding: 0 15px;
+  }
+
+  .catalog {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    grid-row-gap: 15px;
+  }
+
+  .catalog__card {
+    max-width: 100%;
+  }
+
+  .catalog__card-title {
+    font-size: 12px;
+    margin: 0 0 7px;
+  }
+
+  .catalog__card-subtitle {
+    font-size: 18px;
+  }
+
   .footer__list {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -14650,5 +14696,10 @@ button,
 
   .tech__bottom {
     margin: 50px 0 115px;
+  }
+
+  .catalog__card {
+    min-height: 180px;
+    padding: 20px;
   }
 }
