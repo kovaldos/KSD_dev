@@ -92,7 +92,7 @@ mixin projects-road()
 								each item in data.slides 
 									.swiper-slide 
 										.projects__slider-item
-											+picture("slides", item.img, "jpg", item.alt)
+											+img("slides", item.img, "jpg", item.alt)
 											.projects__slider-item-row
 												.projects__slider-item-heading
 													h4.title.projects__slider-item-title=item.title

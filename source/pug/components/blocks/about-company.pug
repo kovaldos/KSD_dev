@@ -14,16 +14,13 @@ mixin about-company()
 
 	section.section.about-company 
 		.container.about-company__container 
-			//- .about-company__heading
-			//- 	.about-company__heading-col.about-company__heading-col--01
-			//- 	.about-company__heading-col.about-company__heading-col--02
 			.about-company__cols
 				.about-company__col.about-company__col--01
 					h2.title.title--h2.about-company__title=data.title
 					h3.title.title--h3.about-company__subtitle=data.subtitle
 					.about-company__pic-wrap 
-						+picture("content", "about-company-img-1", "jpg", "Экскаватор-разрушитель работает").about-company__pic.about-company__pic--main
-						+picture("content", "about-company-img-2", "jpg", "Дробилка работает").about-company__pic.about-company__pic--hover
+						+img("content", "about-company-img-1", "jpg", "Экскаватор-разрушитель работает").about-company__pic.about-company__pic--main
+						//- +img("content", "about-company-img-2", "jpg", "Дробилка работает").about-company__pic.about-company__pic--hover
 				.about-company__col.about-company__col--02
 					p.text.about-company__desc=data.desc
 					p.text.about-company__text=data.text

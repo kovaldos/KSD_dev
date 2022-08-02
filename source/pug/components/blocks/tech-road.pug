@@ -48,7 +48,7 @@ mixin tech-road()
 							each item in data.items
 								.swiper-slide
 									.tech__slider-item
-										+picture(item.src, item.img, "jpg", item.alt)
+										+img(item.src, item.img, "jpg", item.alt)
 				.tech__col.tech__col--02
 					h4.title.title--h4.tech__content-title=data.title2
 					p.text.text--lg.tech__text=data.text

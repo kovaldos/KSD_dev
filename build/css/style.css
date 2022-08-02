@@ -9704,7 +9704,13 @@ button,
   margin: 90px 0 0;
 }
 
+.promo__container {
+  height: 100%;
+}
+
 .promo__wrapper {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9723,12 +9729,24 @@ button,
   right: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
-  clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(33% 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(33% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.promo__wrapper-col {
+  width: 50%;
+  height: 100%;
 }
 
 .promo__wrapper-col--01 {
   max-width: 435px;
+}
+
+.promo__wrapper-col--02 {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .promo__title {
@@ -9757,8 +9775,8 @@ button,
 
 .promo__pic img {
   position: absolute;
-  right: 0;
-  bottom: 30px;
+  right: -50px;
+  bottom: -20px;
   z-index: 1;
 }
 
@@ -11892,16 +11910,16 @@ button,
   justify-content: space-between;
 }
 
-.vehicle-card__tabs {
-  position: relative;
-}
-
 .vehicle-card__tabs-controls {
   margin: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 5;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 10;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .vehicle-card__tabs-control {
@@ -11952,15 +11970,11 @@ button,
 }
 
 .vehicle-card__col--02 {
+  padding: 64px 0 0;
   margin: 0 0 0 70px;
-  padding: 64px 0 0 0;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.vehicle-card__col--nav2 {
-  padding: 0 50px 0 0;
 }
 
 .vehicle-card__pic-wrap {
@@ -11968,6 +11982,15 @@ button,
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+
+.vehicle-card__pic picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .vehicle-card__view {
@@ -13723,10 +13746,6 @@ button,
   .vehicle-card__col--02 {
     margin: 0 0 0 35px;
   }
-
-  .vehicle-card__col--nav2 {
-    padding: 0;
-  }
 }
 
 @media (max-width: 1023px) {
@@ -14429,6 +14448,82 @@ button,
     margin: 0 30px 0 0;
   }
 
+  .vehicle-park__catalog-items {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+  }
+
+  .promo {
+    height: 395px;
+  }
+
+  .promo__wrapper {
+    padding: 30px;
+  }
+
+  .promo__title {
+    font-size: 28px;
+    line-height: 150%;
+  }
+
+  .promo__pic img {
+    right: -30px;
+    top: 0;
+  }
+
+  .vehicle-card__btn-next {
+    display: none;
+  }
+
+  .vehicle-card__tabs-controls {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    margin: 0 0 20px;
+  }
+
+  .vehicle-card__tabs-el--02 .vehicle-card__col--01 {
+    margin: 0 auto 94px;
+    max-width: 610px;
+  }
+
+  .vehicle-card__tabs-el--02 .vehicle-card__col--02 {
+    margin: 0;
+  }
+
+  .vehicle-card__cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .vehicle-card__col--01 {
+    padding: 0;
+    margin: 0 0 50px;
+  }
+
+  .vehicle-card__col--02 {
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+  }
+
+  .vehicle-card__acs {
+    width: 100%;
+  }
+
+  .vehicle-card__slider {
+    margin: 0 0 15px;
+    height: 100%;
+  }
+
   .footer {
     margin: 25px 0 0;
   }
@@ -14577,6 +14672,24 @@ button,
 
   .modal--contact-us .modal__content {
     padding: 0;
+  }
+
+  .modal--vehicle-card .modal__wrapper {
+    padding: 0;
+  }
+
+  .modal--vehicle-card .modal__content {
+    padding: 20px 15px;
+  }
+
+  .modal--vehicle-card .modal__close-btn {
+    display: block;
+    color: #116ACC;
+  }
+
+  .modal--vehicle-card .modal__close-btn svg {
+    width: 16px;
+    height: 16px;
   }
 
   .title--h1 {
@@ -15537,6 +15650,77 @@ button,
     display: flex;
   }
 
+  .vehicle-park__head-text {
+    font-size: 16px;
+    line-height: 220%;
+  }
+
+  .vehicle-park__catalog-item-title {
+    font-size: 16px;
+  }
+
+  .vehicle-park__catalog-item-model {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .promo {
+    height: 480px;
+  }
+
+  .promo__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .promo__wrapper-col {
+    width: 100%;
+  }
+
+  .promo__wrapper-col--01 {
+    max-width: 100%;
+  }
+
+  .promo__title {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 0 10px;
+  }
+
+  .promo__text {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 30px;
+  }
+
+  .promo__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 350px;
+  }
+
+  .promo__pic img {
+    max-width: 350px;
+    top: -60px;
+  }
+
+  .vehicle-card__header {
+    margin: 0 0 25px;
+  }
+
+  .vehicle-card__tabs-el--02 .vehicle-card__col--01 {
+    max-width: 100%;
+    margin: 0 auto 50px;
+  }
+
   .footer__list {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -15666,6 +15850,30 @@ button,
   .video__item-video {
     height: 200px;
   }
+
+  .vehicle-park__catalog-items {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+
+  .vehicle-card__acs {
+    padding: 15px 25px 15px 95px;
+  }
+
+  .vehicle-card__acs-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+
+  .vehicle-card__acs-desc {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .vehicle-card__slider-thumbs {
+    margin: 0 -16px 0 0;
+  }
 }
 
 @media (max-width: 424px) {
@@ -15717,6 +15925,39 @@ button,
     display: flex;
     padding: 14px;
     margin: 0 auto;
+  }
+
+  .promo__pic img {
+    max-width: 275px;
+  }
+
+  .vehicle-card__acs img {
+    width: 80px;
+    height: 80px;
+    top: -16px;
+  }
+
+  .vehicle-card__list-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .vehicle-card__list--characts .vehicle-card__list-item span {
+    font-weight: 500;
+  }
+
+  .vehicle-card__list--characts .vehicle-card__list-item span:first-of-type {
+    margin: 0 0 5px;
+    color: #636B87;
+  }
+
+  .vehicle-card__slider-thumbs {
+    height: 70px;
   }
 }
 

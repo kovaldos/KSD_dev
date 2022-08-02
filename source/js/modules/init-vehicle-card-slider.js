@@ -7,11 +7,16 @@ const initVehicleCardSlider = () => {
   let vehicleCardSliderThumbs = document.querySelector('.vehicle-card__slider-thumbs');
   if (vehicleCardSliderThumbs) {
     vehicleCardSliderThumbs = new Swiper(vehicleCardSliderThumbs, {
-      spaceBetween: 30,
+      spaceBetween: 15,
       slidesPerView: 3.84,
       freeMode: true,
       watchSlidesProgress: true,
       observer: true,
+      breakpoints: {
+        1024: {
+          spaceBetween: 30,
+        },
+      },
     });
   }
   let vehicleCardSlider = document.querySelector('.vehicle-card__slider');

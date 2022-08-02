@@ -100,18 +100,18 @@ mixin blog-article()
 						h2.title.title--h5.blog-article__article-subtitle=data.articleSubtitle1
 						p.text.text--md.blog-article__article-text=data.text2
 						.blog-article__article-pic.blog-article__article-pic--01
-							+picture("content", "blog-article-img-1", "jpg", "Чёрно-белое фото людей, работающих со щебнем")
+							+img("content", "blog-article-img-1", "jpg", "Чёрно-белое фото людей, работающих со щебнем")
 						span.blog-article__article-pic-author=data.photoAuthor 
 						h2.title.title--h5.blog-article__article-subtitle=data.articleSubtitle2
 						p.text.text--md.blog-article__article-text=data.text3		
 						p.text.text--md.blog-article__article-text=data.text4
 						.blog-article__article-pic
-							+picture("content", "blog-article-img-2", "jpg", "Фото работающей дробилки")
+							+img("content", "blog-article-img-2", "jpg", "Фото работающей дробилки")
 						ul.blog-article__article-list.blog-article__article-list--01
 							each item in data.list1 
 								li.blog-article__article-list-item=item
 						.blog-article__article-pic
-							+picture("content", "blog-article-img-3", "jpg", "Фото работающей дробилки")
+							+img("content", "blog-article-img-3", "jpg", "Фото работающей дробилки")
 						ul.blog-article__article-list.blog-article__article-list--02
 							each item in data.list2 
 								li.blog-article__article-list-item=item
@@ -139,7 +139,7 @@ mixin blog-article()
 						h2.title.title--h5.similar-articles__title=data.similar.title
 						each item in data.similar.items 
 							a.similar-articles__item(href=item.href)
-								+picture("content", item.img, "jpg", item.alt)
+								+img("content", item.img, "jpg", item.alt)
 								h3.title.title--h5.similar-articles__item-title=item.title
 								p.text.text--sm.similar-articles__item-text=item.text 
 								span.similar-articles__item-date=item.date

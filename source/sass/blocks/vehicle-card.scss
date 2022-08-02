@@ -4,6 +4,9 @@
 		justify-content: space-between;
 		align-items: center;
 		margin: 0 0 40px;
+		@include vp-767 {
+			margin: 0 0 25px;
+		}
 	}
 	&__name {
 		line-height: 36px;
@@ -30,15 +33,22 @@
 				background-color: $color-dark-orange;
 			}
 		}
+		@include vp-1023 {
+			display: none;
+		}
 	}
 	&__tabs {
-		position: relative;
 		&-controls {
 			margin: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			z-index: 5;
+			justify-content: flex-end;
+			position: relative;
+			z-index: 10;
+			transform: translateY(100%);
+			@include vp-1023 {
+				justify-content: flex-start;
+				transform: none;
+				margin: 0 0 20px;
+			}
 		}
 		&-control {
 			font-weight: 600;
@@ -76,11 +86,22 @@
 					&--01 {
 						max-width: 470px;
 						padding: 0;
+						@include vp-1023 {
+							margin: 0 auto 94px;
+							max-width: 610px;
+						}
+						@include vp-767 {
+							max-width: 100%;
+							margin: 0 auto 50px;
+						}
 					}
 					&--02 {
 						margin: 0 0 0 130px;
 						@include vp-1279 {
 							margin: 0 0 0 70px;
+						}
+						@include vp-1023 {
+							margin: 0;
 						}
 					}
 				}
@@ -91,29 +112,41 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		@include vp-1023 {
+			flex-direction: column;
+		}
 	}
 	&__col {
 		&--01 {
 			padding: 0 7px 0 0;
+			@include vp-1023 {
+				padding: 0;
+				margin: 0 0 50px;
+			}
 		}
 		&--02 {
+			padding: 64px 0 0 ;
 			margin: 0 0 0 70px;
-			padding: 64px 0 0 0;
 			flex-grow: 1;
 			@include vp-1279 {
 				margin: 0 0 0 35px;
 			}
-		}
-		&--nav2 {
-			padding: 0 50px 0 0;
-			@include vp-1279 {
+			@include vp-1023 {
+				margin: 0;
 				padding: 0;
+				flex: auto;
 			}
 		}
 	}
 	&__pic-wrap {
 		display: flex;
 		position: relative;
+	}
+	&__pic {
+		picture {
+			display: flex;
+			justify-content: center;
+		}
 	}
 	&__view {
 		position: absolute;
@@ -217,6 +250,12 @@
 		padding: 23px 23px 23px 128px;
 		border-radius: 5px;
 		position: relative;
+		@include vp-1023 {
+			width: 100%;
+		}
+		@include vp-639 {
+			padding: 15px 25px 15px 95px;
+		}
 		img {
 			width: 120px;
 			height: 120px;
@@ -224,18 +263,32 @@
 			position: absolute;
 			top: -30px;
 			left: 0;
+			@include vp-424 {
+				width: 80px;
+				height: 80px;
+				top: -16px;
+			}
 		}
 		&-name {
 			font-weight: 800;
 			font-size: 20px;
 			line-height: 22px;
 			margin: 0 0 10px;
+			@include vp-639 {
+				font-size: 16px;
+				font-weight: 700;
+				margin: 0 0 4px;
+			}
 		}
 		&-desc {
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 22px;
 			color: $color-waikawa-grey;
+			@include vp-639 {
+				font-size: 12px;
+				line-height: 18px;
+			}
 		}
 	}
 	&__list {
@@ -244,6 +297,10 @@
 		list-style: none;
 		&-item {
 			display: flex;
+			@include vp-424 {
+				flex-direction: column;
+				align-items: flex-start;
+			}
 			&:not(:last-of-type) {
 				margin: 0 0 15px;
 			}
@@ -259,8 +316,15 @@
 					font-weight: 600;
 					font-size: 14px;
 					line-height: 22px;
+					@include vp-424 {
+						font-weight: 500;
+					}
 					&:first-of-type {
 						flex-grow: 1;
+						@include vp-424 {
+							margin: 0 0 5px;
+							color: $color-waikawa-grey;
+						}
 					}
 				}
 			}
@@ -287,10 +351,15 @@
 		height: 390px;
 		border-radius: 10px;
 		margin: 0 0 30px;
+		@include vp-1023 {
+			margin: 0 0 15px;
+			height: 100%;
+		}
 		&-item {
 			height: 100%;
 			overflow: hidden;
 			border-radius: 10px;
+
 			img {
 				width: 100%;
 				height: 100%;
@@ -324,8 +393,11 @@
 		}
 		&-thumbs {
 			height: 100px;
-			.vehicle-card__slider {
-
+			@include vp-639 {
+				margin: 0 -16px 0 0;
+			}
+			@include vp-424 {
+				height: 70px;
 			}
 		}
 	}

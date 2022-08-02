@@ -181,6 +181,11 @@
     }
   }
   &--vehicle-card & {
+    &__wrapper {
+      @include vp-767 {
+        padding: 0;
+      }
+    }
     &__content {
       padding: 60px 100px;
       border-radius: 20px;
@@ -189,9 +194,20 @@
       @include vp-1279 {
         padding: 50px 70px;
       }
+      @include vp-767 {
+        padding: 20px 15px;
+      }
     }
     &__close-btn {
       display: none;
+      @include vp-767 {
+        display: block;
+        color: $color-navy-blue;
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
     }
   }
 }

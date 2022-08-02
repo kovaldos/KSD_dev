@@ -54,7 +54,7 @@ mixin projects-page()
 					each item in data.items
 						.projects-page__card.catalog__card
 							.catalog__card-bg
-								+picture("content", item.img, "jpg", item.alt)
+								+img("content", item.img, "jpg", item.alt)
 							.catalog__card-title=item.title
 							.catalog__card-subtitle=item.subtitle
 							.catalog__card-row
