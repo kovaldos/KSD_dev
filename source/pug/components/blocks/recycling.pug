@@ -20,7 +20,7 @@ mixin recycling()
 				{
 					icon: "icon-check",
 					title: "Беречь экологию",
-					text: "Снизить экологическую нагрузку на окружающую среду",
+					text: "Снизить экологическую нагрузку на окружающую среду",
 				},
 				{
 					icon: "icon-check",
@@ -47,10 +47,13 @@ mixin recycling()
 			p.text.recycling__text=data.text1
 			p.text.recycling__text=data.text2
 			.recycling__items-title=data.title2
-			.recycling__items
+			.swiper.recycling__items
+				.swiper-wrapper
 					each item in data.items
-						.recycling__item
-							.recycling__item-row
-								+icon(item.icon, 26, 26).recycling__item-icon=item.num
-								h2.title.title--h2.recycling__item-title=item.title
-							p.text.text--sm.recycling__item-text=item.text
+						.swiper-slide
+							.recycling__item
+								.recycling__item-row
+									+icon(item.icon, 26, 26).recycling__item-icon
+									h2.title.title--h2.recycling__item-title=item.title
+								p.text.text--sm.recycling__item-text=item.text
+				.swiper-pagination.recycling__items-pag

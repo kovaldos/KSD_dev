@@ -29,12 +29,14 @@ mixin our-history()
 					h3.title.title--h3.our-history__subtitle=data.subtitle
 				.our-history__heading-col.our-history__heading-col--02
 					p.text.our-history__heading-desc=data.desc
-			.our-history__years
+			.our-history__years(data-accordion="parent")
 				each item in data.items
-					.our-history__years-row
-						.our-history__year
+					.our-history__years-row(data-accordion="element")
+						.our-history__year(data-accordion="button")
 							span.our-history__year-num=item.year
-						.our-history__year-text 
+							span.our-history__year-icon 
+								+icon("icon-chevron-down", 14, 7)
+						.our-history__year-text(data-accordion="content")
 							p.text.our-history__year-text-head=item.textHead
 							p.text.our-history__year-text-item=item.text1
 							p.text.our-history__year-text-item=item.text2

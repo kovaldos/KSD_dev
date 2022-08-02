@@ -40,11 +40,13 @@ mixin our-vision()
 				p.text.our-vision__text-item=data.text2
 			.our-vision__benefits 
 				h4.title.our-vision__benefits-title=data.title2
-				.our-vision__benefits-items
+				.our-vision__benefits-items(data-accordion="parent" data-single)
 					each item in data.items
-						.our-vision__benefits-item
-							.our-vision__benefits-item-row
+						.our-vision__benefits-item(data-accordion="element")
+							.our-vision__benefits-item-row(data-accordion="button")
 								+icon(item.icon, 60, 60).our-vision__benefits-item-icon
+								img(src="./img/content/icon-touch.png" alt="иконка тачскрин").our-vision__benefits-item-acc-icon
 								span.our-vision__benefits-item-num=item.num
-							h3.title.our-vision__benefits-item-title=item.title
-							p.text.text--sm.our-vision__benefits-item-text=item.text
+							.our-vision__benefits-item-content(data-accordion="content")
+								h3.title.our-vision__benefits-item-title=item.title
+								p.text.text--sm.our-vision__benefits-item-text=item.text
