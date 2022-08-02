@@ -56,13 +56,13 @@ mixin proj-tech()
 						+icon("icon-chevron-right-black", 25, 25)
 					.swiper-button-prev.proj-tech__slider-btn.proj-tech__slider-btn--prev
 						+icon("icon-chevron-left-black", 25, 25)
-			.swiper.swiper--08.proj-tech__slider
+			.swiper.proj-tech__slider
 				.swiper-wrapper
 					each item in data.items
 						.swiper-slide
 							.proj-tech__slider-item
 								.proj-tech__slider-item-pic
-									+picture(item.src, item.img, "jpg", item.alt)
+									+picture(item.src, item.img, "png", item.alt)
 								h4.title.proj-tech__slider-item-title=item.title
 								span.proj-tech__slider-item-model=item.model
 

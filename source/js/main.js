@@ -28,6 +28,7 @@ import {initCalcRangeSlider} from './modules/init-calc-range-slider';
 import {initTechparkSlider} from './modules/init-techpark-slider';
 import {initHeroSectionSlider} from './modules/init-hero-section-slider';
 import {initVehicleCardSlider} from './modules/init-vehicle-card-slider';
+import {initVideoSlider} from './modules/init-video-slider';
 
 
 // ---------------------------------
@@ -73,6 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCalcRangeSlider();
     initTechparkSlider();
     initVehicleCardSlider();
+    initVideoSlider();
   });
 });
 

@@ -18,6 +18,10 @@
     transition: color 0.2s linear;
     &--current {
       color: $color-waikawa-grey;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
     }
     &:hover:not(.breadcrumbs__link--current) {
       text-decoration: underline;

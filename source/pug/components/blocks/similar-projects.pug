@@ -57,9 +57,11 @@ mixin similar-projects()
 							.swiper-slide
 								.similar-projects__slider-item
 									.similar-projects__slider-item-bg
-										+picture(item.src, item.img, "jpg", item.alt)
+										+img(item.src, item.img, "jpg", item.alt)
 									h3.title.similar-projects__slider-item-title=item.title
 									h4.title.similar-projects__slider-item-subtitle=item.subtitle
 									a.btn.btn--orange.similar-projects__slider-item-link(href=item.link.href)
 										span=item.link.text 
 										+icon(item.link.icon, 16, 16).similar-projects__slider-item-link-icon
+				.similar-projects__slider-pag
+

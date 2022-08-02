@@ -54,17 +54,24 @@ mixin project-hero()
 			.project-hero__heading 
 				h1.title.title--h2.project-hero__title=data.title
 					span.title.title--h3.project-hero__subtitle=data.subtitle
-			.project-hero__head
-				.project-hero__col.project-hero__col--01
-					.project-hero__head-bg
-						+picture("slides", data.img, "jpg", data.alt)
-					.project-hero__head-row
-						.project-hero__head-heading
-							h2.title.project-hero__head-title=data.head.title
-							h3.title.project-hero__head-subtitle=data.head.subtitle
-						.project-hero__head-volume
-							span.volume-text=data.head.volume.text
-							span.volume-value=data.head.volume.num
+			.project-hero__head-wrap
+				.project-hero__head
+					.project-hero__col.project-hero__col--01
+						.project-hero__head-bg
+							+img("slides", data.img, "jpg", data.alt)
+						.project-hero__head-row
+							.project-hero__head-heading
+								h2.title.project-hero__head-title=data.head.title
+								h3.title.project-hero__head-subtitle=data.head.subtitle
+							.project-hero__head-volume
+								span.volume-text=data.head.volume.text
+								span.volume-value=data.head.volume.num
+
+					.project-hero__col.project-hero__col--02
+						a.project-hero__next(href=data.next.href)
+							+icon(data.next.icon, 50, 25)
+							h2.title.next-title=data.next.title
+				.project-hero__list-wrap(data-simplebar)
 					ul.project-hero__head-list
 						each item in data.head.items 
 							li.project-hero__head-list-item 
@@ -72,11 +79,6 @@ mixin project-hero()
 								p.text.project-hero__head-list-text
 									span=item.text.key
 									span=item.text.value
-
-				.project-hero__col.project-hero__col--02
-					a.project-hero__next(href=data.next.href)
-						+icon(data.next.icon, 50, 25)
-						h2.title.next-title=data.next.title
 			.project-hero__text 
 				each item in data.text 
 					p.text.text--lg.project-hero__text-item=item
