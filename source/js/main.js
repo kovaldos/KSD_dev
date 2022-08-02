@@ -29,6 +29,7 @@ import {initTechparkSlider} from './modules/init-techpark-slider';
 import {initHeroSectionSlider} from './modules/init-hero-section-slider';
 import {initVehicleCardSlider} from './modules/init-vehicle-card-slider';
 import {initVideoSlider} from './modules/init-video-slider';
+import {initRecyclingItemsSlider} from './modules/init-recycling-items-slider';
 
 
 // ---------------------------------
@@ -75,6 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTechparkSlider();
     initVehicleCardSlider();
     initVideoSlider();
+    initRecyclingItemsSlider();
   });
 });
 

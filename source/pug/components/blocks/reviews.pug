@@ -43,4 +43,5 @@ mixin reviews()
 						each item in data.items
 							.swiper-slide
 								.reviews__slider-item
-									+picture(item.src, item.img, "jpg", item.alt)
+									+img(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.reviews__slider-pag

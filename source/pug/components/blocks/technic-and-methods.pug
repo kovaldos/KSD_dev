@@ -20,6 +20,7 @@ mixin technic-and-methods()
 					title: "Дробилки",
 					num: "03",
 					text: "Они быстро переработают и расклассифицируют весь кирпичный и бетонный бой.",
+					classMod: "technic-and-methods__item-text--last"
 				},
 			],
 			link: {
@@ -42,9 +43,9 @@ mixin technic-and-methods()
 						.technic-and-methods__item
 							h2.title.title--h2.technic-and-methods__item-title=item.title
 							span.technic-and-methods__item-num=item.num
-							p.text.text--sm.technic-and-methods__item-text=item.text
+							p.text.text--sm.technic-and-methods__item-text(class!=item.classMod)=item.text
 				a.technic-and-methods__all-link(href=data.link.href)
 					.technic-and-methods__all-link-row
-						+icon(data.link.icon1, 56, 56)
-						+icon(data.link.icon2, 50, 25)
+						+icon(data.link.icon1, 56, 56).link-icon01
+						+icon(data.link.icon2, 50, 25).link-icon02
 					span=data.link.text
