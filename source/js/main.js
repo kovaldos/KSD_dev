@@ -30,6 +30,8 @@ import {initHeroSectionSlider} from './modules/init-hero-section-slider';
 import {initVehicleCardSlider} from './modules/init-vehicle-card-slider';
 import {initVideoSlider} from './modules/init-video-slider';
 import {initRecyclingItemsSlider} from './modules/init-recycling-items-slider';
+import {initWeNeedSlider} from './modules/we-need-slider';
+import {initWorkWithUsSlider} from './modules/init-work-with-us-slider';
 
 
 // ---------------------------------
@@ -77,6 +79,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initVehicleCardSlider();
     initVideoSlider();
     initRecyclingItemsSlider();
+    initWeNeedSlider();
+    initWorkWithUsSlider();
   });
 });
 

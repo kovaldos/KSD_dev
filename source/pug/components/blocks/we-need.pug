@@ -80,12 +80,23 @@ mixin we-need()
 	section.section.we-need
 		.container.we-need__container 
 			h4.title.title--h4.we-need__title=data.title
-			.we-need__items
-				each item in data.items
-					a(href=item.href).we-need__item
-						.we-need__item-row
-							+icon(item.icon, 50, 50)
-							.we-need__item-title=item.title
-						.we-need__item-available 
-							span.we-need__item-available-num=item.available.num
-							span.we-need__item-available-text=item.available.text
+			.swiper.we-need__items 
+				.swiper-wrapper
+					each item in data.items
+						.swiper-slide
+							a(href=item.href).we-need__item
+								.we-need__item-row
+									+icon(item.icon, 50, 50)
+									.we-need__item-title=item.title
+								.we-need__item-available 
+									span.we-need__item-available-num=item.available.num
+									span.we-need__item-available-text=item.available.text
+	.we-need__items-nav-wrapper
+		.container
+			.we-need__items-nav
+				.we-need__items-pag
+				.we-need__items-btns
+					.we-need__items-btn.we-need__items-btn--prev
+						+icon("icon-chevron-left-black", 25, 25)
+					.we-need__items-btn.we-need__items-btn--next
+						+icon("icon-chevron-right-black", 25, 25)

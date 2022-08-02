@@ -48,6 +48,9 @@
 		font-size: 18px;
 		line-height: 160%;
 		color: $color-bunting;
+		@include vp-767 {
+			font-size: 16px;
+		}
 	}
 	&--h6 {
 		font-weight: 600;

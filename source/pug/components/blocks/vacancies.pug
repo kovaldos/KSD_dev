@@ -124,25 +124,30 @@ mixin vacancies()
 		.container.vacancies__container 
 			h2.title.title--h2.vacancies__title=data.title
 			h3.title.title--h3.vacancies__subtitle=data.subtitle
-			.vacancies__form(data-validate data-callback="searchVacanciesForm")
-				form.vacancies__form-form(action="#")
-					.vacancies__form-field.vacancies__form-field--01
-						+custom-input(data.form.input)(data-validate-type="text").vacancies__form-input
-						button.btn.btn--transp.vacancies__form-submit(type="submit")
-							+icon(data.form.btn.icon, 26, 26)
-					.vacancies__form-field.vacancies__form-field--02
-						+icon("icon-suitcase", 26, 26).vacancies__form-field-icon
-						+custom-select(data.form.select)(data-select).custom-select.vacancies__form-select
-					.vacancies__form-field.vacancies__form-field--03
-						+icon("icon-calendar", 26, 26).vacancies__form-field-icon
-						+custom-select(data.form.select2)(data-select).custom-select.vacancies__form-select
-			.vacancies__row 
-				.vacancies__available
-					span.vacancies__available-text=data.available.text
-					span.vacancies__available-num=data.available.num
-				.vacancies__sort
-					span.vacancies__sort-text=data.sortText
-					+custom-select(data.sort)(data-select).custom-select.vacancies__sort-select
+			.vacancies__head
+				.vacancies__form(data-validate data-callback="searchVacanciesForm")
+					form.vacancies__form-form(action="#")
+						.vacancies__form-field.vacancies__form-field--01
+							+custom-input(data.form.input)(data-validate-type="text").vacancies__form-input
+							button.btn.btn--transp.vacancies__form-submit(type="submit")
+								+icon(data.form.btn.icon, 26, 26)
+						.vacancies__form-field.vacancies__form-field--02
+							+icon("icon-suitcase", 26, 26).vacancies__form-field-icon
+							+custom-select(data.form.select)(data-select).custom-select.vacancies__form-select
+						.vacancies__form-field.vacancies__form-field--03
+							+icon("icon-calendar", 26, 26).vacancies__form-field-icon
+							+custom-select(data.form.select2)(data-select).custom-select.vacancies__form-select
+				.vacancies__row 
+					.vacancies__available
+						span.vacancies__available-text=data.available.text
+						span.vacancies__available-num=data.available.num
+					.vacancies__sort
+						span.vacancies__sort-text=data.sortText
+						+custom-select(data.sort)(data-select).custom-select.vacancies__sort-select
+						button(type="button").btn.btn--reset.vacancies__sort-btn.vacancies__sort-btn--mobile
+							+icon("icon-sort", 24, 16)
+						button(type="button").btn.btn--reset.vacancies__sort-btn.vacancies__sort-btn--mobile
+							+icon("icon-filter", 22, 21)
 			.vacancies__cols
 				.vacancies__col.vacancies__col--01
 					- for (let i = 0; i < 6; i++)
@@ -158,10 +163,11 @@ mixin vacancies()
 									span.vacancies__card-employment-text=data.card.emplText
 									span.vacancies__card-employment-value=data.card.emplValue
 							.vacancies__card-row.vacancies__card-row--03
-								ul.vacancies__card-tags.vacancy__tags 
-									each tag in data.card.tags 
-										li.vacancies__card-tag.vacancy__tag
-											span=tag
+								.vacancies__card-tags-wrapper(data-simplebar)
+									ul.vacancies__card-tags.vacancy__tags 
+										each tag in data.card.tags 
+											li.vacancies__card-tag.vacancy__tag
+												span=tag
 								.vacancies__card-payment 
 									span.vacancies__card-payment-value=data.card.payment.value
 									span.vacancies__card-payment-currency=data.card.payment.currency

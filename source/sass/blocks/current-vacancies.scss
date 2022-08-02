@@ -1,12 +1,20 @@
 .current-vacancies {
 	padding: 20px 0;
 	margin: 0 0 10px;
+	@include vp-767 {
+		margin: 0 0 10px;
+		padding: 0;
+	}
 	&__title {
 		text-align: center;
 	}
 	&__subtitle {
 		text-align: center;
 		margin: 0 0 15px;
+		@include vp-374 {
+			margin: 0 auto 10px auto;
+			max-width: 68vw;
+		}
 	}
 	&__text {
 		text-align: center;
@@ -29,6 +37,9 @@
 			max-width: 100%;
 			label {
 				border-right: 1px solid $color-lavender;
+				@include vp-767 {
+					border: 0;
+				}
 				input {
 					height: 30px;
 					margin-left: 0;
@@ -95,6 +106,9 @@
 					}
 				}
 			}
+			@include vp-767 {
+				display: none;
+			}
 		}
 		&-submit {
 			flex: 0 0 50px;
@@ -105,6 +119,11 @@
 			align-items: center;
 			justify-content: center;
 			padding: 0;
+			@include vp-767 {
+				flex: 0 0 42px;
+				height: 42px;
+				margin: 0;
+			}
 		}
 	}
 }

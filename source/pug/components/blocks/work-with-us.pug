@@ -57,13 +57,16 @@ mixin work-with-us()
 			p.text.work-with-us__text=data.text1
 			p.text.work-with-us__text=data.text2
 			.work-with-us__items-title=data.title2
-			.work-with-us__items
-				each item in data.items
-					.work-with-us__item
-						.work-with-us__item-row
-							+icon(item.icon, 26, 26).work-with-us__item-icon=item.num
-							h2.title.title--h2.work-with-us__item-title=item.title
-						p.text.text--sm.work-with-us__item-text=item.text
+			.swiper.work-with-us__items
+				.swiper-wrapper
+					each item in data.items
+						.swiper-slide
+							.work-with-us__item
+								.work-with-us__item-row
+									+icon(item.icon, 26, 26).work-with-us__item-icon=item.num
+									h2.title.title--h2.work-with-us__item-title=item.title
+								p.text.text--sm.work-with-us__item-text=item.text
+				.work-with-us__items-pag
 			.work-with-us__questionnaire
 				h4.title.title--h4.work-with-us__questionnaire-title=data.questionnaire.title 
 				+btn(data.questionnaire.btn).work-with-us__questionnaire-btn
