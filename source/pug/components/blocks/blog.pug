@@ -55,7 +55,7 @@ mixin blog(mods)
 						.blog__item-bg
 							// почему два фото в макете?
 							//- +picture("content", item.img, "jpg", "Черно-белое фото НИИ").blog__item-pic.blog__item-pic--main
-							+picture("content", item.imgHover, "jpg", "Фото жилого комплекса").blog__item-pic.blog__item-pic--hover
+							+img("content", item.imgHover, "jpg", "Фото жилого комплекса").blog__item-pic.blog__item-pic--hover
 						small.blog__item-date=item.date
 						h4.title.blog__item-title=item.title
 						p.text.blog__item-text=item.text

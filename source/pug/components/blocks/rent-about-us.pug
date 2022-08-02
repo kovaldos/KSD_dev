@@ -48,7 +48,7 @@ mixin rent-about-us()
 								each item in data.items
 									.swiper-slide
 										.rent-about-us__slider-item
-											+picture(item.src, item.img, "jpg", item.alt)
+											+img(item.src, item.img, "jpg", item.alt)
 					.rent-about-us__col.rent-about-us__col--02
 						h4.title.title--h4.rent-about-us__content-title=data.title2
 						p.text.text--md.rent-about-us__text=data.text
