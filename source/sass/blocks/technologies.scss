@@ -7,23 +7,58 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 30px;
 		grid-row-gap: 15px;
+		@include vp-1023 {
+			grid-template-columns: auto;
+		}
 	}
 	&__item {
 		background: $color-default-white;
 		border: 1px solid $color-hawkes-blue;
 		border-radius: 5px;
 		transition: background-color $trans-default;
-		padding: 25px;
+		padding: 6px 15px 25px 25px;
 		position: relative;
+		&.is-active {
+			.technologies__item-acc-icon {
+				opacity: 0.5;
+			}
+		}
+		@include vp-1023 {
+			padding: 10px 20px;
+		}
+		&-content {
+			max-height: 100%;
+			@include vp-1023 {
+				max-height: 0;
+			}
+		}
 		&-row {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin: 0 0 25px;
+			margin: 0 0 7px;
+			pointer-events: none;
+			@include vp-1023 {
+				pointer-events: all;
+				margin: 0;
+			}
+		}
+		&-acc-icon {
+			display: none;
+			opacity: 1;
+			transition: opacity $trans-default;
+			@include vp-1023 {
+				display: block;
+			}
 		}
 		&-icon {
 			color: $color-bunting;
 			transition: color $trans-default;
+			flex-shrink: 0;
+			@include vp-1023 {
+				width: 50px;
+				height: 50px;
+			}
 		}
 		&-num {
 			font-weight: 800;
@@ -31,9 +66,12 @@
 			line-height: 98px;
 			color: rgba($color-lavender, 0.5);
 			transition: color $trans-default;
-			position: absolute;
-			top: 6px;
-			right: 15px;
+			@include vp-1023 {
+				font-size: 60px;
+				line-height: 73px;
+				width: 77px;
+				flex-shrink: 0;
+			}
 		}
 		&-title {
 			font-weight: 700;
@@ -48,21 +86,23 @@
 			color: $color-waikawa-grey;
 			transition: color $trans-default;
 		}
-		&:hover {
-			background-color: $color-bunting;
-		}
-		&:hover & {
-			&-num {
-				color: rgba($color-default-white, 0.05);
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover {
+				background-color: $color-bunting;
 			}
-			&-icon {
-				color: $color-default-white;
-			}
-			&-title {
-				color: $color-default-white;
-			}
-			&-text {
-				color: rgba($color-default-white, 0.6);
+			&:hover & {
+				&-num {
+					color: rgba($color-default-white, 0.05);
+				}
+				&-icon {
+					color: $color-default-white;
+				}
+				&-title {
+					color: $color-default-white;
+				}
+				&-text {
+					color: rgba($color-default-white, 0.6);
+				}
 			}
 		}
 	}

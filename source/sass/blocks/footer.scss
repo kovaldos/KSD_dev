@@ -284,6 +284,14 @@
       padding: 15px;
     }
   }
+  &--sale {
+    margin: 0;
+  }
+  &--project {
+    @include vp-1023 {
+      margin: 25px 0 0;
+    }
+  }
 }
 
 .subscribe-block {
@@ -338,10 +346,5 @@
       left: auto;
       right: 2px;
     }
-  }
-}
-.wrapper--sale {
-  .footer {
-    margin: 0;
   }
 }

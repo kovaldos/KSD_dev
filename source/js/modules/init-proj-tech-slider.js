@@ -4,29 +4,19 @@
 // Project-page technic slider -- Start --
 
 const initProjTechSlider = () => {
-  let swiper08 = document.querySelector('.swiper--08');
-  if (swiper08) {
-    swiper08 = new Swiper(swiper08, {
+  let projTechSlider = document.querySelector('.proj-tech__slider');
+  if (projTechSlider) {
+    projTechSlider = new Swiper(projTechSlider, {
       watchOverflow: true,
       speed: 800,
-      slidesPerView: 1,
+      slidesPerView: 1.4,
       spaceBetween: 10,
       breakpoints: {
-        // 425: {
-        //   spaceBetween: 20,
-        // },
-        // 768: {
-        //   loop: true,
-        //   slidesPerView: 1.7,
-        //   spaceBetween: 40,
-        // },
-        // 1024: {
-        //   loop: true,
-        //   slidesPerView: 1.745,
-        //   spaceBetween: 60,
-        //   initialSlide: 1,
-        // },
-        1600: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
           slidesPerView: 3,
           spaceBetween: 30,
         },

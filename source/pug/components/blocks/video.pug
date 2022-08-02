@@ -16,10 +16,18 @@ mixin video()
 	section.section.video
 		.container.video__container 
 			.h2.title.title--h3.video__title=data.title
-			.video__wrapper
-				each item in data.items
-					.video__item 
-						.video__item-video(data-video-block)
-							button(type="button" data-video-btn).btn.btn--orange.video__item-video-btn
-								+icon("icon-play", 14, 14)
-							video(src=item.src, type="video/mp4", controls muted preload="none" poster=item.poster)
+			.swiper.video__slider
+				.swiper-wrapper
+					each item in data.items
+						.swiper-slide
+							.video__item 
+								.video__item-video(data-video-block)
+									button(type="button" data-video-btn).btn.btn--orange.video__item-video-btn
+										+icon("icon-play", 14, 14)
+									video(src=item.src, type="video/mp4", controls muted preload="none" poster=item.poster)
+			.video__slider-nav 
+				.swiper-pagination.video__slider-pag
+				.swiper-button-next.video__slider-btn.video__slider-btn--next
+					+icon("icon-chevron-right-black", 25, 25)
+				.swiper-button-prev.video__slider-btn.video__slider-btn--prev
+					+icon("icon-chevron-left-black", 25, 25)
