@@ -2,19 +2,34 @@
 	padding: 20px 0 40px;
 	&__subtitle {
 		margin: 0 0 15px;
+		@include vp-767 {
+			margin: 0 0 20px;
+		}
 	}
 	&__text {
 		text-align: center;
 		color: $color-waikawa-grey;
 	}
+	&__head {
+		@include vp-767 {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
 	&__form {
 		padding: 15px 0 30px;
+		@include vp-767 {
+			padding: 15px 0 5px 0;
+		}
 		&-form {
 			width: 100%;
 			height: 60px;
 			display: flex;
 			align-items: center;
 			background-color: $color-default-white;
+			@include vp-767 {
+				height: 50px;
+			}
 		}
 		&-field {
 			position: relative;
@@ -22,10 +37,19 @@
 			height: 100%;
 			&:not(:last-of-type) {
 				margin: 0 30px 0 0;
+				@include vp-767 {
+					margin: 0;
+				}
 			}
 			&--01 {
 				flex: auto;
 				max-width: 570px;
+			}
+			&--02,
+			&--03 {
+				@include vp-1023 {
+					display: none;
+				}
 			}
 			&-icon {
 				position: absolute;
@@ -51,6 +75,9 @@
 					color: $color-waikawa-grey;
 					background-color: rgba($color-lavender, 0.5);
 					border-radius: 5px;
+					@include vp-767 {
+						padding: 15px 50px 15px 15px;
+					}
 					&::placeholder {
 						font-weight: 400;
 						font-size: 16px;
@@ -130,6 +157,15 @@
 			position: absolute;
 			top: 0;
 			right: 0;
+			@include vp-767 {
+				flex: 0 0 50px;
+				width: 50px;
+				height: 50px;
+				svg {
+					width: 20px;
+					height: 20px;
+				}
+			}
 		}
 	}
 	&__row {
@@ -137,6 +173,11 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 10px 0;
+		@include vp-767 {
+			margin: 0 -16px;
+			padding: 15px 16px;
+			background-color: rgba($color-lavender, 0.5);
+		}
 	}
 	&__available {
 		&-text {
@@ -144,12 +185,19 @@
 			font-size: 20px;
 			line-height: 160%;
 			color: $color-bunting;
+			@include vp-767 {
+				font-weight: 600;
+				font-size: 14px;
+			}
 		}
 		&-num {
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 160%;
 			color: $color-waikawa-grey;
+			@include vp-767 {
+				font-size: 14px;
+			}
 		}
 	}
 	&__sort {
@@ -162,6 +210,9 @@
 			font-size: 16px;
 			line-height: 160%;
 			color: $color-waikawa-grey;
+			@include vp-1023 {
+				display: none;
+			}
 		}
 		&-select {
 			padding: 0;
@@ -169,6 +220,9 @@
 			width: fit-content;
 			flex-grow: 1;
 			min-width: 128px;
+			@include vp-1023 {
+				display: none;
+			}
 			.custom-select {
 				&__placeholder {
 					color: $color-outrageous-orange;
@@ -190,6 +244,19 @@
 				}
 			}
 		}
+		&-btn {
+			width: 30px;
+			height: 30px;
+			&:not(:last-of-type) {
+				margin: 0 15px 0 0;
+			}
+			&--mobile {
+				display: none;
+				@include vp-767 {
+					display: inline-flex;
+				}
+			}
+		}
 	}
 	&__cols {
 		display: flex;
@@ -199,9 +266,15 @@
 		&--01 {
 			flex: auto;
 			margin: 0 30px 0 0;
+			@include vp-1023 {
+				margin: 0;
+			}
 		}
 		&--02 {
 			flex: 0 0 270px;
+			@include vp-1023 {
+				display: none;
+			}
 		}
 	}
 	&__card {
@@ -209,6 +282,9 @@
 		border: 1px solid $color-lavender;
 		border-radius: 10px;
 		padding: 30px;
+		@include vp-767 {
+			padding: 20px 20px 10px;
+		}
 		&:not(:last-of-type) {
 			margin: 0 0 30px;
 		}
@@ -218,23 +294,43 @@
 				justify-content: space-between;
 				align-items: center;
 				margin: 0 0 15px;
+				@include vp-767 {
+					flex-direction: column-reverse;
+					align-items: flex-start;
+					margin: 0 0 20px;
+				}
 			}
 			&--02 {
 				margin: 0 0 25px;
+				@include vp-767 {
+					margin: 0 0 40px;
+				}
 			}
 			&--03 {
 				justify-content: space-between;
+				@include vp-767 {
+					flex-direction: column-reverse;
+				}
 			}
 		}
 		&-title {
 			font-weight: 600;
 			font-size: 18px;
+			@include vp-767 {
+				font-size: 16px;
+				line-height: 28px;
+			}
 		}
 		&-date {
 			font-weight: 500;
 			font-size: 14px;
 			line-height: 23px;
 			color: $color-waikawa-grey;
+			@include vp-767 {
+				font-size: 12px;
+				line-height: 20px;
+				margin: 0 0 15px;
+			}
 		}
 		&-experience {
 			margin: 0 40px 0 0;
@@ -262,6 +358,12 @@
 			padding: 0;
 			list-style: none;
 			display: flex;
+			&-wrapper {
+				@include vp-767 {
+					padding: 0 0 10px;
+					margin: 0 -20px 0 0;
+				}
+			}
 		}
 		&-tag {
 			display: flex;
@@ -274,11 +376,18 @@
 			font-size: 12px;
 			line-height: 20px;
 			color: $color-navy-blue;
+			white-space: nowrap;
 			&:not(:last-of-type) {
 				margin: 0 20px 0 0;
+				@include vp-767 {
+					margin: 0 15px 0 0;
+				}
 			}
 		}
 		&-payment {
+			@include vp-767 {
+				margin: 0 0 30px;
+			}
 			&-value {
 				font-weight: 700;
 				font-size: 24px;

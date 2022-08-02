@@ -118,6 +118,12 @@ mixin vacancy()
 		.container.vacancy__container 
 			h1.title.title--h2.vacancy__title=data.title
 			h2.title.title--h3.vacancy__subtitle=data.subtitle
+			.vacancy__die-experience.vacancy__die-experience--mobile
+				span.vacancy__die-experience-text=data.die.expText
+				span.vacancy__die-experience-value=data.die.expValue
+			.vacancy__die-employment.vacancy__die-employment--mobile
+				span.vacancy__die-employment-text=data.die.emplText
+				span.vacancy__die-employment-value=data.die.emplValue
 			.vacancy__cols
 				.vacancy__col.vacancy__col--01
 					p.text.vacancy__head-text=data.headText
@@ -160,10 +166,17 @@ mixin vacancy()
 							+icon(data.form.upload.icon, 24, 24)
 							span.input-type-file-download=data.form.upload.text
 						button.btn.btn--reset.vacancy__form-btn-del.is-hidden(type='button')=data.form.upload.del
-					+btn(data.form.btn).btn--orange.vacancy__form-submit
+					+btn(data.form.btn).btn--drk-orange.vacancy__form-submit
 				.vacancy__form-agree
 					span.vacancy__form-agree-text=data.form.agree.textBefore
 					a.link.vacancy__form-agree-link(href=data.form.agree.href)=data.form.agree.textLink
 					span.vacancy__form-agree-text=data.form.agree.textAfter
+		.vacancy__response
+			.vacancy__response-payment 
+				span.vacancy__response-payment-value=data.die.payment.value
+				span.vacancy__response-payment-currency=data.die.payment.currency
+				span.vacancy__response-payment-time &nbsp;/&nbsp;
+				span.vacancy__response-payment-time=data.die.payment.time
+			+btn(data.die.btn)(data-open-modal="vacancy-form").btn--drk-orange.vacancy__response-btn
 
 

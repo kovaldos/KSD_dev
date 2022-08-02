@@ -2,6 +2,12 @@
 	padding: 20px 0 0;
 	&__subtitle {
 		margin: 0 0 40px;
+		@include vp-1279 {
+			max-width: 500px;
+		}
+		@include vp-767 {
+			margin: 0 0 15px;
+		}
 	}
 	&__cols {
 		display: flex;
@@ -9,9 +15,18 @@
 	&__col {
 		&--01 {
 			margin: 0 116px 0 0;
+			@include vp-1023 {
+				margin: 0 30px 0 0;
+			}
+			@include vp-767 {
+				margin: 0;
+			}
 		}
 		&--02 {
 			transform: translateY(-80px);
+			@include vp-767 {
+				transform: translateY(0);
+			}
 		}
 	}
 	&__head {
@@ -20,6 +35,9 @@
 			font-size: 18px;
 			line-height: 200%;
 			margin: 0 0 30px;
+			@include vp-767 {
+				font-size: 16px;
+			}
 		}
 		&-subtext {
 			font-weight: 500;
@@ -27,6 +45,9 @@
 			line-height: 200%;
 			color: $color-waikawa-grey;
 			margin: 0 0 50px;
+			@include vp-767 {
+				margin: 0 0 30px;
+			}
 		}
 	}
 	&__desc {
@@ -44,12 +65,17 @@
 				display: flex;
 				align-items: center;
 				color: $color-waikawa-grey;
+				@include vp-767 {
+					font-size: 16px;
+					line-height: 28px;
+				}
 				&::marker {
 					color: $color-transparent;
 				}
 				&::before {
 					content: "";
 					display: block;
+					flex-shrink: 0;
 					margin: 0 5px 0 0;
 					width: 18px;
 					height: 1px;
@@ -62,6 +88,10 @@
 			&--skills {
 				list-style: none;
 				display: flex;
+				flex-wrap: wrap;
+				@include vp-767 {
+					margin: 0;
+				}
 			}
 			&--skills & {
 				&-item {
@@ -75,9 +105,8 @@
 					font-size: 12px;
 					line-height: 20px;
 					color: $color-navy-blue;
-					&:not(:last-of-type) {
-						margin: 0 20px 0 0;
-					}
+					white-space: nowrap;
+					margin: 0 20px 15px 0;
 					&::before {
 						display: none;
 					}
@@ -88,6 +117,9 @@
 	&__form {
 		max-width: 670px;
 		padding: 40px 0 0;
+		@include vp-767 {
+			display: none;
+		}
 		&-form {
 			width: 100%;
 			background-color: $color-default-white;
@@ -212,6 +244,9 @@
 		padding: 30px 20px 20px;
 		position: sticky;
 		top: 100px;
+		@include vp-767 {
+			display: none;
+		}
 		&-payment {
 			margin: 0 0 25px;
 			&-value {
@@ -245,6 +280,12 @@
 			&-value {
 				font-weight: 500;
 			}
+			&--mobile {
+				display: none;
+				@include vp-767 {
+					display: block;
+				}
+			}
 		}
 		&-employment {
 			display: flex;
@@ -258,6 +299,13 @@
 			&-value {
 				font-weight: 500;
 			}
+			&--mobile {
+				display: none;
+				@include vp-767 {
+					display: block;
+					margin: 0 0 30px;
+				}
+			}
 		}
 		&-btn {
 			padding: 16px;
@@ -268,6 +316,43 @@
 			line-height: 20px;
 			border-radius: 7px;
 			width: 100%;
+		}
+	}
+	&__response {
+		width: 100%;
+		z-index: 10;
+		position: fixed;
+		top: auto;
+		bottom: 0;
+		left: 0;
+		background-color: $color-default-white;
+		box-shadow: 0px -5px 26px -8px rgba(45, 49, 66, 0.1);
+		padding: 13px 15px;
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		@include vp-767 {
+			display: flex;
+		}
+		&-payment {
+			&-value {
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 160%;
+				color: $color-bunting;
+			}
+			&-currency {
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 160%;
+				color: $color-bunting;
+			}
+			&-time {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 160%;
+				color: $color-logan;
+			}
 		}
 	}
 }

@@ -1,17 +1,66 @@
 .we-need {
 	padding: 80px 0 50px;
 	background-color: rgba($color-lavender, 0.3);
-	margin: 0 0 60px;
+	margin: 0 0 50px;
+	@include vp-1023 {
+		margin: 0;
+	}
 	&__title {
 		text-align: center;
 		margin: 0 0 20px;
 	}
 	&__items {
 		padding: 30px 0;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-column-gap: 30px;
-		grid-row-gap: 30px;
+		@include vp-1023 {
+			padding: 0;
+		}
+		&-nav-wrapper {
+			display: none;
+			@include vp-1023 {
+				display: block;
+			}
+		}
+		&-nav {
+			display: flex;
+			justify-content: flex-start;
+			padding: 20px 0 25px;
+		}
+		&-pag {
+			width: 50px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 160%;
+			.swiper-pagination-current {
+				display: inline-block;
+				width: 30%;
+			}
+			.swiper-pagination-total {
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 160%;
+			}
+		}
+		&-btns {
+			display: flex;
+			width: 87px;
+			height: 36px;
+			justify-content: space-between;
+			margin: 0 0 0 25px;
+		}
+		&-btn {
+			width: 36px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: color $trans-default;
+			flex-shrink: 0;
+			color: $color-bunting;
+			&.swiper-button-disabled {
+				color: $color-hawkes-blue;
+			}
+		}
 	}
 	&__item {
 		display: block;
@@ -45,22 +94,24 @@
 			color: $color-waikawa-grey;
 			transition: color $trans-default;
 		}
-		&:hover,
-		&:focus-visible {
-			background-color: $color-bunting;
-		}
-		&:hover &,
-		&:focus-visible & {
-			&-row {
-				svg {
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover,
+			&:focus-visible {
+				background-color: $color-bunting;
+			}
+			&:hover &,
+			&:focus-visible & {
+				&-row {
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&-title {
 					color: $color-default-white;
 				}
-			}
-			&-title {
-				color: $color-default-white;
-			}
-			&-available {
-				color: rgba($color-default-white, 0.6);
+				&-available {
+					color: rgba($color-default-white, 0.6);
+				}
 			}
 		}
 	}
