@@ -111,7 +111,7 @@ mixin vehicle-card-tabs-el(mods)
 							each item in data.tabsContent2.slides
 								.swiper-slide 
 									.vehicle-card__slider-item 
-										+picture("slides", item.img, "jpg", item.alt)
+										+img("slides", item.img, "jpg", item.alt)
 						.vehicle-card__slider-nav
 							.swiper-button-prev.vehicle-card__slider-btn.vehicle-card__slider-btn--prev
 							.swiper-button-next.vehicle-card__slider-btn.vehicle-card__slider-btn--next
@@ -120,7 +120,7 @@ mixin vehicle-card-tabs-el(mods)
 							each item in data.tabsContent2.slides
 								.swiper-slide 
 									.vehicle-card__slider-item 
-										+picture("slides", item.img, "jpg", item.alt)
+										+img("slides", item.img, "jpg", item.alt)
 			.vehicle-card__col.vehicle-card__col--02
 				if mods === "01"
 					ul.vehicle-card__list.vehicle-card__list--characts 
