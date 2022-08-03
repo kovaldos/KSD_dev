@@ -11,7 +11,7 @@ const initTechnicSlider = () => {
       loop: false,
       speed: 800,
       slidesPerView: 1,
-
+      autoHeight: true,
       navigation: {
         nextEl: '.technic__slider-btn--next',
         prevEl: '.technic__slider-btn--prev',

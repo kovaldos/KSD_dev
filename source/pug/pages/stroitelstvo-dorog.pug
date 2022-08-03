@@ -14,12 +14,14 @@ block main
 	main
 		//- на странице запрещен "голый" код
 		//- все блоки вставляются из папки pug/components/blocks
-		+road-build-hero()
+		+hero-section("road")
 		+partners("road")
 		+tech("road")
 		+projects-road()
 		+blog-road()
 		+technic-road()
-		+our-science-road()
+		+our-science("road")
 		+contact-us-road()
 block modals
+	+modal("modal--contact-us")(data-modal="contact-us")
+		+modal-contact-us("road")

@@ -137,4 +137,9 @@
 			margin: 0 0 0 20px;
 		}
 	}
+	&--road & {
+		&__subtitle {
+			max-width: 570px;
+		}
+	}
 }

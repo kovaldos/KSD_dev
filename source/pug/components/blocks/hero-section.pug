@@ -41,6 +41,26 @@ mixin hero-section(mods)
 					},
 				],
 			},
+			road: {
+				title: "Строительство дорог из вторичных материалов",
+				subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
+				pic: {
+					src: "slides",
+					img: "hero-bg-img-1",
+					alt: "slide-img-1",
+				},
+
+				numbers: [
+					{
+						num: "5000 км",
+						text: "Дорог обновлено",
+					},
+					{
+						num: "80 000",
+						text: "Кг. пластика использовано",
+					},
+				],
+			},
 			recycling: {
 				title: "Вывоз и утилизация строительных отходов",
 				subtitle: "Транспортировка, сбор, размещение и утилизация отходов строительства и сноса",
@@ -169,13 +189,16 @@ mixin hero-section(mods)
 					if mods === "demolition"
 						h1.title.title--h1.hero-section__title=data.demolition.title
 							span.hero-section__subtitle=data.demolition.subtitle
-					else if mods === "recycling"
+					if mods === "road"
+						h1.title.title--h1.hero-section__title=data.road.title
+							span.hero-section__subtitle=data.road.subtitle
+					if mods === "recycling"
 						h1.title.title--h1.hero-section__title=data.recycling.title
 							span.hero-section__subtitle=data.recycling.subtitle
-					else if mods === "improvement"
+					if mods === "improvement"
 						h1.title.title--h1.hero-section__title=data.improvement.title
 							span.hero-section__subtitle=data.improvement.subtitle
-					else if mods === "pits"
+					if mods === "pits"
 						h1.title.title--h1.hero-section__title=data.pits.title
 							span.hero-section__subtitle=data.pits.subtitle
 				.hero-section__numbers
@@ -184,17 +207,22 @@ mixin hero-section(mods)
 							.hero-section__numbers-item
 								strong.hero-section__numbers-num=item.num 
 								p.text.hero-section__numbers-text=item.text
-					else if mods === "recycling"
+					if mods === "road"
+						each item in data.road.numbers
+							.hero-section__numbers-item
+								strong.hero-section__numbers-num=item.num 
+								p.text.hero-section__numbers-text=item.text
+					if mods === "recycling"
 						each item in data.recycling.numbers
 							.hero-section__numbers-item
 								strong.hero-section__numbers-num=item.num 
 								p.text.hero-section__numbers-text=item.text
-					else if mods === "improvement"
+					if mods === "improvement"
 						each item in data.improvement.numbers
 							.hero-section__numbers-item
 								strong.hero-section__numbers-num=item.num 
 								p.text.hero-section__numbers-text=item.text
-					else if mods === "pits"
+					if mods === "pits"
 						each item in data.pits.numbers
 							.hero-section__numbers-item
 								strong.hero-section__numbers-num=item.num 
@@ -208,7 +236,10 @@ mixin hero-section(mods)
 								.hero-section__slider-item 
 									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.hero-section__slider-pag
-			else if mods === "recycling"
+			if mods === "road"
+				.hero-section__pic 
+					+img(data.road.pic.src, data.road.pic.img, "jpg", data.road.pic.alt)
+			if mods === "recycling"
 				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
 					.swiper-wrapper 
 						each item in data.recycling.items
@@ -216,7 +247,7 @@ mixin hero-section(mods)
 								.hero-section__slider-item 
 									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.hero-section__slider-pag
-			else if mods === "improvement"
+			if mods === "improvement"
 				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
 					.swiper-wrapper 
 						each item in data.improvement.items
@@ -224,7 +255,7 @@ mixin hero-section(mods)
 								.hero-section__slider-item 
 									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.hero-section__slider-pag
-			else if mods === "pits"
+			if mods === "pits"
 				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
 					.swiper-wrapper 
 						each item in data.pits.items

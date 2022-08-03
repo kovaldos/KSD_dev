@@ -1,4 +1,4 @@
-mixin modal-contact-us()
+mixin modal-contact-us(mods)
 	-
 		const data = {
 			form: {
@@ -36,15 +36,19 @@ mixin modal-contact-us()
 				agree2: " персональных данных",
 			},
 		}
-	.contact-us__form(data-validate data-callback="contactUsForm")
-		form(action="" method="post" enctype="multipart/form-data")
-			fieldset.contact-us__form-fieldset 
-				legend.contact-us__form-title=data.form.title
-				+custom-input(data.form.name).contact-us__form-field.contact-us__form-field--input(data-validate-type="text")
-				+custom-input(data.form.email).contact-us__form-field.contact-us__form-field--input(data-validate-type="email")
-				+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
-				+btn(data.form.btn).btn--drk-orange.contact-us__form-submit
-		.contact-us__agreement 
-			span=data.form.agree 
-			a.link.contact-us__agreement-link(href=data.form.linkAgree.href)=data.form.linkAgree.text 
-			span=data.form.agree2
+	div(class="modal--contact-us-" + mods)
+		.contact-us__form(data-validate data-callback="contactUsForm")
+			form(action="" method="post" enctype="multipart/form-data")
+				fieldset.contact-us__form-fieldset 
+					legend.contact-us__form-title=data.form.title
+					+custom-input(data.form.name).contact-us__form-field.contact-us__form-field--input(data-validate-type="text")
+					+custom-input(data.form.email).contact-us__form-field.contact-us__form-field--input(data-validate-type="email")
+					+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
+					if !mods
+						+btn(data.form.btn).btn--drk-orange.contact-us__form-submit
+					if mods === "road"
+						+btn(data.form.btn).btn--cobalt.contact-us__form-submit
+			.contact-us__agreement 
+				span=data.form.agree 
+				a.link.contact-us__agreement-link(href=data.form.linkAgree.href)=data.form.linkAgree.text 
+				span=data.form.agree2

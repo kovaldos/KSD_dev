@@ -232,55 +232,109 @@
 		}
 	}
 	&--road {
-		.hero-section {
-			&__heading {
-				padding: 30px 0 62px;
+		@include vp-1023 {
+			height: 476px;
+		}
+	}
+	&--road & {
+		&__col {
+			&--01 {
+				@include vp-1023 {
+					padding: 24px 0 39px;
+				}
 			}
-			&__title {
-				line-height: 150%;
-				letter-spacing: -0.018em;
-			}
-			&__numbers {
-				grid-template-columns: repeat(2, 1fr);
-				&-num {
-					font-size: 50px;
-					line-height: 61px;
-					color: $color-cobalt;
-					margin: 0 0 12px;
+			&--02 {
+				@include vp-1023 {
+					position: absolute;
+					height: calc(50% - 38px);
+					&::before {
+						display: none;
+					}
 				}
 			}
 		}
-	}
-	&--recycling {
-		.hero-section {
-			&__numbers {
-				&-num {
-					color: $color-apple;
-				}
-				&-text {
-					font-size: 12px;
-					line-height: 15px;
-					letter-spacing: -0.02em;
-				}
+		&__heading {
+			padding: 30px 0 62px;
+			@include vp-1279 {
+				max-width: 570px;
+			}
+			@include vp-1023 {
+				max-width: 100%;
+				width: 100%;
+				padding: 0 0 11px;
 			}
 		}
-	}
-	&--improvement,
-	&--pits {
-		.hero-section {
-			&__numbers {
+		&__title {
+			line-height: 150%;
+			letter-spacing: -0.018em;
+			@include vp-1023 {
+				font-size: 20px;
+				line-height: 160%;
+				color: $color-black-magic;
+				letter-spacing: -0.005em;
+			}
+		}
+		&__subtitle {
+			@include vp-1023 {
+				margin: 16px 0 0;
+				font-weight: 600;
+				font-size: 13px;
+				color: rgba($color-black-magic, 0.8);
+			}
+		}
+		&__numbers {
+			grid-template-columns: repeat(2, 1fr);
+			@include vp-1023 {
+				width: 100%;
+				max-width: 100%;
+				display: grid;
+				grid-template-columns: auto;
+				grid-row-gap: 22px;
 				&-item {
-					padding: 0 5px 0 15px;
+					&:last-child {
+						grid-row: 1/2;
+					}
 				}
-				&-num {
-					color: $color-cobalt;
+			}
+			@include vp-424 {
+				&-item {
+					text-align: center;
 				}
-				&-text {
-					font-weight: 400;
-					font-size: 12px;
-					line-height: 15px;
-					letter-spacing: -0.02em;
-				}
+			}
+			&-num {
+				font-size: 50px;
+				line-height: 61px;
+				color: $color-cobalt;
+				margin: 0 0 12px;
+			}
+		}
+	}
+	&--recycling & {
+		&__numbers {
+			&-num {
+				color: $color-apple;
+			}
+			&-text {
+				font-size: 12px;
+				line-height: 15px;
+				letter-spacing: -0.02em;
+			}
+		}
+	}
+	&--improvement &,
+	&--pits & {
+		&__numbers {
+			&-item {
+				padding: 0 5px 0 15px;
+			}
+			&-num {
+				color: $color-cobalt;
+			}
+			&-text {
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 15px;
+				letter-spacing: -0.02em;
 			}
 		}
 	}

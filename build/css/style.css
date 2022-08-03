@@ -2390,6 +2390,10 @@ button,
   line-height: 180%;
 }
 
+.modal--contact-us-road .contact-us__agreement-link {
+  color: #0452A0;
+}
+
 .modal--contact-us .modal__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5712,10 +5716,6 @@ button,
   line-height: 26px;
 }
 
-.tech__container--bottom {
-  position: relative;
-}
-
 .tech__bottom {
   min-height: 370px;
   margin: 75px 0;
@@ -5736,6 +5736,11 @@ button,
   padding: 0 100px 0 0;
 }
 
+.tech__bottom-col--02 {
+  width: 100%;
+  position: relative;
+}
+
 .tech__bottom-title {
   color: #ffffff;
   margin: 0 0 40px;
@@ -5748,8 +5753,9 @@ button,
 .tech__bottom-video {
   position: absolute;
   left: auto;
-  right: 40px;
-  top: 0;
+  right: 0;
+  top: auto;
+  bottom: -140px;
   width: 100%;
   max-width: 670px;
   height: 396px;
@@ -5805,10 +5811,6 @@ button,
 
 .tech--road .tech__content-title {
   color: #0452A0;
-}
-
-.tech--road .tech__bottom {
-  margin: 80px 0;
 }
 
 .tech--pits .tech__content-title {
@@ -6668,6 +6670,10 @@ button,
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.our-science--road .our-science__subtitle {
+  max-width: 570px;
 }
 
 .projects-page {
@@ -13702,6 +13708,10 @@ button,
     font-size: 14px;
   }
 
+  .hero-section--road .hero-section__heading {
+    max-width: 570px;
+  }
+
   .directions__col--01 {
     padding: 0 75px 0 0;
   }
@@ -13731,8 +13741,7 @@ button,
   }
 
   .tech__bottom {
-    padding: 50px 0;
-    margin: 75px 0 50px;
+    padding: 50px 0 345px;
   }
 
   .tech__bottom-cols {
@@ -13750,14 +13759,11 @@ button,
     text-align: center;
   }
 
-  .tech__bottom-col--02 {
-    margin: 25px 0 -100px;
-  }
-
   .tech__bottom-video {
-    position: relative;
     left: 50%;
+    top: 25px;
     right: auto;
+    bottom: auto;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -13870,6 +13876,59 @@ button,
 
   .hero-section__numbers {
     display: none;
+  }
+
+  .hero-section--road {
+    height: 476px;
+  }
+
+  .hero-section--road .hero-section__col--01 {
+    padding: 24px 0 39px;
+  }
+
+  .hero-section--road .hero-section__col--02 {
+    position: absolute;
+    height: calc(50% - 38px);
+  }
+
+  .hero-section--road .hero-section__col--02::before {
+    display: none;
+  }
+
+  .hero-section--road .hero-section__heading {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 0 11px;
+  }
+
+  .hero-section--road .hero-section__title {
+    font-size: 20px;
+    line-height: 160%;
+    color: #252422;
+    letter-spacing: -0.005em;
+  }
+
+  .hero-section--road .hero-section__subtitle {
+    margin: 16px 0 0;
+    font-weight: 600;
+    font-size: 13px;
+    color: rgba(37, 36, 34, 0.8);
+  }
+
+  .hero-section--road .hero-section__numbers {
+    width: 100%;
+    max-width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    grid-row-gap: 22px;
+  }
+
+  .hero-section--road .hero-section__numbers-item:last-child {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
   }
 
   .directions__col--01 {
@@ -14014,6 +14073,10 @@ button,
     width: 100%;
     height: 39px;
     left: 85px;
+  }
+
+  .tech__bottom {
+    padding: 50px 0 33%;
   }
 
   .tech__bottom-title {
@@ -15350,6 +15413,11 @@ button,
     text-align: left;
   }
 
+  .tech__bottom {
+    margin: 50px 0;
+    padding: 30px 0 46%;
+  }
+
   .tech__bottom-video {
     max-width: calc(90% - 2 * 15px);
   }
@@ -15932,13 +16000,7 @@ button,
   }
 
   .tech__bottom {
-    padding: 30px 0;
-    margin: 50px 0 155px;
-    min-height: 314px;
-  }
-
-  .tech__bottom-col--02 {
-    margin: 25px 0 -200px;
+    padding: 30px 0 50%;
   }
 
   .tech__bottom-video {
@@ -16045,6 +16107,10 @@ button,
     height: 250px;
   }
 
+  .hero-section--road .hero-section__numbers-item {
+    text-align: center;
+  }
+
   .directions__col {
     width: 100%;
   }
@@ -16069,10 +16135,6 @@ button,
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-  }
-
-  .tech__bottom {
-    margin: 50px 0 135px;
   }
 
   .tech__bottom-video video {
@@ -16136,10 +16198,6 @@ button,
 
   .about-company__pic-wrap {
     height: 220px;
-  }
-
-  .tech__bottom {
-    margin: 50px 0 115px;
   }
 
   .catalog__card {

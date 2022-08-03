@@ -160,6 +160,15 @@
         }
       }
     }
+    &-road {
+      .contact-us {
+        &__agreement {
+          &-link {
+            color: $color-cobalt;
+          }
+        }
+      }
+    }
   }
   &--contact-us & {
     &__content {

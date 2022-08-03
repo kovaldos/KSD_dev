@@ -166,30 +166,24 @@
 		font-size: 16px;
 		line-height: 26px;
 	}
-	&__container {
-		&--bottom {
-			position: relative;
-		}
-	}
 	&__bottom {
 		min-height: 370px;
 		margin: 75px 0;
 		padding: 50px 0 58px 0;
 		background-color: $color-bunting;
 		@include vp-1279 {
-			padding: 50px 0;
-			margin: 75px 0 50px;
+			padding: 50px 0 345px;
+		}
+		@include vp-1023 {
+			padding: 50px 0 33%;
+			
+		}
+		@include vp-767 {
+			margin: 50px 0;
+			padding: 30px 0 46%;
 		}
 		@include vp-639 {
-			padding: 30px 0;
-			margin: 50px 0 155px;
-			min-height: 314px;
-		}
-		@include vp-424 {
-			margin: 50px 0 135px;
-		}
-		@include vp-374 {
-			margin: 50px 0 115px;
+			padding: 30px 0 50%;
 		}
 		&-cols {
 			display: flex;
@@ -208,12 +202,8 @@
 				}
 			}
 			&--02 {
-				@include vp-1279 {
-					margin: 25px 0 -100px;
-				}
-				@include vp-639 {
-					margin: 25px 0 -200px;
-				}
+				width: 100%;
+				position: relative;
 			}
 		}
 
@@ -230,8 +220,9 @@
 		&-video {
 			position: absolute;
 			left: auto;
-			right: 40px;
-			top: 0;
+			right: 0;
+			top: auto;
+			bottom: -140px;
 			width: 100%;
 			max-width: 670px; // временно?
 			height: 396px; // временно?
@@ -242,9 +233,10 @@
 			border-radius: 10px;
 			padding: 10px;
 			@include vp-1279 {
-				position: relative;
 				left: 50%;
+				top: 25px;
 				right: auto;
+				bottom: auto;
 				transform: translateX(-50%);
 			}
 			@include vp-1023 {
@@ -312,15 +304,10 @@
 	// 		margin: 75px 0 95px;
 	// 	}
 	// }
-	&--road {
-		.tech {
-			&__content {
-				&-title {
-					color: $color-cobalt;
-				}
-			}
-			&__bottom {
-				margin: 80px 0;
+	&--road & {
+		&__content {
+			&-title {
+				color: $color-cobalt;
 			}
 		}
 	}
