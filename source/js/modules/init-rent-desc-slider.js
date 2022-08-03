@@ -3,15 +3,20 @@
 // Rent description slider -- Start --
 
 const initRentDescSlider = () => {
-  let swiper12 = document.querySelector('.swiper--12');
-  if (swiper12) {
-    swiper12 = new Swiper(swiper12, {
+  let heroRentDescSlider = document.querySelector('.rent-hero-desc__slider');
+  if (heroRentDescSlider) {
+    heroRentDescSlider = new Swiper(heroRentDescSlider, {
       watchOverflow: true,
       speed: 800,
       slidesPerView: 1,
       spaceBetween: 15,
+      autoHeight: true,
       breakpoints: {
         768: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+        },
+        1024: {
           slidesPerView: 2,
           spaceBetween: 30,
         },

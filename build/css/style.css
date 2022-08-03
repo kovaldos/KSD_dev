@@ -10024,6 +10024,13 @@ button,
   max-width: 745px;
 }
 
+.rent-hero__col-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .rent-hero__col--02 {
   position: absolute;
   width: 100%;
@@ -10242,8 +10249,28 @@ button,
   margin: 0 0 40px;
 }
 
-.rent-technic__catalog-title {
+.rent-technic .acc__el.is-active .acc__btn-icon {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.rent-technic .acc__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  pointer-events: none;
   margin: 0 0 10px;
+}
+
+.rent-technic .acc__btn-icon {
+  display: none;
+}
+
+.rent-technic__catalog-title {
   font-size: 20px;
   line-height: 24px;
 }
@@ -10314,8 +10341,7 @@ button,
   padding: 30px 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
@@ -13618,6 +13644,12 @@ button,
   }
 }
 
+@media (max-width: 1919px) {
+  .rent-hero__col--02 {
+    max-width: 60vw;
+  }
+}
+
 @media (max-width: 1439px) {
   .container {
     padding: 0 32px;
@@ -13633,6 +13665,10 @@ button,
 
   .services__bottom-video {
     right: 32px;
+  }
+
+  .rent-hero {
+    height: 60vh;
   }
 }
 
@@ -14509,6 +14545,66 @@ button,
 
   .similar-articles__item-title {
     min-height: 48px;
+  }
+
+  .rent-technic .acc__btn {
+    pointer-events: all;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .rent-technic .acc__btn-icon {
+    display: block;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+
+  .rent-technic__catalog-nav--desktop {
+    display: none;
+  }
+
+  .rent-technic__catalog-items {
+    grid-column-gap: 15px;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-columns: 188px;
+    grid-auto-flow: column;
+    grid-row-gap: 0;
+  }
+
+  .rent-technic__catalog-item {
+    padding: 15px 10px;
+    min-width: 188px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+  }
+
+  .rent-technic__catalog-item-pic {
+    height: 104px;
+    margin: 0 0 10px;
+  }
+
+  .rent-technic__catalog-item-title {
+    display: none;
+  }
+
+  .rent-technic__catalog-item-model {
+    font-weight: 500;
+    font-size: 13px;
+    margin: 0 0 20px;
+  }
+
+  .rent-technic__catalog-item-price {
+    font-size: 13px;
+    line-height: 16px;
+    padding: 0 0 9px;
   }
 
   .vehicle-card__btn-next {

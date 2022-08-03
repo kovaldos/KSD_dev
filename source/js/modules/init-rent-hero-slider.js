@@ -3,9 +3,9 @@
 // Rent-hero slider -- Start --
 
 const initRentHeroSlider = () => {
-  let swiper11 = document.querySelector('.swiper--11');
-  if (swiper11) {
-    swiper11 = new Swiper(swiper11, {
+  let rentHeroSlider = document.querySelector('.rent-hero__slider');
+  if (rentHeroSlider) {
+    rentHeroSlider = new Swiper(rentHeroSlider, {
       watchOverflow: true,
       loop: true,
       autoplay: true,
