@@ -53,7 +53,66 @@ mixin directions(mods)
 					alt: "экскаватор-разрушитель",
 					},
 				],
-			}
+			},
+			recycling: {
+				title: "Технопарк",
+				subtitle: "Высокотехнологичная площадка по переработке строительных отходов",
+				contentTitle: "",
+				textItems: [
+					{
+						text: "В 2022 году в Московской области открыт завод по переработке строительных отходов.",
+						text1: "Собственный комплекс по производству материалов из вторсырья дает возможность работать с объемом свыше 5 тыс. тонн строительных отходов ежедневно.",
+					},
+					{
+						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam pariatur rerum tenetur harum sapiente porro autem perspiciatis impedit quo. Maxime?",
+						text1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam pariatur rerum tenetur harum sapiente porro autem perspiciatis impedit quo. Maxime?",
+					},
+					{
+						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam pariatur rerum tenetur harum sapiente porro autem perspiciatis impedit quo. Maxime?",
+						text1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis eum maxime rem explicabo ad a repellat necessitatibus, consequatur eveniet deserunt quo tenetur, accusamus porro quis iusto nostrum, ipsum eius similique!",
+					},
+					{
+						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores alias iste delectus itaque possimus maxime pariatur recusandae, velit est ex cumque maiores. Illo optio ipsam eos consequatur ab molestias officiis repellendus, temporibus, velit magni, omnis aperiam esse nulla dolore ex!",
+						text1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores alias iste delectus itaque possimus maxime pariatur recusandae, velit est ex cumque maiores. Illo optio ipsam eos consequatur ab molestias officiis repellendus, temporibus, velit magni, omnis aperiam esse nulla dolore ex!",
+					},
+					{
+						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores alias iste delectus itaque possimus maxime pariatur recusandae, velit est ex cumque maiores. Illo optio ipsam eos consequatur ab molestias officiis repellendus, temporibus, velit magni, omnis aperiam esse nulla dolore ex!",
+						text1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur numquam tenetur unde doloremque? Quisquam ducimus vitae totam. Optio repudiandae eaque fuga unde illo neque suscipit minus reiciendis quisquam? Rem accusamus doloribus nemo sed dignissimos veniam eum, magni aperiam obcaecati nam, minima dolorem quibusdam sapiente quis explicabo qui voluptatibus. Doloremque, fugiat.",
+					},
+				],
+				items: [
+					{				
+
+						src: "slides",
+						img: "directions-img-1",
+						alt: "экскаватор-разрушитель",
+					},
+					{		
+
+						src: "slides",
+						img: "directions-img-1",
+						alt: "экскаватор-разрушитель",
+					},
+					{	
+
+						src: "slides",
+						img: "directions-img-1",
+						alt: "экскаватор-разрушитель",
+					},
+					{
+
+						src: "slides",
+						img: "directions-img-1",
+						alt: "экскаватор-разрушитель",
+					},
+					{	
+
+						src: "slides",
+						img: "directions-img-1",
+						alt: "экскаватор-разрушитель",
+					},
+				],
+			},
 		}
 
 	section.section.directions(class="directions--" + mods)
@@ -62,6 +121,9 @@ mixin directions(mods)
 				if mods === "main"
 					h2.title.title--h2.directions__title=data.main.title
 					h3.title.title--h3.directions__subtitle=data.main.subtitle
+				if mods === "recycling"
+					h2.title.title--h2.directions__title=data.recycling.title
+					h3.title.title--h3.directions__subtitle=data.recycling.subtitle
 			.directions__cols
 				.directions__col.directions__col--01
 					.swiper.directions__text-slider 
@@ -72,6 +134,12 @@ mixin directions(mods)
 										.directions__text-slider-item
 											h4.title.title--h4.directions__content-title=item.title
 											p.text.text--lg.directions__text=item.text
+							if mods === "recycling"
+								each item in data.recycling.textItems
+									.swiper-slide
+										.directions__text-slider-item
+											p.text.text--lg.directions__text=item.text
+											p.text.text--lg.directions__text=item.text1
 					.directions__slider-nav
 						.directions__slider-pag
 						.directions__slider-btns
@@ -84,6 +152,11 @@ mixin directions(mods)
 						.swiper-wrapper
 							if mods === "main"
 								each item in data.main.items
+									.swiper-slide
+										.directions__slider-item
+											+img(item.src, item.img, "jpg", item.alt)
+							if mods === "recycling"
+								each item in data.recycling.items
 									.swiper-slide
 										.directions__slider-item
 											+img(item.src, item.img, "jpg", item.alt)

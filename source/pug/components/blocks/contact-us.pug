@@ -87,8 +87,10 @@ mixin contact-us(mods)
 								+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
 								if mods === "main" || mods === "about-us" 
 									+btn(data.form.btn).btn--orange.contact-us__form-submit
-								else if mods === "pits"
+								if mods === "improvement" || mods === "pits"
 									+btn(data.form.btn).btn--cobalt.contact-us__form-submit
+								if mods === "recycling"
+									+btn(data.form.btn).btn--apple.contact-us__form-submit
 					.contact-us__agreement 
 						span=data.form.agree 
 						a.link.contact-us__agreement-link(href=data.form.linkAgree.href)=data.form.linkAgree.text 
@@ -109,5 +111,10 @@ mixin contact-us(mods)
 									+icon(item.icon, 16, 16)
 					.contact-us__modal-call
 						h3.title.title--h5.contact-us__modal-call-title=data.modalCall.title
-						+btn(data.modalCall.btn).btn--drk-orange.contact-us__modal-call-btn(data-open-modal="contact-us")
+						if mods === "main" || mods === "about-us"
+							+btn(data.modalCall.btn).btn--drk-orange.contact-us__modal-call-btn(data-open-modal="contact-us")
+						if mods === "improvement" || mods === "pits"
+							+btn(data.modalCall.btn).btn--cobalt.contact-us__modal-call-btn(data-open-modal="contact-us")
+						if mods === "recycling"
+							+btn(data.modalCall.btn).btn--apple.contact-us__modal-call-btn(data-open-modal="contact-us")
 					+btn-to-top()

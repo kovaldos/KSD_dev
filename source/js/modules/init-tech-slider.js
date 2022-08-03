@@ -4,14 +4,15 @@
 // Technology slider -- Start --
 
 const initTechSlider = () => {
-  let swiper05 = document.querySelector('.swiper--05');
-  if (swiper05) {
-    swiper05 = new Swiper(swiper05, {
+  let techSlider = document.querySelector('.tech__slider');
+  if (techSlider) {
+    techSlider = new Swiper(techSlider, {
       watchOverflow: true,
       loop: false,
       speed: 800,
       slidesPerView: 1,
       spaceBetween: 10,
+      autoHeight: true,
       //  breakpoints: {
 
       //  },

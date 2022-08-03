@@ -311,6 +311,15 @@
 			}
 		}
 	}
+	&--improvement & {
+		&__bottom {
+			&-col {
+				&--01 {
+					padding: 0 30px 0 0;
+				}
+			}
+		}
+	}
 	&--pits & {
 		&__content {
 			&-title {

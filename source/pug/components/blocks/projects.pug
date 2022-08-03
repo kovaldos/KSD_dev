@@ -73,6 +73,126 @@ mixin projects(mods)
 					},
 				],
 			},
+			road: {
+				slides: [
+					{
+						img: "road-project-img-1",
+						alt: "projects-img-1",
+						title: "Проселочная дорога",
+						subtitle: "Тучково",
+						volume: {
+							text: "Объемы работ: ",
+							num: " 250 569 м3 со",
+						},
+						die: {
+							icon: "icon-place",
+							title: "Московская область",
+							address: {
+								text: "Адрес: ",
+								value: "г.Москва, ЦАО, Елизаветинский пер.",
+							},
+							term: {
+								text: "Срок выполнения: ",
+								value: "14  дней",
+							},
+							work: {
+								text: "Кол-во техники:",
+								value: "8 единиц",
+							},
+							btn: {
+								href: "",
+								text: "Подробнее",
+							}
+						},
+					},
+					{
+						img: "projects-img-2",
+						alt: "projects-img-2",
+						title: "Нежилые здания",
+						subtitle: "Проект #2",
+						volume: {
+							text: "Объемы работ: ",
+							num: " 250 569 м3 со",
+						},
+						die: {
+							icon: "icon-place",
+							title: "Московская область",
+							address: {
+								text: "Адрес: ",
+								value: "г. Москва, пр-кт Рязанский, вл.26/1",
+							},
+							term: {
+								text: "Срок выполнения: ",
+								value: "25.02.2021  -  30.07.2021",
+							},
+							work: {
+								text: "Вид работ: ",
+								value: "Снос строений",
+							},
+							btn: {
+								href: "",
+								text: "Подробнее",
+							}
+						},
+					},
+				],
+			},
+			improvement: {
+				slides: [
+					{
+						img: "improvement-projects-img-1",
+						alt: "projects-img-1",
+						title: "Благоустройство",
+						subtitle: "Москва",
+						die: {
+							icon: "icon-place",
+							title: "Москва",
+							address: {
+								text: "Адрес: ",
+								value: "ЦАО, Офис продаж УК «ПИК»",
+							},
+							term: {
+								text: "Срок выполнения: ",
+								value: "14  дней",
+							},
+							work: {
+								text: "Кол-во техники: ",
+								value: "5 единиц",
+							},
+							btn: {
+								href: "#",
+								text: "Подробнее",
+							}
+						},
+					},
+					{
+						img: "projects-img-2",
+						alt: "projects-img-2",
+						title: "Благоустройство",
+						subtitle: "Новая Москва",
+						die: {
+							icon: "icon-place",
+							title: "Московская область",
+							address: {
+								text: "Адрес: ",
+								value: "г.Москва, ЮАО, ЖК Восточное бутово",
+							},
+							term: {
+								text: "Срок выполнения: ",
+								value: "3 месяца",
+							},
+							work: {
+								text: "Кол-во техники: ",
+								value: "5 единиц",
+							},
+							btn: {
+								href: "#",
+								text: "Подробнее",
+							}
+						},
+					},
+				],
+			},
 			pits: {
 				slides: [
 					{
@@ -175,7 +295,35 @@ mixin projects(mods)
 														span.die-term__text=item.die.term.text
 														span.die-term__value=item.die.term.value
 													a.btn.btn--orange.die-link-btn(href=item.die.btn.href)=item.die.btn.text
-							else if mods === "pits"
+							if mods === "road"
+								- for(let i = 0; i < 10; i++)
+									each item in data.road.slides
+										.swiper-slide 
+											.projects__slider-item
+												+img("slides", item.img, "jpg", item.alt)
+												.projects__slider-item-row
+													.projects__slider-item-heading
+														h4.title.projects__slider-item-title=item.title
+														h5.title.projects__slider-item-subtitle=item.subtitle
+													if mods !== "improvement"
+														.projects__slider-item-volume
+															span.volume-text=item.volume.text
+															span.volume-value=item.volume.num
+												.projects__slider-item-die
+													.die-title
+														+icon(item.die.icon, 20, 20).die-title__icon
+														span.die-title__text=item.die.title
+													.die-address
+														span.die-address__text=item.die.address.text
+														span.die-address__value=item.die.address.value
+													.die-work
+														span.die-work__text=item.die.work.text
+														span.die-work__value=item.die.work.value
+													.die-term
+														span.die-term__text=item.die.term.text
+														span.die-term__value=item.die.term.value
+													a.link.die-link-btn(href=item.die.btn.href)=item.die.btn.text
+							if mods === "pits"
 								- for(let i = 0; i < 10; i++)
 									each item in data.pits.slides
 										.swiper-slide 
@@ -185,9 +333,38 @@ mixin projects(mods)
 													.projects__slider-item-heading
 														h4.title.projects__slider-item-title=item.title
 														h5.title.projects__slider-item-subtitle=item.subtitle
-													.projects__slider-item-volume
-														span.volume-text=item.volume.text
-														span.volume-value=item.volume.num
+													if mods !== "improvement"
+														.projects__slider-item-volume
+															span.volume-text=item.volume.text
+															span.volume-value=item.volume.num
+												.projects__slider-item-die
+													.die-title
+														+icon(item.die.icon, 20, 20).die-title__icon
+														span.die-title__text=item.die.title
+													.die-address
+														span.die-address__text=item.die.address.text
+														span.die-address__value=item.die.address.value
+													.die-work
+														span.die-work__text=item.die.work.text
+														span.die-work__value=item.die.work.value
+													.die-term
+														span.die-term__text=item.die.term.text
+														span.die-term__value=item.die.term.value
+													a.link.die-link-btn(href=item.die.btn.href)=item.die.btn.text
+							if mods === "improvement"
+								- for(let i = 0; i < 10; i++)
+									each item in data.improvement.slides
+										.swiper-slide 
+											.projects__slider-item
+												+img("slides", item.img, "jpg", item.alt)
+												.projects__slider-item-row
+													.projects__slider-item-heading
+														h4.title.projects__slider-item-title=item.title
+														h5.title.projects__slider-item-subtitle=item.subtitle
+													if mods !== "improvement"
+														.projects__slider-item-volume
+															span.volume-text=item.volume.text
+															span.volume-value=item.volume.num
 												.projects__slider-item-die
 													.die-title
 														+icon(item.die.icon, 20, 20).die-title__icon
