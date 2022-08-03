@@ -1041,32 +1041,34 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <div class="contact-us__form" data-validate data-callback="contactUsForm">
-            <form action="" method="post" enctype="multipart/form-data">
-              <fieldset class="contact-us__form-fieldset"> 
-                <legend class="contact-us__form-title">Свяжитесь с нами</legend>
-                <div class="custom-input contact-us__form-field contact-us__form-field--input" data-validate-type="text">
-                  <label>
-                    <input type="text" id="first-name" name="first-name" minlength="2" maxlength="20" placeholder="Укажите имя...">
-                  </label>
-                  <div class="custom-input__error">Введите Ваше имя</div>
-                </div>
-                <div class="custom-input contact-us__form-field contact-us__form-field--input" data-validate-type="email">
-                  <label>
-                    <input type="text" id="email" name="email" placeholder="Укажите email...">
-                  </label>
-                  <div class="custom-input__error">Введите корректный email</div>
-                </div>
-                <div class="custom-textarea contact-us__form-field contact-us__form-field--message">
-                  <label>
-                    <textarea id="message" name="message" minlength="10" placeholder="Сообщение"></textarea>
-                  </label>
-                  <div class="custom-textarea__error">Введите Ваше сообщение</div>
-                </div>
-                <button class="btn btn--drk-orange contact-us__form-submit" type="submit">Отправить</button>
-              </fieldset>
-            </form>
-            <div class="contact-us__agreement"> <span>Оставляя свои контактные данные вы даете свое </span><a class="link contact-us__agreement-link" href="#">согласие на обработку</a><span> персональных данных</span></div>
+          <div class="modal--contact-us-undefined">
+            <div class="contact-us__form" data-validate data-callback="contactUsForm">
+              <form action="" method="post" enctype="multipart/form-data">
+                <fieldset class="contact-us__form-fieldset"> 
+                  <legend class="contact-us__form-title">Свяжитесь с нами</legend>
+                  <div class="custom-input contact-us__form-field contact-us__form-field--input" data-validate-type="text">
+                    <label>
+                      <input type="text" id="first-name" name="first-name" minlength="2" maxlength="20" placeholder="Укажите имя...">
+                    </label>
+                    <div class="custom-input__error">Введите Ваше имя</div>
+                  </div>
+                  <div class="custom-input contact-us__form-field contact-us__form-field--input" data-validate-type="email">
+                    <label>
+                      <input type="text" id="email" name="email" placeholder="Укажите email...">
+                    </label>
+                    <div class="custom-input__error">Введите корректный email</div>
+                  </div>
+                  <div class="custom-textarea contact-us__form-field contact-us__form-field--message">
+                    <label>
+                      <textarea id="message" name="message" minlength="10" placeholder="Сообщение"></textarea>
+                    </label>
+                    <div class="custom-textarea__error">Введите Ваше сообщение</div>
+                  </div>
+                  <button class="btn btn--drk-orange contact-us__form-submit" type="submit">Отправить</button>
+                </fieldset>
+              </form>
+              <div class="contact-us__agreement"> <span>Оставляя свои контактные данные вы даете свое </span><a class="link contact-us__agreement-link" href="#">согласие на обработку</a><span> персональных данных</span></div>
+            </div>
           </div>
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15" aria-hidden="true">

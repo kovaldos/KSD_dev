@@ -549,7 +549,7 @@
         </div>
       </header>
       <main>
-        <section class="hero-section hero-section--road road-build-hero">
+        <section class="hero-section hero-section--road">
           <div class="container hero-section__container">
             <div class="hero-section__col hero-section__col--01">
               <div class="hero-section__heading"> 
@@ -1476,7 +1476,7 @@
         </section>
         <section class="section our-science our-science--road">
           <div class="container our-science__container"> 
-            <div class="our-science__heading"> 
+            <div class="our-science__heading">
               <h2 class="title title--h2 our-science__title">Наша наука</h2>
               <h3 class="title title--h3 our-science__subtitle">Обновление дорожного полотна</h3>
             </div>
@@ -1487,30 +1487,50 @@
                 <p class="text our-science__text">Более 150 сертифицированных специалистов КСД имеют многолетний опыт для качественного решения поставленных задач</p>
               </div>
               <div class="our-science__col our-science__col--02">
-                <ol class="our-science__list"> 
-                  <li class="our-science__list-item">Документация на снос
-                    <svg class="our-science__list-icon" width="60" height="60" aria-hidden="true">
-                      <use xlink:href="#icon-our-science-1"></use>
-                    </svg>
-                    <p class="text our-science__list-text">Разработка исходно разрешительной документации. Согласование с департаментом строительства</p>
+                <ol class="our-science__list" data-accordion="parent" data-single>
+                  <li class="our-science__list-item" data-accordion="element">
+                    <button class="btn btn--reset our-science__list-btn" type="button" data-accordion="button">
+                      <svg class="our-science__list-icon" width="60" height="60" aria-hidden="true">
+                        <use xlink:href="#icon-our-science-1"></use>
+                      </svg><span class="our-science__list-title">Документация на снос</span>
+                      <svg class="our-science__acc-icon" width="12" height="7" aria-hidden="true">
+                        <use xlink:href="#icon-chevron-down"></use>
+                      </svg>
+                    </button>
+                    <p class="text our-science__list-text" data-accordion="content">Разработка исходно разрешительной документации. Согласование с департаментом строительства</p>
                   </li>
-                  <li class="our-science__list-item">Организация
-                    <svg class="our-science__list-icon" width="60" height="60" aria-hidden="true">
-                      <use xlink:href="#icon-our-science-2"></use>
-                    </svg>
-                    <p class="text our-science__list-text">Мобилизация, временные постройки на объекте, распределение рабочих процессов</p>
+                  <li class="our-science__list-item" data-accordion="element">
+                    <button class="btn btn--reset our-science__list-btn" type="button" data-accordion="button">
+                      <svg class="our-science__list-icon" width="60" height="60" aria-hidden="true">
+                        <use xlink:href="#icon-our-science-2"></use>
+                      </svg><span class="our-science__list-title">Организация</span>
+                      <svg class="our-science__acc-icon" width="12" height="7" aria-hidden="true">
+                        <use xlink:href="#icon-chevron-down"></use>
+                      </svg>
+                    </button>
+                    <p class="text our-science__list-text" data-accordion="content">Мобилизация, временные постройки на объекте, распределение рабочих процессов</p>
                   </li>
-                  <li class="our-science__list-item">Снос и демонтаж
-                    <svg class="our-science__list-icon" width="60" height="60" aria-hidden="true">
-                      <use xlink:href="#icon-our-science-3"></use>
-                    </svg>
-                    <p class="text our-science__list-text">Механизированный и ручной демонтаж зданий. С расчетом мер безопасности для окружения</p>
+                  <li class="our-science__list-item" data-accordion="element">
+                    <button class="btn btn--reset our-science__list-btn" type="button" data-accordion="button">
+                      <svg class="our-science__list-icon" width="60" height="60" aria-hidden="true">
+                        <use xlink:href="#icon-our-science-3"></use>
+                      </svg><span class="our-science__list-title">Снос и демонтаж</span>
+                      <svg class="our-science__acc-icon" width="12" height="7" aria-hidden="true">
+                        <use xlink:href="#icon-chevron-down"></use>
+                      </svg>
+                    </button>
+                    <p class="text our-science__list-text" data-accordion="content">Механизированный и ручной демонтаж зданий. С расчетом мер безопасности для окружения</p>
                   </li>
-                  <li class="our-science__list-item">Вывоз и переработка
-                    <svg class="our-science__list-icon" width="60" height="60" aria-hidden="true">
-                      <use xlink:href="#icon-our-science-4"></use>
-                    </svg>
-                    <p class="text our-science__list-text">КСД Групп имеет собственный перерабатывающий завод, что позволяет переиспользовать до 99% строительного мусора</p>
+                  <li class="our-science__list-item" data-accordion="element">
+                    <button class="btn btn--reset our-science__list-btn" type="button" data-accordion="button">
+                      <svg class="our-science__list-icon" width="60" height="60" aria-hidden="true">
+                        <use xlink:href="#icon-our-science-4"></use>
+                      </svg><span class="our-science__list-title">Вывоз и переработка</span>
+                      <svg class="our-science__acc-icon" width="12" height="7" aria-hidden="true">
+                        <use xlink:href="#icon-chevron-down"></use>
+                      </svg>
+                    </button>
+                    <p class="text our-science__list-text" data-accordion="content">КСД Групп имеет собственный перерабатывающий завод, что позволяет переиспользовать до 99% строительного мусора</p>
                   </li>
                 </ol>
               </div>
@@ -1706,6 +1726,47 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--contact-us" data-modal="contact-us">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal--contact-us-road">
+            <div class="contact-us__form" data-validate data-callback="contactUsForm">
+              <form action="" method="post" enctype="multipart/form-data">
+                <fieldset class="contact-us__form-fieldset"> 
+                  <legend class="contact-us__form-title">Свяжитесь с нами</legend>
+                  <div class="custom-input contact-us__form-field contact-us__form-field--input" data-validate-type="text">
+                    <label>
+                      <input type="text" id="first-name" name="first-name" minlength="2" maxlength="20" placeholder="Укажите имя...">
+                    </label>
+                    <div class="custom-input__error">Введите Ваше имя</div>
+                  </div>
+                  <div class="custom-input contact-us__form-field contact-us__form-field--input" data-validate-type="email">
+                    <label>
+                      <input type="text" id="email" name="email" placeholder="Укажите email...">
+                    </label>
+                    <div class="custom-input__error">Введите корректный email</div>
+                  </div>
+                  <div class="custom-textarea contact-us__form-field contact-us__form-field--message">
+                    <label>
+                      <textarea id="message" name="message" minlength="10" placeholder="Сообщение"></textarea>
+                    </label>
+                    <div class="custom-textarea__error">Введите Ваше сообщение</div>
+                  </div>
+                  <button class="btn btn--cobalt contact-us__form-submit" type="submit">Отправить</button>
+                </fieldset>
+              </form>
+              <div class="contact-us__agreement"> <span>Оставляя свои контактные данные вы даете свое </span><a class="link contact-us__agreement-link" href="#">согласие на обработку</a><span> персональных данных</span></div>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
