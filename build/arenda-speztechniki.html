@@ -562,7 +562,7 @@
           <div class="rent-hero__col rent-hero__col--02">
             <div class="rent-hero__col-bg"> <img src="img/slides/rent-bg-img-1.jpg" srcset="img/slides/rent-bg-img-1@2x.jpg 2x" alt="rent-bg-img">
             </div>
-            <div class="swiper swiper--11 rent-hero__slider">
+            <div class="swiper rent-hero__slider">
               <div class="swiper-wrapper"> 
                 <div class="swiper-slide"> 
                   <div class="rent-hero__slider-item"> 
@@ -598,7 +598,7 @@
         </section>
         <div class="rent-hero-desc">
           <div class="container rent-hero__container rent-hero__container--rel">
-            <div class="rent-hero-desc__slider swiper swiper--12">
+            <div class="swiper rent-hero-desc__slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="rent-hero-desc__item">
@@ -640,7 +640,7 @@
             <h1 class="title title--h2 rent-technic__title">Техника</h1>
             <h2 class="title title--h3 rent-technic__subtitle">Большой выбор спецтехники</h2>
             <p class="text rent-technic__head-text">Принимая во внимание показатели успешности, экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса глубокомысленных рассуждений.</p>
-            <nav class="rent-technic__catalog-nav" data-simplebar> 
+            <nav class="rent-technic__catalog-nav rent-technic__catalog-nav--desktop" data-simplebar> 
               <ul class="rent-technic__catalog-list"> 
                 <li class="rent-technic__catalog-list-item"><a class="link rent-technic__catalog-link" href="#">Популярное</a></li>
                 <li class="rent-technic__catalog-list-item"><a class="link rent-technic__catalog-link rent-technic__catalog-link--current" href="#">Новинки</a></li>
@@ -649,121 +649,132 @@
                 <li class="rent-technic__catalog-list-item"><a class="link rent-technic__catalog-link" href="#">Длительная аренда</a></li>
               </ul>
             </nav>
-            <div class="rent-technic__catalog"> 
-              <h3 class="title title--h4 rent-technic__catalog-title">Новинки</h3>
-              <p class="text text--sm rent-technic__catalog-subtext">Принимая во внимание показатели успешности, экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный план целого ряда внеочередных</p>
-              <div class="rent-technic__catalog-items">
-                <div class="rent-technic__catalog-item">
-                  <h4 class="title rent-technic__catalog-item-title">Техника</h4>
-                  <div class="rent-technic__catalog-item-pic">
-                    <picture>
-                      <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
-                    </picture>
-                  </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
-                  <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
-                  <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
-                    <svg width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-plus"></use>
-                    </svg>
-                  </button>
+            <div class="rent-technic__catalog" data-accordion="parent" data-single>
+              <div class="acc__el is-active" data-accordion="element">
+                <div class="acc__btn" data-accordion="button">
+                  <h3 class="title title--h4 rent-technic__catalog-title">Новинки</h3>
+                  <svg class="acc__btn-icon" width="12" height="8" aria-hidden="true">
+                    <use xlink:href="#icon-chevron-down"></use>
+                  </svg>
                 </div>
-                <div class="rent-technic__catalog-item">
-                  <h4 class="title rent-technic__catalog-item-title">Техника</h4>
-                  <div class="rent-technic__catalog-item-pic">
-                    <picture>
-                      <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
-                    </picture>
-                  </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
-                  <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
-                  <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
-                    <svg width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="rent-technic__catalog-item">
-                  <h4 class="title rent-technic__catalog-item-title">Техника</h4>
-                  <div class="rent-technic__catalog-item-pic">
-                    <picture>
-                      <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
-                    </picture>
-                  </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
-                  <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
-                  <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
-                    <svg width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="rent-technic__catalog-item">
-                  <h4 class="title rent-technic__catalog-item-title">Техника</h4>
-                  <div class="rent-technic__catalog-item-pic">
-                    <picture>
-                      <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
-                    </picture>
-                  </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
-                  <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
-                  <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
-                    <svg width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="rent-technic__catalog-item">
-                  <h4 class="title rent-technic__catalog-item-title">Техника</h4>
-                  <div class="rent-technic__catalog-item-pic">
-                    <picture>
-                      <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
-                    </picture>
-                  </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
-                  <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
-                  <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
-                    <svg width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="rent-technic__catalog-item">
-                  <h4 class="title rent-technic__catalog-item-title">Техника</h4>
-                  <div class="rent-technic__catalog-item-pic">
-                    <picture>
-                      <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
-                    </picture>
-                  </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
-                  <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
-                  <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
-                    <svg width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="rent-technic__catalog-item">
-                  <h4 class="title rent-technic__catalog-item-title">Техника</h4>
-                  <div class="rent-technic__catalog-item-pic">
-                    <picture>
-                      <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
-                    </picture>
-                  </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
-                  <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
-                  <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
-                    <svg width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="rent-technic__catalog-item">
-                  <h4 class="title rent-technic__catalog-item-title">Техника</h4>
-                  <div class="rent-technic__catalog-item-pic">
-                    <picture>
-                      <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
-                    </picture>
-                  </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
-                  <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
-                  <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
-                    <svg width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-plus"></use>
-                    </svg>
-                  </button>
+                <div class="acc__content" data-accordion="content">
+                  <p class="text text--sm rent-technic__catalog-subtext">Принимая во внимание показатели успешности, экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный план целого ряда внеочередных</p>
+                  <div class="rent-technic__catalog-wrap" data-simplebar>
+                    <div class="rent-technic__catalog-items">
+                      <div class="rent-technic__catalog-item">
+                        <h4 class="title rent-technic__catalog-item-title">Техника</h4>
+                        <div class="rent-technic__catalog-item-pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
+                          </picture>
+                        </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
+                        <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
+                        <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
+                          <svg width="23" height="23" aria-hidden="true">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="rent-technic__catalog-item">
+                        <h4 class="title rent-technic__catalog-item-title">Техника</h4>
+                        <div class="rent-technic__catalog-item-pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
+                          </picture>
+                        </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
+                        <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
+                        <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
+                          <svg width="23" height="23" aria-hidden="true">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="rent-technic__catalog-item">
+                        <h4 class="title rent-technic__catalog-item-title">Техника</h4>
+                        <div class="rent-technic__catalog-item-pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
+                          </picture>
+                        </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
+                        <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
+                        <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
+                          <svg width="23" height="23" aria-hidden="true">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="rent-technic__catalog-item">
+                        <h4 class="title rent-technic__catalog-item-title">Техника</h4>
+                        <div class="rent-technic__catalog-item-pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
+                          </picture>
+                        </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
+                        <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
+                        <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
+                          <svg width="23" height="23" aria-hidden="true">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="rent-technic__catalog-item">
+                        <h4 class="title rent-technic__catalog-item-title">Техника</h4>
+                        <div class="rent-technic__catalog-item-pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
+                          </picture>
+                        </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
+                        <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
+                        <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
+                          <svg width="23" height="23" aria-hidden="true">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="rent-technic__catalog-item">
+                        <h4 class="title rent-technic__catalog-item-title">Техника</h4>
+                        <div class="rent-technic__catalog-item-pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
+                          </picture>
+                        </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
+                        <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
+                        <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
+                          <svg width="23" height="23" aria-hidden="true">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="rent-technic__catalog-item">
+                        <h4 class="title rent-technic__catalog-item-title">Техника</h4>
+                        <div class="rent-technic__catalog-item-pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
+                          </picture>
+                        </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
+                        <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
+                        <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
+                          <svg width="23" height="23" aria-hidden="true">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="rent-technic__catalog-item">
+                        <h4 class="title rent-technic__catalog-item-title">Техника</h4>
+                        <div class="rent-technic__catalog-item-pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
+                          </picture>
+                        </div><span class="rent-technic__catalog-item-model">Экскаватор-погрузчик Volvo BL71B</span>
+                        <div class="rent-technic__catalog-item-price"><span>35 000</span><span> ₽ </span><span>/ смена</span></div>
+                        <button class="btn btn--drk-orange rent-technic__catalog-item-add" type="button">
+                          <svg width="23" height="23" aria-hidden="true">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
