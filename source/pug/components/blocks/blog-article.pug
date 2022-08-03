@@ -135,15 +135,16 @@ mixin blog-article()
 						p.text.text--md.blog-article__article-text=data.text8
 						p.text.text--md.blog-article__article-text=data.text9
 				.blog-article__col.blog-article__col--02
-					.similar-articles
-						h2.title.title--h5.similar-articles__title=data.similar.title
-						each item in data.similar.items 
-							a.similar-articles__item(href=item.href)
-								+img("content", item.img, "jpg", item.alt)
-								h3.title.title--h5.similar-articles__item-title=item.title
-								p.text.text--sm.similar-articles__item-text=item.text 
-								span.similar-articles__item-date=item.date
-						+btn(data.similar.btn).btn--drk-orange.similar-articles__btn
+					h2.title.title--h5.similar-articles__title=data.similar.title
+					.similar-articles__wrapper(data-simplebar)
+						.similar-articles
+							each item in data.similar.items 
+								a.similar-articles__item(href=item.href)
+									+img("content", item.img, "jpg", item.alt)
+									h3.title.title--h5.similar-articles__item-title=item.title
+									p.text.text--sm.similar-articles__item-text=item.text 
+									span.similar-articles__item-date=item.date
+					+btn(data.similar.btn).btn--stroke-drk-orange.similar-articles__btn
 
 
 

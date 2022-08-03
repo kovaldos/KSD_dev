@@ -9791,13 +9791,16 @@ button,
 .blog-page__items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(289px, 1fr));
   grid-column-gap: 30px;
   grid-row-gap: 40px;
 }
 
 .blog-page__item img {
+  width: 100%;
+  min-height: 220px;
+  -o-object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
   margin: 0 0 20px;
 }
@@ -9929,6 +9932,10 @@ button,
   line-height: 160%;
 }
 
+.similar-articles {
+  margin: 0 0 40px;
+}
+
 .similar-articles__title {
   margin: 0 0 30px;
 }
@@ -9941,6 +9948,8 @@ button,
   transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   border-radius: 5px;
+  min-width: 250px;
+  max-width: 270px;
 }
 
 .similar-articles__item:not(:last-of-type) {
@@ -9948,6 +9957,10 @@ button,
 }
 
 .similar-articles__item img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
   margin: 0 0 15px;
 }
@@ -14472,6 +14485,32 @@ button,
     top: 0;
   }
 
+  .blog-article__cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .blog-article__col--01 {
+    margin: 0 0 40px;
+  }
+
+  .similar-articles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 30px;
+  }
+
+  .similar-articles__item:not(:last-of-type) {
+    margin: 0 15px 0 0;
+  }
+
+  .similar-articles__item-title {
+    min-height: 48px;
+  }
+
   .vehicle-card__btn-next {
     display: none;
   }
@@ -14708,6 +14747,11 @@ button,
 
   .title--h5 {
     font-size: 16px;
+  }
+
+  .text--md {
+    font-size: 14px;
+    line-height: 32px;
   }
 
   .text--lg {
@@ -15712,6 +15756,26 @@ button,
     top: -60px;
   }
 
+  .blog-article__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .blog-article__article-list {
+    padding: 0;
+    list-style-position: inside;
+  }
+
+  .blog-article__article-list-item {
+    font-size: 14px;
+    line-height: 32px;
+  }
+
   .vehicle-card__header {
     margin: 0 0 25px;
   }
@@ -15854,6 +15918,10 @@ button,
   .vehicle-park__catalog-items {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
+  }
+
+  .blog-article__article-pic {
+    min-height: auto;
   }
 
   .vehicle-card__acs {

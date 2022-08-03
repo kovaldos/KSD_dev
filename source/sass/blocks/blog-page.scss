@@ -7,12 +7,18 @@
 	}
 	&__items {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		// grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(289px, 1fr));
 		grid-column-gap: 30px;
 		grid-row-gap: 40px;
+		@include vp-1023 {
+		}
 	}
 	&__item {
 		img {
+			width: 100%;
+			min-height: 220px;
+			object-fit: cover;
 			border-radius: 5px;
 			margin: 0 0 20px;
 		}
