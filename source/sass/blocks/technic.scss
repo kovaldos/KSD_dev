@@ -14,7 +14,7 @@
 				position: static;
 			}
 			&-col {
-				width: 50%;
+				width: 55%;
 				height: 100%;
 				@include vp-1023 {
 					width: 100%;
@@ -59,7 +59,7 @@
 			line-height: 100%;
 			color: rgba($color-lavender, 0.7);
 			@include vp-767 {
-				font-size: 60px;
+				font-size: 40px;
 			}
 		}
 		&-text {
@@ -107,26 +107,49 @@
 			border-radius: 5px;
 			width: 100%;
 			height: 100%;
-			max-width: fit-content;
-			transition: max-width $trans-600, background-color $trans-600, color $trans-600;
+			max-width: 250px;
+			transition: width $trans-600, max-width $trans-600, background-color $trans-600, color $trans-600;
 			overflow: hidden;
 			&--prev {
+				flex-shrink: 0;
 				margin: 0 30px 0 0;
+				width: 52px;
+				padding: 0;
+				@include vp-767 {
+					margin: 0 20px 0 0;
+				}
+				.technic__slider-btn-text {
+					display: none;
+				}
+			}
+			&--next {
+				svg {
+					margin: 0 0 0 20px;
+				}
+				&.swiper-button-disabled {
+					svg {
+						margin: 0;
+					}
+				}
 			}
 			&-text {
-				display: block;
-				margin: 0 36px 0 0;
+				width: 100%;
+				max-width: 131px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
 				flex-shrink: 0;
+				flex-grow: 1;
 				font-weight: 600;
 				font-size: 16px;
 				line-height: 20px;
-				white-space: nowrap;
-				transition: all $trans-default;
+				transition: all $trans-600;
 			}
 			svg {
 				color: $color-default-white;
 				pointer-events: none;
-				transition: color $trans-default;
+				transition: color $trans-600;
+				flex-shrink: 0;
 			}
 			&::after {
 				display: none;
@@ -134,6 +157,7 @@
 			&.swiper-button-disabled {
 				background-color: $color-lavender;
 				padding: 16px 8.5px;
+				max-width: fit-content;
 				.technic__slider-btn-text {
 					margin: 0;
 					max-width: 0;
@@ -165,6 +189,9 @@
 					&.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
 						background-color: $color-bunting;
 						box-shadow: 0px 0px 0px 7px $color-hawkes-blue;
+					}
+					@include vp-1023 {
+						display: none;
 					}
 				}
 			}

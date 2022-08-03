@@ -30,6 +30,62 @@ mixin technic(mods)
 					},
 				],
 			},
+			recycling: {
+				items: [
+					{
+						subtitle: "Первичный двухдековый грохот",
+						name: "McCloskey R155",
+						text: "",
+						src: "slides",
+						img: "technic-recycling-img-1",
+						alt: "Экскаватор - Погрузчик",
+					},
+					{					
+						subtitle: "Самосвал",
+						name: "MAN TGS 41.440",
+						text: "",
+						src: "slides",
+						img: "technic-img-1",
+						alt: "Гусеничный Экскаватор",
+					},
+					{
+						subtitle: "Экскаватор - Погрузчик",
+						name: "540 - I70",
+						text: "",
+						src: "slides",
+						img: "technic-img-1",
+						alt: "Экскаватор - Погрузчик",
+					},
+				],
+			},
+			improvement: {
+				items: [
+					{
+						subtitle: "Асфальтоукладчик",
+						name: "VOGELE SUPER 1600",
+						text: "Новая машина VOGELE SUPER 1600 рассчитана на тяжелую работу.",
+						src: "slides",
+						img: "technic-road-img-1",
+						alt: "Экскаватор - Погрузчик",
+					},
+					{					
+						subtitle: "Гусеничный Экскаватор",
+						name: "SUPER 700",
+						text: "Новая машина SUPER 700 рассчитана на тяжелую работу.",
+						src: "slides",
+						img: "technic-road-img-1",
+						alt: "Гусеничный Экскаватор",
+					},
+					{
+						subtitle: "Экскаватор - Погрузчик",
+						name: "540 - I70",
+						text: "Новая машина 540 - I70 рассчитана на тяжелую работу.",
+						src: "slides",
+						img: "technic-road-img-1",
+						alt: "Экскаватор - Погрузчик",
+					},
+				],
+			},
 			pits: {
 				items: [
 					{
@@ -57,7 +113,7 @@ mixin technic(mods)
 						alt: "Экскаватор - Погрузчик",
 					},
 				],
-			}
+			},
 		}
 	section.section.technic(class="technic--" + mods)
 		.container.technic__container
@@ -77,7 +133,28 @@ mixin technic(mods)
 										.technic__slider-item-col.technic__slider-item-col--02
 											+picture(item.src, item.img, "png", item.alt).technic__slider-pic
 										p.text.technic__slider-text.technic__slider-text--mobile=item.text
-						else if mods === "pits"
+						if mods === "recycling"
+							each item in data.recycling.items
+								.swiper-slide
+									.technic__slider-item
+										.technic__slider-item-col.technic__slider-item-col--01
+											h3.title.title--h3.technic__subtitle=item.subtitle
+											h4.title.technic__slider-name=item.name
+											p.text.technic__slider-text=item.text
+										.technic__slider-item-col.technic__slider-item-col--02
+											+picture(item.src, item.img, "png", item.alt).technic__slider-pic
+						if mods === "improvement"
+							each item in data.improvement.items
+								.swiper-slide
+									.technic__slider-item
+										.technic__slider-item-col.technic__slider-item-col--01
+											h3.title.title--h3.technic__subtitle=item.subtitle
+											h4.title.technic__slider-name=item.name
+											p.text.technic__slider-text.technic__slider-text--desktop=item.text
+										.technic__slider-item-col.technic__slider-item-col--02
+											+picture(item.src, item.img, "png", item.alt).technic__slider-pic
+										p.text.technic__slider-text.technic__slider-text--mobile=item.text
+						if mods === "pits"
 							each item in data.pits.items
 								.swiper-slide
 									.technic__slider-item
@@ -94,13 +171,21 @@ mixin technic(mods)
 							span.technic__slider-btn-text.technic__slider-btn-text--prev
 							+icon("icon-arrow-left", 35, 20)
 						button.swiper-button-next.btn.btn--orange.technic__slider-btn.technic__slider-btn--next(type="button")
-							span.technic__slider-btn-text.technic__slider-btn-text--next=data.name
+							span.technic__slider-btn-text.technic__slider-btn-text--next
 							+icon("icon-arrow-right", 35, 20)
-					else if mods === "pits"
+					if mods === "improvement" || mods === "pits"
 						button.swiper-button-prev.btn.btn--cobalt.technic__slider-btn.technic__slider-btn--prev(type="button")
 							span.technic__slider-btn-text.technic__slider-btn-text--prev
 							+icon("icon-arrow-left", 35, 20)
 						button.swiper-button-next.btn.btn--cobalt.technic__slider-btn.technic__slider-btn--next(type="button")
-							span.technic__slider-btn-text.technic__slider-btn-text--next=data.name
+							span.technic__slider-btn-text.technic__slider-btn-text--next
 							+icon("icon-arrow-right", 35, 20)
+					if mods === "recycling"
+						button.swiper-button-prev.btn.btn--apple.technic__slider-btn.technic__slider-btn--prev(type="button")
+							span.technic__slider-btn-text.technic__slider-btn-text--prev
+							+icon("icon-arrow-left", 35, 20)
+						button.swiper-button-next.btn.btn--apple.technic__slider-btn.technic__slider-btn--next(type="button")
+							span.technic__slider-btn-text.technic__slider-btn-text--next
+							+icon("icon-arrow-right", 35, 20)
+						.custom-pagination.technic__slider-pag
 
