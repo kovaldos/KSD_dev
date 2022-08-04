@@ -1,0 +1,58 @@
+mixin contacts-bottom()
+	-
+		const data = {
+			list: [
+				{
+					title: "Отдел продаж",
+					tel: {
+						href: "tel:+79651109110",
+						text: "+7 (965) 110-91-10",
+					},
+					mail: {
+						href: "mailto:info@ksd.msk.ru",
+						text: "info@ksd.msk.ru",
+					},
+				},
+				{
+					title: "Отдел закупок",
+					tel: {
+						href: "tel:+79684086398",
+						text: "+7 (968) 408-63-98",
+					},
+					mail: {
+						href: "mailto:remont@ksd.msk.ru",
+						text: "remont@ksd.msk.ru",
+					},
+				},
+				{
+					title: "HR",
+					tel: {
+						href: "tel:+79652419599",
+						text: "+7 (965) 241-95-99",
+					},
+					mail: {
+						href: "mailto:job@ksd.msk.ru",
+						text: "job@ksd.msk.ru",
+					},
+				},
+				{
+					title: "Маркетинг и PR",
+					tel: {
+						href: "tel:+74991109110",
+						text: "+7 (499) 110-91-10",
+					},
+					mail: {
+						href: "mailto:cmo@ksd.msk.ru",
+						text: "cmo@ksd.msk.ru",
+					},
+				},
+			],
+		}
+	section.section.contacts.contacts--bottom 
+		.container.contacts__container
+			ul.contacts__list
+				each item in data.list 
+					li.contacts__list-item 
+						span.contacts__list-item-title=item.title
+						a.contacts__list-item-tel(href=item.tel.href)=item.tel.text
+						a.contacts__list-item-mail(href=item.mail.href)=item.mail.text
