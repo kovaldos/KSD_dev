@@ -1,0 +1,94 @@
+mixin directions-sup()
+	-
+		const data = {
+			title: "Направления",
+			subtitle: "Частые закупки",
+			dirItems: [
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Производство",
+					tags: [
+						{
+							text: "Строительные инструменты",
+							sup: "1",
+						},
+						{
+							text: "Электрика",
+							sup: "2",
+						},
+						{
+							text: "Электроника",
+							sup: "3",
+						},
+						{
+							text: "Временные ограждения",
+							sup: "4",
+						},
+						{
+							text: "Бытовки",
+							sup: "5",
+						},
+						{
+							text: "ЖБИ",
+							sup: "6",
+						},
+						{
+							text: "ОФИС",
+							sup: "7",
+						},
+					],
+				},
+				{
+					href: "#",
+					icon: "we-need-icon-1",
+					title: "Механизация",
+					tags: [
+						{
+							text: "Навесное оборудование",
+							sup: "1",
+						},
+						{
+							text: "Спецтехника",
+							sup: "2",
+						},
+						{
+							text: "Запчасти",
+							sup: "3",
+						},
+						{
+							text: "Масла и технические жидкости",
+							sup: "4",
+						},
+						{
+							text: "Обслуживание и ремонт",
+							sup: "5",
+						},
+					],
+				},
+			],
+		}
+	section.section.directions-sup
+		.container.directions-sup__container
+			h2.title.title--h4.directions-sup__title=data.title
+			h3.title.title--h6.directions-sup__subtitle=data.subtitle
+			.swiper.directions-sup__slider
+				.swiper-wrapper
+					each item in data.dirItems
+						.swiper-slide
+							a(href=item.href).directions-sup__dir-item
+								+icon(item.icon, 50, 50)
+								.directions-sup__dir-item-title=item.title
+							.directions-sup__dir-tags 
+								each tag in item.tags
+									.directions-sup__dir-tag
+										span=tag.text 
+										sup=tag.sup
+				.directions-sup__slider-nav
+					.swiper-pagination.directions-sup__slider-pag
+					.directions-sup__slider-btns
+						.swiper-button-next.directions-sup__slider-btn.directions-sup__slider-btn--next
+							+icon("icon-chevron-right-black", 30, 30)
+						.swiper-button-prev.directions-sup__slider-btn.directions-sup__slider-btn--prev
+							+icon("icon-chevron-left-black", 30, 30)
+

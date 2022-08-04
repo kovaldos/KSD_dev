@@ -1,0 +1,21 @@
+extends ../components/base/layout
+
+block variables
+	- const title = "KSD - Поставщикам" //- на страницах кроме главной используйте О нас — ProjectName
+	- const wrapperMods = "wrapper--suppliers"
+	- const hasHeader = true
+	- const headerMods = ""
+	- const sectionClassMode = ""
+	- const hasFooter = true
+	- const footerMods = ""
+	- const currentUrl = "postavshikam.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+	main
+		//- на странице запрещен "голый" код
+		//- все блоки вставляются из папки pug/components/blocks
+		+cooperation("suppliers")
+		+directions-sup()
+		+topical()
+
+block modals
