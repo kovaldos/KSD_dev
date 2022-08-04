@@ -16,10 +16,6 @@ const initDirectionsSupSlider = () => {
           slidesPerView: 2,
           spaceBetween: 30,
         },
-        // 1024: {
-        //   slidesPerView: 2,
-        //   spaceBetween: 30,
-        // },
       },
       navigation: {
         nextEl: '.directions-sup__slider-btn--next',
