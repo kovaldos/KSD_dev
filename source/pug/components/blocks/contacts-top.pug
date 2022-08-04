@@ -1,0 +1,38 @@
+mixin contacts-top()
+	-
+		const data = {
+			title: "Контакты",
+			regime: "Ежедневно с 9:00 До 21:00",
+			hero: {
+				tel: {
+					href: "tel:+74991109910",
+					text: "+7 499 110 99 10",
+				},
+				title: "Офис",
+				address: "Москва ул. Ибрагимова, 31",
+				mail: {
+					href: "mailto:info@ksd.msk.ru",
+					text: "info@ksd.msk.ru",
+				},
+			},
+		}
+	section.section.contacts.contacts--top 
+		.container.contacts__container
+			.contacts__heading
+				h1.title.title--h2.contacts__title=data.title
+				span.contacts__regime=data.regime
+			.contacts__hero 
+				.contacts__hero-col.contacts__hero-col--01
+					a.contacts__hero-tel(href=data.hero.tel.href)=data.hero.tel.text
+					.contacts__hero-office
+						.contacts__hero-office-head
+							h2.title.title--h2.contacts__hero-title=data.hero.title
+							span.contacts__regime.contacts__regime--mobile=data.regime
+						span.contacts__hero-address=data.hero.address 
+						a.contacts__hero-mail(href=data.hero.mail.href)
+							+icon("icon-mail", 20, 20)
+							span=data.hero.mail.text
+				.contacts__hero-col.contacts__hero-col--02
+					+img("content", "contacts-img", "jpg", "Фото офиса изнутри")
+
+			
