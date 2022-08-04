@@ -1,0 +1,95 @@
+mixin cooperation(mods)
+	-
+		const data = {
+			title: "Вакансии",
+			subtitle: "Работа в «Конструктив-СД»",
+			text: "Работай с нами и стань лучше нас!",
+			form: {
+				input: {
+					inputPlaceholder: "Поиск...",
+					inputError: "Не менее 3 знаков!",
+					inputId: "search-vacancies",
+					inputName: "search-vacancies",
+					inputMinLength: 3,
+				},
+				select: {
+					placeholder: "Категория",
+					name: "job-category",
+					simplebar: "data-simplebar",
+					optionsList: [
+						{
+							value: "option-01",
+							text: "Опция 01",
+						},
+						{
+							value: "option-02",
+							text: "Опция 02",
+						},
+						{
+							value: "option-03",
+							text: "Опция 03",
+						},
+						{
+							value: "option-04",
+							text: "Опция 04",
+						},
+					],
+				},
+				btn: {
+					icon: "icon-chevron-right"
+				},
+			},
+			suppliers: {	
+				title: "Сотрудничество с КСД",
+				form: {
+					input: {
+						inputPlaceholder: "Поиск...",
+						inputError: "Не менее 3 знаков!",
+						inputId: "search-cooperation",
+						inputName: "search-cooperation",
+						inputMinLength: 3,
+					},
+					select: {
+						placeholder: "Категория",
+						name: "cooperation-category",
+						simplebar: "data-simplebar",
+						optionsList: [
+							{
+								value: "option-01",
+								text: "Опция 01",
+							},
+							{
+								value: "option-02",
+								text: "Опция 02",
+							},
+							{
+								value: "option-03",
+								text: "Опция 03",
+							},
+							{
+								value: "option-04",
+								text: "Опция 04",
+							},
+						],
+					},
+				}
+			}
+		}
+	section.section.cooperation(class="cooperation--" + mods)
+		.container.cooperation__container
+			if !mods
+				h2.title.title--h2.cooperation__title=data.title
+				h3.title.title--h3.cooperation__subtitle=data.subtitle
+			else 
+				h2.title.title--h3.cooperation__title=data.suppliers.title
+			p.text.text--sm.cooperation__text=data.text
+			.cooperation__form(data-validate data-callback="searchVacanciesForm")
+				form.cooperation__form-form(action="#")
+					if !mods
+						+custom-input(data.form.input)(data-validate-type="text").cooperation__form-input
+						+custom-select(data.form.select)(data-select).custom-select.cooperation__form-select
+					else 
+						+custom-input(data.suppliers.form.input)(data-validate-type="text").cooperation__form-input
+						+custom-select(data.suppliers.form.select)(data-select).custom-select.cooperation__form-select
+					button.btn.btn--drk-orange.cooperation__form-submit(type="submit")
+						+icon(data.form.btn.icon, 26, 26)
