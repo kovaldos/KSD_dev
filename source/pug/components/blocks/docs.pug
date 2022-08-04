@@ -1,0 +1,90 @@
+mixin docs()
+	-
+		const data = {
+			title: "Документы",
+			navItems: [
+				{
+					href: "#",
+					title: "Договоры",
+				},
+				{
+					href: "#",
+					title: "Лицензии",
+				},
+				{
+					href: "#",
+					title: "Сертификаты",
+				},
+			],
+			lists: [
+				{
+					title: "Демонтаж",
+					list: [
+						{
+							href: "#",
+							text: "Договор на оказание услуг по сносу строений",
+						},
+					],
+				},
+				{
+					title: "Рециклинг",
+					list: [
+						{
+							href: "#",
+							text: "Список ОСС, разрешенных к утилизации",
+						},
+					],
+				},
+				{
+					title: "Строительство",
+					list: [
+						{
+							href: "#",
+							text: "Договор на оказание услуг по строительству дороги из вторичного бетонного щебня",
+						},
+						{
+							href: "#",
+							text: "Договор на оказание услуг по облагораживанию территории",
+						},
+						{
+							href: "#",
+							text: "Договор на оказание услуг по проведению земляных работ",
+						},
+					],
+				},
+				{
+					title: "Аренда техники",
+					list: [
+						{
+							href: "#",
+							text: "Договор аренды",
+						}
+					],
+				},
+			],
+		}
+
+	section.section.docs
+		.container.docs__container 
+			h1.title.title--h3.docs__title=data.title
+			.tabs.docs__tabs(data-tabs="parent" data-delay="300")
+				.docs__tabs-controls-wrap(data-simplebar)
+					ul.tabs__controls.docs__tabs-controls(data-tabs="controls")
+						each item in data.navItems
+							li.docs__tabs-controls-item
+								button.btn.btn--reset.tabs__control.docs__tabs-control(type="button" data-tabs="control",)
+									span.docs__tabs-control-title=item.title
+				.docs__tabs-content-wrap
+					.tabs__content.docs__tabs-content(data-tabs="content")
+						- for (let i = 0; i < 3; i++)
+							.docs__tabs-el(data-tabs="element")
+								each list in data.lists
+									ul.docs__items-list
+										li.docs__items-list-item
+											h2.title.title--h2.docs__items-list-title=list.title
+											ul.docs__item-list 
+												each item in list.list 
+													li.docs__item-list-item
+														span.docs__item-list-icon
+															+icon("icon-download", 30, 30)
+														a.docs__item-list-link(href=item.href download)=item.text
