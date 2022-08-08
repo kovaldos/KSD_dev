@@ -35,6 +35,8 @@ mixin rent-selections()
 					title: "Облагораживание территории",
 				},
 			],
+			more: "Показать еще",
+			less: "Свернуть",
 			wrapClassMod: "rent-selections__tabs-wrap--",
 			items: [
 				{
@@ -66,12 +68,16 @@ mixin rent-selections()
 			h2.title.title--h2.rent-selections__title=data.title
 			h3.title.title--h3.rent-selections__title=data.subtitle
 			.tabs.rent-selections__tabs(data-tabs="parent" data-delay="300")
+				input.rent-selections__toggle#load-more(type="checkbox", name="more-less")
 				ul.tabs__controls.rent-selections__tabs-controls(data-tabs="controls")
 					each item in data.navItems
-						li.rent-selections__controls-item
+						li.rent-selections__tabs-controls-item
 							button.tabs__control.rent-selections__tabs-control(type="button" data-index=index, data-tabs="control",)
 								span.rent-selections__tabs-control-title=item.title
 								+icon(item.icon, 80, 80)
+				label.rent-selections__label(for="load-more")
+					span.unloaded=data.more
+					span.loaded=data.less
 				.tabs__content.rent-selections__tabs-content(data-tabs="content")
 					- for (let i = 0; i < 6; i++)
 						.rent-selections__tabs-wrap(class=data.wrapClassMod + (i + 1), data-tabs="element")

@@ -46,11 +46,12 @@ mixin rent-catalog-items()
 			],
 		}
 	.rent-catalog__items
-		ul.rent-catalog__tags-list
-			each tag in data.tags 
-				li.rent-catalog__tags-list-item 
-					span=tag
-					span 🗙
+		.rent-catalog__tags-wrapper(data-simplebar)
+			ul.rent-catalog__tags-list
+				//- each tag in data.tags 
+				//- 	li.rent-catalog__tags-list-item 
+				//- 		span=tag
+				//- 		span 🗙
 		.rent-catalog__cards.rent-catalog__cards--rows
 			- for (let i = 0; i < 10; i++)
 				each item in data.cards

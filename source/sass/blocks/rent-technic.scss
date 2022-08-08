@@ -195,6 +195,19 @@
 				right: 0;
 				transition: transform $trans-default;
 				transform: translateX(100%);
+				@include vp-1023 {
+					transform: translateX(0);
+					bottom: 15px;
+					right: 10px;
+					width: 38px;
+					height: 38px;
+					border-radius: 50%;
+					padding: 0;
+					svg {
+						width: 15px;
+						height: 15px;
+					}
+				}
 			}
 		}
 		&-btn {

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-// Слайдер под секцией Hero на странице аренды -- Начало --
-// Rent description slider -- Start --
+// Слайдер в секции Направления на странице Поставщикам -- Начало --
+// Directions section slider on Suppliers page -- Start --
 
 const initDirectionsSupSlider = () => {
   let directionsSupSlider = document.querySelector('.directions-sup__slider');
@@ -30,5 +30,5 @@ const initDirectionsSupSlider = () => {
 };
 
 export {initDirectionsSupSlider};
-// Слайдер под секцией Hero на странице аренды -- Конец --
-// Rent description slider -- Finish --
+// Слайдер в секции Направления на странице Поставщикам -- Конец --
+// Directions section slider on Suppliers page -- End --

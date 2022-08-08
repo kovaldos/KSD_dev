@@ -4,48 +4,44 @@
 // About us slider -- Start --
 
 const initRentAboutUsSlider = () => {
-  let swiper13 = document.querySelector('.swiper--13');
-  if (swiper13) {
-    swiper13 = new Swiper(swiper13, {
+  let rentAboutUsTextSlider = document.querySelector('.rent-about-us__text-slider');
+  if (rentAboutUsTextSlider) {
+    rentAboutUsTextSlider = new Swiper(rentAboutUsTextSlider, {
+      watchOverflow: true,
+      slidesPerView: 1,
+      enabled: false,
+      autoHeight: true,
+      speed: 500,
+    });
+  }
+  let rentAboutUsSlider = document.querySelector('.rent-about-us__slider');
+  if (rentAboutUsSlider) {
+    rentAboutUsSlider = new Swiper(rentAboutUsSlider, {
       watchOverflow: true,
       loop: false,
-      effect: 'cards',
-      cardsEffect: {
-        rotate: false,
-        slideShadows: false,
-      },
       speed: 800,
       slidesPerView: 1,
+      spaceBetween: 10,
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: false,
+      coverflowEffect: {
+        rotate: -2,
+        stretch: -500,
+        depth: 215,
+        modifier: -1,
+        slideShadows: false,
+      },
+      controller: {
+        control: rentAboutUsTextSlider,
+        by: 'slide',
+      },
       //  breakpoints: {
-      //    425: {
-      //      spaceBetween: 20,
-      //    },
-      //    768: {
-      //      loop: true,
-      //      slidesPerView: 1.7,
-      //      spaceBetween: 40,
-      //    },
-      //    1024: {
-      //      loop: true,
-      //      slidesPerView: 1.745,
-      //      spaceBetween: 60,
-      //      initialSlide: 1,
-      //    },
-      //    1600: {
-      //      loop: true,
-      //      slidesPerView: 2,
-      //      spaceBetween: 60,
-      //      initialSlide: 1,
-      //    },
       //  },
       navigation: {
         nextEl: '.rent-about-us__slider-btn--next',
         prevEl: '.rent-about-us__slider-btn--prev',
       },
-      // pagination: {
-      //   el: '.rent-about-us__slider-pag',
-      //   type: 'fraction',
-      // },
     });
   }
 };
