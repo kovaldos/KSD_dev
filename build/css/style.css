@@ -11690,23 +11690,19 @@ button,
 }
 
 .rent-card__wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rent-card__wrapper-col {
+  width: 100%;
 }
 
 .rent-card__wrapper-col--01 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1/5;
-}
-
-.rent-card__wrapper-col--02 {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 7;
-  grid-column: 6/13;
+  max-width: 370px;
+  margin: 0 131px 0 0;
 }
 
 .rent-card__title {
@@ -11758,6 +11754,10 @@ button,
   align-items: center;
 }
 
+.rent-card__equip-toggles-item:not(:last-of-type) {
+  margin: 0 20px 0 0;
+}
+
 .rent-card__equip-toggles-item img {
   position: absolute;
   top: -10px;
@@ -11784,6 +11784,7 @@ button,
 
 .rent-card__equip-toggle label {
   padding-left: 0;
+  width: 100%;
 }
 
 .rent-card__equip-toggle .custom-toggle__icon {
@@ -12033,24 +12034,11 @@ button,
   background-color: #FF8700;
 }
 
-.rent-card-similar__list {
-  margin: 0;
-  padding: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 30px;
-}
-
 .rent-card-similar__card {
-  -webkit-box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
-  box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
-  border-radius: 10px;
-  padding: 20px;
-  position: relative;
+  padding: 20px 20px 30px;
   background-color: #ffffff;
-  overflow: hidden;
+  border: 1px solid #EEEEFB;
+  border-radius: 7px;
 }
 
 .rent-card-similar__card-pic {
@@ -12130,6 +12118,71 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.rent-card-similar__slider-nav {
+  position: relative;
+}
+
+.rent-card-similar__slider-btns {
+  position: absolute;
+  width: 75px;
+  left: 100px;
+  bottom: 20px;
+}
+
+.rent-card-similar__slider-btn {
+  color: #2D3142;
+}
+
+.rent-card-similar__slider-btn::after {
+  display: none;
+}
+
+.rent-card-similar__slider-btn svg {
+  color: #2D3142;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+
+.rent-card-similar__slider-btn.swiper-button-disabled {
+  opacity: 1;
+}
+
+.rent-card-similar__slider-btn.swiper-button-disabled svg {
+  color: #D2D7E8;
+}
+
+.rent-card-similar__slider-btn--next {
+  right: 0;
+}
+
+.rent-card-similar__slider-btn--prev {
+  left: 0;
+}
+
+.rent-card-similar .swiper-pagination-fraction {
+  right: auto;
+  bottom: 0;
+  width: 70px;
+  left: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #2D3142;
+}
+
+.rent-card-similar .swiper-pagination-current {
+  display: inline-block;
+  width: 33%;
+}
+
+.rent-card-similar .swiper-pagination-total {
+  font-size: 16px;
 }
 
 .vehicle-card__header {
@@ -14832,6 +14885,25 @@ button,
     grid-column-gap: 20px;
   }
 
+  .rent-card__wrapper-col {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
+  .rent-card__wrapper-col--01 {
+    margin: 0 50px 0 0;
+  }
+
+  .rent-card__equip-toggle .custom-toggle__label {
+    padding: 10px 10px 10px 50px;
+    line-height: 200%;
+  }
+
+  .rent-card-characteristics__list {
+    grid-column-gap: 30px;
+  }
+
   .vehicle-card__tabs-control {
     font-size: 16px;
     line-height: 125%;
@@ -16066,6 +16138,60 @@ button,
 
   .rent-catalog__cards--grid .rent-catalog__card-add-icon {
     display: none;
+  }
+
+  .rent-card__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .rent-card__wrapper-col {
+    max-width: 768px;
+  }
+
+  .rent-card__wrapper-col--01 {
+    margin: 0 0 20px;
+  }
+
+  .rent-card-similar__link {
+    display: none;
+  }
+
+  .rent-card-similar__card {
+    border: 0;
+    padding: 0;
+  }
+
+  .rent-card-similar__card-pic::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: rgba(238, 238, 251, 0.5);
+  }
+
+  .rent-card-similar__card-title {
+    display: none;
+  }
+
+  .rent-card-similar__slider-nav {
+    margin: 50px 0 0 0;
+  }
+
+  .rent-card-similar .swiper-pagination-fraction {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .rent-card-similar .swiper-pagination-total {
+    font-size: 14px;
   }
 
   .vehicle-card__btn-next {
@@ -17671,6 +17797,72 @@ button,
     display: none;
   }
 
+  .rent-card__wrapper-col--02 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .rent-card__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .rent-card__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .rent-card__equip-title {
+    margin: 0 0 30px;
+  }
+
+  .rent-card__equip-toggles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .rent-card__equip-toggles-item {
+    max-width: 50%;
+  }
+
+  .rent-card__equip-toggles-item:not(:last-of-type) {
+    margin: 0 0 30px;
+  }
+
+  .rent-card__price {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    padding: 0 0 10px;
+  }
+
+  .rent-card-characteristics {
+    display: none;
+  }
+
+  .rent-card-similar__card-model {
+    margin: 0 0 15px;
+  }
+
+  .rent-card-similar__card-price-time {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #9ca1bb;
+  }
+
   .vehicle-card__header {
     margin: 0 0 25px;
   }
@@ -18079,6 +18271,20 @@ button,
     color: #2D3142;
   }
 
+  .rent-card__equip-toggles-item {
+    max-width: 350px;
+  }
+
+  .rent-card__charact {
+    padding: 10px 0 0 0;
+  }
+
+  .rent-card__charact-items {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    grid-row-gap: 15px;
+  }
+
   .vehicle-card__acs {
     padding: 15px 25px 15px 95px;
   }
@@ -18194,6 +18400,14 @@ button,
     font-size: 13px;
     line-height: 16px;
     color: #2D3142;
+  }
+
+  .rent-card__slider {
+    height: 290px;
+  }
+
+  .rent-card__slider--thumb {
+    height: 70px;
   }
 
   .vehicle-card__acs img {

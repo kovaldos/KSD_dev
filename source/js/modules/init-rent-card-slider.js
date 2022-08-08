@@ -7,10 +7,15 @@ const initRentCardSlider = () => {
   let swiper15 = document.querySelector('.swiper--15');
   if (swiper15) {
     swiper15 = new Swiper(swiper15, {
-      spaceBetween: 10,
+      spaceBetween: 5,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
+      breakpoints: {
+        425: {
+          spaceBetween: 10,
+        },
+      },
     });
   }
   let swiper14 = document.querySelector('.swiper--14');
