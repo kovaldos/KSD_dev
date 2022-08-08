@@ -7,6 +7,7 @@ const initDirectionsSlider = () => {
   let directionsTextSlider = document.querySelector('.directions__text-slider');
   if (directionsTextSlider) {
     directionsTextSlider = new Swiper(directionsTextSlider, {
+      watchOverflow: true,
       slidesPerView: 1,
       enabled: false,
       autoHeight: true,

@@ -26,30 +26,44 @@ mixin rent-catalog()
 						},
 					],
 				},
-			} 
-
+			},
+			filterTitle: "Фильтры",
+			btn: {
+				text: "Отмена",
+			}
 		}
 	section.section.rent-catalog 
-		.container.rent-catalog__container 
-			h1.title.title--h2.rent-catalog__title=data.title
+		.container.rent-catalog__container
+			.rent-catalog__heading
+				h1.title.title--h2.rent-catalog__title=data.title
+				.rent-catalog__quantity.rent-catalog__quantity--mobile 
+					span.rent-catalog__quantity-num=data.navRow.quantity.num
+					span.rent-catalog__quantity-text=data.navRow.quantity.text
 			nav.rent-catalog__nav
-				.rent-catalog__nav-quantity 
-					span.rent-catalog__nav-quantity-num=data.navRow.quantity.num
-					span.rent-catalog__nav-quantity-text=data.navRow.quantity.text
+				.rent-catalog__quantity 
+					span.rent-catalog__quantity-num=data.navRow.quantity.num
+					span.rent-catalog__quantity-text=data.navRow.quantity.text
 				+custom-select(data.navRow.select).rent-catalog__nav-select(data-select)
 				.rent-catalog__nav-view-btns 
-					button.rent-catalog__nav-btn.rent-catalog__nav-btn--stripes.is-active
+					button.btn.btn--reset.rent-catalog__nav-btn.rent-catalog__nav-btn--stripes.is-active(type="button")
 						span
 						span
 						span
-					button.rent-catalog__nav-btn.rent-catalog__nav-btn--squares
+					button.btn.btn--reset.rent-catalog__nav-btn.rent-catalog__nav-btn--squares(type="button")
 						span
 						span
 						span
 						span
+				button.btn.btn--reset.rent-catalog__filter-toggle
+					+icon("icon-filter-toggle", 24, 24)
 			.rent-catalog__wrapper
 				.rent-catalog__wrapper-cols
 					.rent-catalog__wrapper-col.rent-catalog__wrapper-col--01
+						.rent-catalog__filter-head 
+							h2.title.title--h6.rent-catalog__filter-title=data.filterTitle 
+							+btn(data.btn).btn--reset.rent-catalog__filter-cancel
+						.rent-catalog__tags-wrapper(data-simplebar)
+							ul.rent-catalog__tags-list.rent-catalog__tags-list--mobile
 						+rent-filter()
 					.rent-catalog__wrapper-col.rent-catalog__wrapper-col--02
 						+rent-catalog-items()

@@ -33,6 +33,7 @@ import {initRecyclingItemsSlider} from './modules/init-recycling-items-slider';
 import {initWeNeedSlider} from './modules/we-need-slider';
 import {initWorkWithUsSlider} from './modules/init-work-with-us-slider';
 import {initDirectionsSupSlider} from './modules/init-directions-sup-slider';
+import {initRentCatalogFilterMobile} from './modules/init-rent-catalog-filter-mobile.js';
 
 
 // ---------------------------------
@@ -83,6 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initWeNeedSlider();
     initWorkWithUsSlider();
     initDirectionsSupSlider();
+    initRentCatalogFilterMobile();
   });
 });
 
@@ -99,7 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // выносим все в дата атрибуты
 // url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
 
-// для адаптивного JS используейтся matchMedia и addListener
+// для адаптивного JS используется matchMedia и addListener
 // const breakpoint = window.matchMedia(`(min-width:1024px)`);
 // const breakpointChecker = () => {
 //   if (breakpoint.matches) {
