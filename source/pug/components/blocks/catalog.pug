@@ -1,0 +1,111 @@
+mixin catalog(mods)
+	-
+		const data = {
+			title: "Каталог",
+			select: {
+				placeholder: "Сначала популярные",
+				name: "rent-catalog-sort-select",
+				simplebar: "data-simplebar",
+				optionsList: [
+					{
+						value: "option-01",
+						text: "Сначала популярные",
+					},
+					{
+						value: "option-02",
+						text: "Сначала подешевле",
+					},
+					{
+						value: "option-03",
+						text: "Сначала подороже",
+					},
+				],
+			},
+			rent: {
+				navRow: {
+					quantity: {
+						num: "28 ",
+						text: "единиц техники",
+					},
+				},
+			},
+			sale: {
+				subtitle: "Вторичные строительные материалы",
+				navRow: {
+					quantity: {
+						num: "12 ",
+						text: "материалов",
+					},
+					//- select: {
+					//- 	placeholder: "Сначала популярные",
+					//- 	name: "rent-catalog-sort-select",
+					//- 	simplebar: "data-simplebar",
+					//- 	optionsList: [
+					//- 		{
+					//- 			value: "option-01",
+					//- 			text: "Сначала популярные",
+					//- 		},
+					//- 		{
+					//- 			value: "option-02",
+					//- 			text: "Сначала подешевле",
+					//- 		},
+					//- 		{
+					//- 			value: "option-03",
+					//- 			text: "Сначала подороже",
+					//- 		},
+					//- 	],
+					//- },
+				},
+				filterTitle: "Фильтры",
+				btn: {
+					text: "Отмена",
+				},
+			},
+		}
+	section.section.catalog(class="catalog--" + mods)
+		.container.catalog__container
+			.catalog__heading
+				h1.title.title--h2.catalog__title=data.title
+				if mods === "rent"
+					.catalog__quantity.catalog__quantity--mobile 
+						span.catalog__quantity-num=data.rent.navRow.quantity.num
+						span.catalog__quantity-text=data.rent.navRow.quantity.text
+				if mods === "sale"
+					.catalog__quantity.catalog__quantity--mobile 
+						span.catalog__quantity-num=data.sale.navRow.quantity.num
+						span.catalog__quantity-text=data.sale.navRow.quantity.text
+			if mods === "sale"
+				h2.title.title--h4.catalog__subtitle=data.sale.subtitle
+			nav.catalog__nav
+				.catalog__quantity
+					if mods === "rent"
+						span.catalog__quantity-num=data.rent.navRow.quantity.num
+						span.catalog__quantity-text=data.rent.navRow.quantity.text
+					if mods === "sale"
+						span.catalog__quantity-num=data.sale.navRow.quantity.num
+						span.catalog__quantity-text=data.sale.navRow.quantity.text
+				+custom-select(data.select).catalog__nav-select(data-select)
+				.catalog__nav-view-btns 
+					button.btn.btn--reset.catalog__nav-btn.catalog__nav-btn--stripes.is-active(type="button")
+						span
+						span
+						span
+					button.btn.btn--reset.catalog__nav-btn.catalog__nav-btn--squares(type="button")
+						span
+						span
+						span
+						span
+				button.btn.btn--reset.catalog__filter-toggle
+					+icon("icon-filter-toggle", 24, 24)
+			.catalog__wrapper
+				.catalog__wrapper-cols
+					.catalog__wrapper-col.catalog__wrapper-col--01
+						if mods === "rent"
+							+catalog-filter("rent")
+						if mods === "sale"
+							+catalog-filter("sale")
+					.catalog__wrapper-col.catalog__wrapper-col--02
+						if mods === "rent"
+							+catalog-items("rent")
+						if mods === "sale"
+							+catalog-items("sale")

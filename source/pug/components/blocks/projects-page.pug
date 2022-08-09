@@ -49,20 +49,20 @@ mixin projects-page()
 							h4.title.title--h4.projects-page__ac-content-title=data.acTitle
 							.projects-page__ac-map#map01
 								iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A404158a0e384c3510381ac152bab6310fa2c23c0eddbadcce358b45f39151426&amp;source=constructor" width="1110" height="500" frameborder="0")
-			.projects-page__catalog.catalog
+			.projects-page__catalog
 				- for(let i = 0; i < 10; i++)
 					each item in data.items
-						.projects-page__card.catalog__card
-							.catalog__card-bg
+						.projects-page__catalog-card
+							.projects-page__catalog-card-bg
 								+img("content", item.img, "jpg", item.alt)
-							.catalog__card-title=item.title
-							.catalog__card-subtitle=item.subtitle
-							.catalog__card-row
-								a.btn.btn--orange.catalog__card-link(href=item.link.href)
+							.projects-page__catalog-card-title=item.title
+							.projects-page__catalog-card-subtitle=item.subtitle
+							.projects-page__catalog-card-row
+								a.btn.btn--orange.projects-page__catalog-card-link(href=item.link.href)
 									span=item.link.text 
-									+icon(item.link.icon, 16, 16).catalog__card-link-icon
-								.catalog__card-vol 
-									span.catalog__card-vol-text=item.volume.text
-									span.catalog__card-vol-num=item.volume.num
+									+icon(item.link.icon, 16, 16).projects-page__catalog-card-link-icon
+								.projects-page__catalog-card-vol 
+									span.projects-page__catalog-card-vol-text=item.volume.text
+									span.projects-page__catalog-card-vol-num=item.volume.num
 			+btn(data.btn).btn--orange.projects-page__btn-more.catalog__btn-more
 
