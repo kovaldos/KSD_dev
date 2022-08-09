@@ -1,5 +1,7 @@
 mixin sale-goods-types()
 	-
+		var shy = "&#173;"
+	-
 		const data = {
 			items: [
 				{
@@ -20,9 +22,10 @@ mixin sale-goods-types()
 					img: "zh-b-konstruktsii",
 					alt: "Ж/б конструкции",
 				},
-				{
+				{	
 					href: "#",
 					title: "Металлоконструкции",
+					title2: "Металло-конструкции",
 					img: "metallo-konstruktsii",
 					alt: "Металлоконструкции",
 				},
@@ -34,5 +37,9 @@ mixin sale-goods-types()
 				each item in data.items
 					li.sale-goods-types__list-item
 						a.sale-goods-types__link(href=item.href)
-							h2.title.sale-goods-types__link-title=item.title 
+							if item.title2
+								h2.title.sale-goods-types__link-title.sale-goods-types__link-title--desktop=item.title
+								h2.title.sale-goods-types__link-title.sale-goods-types__link-title--mobile=item.title2
+							else
+								h2.title.sale-goods-types__link-title=item.title
 							+picture("content", item.img, "png", item.alt)

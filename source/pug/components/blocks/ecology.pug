@@ -18,9 +18,11 @@ mixin ecology()
 				.ecology__titles
 					h2.title.title--h2.ecology__item-title=data.title
 					h3.title.title--h3.ecology__item-subtitle=data.subtitle
-		.container.ecology__container 
-			ul.ecology__list
-				each item in data.list
-					li.ecology__list-item
-						+icon("icon-check", 26, 26).ecology__list-item-icon
-						span.ecology__list-item-text=item
+		.container.ecology__container
+			.swiper.ecology__slider
+				ul.swiper-wrapper.ecology__list
+					each item in data.list
+						li.swiper-slide.ecology__list-item
+							+icon("icon-check", 26, 26).ecology__list-item-icon
+							span.ecology__list-item-text=item
+				.ecology__slider-pag

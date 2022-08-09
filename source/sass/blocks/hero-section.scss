@@ -205,29 +205,78 @@
 		}
 	}
 	&--sale {
-		margin: 0 0 40px;
-		.hero-section {
-			&__heading {
-				padding: 30px 0 48px;
+		margin: 0 0 30px;
+		@include vp-1023 {
+			height: 476px;
+		}
+	}
+	&--sale & {
+		&__col {
+			&--01 {
+				@include vp-1023 {
+					padding: 30px 0 45px;
+				}
 			}
-			&__title {
-				letter-spacing: -0.02em;
-			}
-			&__subtitle {
-				margin: 15px 0 0;
-			}
-			&__numbers {
-				grid-template-columns: repeat(2, 1fr);
-				&-item {
-					&::after {
-						top: 35px;
-						height: 110px;
+			&--02 {
+				@include vp-1023 {
+					position: absolute;
+					height: calc(50% - 38px);
+					&::before {
+						background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 					}
 				}
-				&-num {
-					color: $color-apple;
-					margin: 0 0 14px;
+			}
+		}
+		&__heading {
+			padding: 30px 0 48px;
+			@include vp-1279 {
+				max-width: 600px;
+			}
+			@include vp-1023 {
+				padding: 0;
+			}
+		}
+		&__title {
+			letter-spacing: -0.02em;
+			@include vp-1023 {
+				font-size: 20px;
+				line-height: 160%;
+				letter-spacing: -0.01em;
+			}
+		}
+		&__subtitle {
+			margin: 15px 0 0;
+			@include vp-1023 {
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 200%;
+				letter-spacing: -0.03em;
+			}
+		}
+		&__numbers {
+			grid-template-columns: repeat(2, 1fr);
+			@include vp-1023 {
+				width: 100%;
+				max-width: 100%;
+				display: grid;
+				grid-template-columns: auto;
+				grid-row-gap: 22px;
+				&-item {
+					&:last-child {
+						grid-row: 1/2;
+					}
 				}
+			}
+			@include vp-424 {
+				&-item {
+					text-align: center;
+				}
+			}
+			&-num {
+				font-size: 50px;
+				line-height: 61px;
+				color: $color-apple;
+				margin: 0 0 12px;
 			}
 		}
 	}
