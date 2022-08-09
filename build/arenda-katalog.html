@@ -570,15 +570,16 @@
             </div>
           </div>
         </div>
-        <section class="section rent-catalog"> 
-          <div class="container rent-catalog__container">
-            <div class="rent-catalog__heading">
-              <h1 class="title title--h2 rent-catalog__title">Каталог</h1>
-              <div class="rent-catalog__quantity rent-catalog__quantity--mobile"> <span class="rent-catalog__quantity-num">28 </span><span class="rent-catalog__quantity-text">единиц техники</span></div>
+        <section class="section catalog catalog--rent">
+          <div class="container catalog__container">
+            <div class="catalog__heading">
+              <h1 class="title title--h2 catalog__title">Каталог</h1>
+              <div class="catalog__quantity catalog__quantity--mobile"> <span class="catalog__quantity-num">28 </span><span class="catalog__quantity-text">единиц техники</span></div>
             </div>
-            <nav class="rent-catalog__nav">
-              <div class="rent-catalog__quantity"> <span class="rent-catalog__quantity-num">28 </span><span class="rent-catalog__quantity-text">единиц техники</span></div>
-              <div class="custom-select rent-catalog__nav-select" data-select><span class="custom-select__placeholder">Сначала популярные</span>
+            <nav class="catalog__nav">
+              <div class="catalog__quantity"><span class="catalog__quantity-num">28 </span><span class="catalog__quantity-text">единиц техники</span>
+              </div>
+              <div class="custom-select catalog__nav-select" data-select><span class="custom-select__placeholder">Сначала популярные</span>
                 <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
                 <ul class="custom-select__list" role="listbox" data-simplebar="data-simplebar" data-name="rent-catalog-sort-select">
                   <li class="custom-select__item" tabindex="0" data-select-value="option-01" aria-selected="false" role="option">Сначала популярные</li>
@@ -586,571 +587,573 @@
                   <li class="custom-select__item" tabindex="0" data-select-value="option-03" aria-selected="false" role="option">Сначала подороже</li>
                 </ul>
               </div>
-              <div class="rent-catalog__nav-view-btns"> 
-                <button class="btn btn--reset rent-catalog__nav-btn rent-catalog__nav-btn--stripes is-active" type="button"><span></span><span></span><span></span></button>
-                <button class="btn btn--reset rent-catalog__nav-btn rent-catalog__nav-btn--squares" type="button"><span></span><span></span><span></span><span></span></button>
+              <div class="catalog__nav-view-btns"> 
+                <button class="btn btn--reset catalog__nav-btn catalog__nav-btn--stripes is-active" type="button"><span></span><span></span><span></span></button>
+                <button class="btn btn--reset catalog__nav-btn catalog__nav-btn--squares" type="button"><span></span><span></span><span></span><span></span></button>
               </div>
-              <button class="btn btn--reset rent-catalog__filter-toggle">
+              <button class="btn btn--reset catalog__filter-toggle">
                 <svg width="24" height="24" aria-hidden="true">
                   <use xlink:href="#icon-filter-toggle"></use>
                 </svg>
               </button>
             </nav>
-            <div class="rent-catalog__wrapper">
-              <div class="rent-catalog__wrapper-cols">
-                <div class="rent-catalog__wrapper-col rent-catalog__wrapper-col--01">
-                  <div class="rent-catalog__filter-head"> 
-                    <h2 class="title title--h6 rent-catalog__filter-title">Фильтры</h2>
-                    <button class="btn btn--reset rent-catalog__filter-cancel" type="button">Отмена</button>
-                  </div>
-                  <div class="rent-catalog__tags-wrapper" data-simplebar>
-                    <ul class="rent-catalog__tags-list rent-catalog__tags-list--mobile"></ul>
-                  </div>
-                  <div class="accordion rent-filter__ac" data-accordion="parent">
-                    <div class="accordion rent-filter__ac-el is-active" data-accordion="element">
-                      <div class="rent-filter__ac-btn" data-accordion="button"><span class="rent-filter__ac-btn-text">Техника</span><span class="rent-filter__ac-btn-icon"> 
-                          <svg width="13" height="8" aria-hidden="true">
-                            <use xlink:href="#icon-chevron-down"></use>
-                          </svg></span></div>
-                      <div class="rent-filter__ac-content" data-accordion="content">
-                        <ul class="rent-filter__list">
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="ekskavatory" name="ekskavatory"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Экскаваторы</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="buldozery" name="buldozery"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Бульдозеры</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="pogruzchiki" name="pogruzchiki"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Погрузчики</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="samosvaly" name="samosvaly"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Самосвалы</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="drobilki" name="drobilki"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Дробилки</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="grohoty" name="grohoty"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Грохоты</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="katki" name="katki"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Катки</span>
-                              </label>
-                            </div>
-                          </li>
-                        </ul><a class="link rent-filter__list-more" href="#">Показать еще</a>
-                      </div>
+            <div class="catalog__wrapper">
+              <div class="catalog__wrapper-cols">
+                <div class="catalog__wrapper-col catalog__wrapper-col--01">
+                  <div class="catalog__filter catalog__filter--rent">
+                    <div class="catalog__filter-head"> 
+                      <h2 class="title title--h6 catalog__filter-title">Фильтры</h2>
+                      <button class="btn btn--reset catalog__filter-cancel" type="button">Отмена</button>
                     </div>
-                    <div class="accordion rent-filter__ac-el is-active" data-accordion="element">
-                      <div class="rent-filter__ac-btn" data-accordion="button"><span class="rent-filter__ac-btn-text">Спецоборудование</span><span class="rent-filter__ac-btn-icon"> 
-                          <svg width="13" height="8" aria-hidden="true">
-                            <use xlink:href="#icon-chevron-down"></use>
-                          </svg></span></div>
-                      <div class="rent-filter__ac-content" data-accordion="content">
-                        <ul class="rent-filter__list">
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="shreder" name="shreder"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Шредер</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="nozhnizy" name="nozhnizy"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Ножницы</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="gidromolot" name="gidromolot"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Гидромолот</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="greifery" name="greifery"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Грейферы</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="krashery" name="krashery"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Крашеры</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="izmelchiteli" name="izmelchiteli"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Измельчители</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="kovchy" name="kovchy"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Ковши</span>
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="catalog__tags-wrapper" data-simplebar>
+                      <ul class="catalog__tags-list catalog__tags-list--mobile"></ul>
                     </div>
-                    <div class="accordion rent-filter__ac-el is-active" data-accordion="element">
-                      <div class="rent-filter__ac-btn" data-accordion="button"><span class="rent-filter__ac-btn-text">Бренды</span><span class="rent-filter__ac-btn-icon"> 
-                          <svg width="13" height="8" aria-hidden="true">
-                            <use xlink:href="#icon-chevron-down"></use>
-                          </svg></span></div>
-                      <div class="rent-filter__ac-content" data-accordion="content">
-                        <ul class="rent-filter__list">
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="CASE" name="CASE"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">CASE</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="MAN" name="MAN"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">MAN</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="CATERPILLAR" name="CATERPILLAR"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">CATERPILLAR</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="MCCLOSKEY" name="MCCLOSKEY"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">MCCLOSKEY</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="Hamm" name="Hamm"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Hamm</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="EARTHFORCE" name="EARTHFORCE"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">EARTHFORCE</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="Shantui" name="Shantui"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Shantui</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="HITACHI" name="HITACHI"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">HITACHI</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="HYUNDAI" name="HYUNDAI"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">HYUNDAI</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="JCB" name="JCB"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">JCB</span>
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="accordion rent-filter__ac-el is-active" data-accordion="element">
-                      <div class="rent-filter__ac-btn" data-accordion="button"><span class="rent-filter__ac-btn-text">Благоустройство</span><span class="rent-filter__ac-btn-icon"> 
-                          <svg width="13" height="8" aria-hidden="true">
-                            <use xlink:href="#icon-chevron-down"></use>
-                          </svg></span></div>
-                      <div class="rent-filter__ac-content" data-accordion="content">
-                        <ul class="rent-filter__list">
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="demontazh" name="demontazh"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Демонтаж</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="perevozka-materialov" name="perevozka-materialov"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Перевозка материалов</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="oblagorazhivanie-territorii" name="oblagorazhivanie-territorii"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Облагораживание территорий</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="stroitelstvo-dorog" name="stroitelstvo-dorog"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Строительство дорог</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="zemlyanye-raboty" name="zemlyanye-raboty"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Земляные работы</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="rent-filter__list-item">
-                            <div class="custom-toggle">
-                              <label>
-                                <input type="checkbox" id="pererabotka-othodov" name="pererabotka-othodov"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Переработка отходов</span>
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion rent-filter__ac accordion rent-filter__ac--price" data-accordion="parent">
-                    <div class="accordion rent-filter__ac-el is-active" data-accordion="element">
-                      <div class="rent-filter__ac-btn" data-accordion="button"><span class="rent-filter__ac-btn-text">Цена</span><span class="rent-filter__ac-btn-icon"> 
-                          <svg width="14" height="14" aria-hidden="true">
-                            <use xlink:href="#icon-chevron-down"></use>
-                          </svg></span></div>
-                      <div class="rent-filter__ac-content" data-accordion="content">
-                        <div class="rent-filter__inputs">
-                          <label class="rent-filter__inputs-label"><span class="rent-filter__input-label">от</span>
-                            <input class="rent-filter__input rent-filter__input--from" id="price-from" type="number" name="price-from">
-                          </label><span class="stripe">-</span>
-                          <label class="rent-filter__inputs-label"><span class="rent-filter__input-label">до</span>
-                            <input class="rent-filter__input rent-filter__input--to" id="price-to" type="number" name="price-to">
-                          </label>
+                    <div class="accordion catalog__filter-ac" data-accordion="parent">
+                      <div class="accordion catalog__filter-ac-el is-active" data-accordion="element">
+                        <div class="catalog__filter-ac-btn" data-accordion="button"><span class="catalog__filter-ac-btn-text">Техника</span><span class="catalog__filter-ac-btn-icon"> 
+                            <svg width="13" height="8" aria-hidden="true">
+                              <use xlink:href="#icon-chevron-down"></use>
+                            </svg></span></div>
+                        <div class="catalog__filter-ac-content" data-accordion="content">
+                          <ul class="catalog__filter-list">
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="ekskavatory" name="ekskavatory"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Экскаваторы</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="buldozery" name="buldozery"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Бульдозеры</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="pogruzchiki" name="pogruzchiki"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Погрузчики</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="samosvaly" name="samosvaly"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Самосвалы</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="drobilki" name="drobilki"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Дробилки</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="grohoty" name="grohoty"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Грохоты</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="katki" name="katki"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Катки</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul><a class="link catalog__filter-list-more" href="#">Показать еще</a>
                         </div>
-                        <div class="rent-filter__price">
-                          <div class="rent-filter__price-range" id="noui-1"></div>
+                      </div>
+                      <div class="accordion catalog__filter-ac-el is-active" data-accordion="element">
+                        <div class="catalog__filter-ac-btn" data-accordion="button"><span class="catalog__filter-ac-btn-text">Спецоборудование</span><span class="catalog__filter-ac-btn-icon"> 
+                            <svg width="13" height="8" aria-hidden="true">
+                              <use xlink:href="#icon-chevron-down"></use>
+                            </svg></span></div>
+                        <div class="catalog__filter-ac-content" data-accordion="content">
+                          <ul class="catalog__filter-list">
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="shreder" name="shreder"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Шредер</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="nozhnizy" name="nozhnizy"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Ножницы</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="gidromolot" name="gidromolot"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Гидромолот</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="greifery" name="greifery"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Грейферы</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="krashery" name="krashery"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Крашеры</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="izmelchiteli" name="izmelchiteli"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Измельчители</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="kovchy" name="kovchy"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Ковши</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="accordion catalog__filter-ac-el is-active" data-accordion="element">
+                        <div class="catalog__filter-ac-btn" data-accordion="button"><span class="catalog__filter-ac-btn-text">Бренды</span><span class="catalog__filter-ac-btn-icon"> 
+                            <svg width="13" height="8" aria-hidden="true">
+                              <use xlink:href="#icon-chevron-down"></use>
+                            </svg></span></div>
+                        <div class="catalog__filter-ac-content" data-accordion="content">
+                          <ul class="catalog__filter-list">
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="CASE" name="CASE"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">CASE</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="MAN" name="MAN"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">MAN</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="CATERPILLAR" name="CATERPILLAR"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">CATERPILLAR</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="MCCLOSKEY" name="MCCLOSKEY"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">MCCLOSKEY</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="Hamm" name="Hamm"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Hamm</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="EARTHFORCE" name="EARTHFORCE"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">EARTHFORCE</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="Shantui" name="Shantui"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Shantui</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="HITACHI" name="HITACHI"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">HITACHI</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="HYUNDAI" name="HYUNDAI"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">HYUNDAI</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="JCB" name="JCB"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">JCB</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="accordion catalog__filter-ac-el is-active" data-accordion="element">
+                        <div class="catalog__filter-ac-btn" data-accordion="button"><span class="catalog__filter-ac-btn-text">Благоустройство</span><span class="catalog__filter-ac-btn-icon"> 
+                            <svg width="13" height="8" aria-hidden="true">
+                              <use xlink:href="#icon-chevron-down"></use>
+                            </svg></span></div>
+                        <div class="catalog__filter-ac-content" data-accordion="content">
+                          <ul class="catalog__filter-list">
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="demontazh" name="demontazh"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Демонтаж</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="perevozka-materialov" name="perevozka-materialov"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Перевозка материалов</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="oblagorazhivanie-territorii" name="oblagorazhivanie-territorii"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Облагораживание территорий</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="stroitelstvo-dorog" name="stroitelstvo-dorog"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Строительство дорог</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="zemlyanye-raboty" name="zemlyanye-raboty"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Земляные работы</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="catalog__filter-list-item">
+                              <div class="custom-toggle">
+                                <label>
+                                  <input type="checkbox" id="pererabotka-othodov" name="pererabotka-othodov"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Переработка отходов</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion catalog__filter-ac catalog__filter-ac--price" data-accordion="parent">
+                      <div class="catalog__filter-ac-el is-active" data-accordion="element">
+                        <div class="catalog__filter-ac-btn" data-accordion="button"><span class="catalog__filter-ac-btn-text">Цена</span><span class="catalog__filter-ac-btn-icon"> 
+                            <svg width="14" height="14" aria-hidden="true">
+                              <use xlink:href="#icon-chevron-down"></use>
+                            </svg></span></div>
+                        <div class="catalog__filter-ac-content" data-accordion="content">
+                          <div class="catalog__filter-inputs">
+                            <label class="catalog__filter-inputs-label"><span class="catalog__filter-input-label">от</span>
+                              <input class="catalog__filter-input catalog__filter-input--from" id="price-from" type="number" name="price-from">
+                            </label><span class="stripe">-</span>
+                            <label class="catalog__filter-inputs-label"><span class="catalog__filter-input-label">до</span>
+                              <input class="catalog__filter-input catalog__filter-input--to" id="price-to" type="number" name="price-to">
+                            </label>
+                          </div>
+                          <div class="catalog__filter-price">
+                            <div class="catalog__filter-price-range" id="noui-1"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="rent-catalog__wrapper-col rent-catalog__wrapper-col--02">
-                  <div class="rent-catalog__items">
-                    <div class="rent-catalog__tags-wrapper" data-simplebar>
-                      <ul class="rent-catalog__tags-list"></ul>
+                <div class="catalog__wrapper-col catalog__wrapper-col--02">
+                  <div class="catalog__items catalog__items--rent">
+                    <div class="catalog__tags-wrapper" data-simplebar>
+                      <ul class="catalog__tags-list"></ul>
                     </div>
-                    <div class="rent-catalog__cards rent-catalog__cards--rows">
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                    <div class="catalog__cards catalog__cards--rows">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>
                         </div>
                       </div>
-                      <div class="rent-catalog__card">
-                        <div class="rent-catalog__card-col rent-catalog__card-col--01">
-                          <h2 class="title rent-catalog__card-title">Техника</h2>
-                          <div class="rent-catalog__card-pic">
+                      <div class="catalog__card">
+                        <div class="catalog__card-col catalog__card-col--01">
+                          <h2 class="title catalog__card-title">Техника</h2>
+                          <div class="catalog__card-pic">
                             <picture>
                               <source type="image/webp" srcset="img/content/rent-technic-img-1.webp, img/content/rent-technic-img-1@2x.webp 2x"><img src="img/content/rent-technic-img-1.png" srcset="img/content/rent-technic-img-1@2x.png 2x" alt="rent-technic-img-1">
                             </picture>
                           </div>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--02">
-                          <h3 class="title rent-catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
-                          <ul class="rent-catalog__card-desc">
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Грузоподъемность: </span><span class="rent-catalog__card-desc-value">25 тонн</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Объем кузова: </span><span class="rent-catalog__card-desc-value">20 кубов</span></li>
-                            <li class="rent-catalog__card-desc-item"> <span class="rent-catalog__card-desc-name">Колесная формула: </span><span class="rent-catalog__card-desc-value">6x4</span></li>
+                        <div class="catalog__card-col catalog__card-col--02">
+                          <h3 class="title catalog__card-model">Экскаватор-погрузчик Volvo BL71B</h3>
+                          <ul class="catalog__card-desc">
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Грузоподъемность: </span><span class="catalog__card-desc-value">25 тонн</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Объем кузова: </span><span class="catalog__card-desc-value">20 кубов</span></li>
+                            <li class="catalog__card-desc-item"> <span class="catalog__card-desc-name">Колесная формула: </span><span class="catalog__card-desc-value">6x4</span></li>
                           </ul>
                         </div>
-                        <div class="rent-catalog__card-col rent-catalog__card-col--03">
-                          <div class="rent-catalog__card-price"><span class="rent-catalog__card-price-num">35 000</span><span class="rent-catalog__card-price-currency"> ₽ </span><span class="rent-catalog__card-price-time">/ смена</span></div>
-                          <button class="btn btn--drk-orange rent-catalog__card-add" type="button"><span class="rent-catalog__card-add-text">Арендовать</span><span class="rent-catalog__card-add-icon">
+                        <div class="catalog__card-col catalog__card-col--03">
+                          <div class="catalog__card-price"><span class="catalog__card-price-num">35 000</span><span class="catalog__card-price-currency"> ₽ </span><span class="catalog__card-price-time">/ смена</span></div>
+                          <button class="btn btn--drk-orange catalog__card-add" type="button"><span class="catalog__card-add-text">Арендовать</span><span class="catalog__card-add-icon">
                               <svg width="23" height="23" aria-hidden="true">
                                 <use xlink:href="#icon-plus"></use>
                               </svg></span></button>

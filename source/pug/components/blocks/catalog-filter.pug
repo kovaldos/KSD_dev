@@ -1,0 +1,318 @@
+mixin catalog-filter(mods)
+	-
+		const data = {
+			filterTitle: "Фильтры",
+			btn: {
+				text: "Отмена",
+			},
+			rent: {
+				items: [
+					{
+						title: "Техника",
+						//- classMod: "is-active",
+						list: [
+							{
+								inputLabel: "Экскаваторы",
+								inputId: "ekskavatory",
+								inputName: "ekskavatory",
+							},
+							{
+								inputLabel: "Бульдозеры",
+								inputId: "buldozery",
+								inputName: "buldozery",
+								inputChecked: false,
+							},
+							{
+								inputLabel: "Погрузчики",
+								inputId: "pogruzchiki",
+								inputName: "pogruzchiki",
+							},
+							{
+								inputLabel: "Самосвалы",
+								inputId: "samosvaly",
+								inputName: "samosvaly",
+							},
+							{
+								inputLabel: "Дробилки",
+								inputId: "drobilki",
+								inputName: "drobilki",
+							},
+							{
+								inputLabel: "Грохоты",
+								inputId: "grohoty",
+								inputName: "grohoty",
+							},
+							{
+								inputLabel: "Катки",
+								inputId: "katki",
+								inputName: "katki",
+							},
+						],
+						href: "#",
+						text: "Показать еще",	
+					},
+					{
+						title: "Спецоборудование",
+
+						list: [
+							{
+								inputLabel: "Шредер",
+								inputId: "shreder",
+								inputName: "shreder",
+							},
+							{
+								inputLabel: "Ножницы",
+								inputId: "nozhnizy",
+								inputName: "nozhnizy",
+							},
+							{
+								inputLabel: "Гидромолот",
+								inputId: "gidromolot",
+								inputName: "gidromolot",
+								inputChecked: false,
+							},
+							{
+								inputLabel: "Грейферы",
+								inputId: "greifery",
+								inputName: "greifery",
+							},
+							{
+								inputLabel: "Крашеры",
+								inputId: "krashery",
+								inputName: "krashery",
+							},
+							{
+								inputLabel: "Измельчители",
+								inputId: "izmelchiteli",
+								inputName: "izmelchiteli",
+							},
+							{
+								inputLabel: "Ковши",
+								inputId: "kovchy",
+								inputName: "kovchy",
+							},
+						],
+					},
+					{
+						title: "Бренды",
+						list: [
+							{
+								inputLabel: "CASE",
+								inputId: "CASE",
+								inputName: "CASE",
+							},
+							{
+								inputLabel: "MAN",
+								inputId: "MAN",
+								inputName: "MAN",
+							},
+							{
+								inputLabel: "CATERPILLAR",
+								inputId: "CATERPILLAR",
+								inputName: "CATERPILLAR",
+							},
+							{
+								inputLabel: "MCCLOSKEY",
+								inputId: "MCCLOSKEY",
+								inputName: "MCCLOSKEY",
+								inputChecked: false,
+							},
+							{
+								inputLabel: "Hamm",
+								inputId: "Hamm",
+								inputName: "Hamm",
+							},
+							{
+								inputLabel: "EARTHFORCE",
+								inputId: "EARTHFORCE",
+								inputName: "EARTHFORCE",
+							},
+							{
+								inputLabel: "Shantui",
+								inputId: "Shantui",
+								inputName: "Shantui",
+							},
+							{
+								inputLabel: "HITACHI",
+								inputId: "HITACHI",
+								inputName: "HITACHI",
+							},
+							{
+								inputLabel: "HYUNDAI",
+								inputId: "HYUNDAI",
+								inputName: "HYUNDAI",
+							},
+							{
+								inputLabel: "JCB",
+								inputId: "JCB",
+								inputName: "JCB",
+							},
+						],
+					},
+					{
+						title: "Благоустройство",
+						list: [
+							{
+								inputLabel: "Демонтаж",
+								inputId: "demontazh",
+								inputName: "demontazh",
+							},
+							{
+								inputLabel: "Перевозка материалов",
+								inputId: "perevozka-materialov",
+								inputName: "perevozka-materialov",
+							},
+							{
+								inputLabel: "Облагораживание территорий",
+								inputId: "oblagorazhivanie-territorii",
+								inputName: "oblagorazhivanie-territorii",
+							},
+							{
+								inputLabel: "Строительство дорог",
+								inputId: "stroitelstvo-dorog",
+								inputName: "stroitelstvo-dorog",
+								inputChecked: false,
+							},
+							{
+								inputLabel: "Земляные работы",
+								inputId: "zemlyanye-raboty",
+								inputName: "zemlyanye-raboty",
+							},
+							{
+								inputLabel: "Переработка отходов",
+								inputId: "pererabotka-othodov",
+								inputName: "pererabotka-othodov",
+							},
+						],
+					},
+				],
+			},
+			sale: {
+				items: [
+					{
+						title: "Вид",
+						//- classMod: "is-active",
+						list: [
+							{
+								inputLabel: "Вторичный щебень",
+								inputId: "vtorichny-sheben",
+								inputName: "vtorichny-sheben",
+							},
+							{
+								inputLabel: "Кирпичный бой",
+								inputId: "kirpichny-boi",
+								inputName: "kirpichny-boi",
+								inputChecked: false,
+							},
+							{
+								inputLabel: "Ж/Б конструкции",
+								inputId: "zh-b-konstruktsii",
+								inputName: "zh-b-konstruktsii",
+							},
+							{
+								inputLabel: "Металлоконстукции",
+								inputId: "metallokonstruktsii",
+								inputName: "metallokonstruktsii",
+							},
+							{
+								inputLabel: "Кирпичный бой",
+								inputId: "kirpichny-boi",
+								inputName: "kirpichny-boi",
+								inputChecked: false,
+							},
+							{
+								inputLabel: "Ж/Б конструкции",
+								inputId: "zh-b-konstruktsii",
+								inputName: "zh-b-konstruktsii",
+							},
+							{
+								inputLabel: "Металлоконстукции",
+								inputId: "metallokonstruktsii",
+								inputName: "metallokonstruktsii",
+							},
+						],
+						href: "#",
+						text: "Показать еще",	
+					},
+					{
+						title: "Направление",
+						list: [
+							{
+								inputLabel: "Строительство дорог",
+								inputId: "stroitelstvo-dorog",
+								inputName: "stroitelstvo-dorog",
+							},
+							{
+								inputLabel: "Благоустройство",
+								inputId: "blagoustroistvo",
+								inputName: "blagoustroistvo",
+							},
+							{
+								inputLabel: "Укрепление строений",
+								inputId: "gidromolot",
+								inputName: "gidromolot",
+								inputChecked: false,
+							},
+						],
+					},
+				],
+			},
+			price: {
+				title: "Цена",
+				from: "от",
+				span: "-",
+				to: "до"
+			},
+		}
+	.catalog__filter(class="catalog__filter--" + mods)
+		.catalog__filter-head 
+			h2.title.title--h6.catalog__filter-title=data.filterTitle 
+			+btn(data.btn).btn--reset.catalog__filter-cancel
+		.catalog__tags-wrapper(data-simplebar)
+			ul.catalog__tags-list.catalog__tags-list--mobile
+		.accordion.catalog__filter-ac(data-accordion="parent")
+			if mods === "rent"
+				each item in data.rent.items
+					.accordion.catalog__filter-ac-el.is-active(data-accordion="element" class!=item.classMod)
+						.catalog__filter-ac-btn(data-accordion="button")
+							span.catalog__filter-ac-btn-text=item.title
+							span.catalog__filter-ac-btn-icon 
+								+icon("icon-chevron-down", 13, 8)
+						.catalog__filter-ac-content(data-accordion="content")
+							ul.catalog__filter-list
+								each listItem in item.list
+									li.catalog__filter-list-item
+										+custom-toggle(listItem)
+							if item.href && item.text
+								a.link.catalog__filter-list-more(href!=item.href)!=item.text 
+			if mods === "sale"
+				each item in data.sale.items
+					.accordion.catalog__filter-ac-el.is-active(data-accordion="element" class!=item.classMod)
+						.catalog__filter-ac-btn(data-accordion="button")
+							span.catalog__filter-ac-btn-text=item.title
+							span.catalog__filter-ac-btn-icon 
+								+icon("icon-chevron-down", 13, 8)
+						.catalog__filter-ac-content(data-accordion="content")
+							ul.catalog__filter-list
+								each listItem in item.list
+									li.catalog__filter-list-item
+										+custom-toggle(listItem)
+							if item.href && item.text
+								a.link.catalog__filter-list-more(href!=item.href)!=item.text 
+		.accordion.catalog__filter-ac.catalog__filter-ac--price(data-accordion="parent")
+			.catalog__filter-ac-el.is-active(data-accordion="element")
+				.catalog__filter-ac-btn(data-accordion="button")
+					span.catalog__filter-ac-btn-text=data.price.title
+					span.catalog__filter-ac-btn-icon 
+						+icon("icon-chevron-down", 14, 14)
+				.catalog__filter-ac-content(data-accordion="content")
+					.catalog__filter-inputs
+						label.catalog__filter-inputs-label
+							span.catalog__filter-input-label=data.price.from
+							input.catalog__filter-input.catalog__filter-input--from#price-from(type="number" name="price-from")
+						span.stripe=data.price.span
+						label.catalog__filter-inputs-label
+							span.catalog__filter-input-label=data.price.to
+							input.catalog__filter-input.catalog__filter-input--to#price-to(type="number" name="price-to")
+					.catalog__filter-price
+						.catalog__filter-price-range#noui-1
