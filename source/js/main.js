@@ -35,6 +35,8 @@ import {initWorkWithUsSlider} from './modules/init-work-with-us-slider';
 import {initDirectionsSupSlider} from './modules/init-directions-sup-slider';
 import {initRentCatalogFilterMobile} from './modules/init-rent-catalog-filter-mobile.js';
 import {initRentCardSimilarSlider} from './modules/init-rent-card-similar-slider';
+import {initGoodsSlider} from './modules/init-goods-slider';
+import {initEcologySlider} from './modules/init-ecology-slider';
 
 
 // ---------------------------------
@@ -87,6 +89,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initDirectionsSupSlider();
     initRentCatalogFilterMobile();
     initRentCardSimilarSlider();
+    initGoodsSlider();
+    initEcologySlider();
   });
 });
 

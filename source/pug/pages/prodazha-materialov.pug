@@ -5,7 +5,7 @@ block variables
 	- const wrapperMods = "wrapper--sale"
 	- const hasHeader = true
 	- const headerMods = ""
-	- const classMode = "goods-popular--roads"
+	- const classMode = "goods-popular--sale"
 	- const hasFooter = true
 	- const footerMods = "footer--sale"
 	- const currentUrl = "prodazha-materialov.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
@@ -14,14 +14,15 @@ block main
 	main
 		//- на странице запрещен "голый" код
 		//- все блоки вставляются из папки pug/components/blocks
-		+sale-hero()
+		//- +sale-hero()
+		+hero-section("sale")
 		+sale-goods-types()
-		+goods-popular()
+		+goods("popular")
 		+delivery-calc()
 		+sale-selections()
 		+ecology()
 		+sale-about-us()
-		+goods-popular(classMode)
-		+partners()
+		+goods("road")
+		+partners("sale")
 
 block modals

@@ -41,6 +41,25 @@ mixin hero-section(mods)
 					},
 				],
 			},
+			sale: {
+				title: "Строительные материалы от ведущих экспертов",
+				subtitle: "Производство вторичных стройматериалов компанией «ООО Конструктив — СД»",
+				pic: {
+						src: "content",
+						img: "sale-hero-img",
+						alt: "sale-hero-img",
+				},
+				numbers: [
+					{
+						num: "1 час",
+						text: "Срок до вывоза с момента отправки заявки",
+					},
+					{
+						num: "100%",
+						text: "Гарантия качества на материалы",
+					},
+				],
+			},
 			road: {
 				title: "Строительство дорог из вторичных материалов",
 				subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
@@ -189,6 +208,9 @@ mixin hero-section(mods)
 					if mods === "demolition"
 						h1.title.title--h1.hero-section__title=data.demolition.title
 							span.hero-section__subtitle=data.demolition.subtitle
+					if mods === "sale"
+						h1.title.title--h1.hero-section__title=data.sale.title
+							span.hero-section__subtitle=data.sale.subtitle
 					if mods === "road"
 						h1.title.title--h1.hero-section__title=data.road.title
 							span.hero-section__subtitle=data.road.subtitle
@@ -204,6 +226,11 @@ mixin hero-section(mods)
 				.hero-section__numbers
 					if mods === "demolition"
 						each item in data.demolition.numbers
+							.hero-section__numbers-item
+								strong.hero-section__numbers-num=item.num 
+								p.text.hero-section__numbers-text=item.text
+					if mods === "sale"
+						each item in data.sale.numbers
 							.hero-section__numbers-item
 								strong.hero-section__numbers-num=item.num 
 								p.text.hero-section__numbers-text=item.text
@@ -236,6 +263,9 @@ mixin hero-section(mods)
 								.hero-section__slider-item 
 									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.hero-section__slider-pag
+			if mods === "sale"
+				.hero-section__pic 
+					+img(data.sale.pic.src, data.sale.pic.img, "jpg", data.sale.pic.alt)
 			if mods === "road"
 				.hero-section__pic 
 					+img(data.road.pic.src, data.road.pic.img, "jpg", data.road.pic.alt)
