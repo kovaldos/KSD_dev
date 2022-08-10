@@ -3,10 +3,10 @@
 // Слайдер в секции Команда -- Начало --
 // Team slider -- Start --
 
-const initRentCardSimilarSlider = () => {
-  let rentCardSimilarSlider = document.querySelector('.rent-card-similar__slider');
-  if (rentCardSimilarSlider) {
-    rentCardSimilarSlider = new Swiper(rentCardSimilarSlider, {
+const initCardSimilarSlider = () => {
+  let cardSimilarSlider = document.querySelector('.card-similar__slider');
+  if (cardSimilarSlider) {
+    cardSimilarSlider = new Swiper(cardSimilarSlider, {
       watchOverflow: true,
       speed: 800,
       slidesPerView: 1.4,
@@ -32,17 +32,17 @@ const initRentCardSimilarSlider = () => {
         },
       },
       navigation: {
-        nextEl: '.rent-card-similar__slider-btn--next',
-        prevEl: '.rent-card-similar__slider-btn--prev',
+        nextEl: '.card-similar__slider-btn--next',
+        prevEl: '.card-similar__slider-btn--prev',
       },
       pagination: {
-        el: '.rent-card-similar__slider-pag',
+        el: '.card-similar__slider-pag',
         type: 'fraction',
       },
     });
   }
 };
 
-export {initRentCardSimilarSlider};
+export {initCardSimilarSlider};
 // Слайдер в секции Команда -- Конец --
 // Team slider -- End --

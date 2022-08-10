@@ -24,6 +24,7 @@ import {initRentAboutUsSlider} from './modules/init-rent-about-us-slider';
 import {initRentCatalogViewSwitch} from './modules/init-rent-catalog-view-switch';
 import {initRangeSlider} from './modules/init-range-slider';
 import {initRentCardSlider} from './modules/init-rent-card-slider';
+import {initCount} from './modules/init-count';
 import {initCalcRangeSlider} from './modules/init-calc-range-slider';
 import {initTechparkSlider} from './modules/init-techpark-slider';
 import {initHeroSectionSlider} from './modules/init-hero-section-slider';
@@ -34,7 +35,7 @@ import {initWeNeedSlider} from './modules/we-need-slider';
 import {initWorkWithUsSlider} from './modules/init-work-with-us-slider';
 import {initDirectionsSupSlider} from './modules/init-directions-sup-slider';
 import {initRentCatalogFilterMobile} from './modules/init-rent-catalog-filter-mobile.js';
-import {initRentCardSimilarSlider} from './modules/init-rent-card-similar-slider';
+import {initCardSimilarSlider} from './modules/init-card-similar-slider';
 import {initGoodsSlider} from './modules/init-goods-slider';
 import {initEcologySlider} from './modules/init-ecology-slider';
 
@@ -79,6 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initRentCatalogViewSwitch();
     initRangeSlider();
     initRentCardSlider();
+    initCount();
     initCalcRangeSlider();
     initTechparkSlider();
     initVehicleCardSlider();
@@ -88,7 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initWorkWithUsSlider();
     initDirectionsSupSlider();
     initRentCatalogFilterMobile();
-    initRentCardSimilarSlider();
+    initCardSimilarSlider();
     initGoodsSlider();
     initEcologySlider();
   });

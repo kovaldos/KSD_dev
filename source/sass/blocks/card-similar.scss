@@ -1,4 +1,4 @@
-.rent-card-similar {
+.card-similar {
 	margin: 0 0 20px;
 	&__heading {
 		display: flex;
@@ -19,20 +19,20 @@
 		}
 	}
 	&__card {
+		display: block;
 		padding: 20px 20px 30px;
 		background-color: $color-default-white;
 		border: 1px solid $color-lavender;
-		border-radius: 7px;
+		border-radius: 10px;
+		transition: box-shadow $trans-default;
 		@include vp-1023 {
 			border: 0;
 			padding: 0;
 		}
 		@media (hover: hover), screen and (min-width: 0\0) {
 			&:hover,
-			&:focus-visible & {
-				.rent-catalog__card-add {
-					transform: translateX(0);
-				}
+			&:focus-visible {
+				box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
 			}
 		}
 		&-pic {
@@ -179,6 +179,13 @@
 		font-size: 16px;
 		@include vp-1023 {
 			font-size: 14px;
+		}
+	}
+	&--sale & {
+		&__card {
+			&-title {
+				color: $color-apple;
+			}
 		}
 	}
 }

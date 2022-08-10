@@ -1,0 +1,265 @@
+mixin card(mods)
+	-
+		const data = {
+			rent: {
+				slider: {
+					items: [
+						{
+							img: "rent-card-img-1",
+							alt: "rent-card-img-1",
+						},
+						{
+							img: "rent-card-img-1",
+							alt: "rent-card-img-2",
+						},
+						{
+							img: "rent-card-img-1",
+							alt: "rent-card-img-3",
+						},
+					],
+				},
+				title: "Экскаватор-погрузчик Volvo BL71B",
+				subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati pariatur a id dolor ratione porro, tempora nam accusantium deserunt.",
+				equip: {
+					title: "Навесное оборудование:",
+					toggle1: {
+						inputLabel: "Гидравлические ножницы",
+						inputType: "radio",
+						inputId: "gidravlicheskie-nozhnizy",
+						inputName: "equipment",
+						inputChecked: false,
+						inputValue: "gidravlicheskie-nozhnizy"
+					},
+					toggle2: {
+						inputLabel: "Гидравлический молот",
+						inputType: "radio",
+						inputId: "gidravlicheskiy-molot",
+						inputName: "equipment",
+						inputChecked: true,
+						inputValue: "gidravlicheskiy-molot"
+					},
+				}, 
+				charact: {
+					title: "Характеристики:",
+					link: {
+						href: "#",
+						text: "Посмотреть все",
+					},
+					items: [
+						{
+							name: "Грузоподъемность: ",
+							value: "25 тонн",
+						},
+						{
+							name: "Грузоподъемность: ",
+							value: "25 тонн",
+						},
+						{
+							name: "Объем кузова: ",
+							value: "20 кубов",
+						},
+						{
+							name: "Объем кузова: ",
+							value: "20 кубов",
+						},
+						{
+							name: "Колесная формула: ",
+							value: "6x4",
+						},
+						{
+							name: "Колесная формула: ",
+							value: "6x4",
+						},
+					],
+				},
+				price: {
+					num: "35 000",
+					currency: " ₽ ",
+					time: "/ смена",
+				},
+				counter: {
+					btnMinus: {
+						text: "-",
+					},
+					input: {
+						inputType: "number",
+						inputId: "counter-rent",
+						inputName: "counter-rent",
+						inputValue: "0",
+					},
+					btnPlus: {
+						text: "+",
+					},
+				},
+				btn: {
+					text: "Арендовать",
+				},
+			},
+			sale: {
+				slider: {
+					items: [
+						{
+							img: "sale-card-img-1",
+							alt: "sale-card-img-1",
+						},
+						{
+							img: "sale-card-img-2",
+							alt: "sale-card-img-2",
+						},
+						{
+							img: "sale-card-img-3",
+							alt: "sale-card-img-3",
+						},
+						{
+							img: "sale-card-img-4",
+							alt: "sale-card-img-4",
+						},
+						{
+							img: "sale-card-img-5",
+							alt: "sale-card-img-5",
+						},
+					],
+				},
+				title: "Вторичный бетонный щебень, фракция 20-40",
+				subtitle: "Вторичный бетонный щебень — универсальный материал, полученный в процессе рециклинга строительных отходов.",
+				charact: {
+					title: "Характеристики:",
+					items: [
+						{
+							name: "Фракция: ",
+							value: "20-40",
+						},
+						{
+							name: "Морозостойкость: ",
+							value: "F300",
+						},
+						{
+							name: "Вид: ",
+							value: "Вторичный",
+						},
+						{
+							name: "Марка дробимости: ",
+							value: "М600",
+						},
+						{
+							name: "Класс: ",
+							value: "1",
+						},
+					],
+				},
+				price: {
+					num: "600",
+					currency: " ₽ ",
+					unit: "/ м",
+					sup: "3",
+				},
+				counter: {
+					btnMinus: {
+						text: "-",
+					},
+					input: {
+						inputType: "number",
+						inputId: "counter-sale",
+						inputName: "counter-sale",
+						inputValue: "0",
+					},
+					btnPlus: {
+						text: "+",
+					},
+				},
+				btn: {
+					text: "В корзину",
+				},
+			},
+		}
+	section.section.card(class="card--" + mods)
+		.container.card__container
+			.card__wrapper
+				.card__wrapper-col.card__wrapper-col--01
+					.swiper.swiper--14.card__slider
+						.swiper-wrapper 
+							-for (let i = 0; i < 3; i++)
+								if mods === "rent"
+									each item in data.rent.slider.items 
+										.swiper-slide 
+											.card__slider-item
+												+picture("slides", item.img, "png", item.alt)
+								if mods === "sale"
+									each item in data.sale.slider.items 
+										.swiper-slide 
+											.card__slider-item
+												+img("slides", item.img, "jpg", item.alt)
+					.swiper.swiper--15.card__slider.card__slider--thumb
+						.swiper-wrapper
+							-for (let i = 0; i < 3; i++)
+								if mods === "rent"
+									each item in data.rent.slider.items 
+										.swiper-slide 
+											.card__slider-item
+												+picture("slides", item.img, "png", item.alt)
+								if mods === "sale"
+									each item in data.sale.slider.items 
+										.swiper-slide 
+											.card__slider-item
+												+img("slides", item.img, "jpg", item.alt)
+				.card__wrapper-col.card__wrapper-col--02
+					if mods === "rent"
+						h1.title
+								span.card__title=data.rent.title
+								span.card__subtitle=data.rent.subtitle
+						.card__equip
+							h2.title.title--h6.card__equip-title=data.rent.equip.title
+							.card__equip-toggles
+								.card__equip-toggles-item
+									+picture("content", "card-toggle-img-2", "png", "Гидравлические ножницы")
+									+custom-toggle(data.rent.equip.toggle1).custom-toggle--radio.card__equip-toggle
+								.card__equip-toggles-item
+									+picture("content", "card-toggle-img-2", "png", "Гидравлический молот")
+									+custom-toggle(data.rent.equip.toggle2).custom-toggle--radio.card__equip-toggle
+						.card__charact
+							.card__charact-head
+								h2.title.title--h6.card__charact-title=data.rent.charact.title
+								a.link.card__charact-link(href=data.rent.charact.link.href data-target="characteristics")=data.rent.charact.link.text
+							ul.card__charact-items
+								each item in data.rent.charact.items 
+									li.card__charact-items-item 
+										span.card__charact-items-name=item.name
+										span.card__charact-items-border
+										span.card__charact-items-value=item.value
+					if mods === "sale"
+						h1.title
+								span.card__title=data.sale.title
+								span.card__subtitle=data.sale.subtitle
+						.card__charact
+							.card__charact-head
+								h2.title.title--h6.card__charact-title=data.sale.charact.title
+							ul.card__charact-items
+								each item in data.sale.charact.items 
+									li.card__charact-items-item 
+										span.card__charact-items-name=item.name
+										span.card__charact-items-border
+										span.card__charact-items-value=item.value
+					.card__row
+						if mods === "rent"
+							.card__price 
+								span.card__price-num=data.rent.price.num
+								span.card__price-currency=data.rent.price.currency
+								span.card__price-time=data.rent.price.time
+							.card__add 
+								.card__counter
+									+btn(data.rent.counter.btnMinus).card__counter-btn.card__counter-btn--minus
+									+custom-input(data.rent.counter.input).card__counter-input
+									+btn(data.rent.counter.btnPlus).card__counter-btn.card__counter-btn--plus
+								+btn(data.rent.btn).btn--drk-orange.card__btn
+						if mods === "sale"
+							.card__price 
+								span.card__price-num=data.sale.price.num
+								span.card__price-currency=data.sale.price.currency
+								span.card__price-unit=data.sale.price.unit
+								sup.card__price-sup=data.sale.price.sup
+							.card__add 
+								.card__counter
+									+btn(data.sale.counter.btnMinus).card__counter-btn.card__counter-btn--minus
+									+custom-input(data.sale.counter.input).card__counter-input
+									+btn(data.sale.counter.btnPlus).card__counter-btn.card__counter-btn--plus
+								+btn(data.sale.btn).btn--apple.card__btn
