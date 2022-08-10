@@ -3636,6 +3636,13 @@ button,
   display: none;
 }
 
+.burger.is-active {
+  overflow-y: auto;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
 .burger__list {
   margin: 0;
   padding: 0;
@@ -15622,7 +15629,7 @@ button,
     top: 120px;
     left: 0;
     width: 50vw;
-    height: 100%;
+    height: calc(100vh - 120px);
     background-color: #ffffff;
     z-index: 10;
     padding: 20px 15px;
@@ -15638,13 +15645,6 @@ button,
     -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  }
-
-  .burger.is-active {
-    overflow-y: auto;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
   }
 
   .hero {
@@ -17434,6 +17434,12 @@ button,
     height: 36px;
   }
 
+  .burger {
+    top: 100px;
+    height: calc(100vh - 100px);
+    width: 75vw;
+  }
+
   .hero {
     height: auto;
   }
@@ -19115,6 +19121,12 @@ button,
 }
 
 @media (max-width: 639px) {
+  .burger {
+    width: 100%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
   .career__link-btn {
     max-width: unset;
   }
