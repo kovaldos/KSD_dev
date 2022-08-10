@@ -7,7 +7,7 @@
 		top: 120px;
 		left: 0;
 		width: 50vw;
-		height: 100%;
+		height: calc(100vh - 120px);
 		background-color: $color-default-white;
 		z-index: 10;
 		padding: 20px 15px;
@@ -16,10 +16,19 @@
 		border-bottom-right-radius: 7px;
 		transform: translateX(-120%);
 		transition: transform $trans-default;
-		&.is-active {
-			overflow-y: auto;
-			transform: translateX(0);
-		}
+	}
+	@include vp-767 {
+		top: 100px;
+		height: calc(100vh - 100px);
+		width: 75vw;
+	}
+	@include vp-639 {
+		width: 100%;
+		box-shadow: none;
+	}
+	&.is-active {
+		overflow-y: auto;
+		transform: translateX(0);
 	}
 	&__list {
 		margin: 0;
