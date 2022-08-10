@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
+import {initSubmenu} from './modules/init-submenu';
 import {initBurgerMenu} from './modules/init-burger-menu';
 import {initHeroSlider} from './modules/init-hero-slider';
 import {initAccordions} from './modules/init-accordion';
@@ -48,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initSubmenu();
   initBurgerMenu();
   initHeroSlider();
   initHeroSectionSlider();
