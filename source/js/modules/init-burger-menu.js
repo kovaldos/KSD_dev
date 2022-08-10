@@ -5,17 +5,20 @@ const initBurgerMenu = () => {
   if (burgerBtns.length) {
     const menuBody = document.querySelector('[data-burger-body]');
     burgerBtns.forEach((burgerBtn) => {
-      burgerBtn.addEventListener('click', function () {
+      burgerBtn.addEventListener('click', () => {
         document.body.classList.toggle('scroll-lock');
         burgerBtn.classList.toggle('is-active');
         menuBody.classList.toggle('is-active');
       });
       menuBody.addEventListener('click', (e) => {
-        if (e.target.dataset.target && menuBody.classList.contains('is-active')) {
-          document.body.classList.remove('scroll-lock');
-          burgerBtn.classList.remove('is-active');
-          menuBody.classList.remove('is-active');
-        }
+        const burgerLinks = menuBody.querySelectorAll('.burger__link');
+        burgerLinks.forEach((burgerLink) => {
+          if (e.target === burgerLink && menuBody.classList.contains('is-active')) {
+            document.body.classList.remove('scroll-lock');
+            burgerBtn.classList.remove('is-active');
+            menuBody.classList.remove('is-active');
+          }
+        });
       });
     });
   }
