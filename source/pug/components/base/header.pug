@@ -77,7 +77,7 @@ mixin header(headerMods, currentUrl)
         ],
         subLinks: [
           {
-            href: "proekty.html",
+            href: "recykling.html",
             text: "Рециклинг",
           },
           {
@@ -166,38 +166,77 @@ mixin header(headerMods, currentUrl)
       burger: {
         items: [
           {
-            href: "about-company.html",
+            href: "o-nas.html",
             text: "О компании",
           },
           {
-            href: "#",
+            href: "snos-zdaniy.html",
             text: "Демонтаж",
-            subitems: [
-              "Проекты",
-              "Каталог спецтехники",
-              "Аренда техники",
+            subItems: [
+              {
+                href: "katalog-proektov.html",
+                text: "Проекты",
+              }, 
+              {
+                href: "katalog-techniki.html",
+                text: "Каталог спецтехники",
+              },
+              {
+                href: "arenda-speztechniki.html",
+                text: "Аренда техники",
+              },
             ],
           },
           {
-            href: "#",
+            href: "stroitelstvo-dorog.html",
             text: "Строительство",
-            subitems: [
-              "Благоустройство",
-              "Строительство дорог",
-              "Разработка котлованов",
-              "Проекты",
-              "Каталог спецтехники",
-              "Аренда спецтехники",
+            subItems: [
+              {
+                href: "blagoustroystvo.html",
+                text: "Благоустройство",
+              },
+              {
+                href: "stroitelstvo-dorog.html",
+                text: "Строительство дорог",
+              },
+              {
+                href: "kotlovany.html",
+                text: "Разработка котлованов",
+              },
+              {
+                href: "katalog-proektov",
+                text: "Проекты",
+              },
+              {
+                href: "katalog-techniki.html",
+                text: "Каталог спецтехники",
+              },
+              {
+                href: "arenda-speztechniki.html",
+                text: "Аренда спецтехники",
+              },
             ],
           },
           {
-            href: "#",
+            href: "recykling.html",
             text: "Рециклинг",
-            subitems: [
-              "Утилизация и переработка",
-              "Продажа материалов",
-              "Каталог спецтехники",
-              "Аренда спецтехники",
+            subItems: [
+              {
+                href: "#",
+                text: "Утилизация и переработка",
+              },
+              {
+                href: "prodazha-materialov.html",
+                text: "Продажа материалов",
+              },
+              {
+                href: "katalog-techniki.html",
+                text: "Каталог спецтехники", 
+              },
+              {
+                href: "arenda-speztechniki.html",
+                text: "Аренда спецтехники",
+              },
             ],
           },
           {
@@ -205,7 +244,7 @@ mixin header(headerMods, currentUrl)
             text: "Блог",
           },
           {
-            href: "#",
+            href: "kontakty.html",
             text: "Контакты",
           },
         ],
@@ -234,7 +273,7 @@ mixin header(headerMods, currentUrl)
           a.header__logo(href="index.html" aria-label="Переход на главную")
             +icon("logo", 118, 32)
         nav.main-nav
-          .main-nav__wrapper(data-burger-body)
+          .main-nav__wrapper
             if headerMods === "header--main"
               ul.main-nav__list
                 each link in data.main.headerLinks
@@ -304,6 +343,22 @@ mixin header(headerMods, currentUrl)
                 each item in data.road.subLinks 
                   li.main-nav__subitem
                     a.link.main-nav__link(href=item.href)=item.text
+          .burger(data-burger-body)
+            ul.burger__list(data-accordion="parent" data-single)
+              each item in data.burger.items 
+                if item.subItems
+                  li.burger__list-item(data-accordion="element")
+                    span.burger__subList-row
+                      a.burger__link(href!=item.href)=item.text
+                      button.btn.btn--reset.burger__ac-btn(type="button" data-accordion="button")
+                        +icon("icon-chevron-down", 15, 15)
+                    ul.burger__subList(data-accordion="content")
+                      each subItem in item.subItems
+                        li.burger__subList-item
+                          a.burger__link.burger__subList-link(href=subItem.href)=subItem.text 
+                else
+                  li.burger__list-item
+                    a.burger__link(href!=item.href)=item.text
 
         .header__contacts 
           a.link.header__contacts-link(href=data.headerContacts.href)
