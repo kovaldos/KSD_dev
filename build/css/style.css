@@ -12026,34 +12026,44 @@ button,
   color: #9ca1bb;
 }
 
-.rent-card {
+.card {
   padding: 20px 0 40px;
 }
 
-.rent-card__wrapper {
+.card__wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.rent-card__wrapper-col {
+.card__wrapper-col {
   width: 100%;
 }
 
-.rent-card__wrapper-col--01 {
+.card__wrapper-col--01 {
   max-width: 370px;
   margin: 0 131px 0 0;
 }
 
-.rent-card__title {
+.card__wrapper-col--02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.card__title {
   font-weight: 700;
   font-size: 24px;
   line-height: 140%;
   color: #2D3142;
 }
 
-.rent-card__subtitle {
+.card__subtitle {
   display: block;
   margin: 15px 0 0;
   font-weight: 400;
@@ -12062,15 +12072,15 @@ button,
   color: #2D3142;
 }
 
-.rent-card__equip {
+.card__equip {
   padding: 30px 0;
 }
 
-.rent-card__equip-title {
+.card__equip-title {
   margin: 0 0 15px;
 }
 
-.rent-card__equip-toggles {
+.card__equip-toggles {
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12083,7 +12093,7 @@ button,
   justify-content: space-between;
 }
 
-.rent-card__equip-toggles-item {
+.card__equip-toggles-item {
   width: 100%;
   height: 50px;
   position: relative;
@@ -12095,11 +12105,11 @@ button,
   align-items: center;
 }
 
-.rent-card__equip-toggles-item:not(:last-of-type) {
+.card__equip-toggles-item:not(:last-of-type) {
   margin: 0 20px 0 0;
 }
 
-.rent-card__equip-toggles-item img {
+.card__equip-toggles-item img {
   position: absolute;
   top: -10px;
   left: 0;
@@ -12110,7 +12120,7 @@ button,
   z-index: 1;
 }
 
-.rent-card__equip-toggle {
+.card__equip-toggle {
   width: 100%;
   height: 100%;
   -webkit-box-flex: 1;
@@ -12119,20 +12129,20 @@ button,
   padding: 0;
 }
 
-.rent-card__equip-toggle:not(:last-of-type) {
+.card__equip-toggle:not(:last-of-type) {
   margin: 0 20px 0 0;
 }
 
-.rent-card__equip-toggle label {
+.card__equip-toggle label {
   padding-left: 0;
   width: 100%;
 }
 
-.rent-card__equip-toggle .custom-toggle__icon {
+.card__equip-toggle .custom-toggle__icon {
   display: none;
 }
 
-.rent-card__equip-toggle .custom-toggle__label {
+.card__equip-toggle .custom-toggle__label {
   display: block;
   padding: 15px 15px 15px 70px;
   width: 100%;
@@ -12148,15 +12158,15 @@ button,
   transition: border-color 0.3s ease;
 }
 
-.rent-card__equip-toggle input:checked ~ .custom-toggle__label {
+.card__equip-toggle input:checked ~ .custom-toggle__label {
   border-color: #116ACC;
 }
 
-.rent-card__charact {
+.card__charact {
   padding: 10px 0 30px;
 }
 
-.rent-card__charact-head {
+.card__charact-head {
   margin: 0 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12169,18 +12179,18 @@ button,
   align-items: center;
 }
 
-.rent-card__charact-link {
+.card__charact-link {
   color: #FF8700;
   font-weight: 600;
   font-size: 14px;
   line-height: 160%;
 }
 
-.rent-card__charact-link::after {
+.card__charact-link::after {
   background-color: #FF8700;
 }
 
-.rent-card__charact-items {
+.card__charact-items {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -12192,7 +12202,7 @@ button,
   grid-row-gap: 25px;
 }
 
-.rent-card__charact-items-item {
+.card__charact-items-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12202,7 +12212,7 @@ button,
   color: #636B87;
 }
 
-.rent-card__charact-items-border {
+.card__charact-items-border {
   display: block;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -12211,67 +12221,161 @@ button,
   margin: 0 10px 6px;
 }
 
-.rent-card__charact-items-value {
+.card__charact-items-value {
   color: #2D3142;
 }
 
-.rent-card__price {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 160%;
-  color: #2D3142;
-  padding: 20px 0;
-}
-
-.rent-card__price-time {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 160%;
-  color: #9ca1bb;
-}
-
-.rent-card__slider {
+.card__slider {
   height: 370px;
 }
 
-.rent-card__slider--thumb {
+.card__slider--thumb {
   margin: 15px 0 0;
   height: 70px;
 }
 
-.rent-card__slider--thumb .rent-card__slider-item {
+.card__slider--thumb .card__slider-item {
   border: 1px solid #EEEEFB;
 }
 
-.rent-card__slider-item {
+.card__slider-item {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.rent-card__slider-item img {
+.card__slider-item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-.rent-card-description__title {
+.card__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0 0;
+}
+
+.card__price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #2D3142;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0 20px 0 0;
+}
+
+.card__price-time {
+  font-weight: 400;
+  font-size: 18px;
+  color: #9ca1bb;
+}
+
+.card__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__counter {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  height: 45px;
+  position: relative;
+}
+
+.card__counter-btn {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 45px;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #EEEEFB;
+  font-size: 36px;
+  line-height: 100%;
+  color: #2D3142;
+  padding: 0;
+}
+
+.card__counter-input {
+  padding: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0 -10px;
+}
+
+.card__counter-input label input {
+  border: 0;
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #2D3142;
+  background-color: rgba(238, 238, 251, 0.5);
+  text-align: center;
+}
+
+.card__counter-input label input:hover,
+.card__counter-input label input:focus {
+  border: 0;
+}
+
+.card--sale .card__charact {
+  padding: 50px 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.card--sale .card__row {
+  margin: 0;
+}
+
+.card--sale .card__price-unit {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #9ca1bb;
+}
+
+.card--sale .card__price-sup {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #9ca1bb;
+}
+
+.card-description__title {
   font-weight: 700;
   line-height: 155%;
   margin: 0 0 25px;
 }
 
-.rent-card-description__text {
+.card-description__text {
   color: #636B87;
   line-height: 220%;
 }
 
-.rent-card-description__text:not(:last-of-type) {
+.card-description__text:not(:last-of-type) {
   margin: 0 0 30px;
 }
 
-.rent-card-description-items {
+.card-description-items {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -12283,7 +12387,7 @@ button,
   grid-row-gap: 25px;
 }
 
-.rent-card-description-items-item {
+.card-description-items-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12293,7 +12397,7 @@ button,
   color: #636B87;
 }
 
-.rent-card-description-items-border {
+.card-description-items-border {
   display: block;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -12302,8 +12406,13 @@ button,
   margin: 0 10px 6px;
 }
 
-.rent-card-description-items-value {
+.card-description-items-value {
   color: #2D3142;
+}
+
+.card-description--sale .card-description__text {
+  width: 100%;
+  max-width: 74%;
 }
 
 .rent-card-characteristics__title {
@@ -12347,11 +12456,11 @@ button,
   color: #2D3142;
 }
 
-.rent-card-similar {
+.card-similar {
   margin: 0 0 20px;
 }
 
-.rent-card-similar__heading {
+.card-similar__heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12364,32 +12473,38 @@ button,
   margin: 0 0 30px;
 }
 
-.rent-card-similar__link {
+.card-similar__link {
   font-weight: 600;
   font-size: 18px;
   line-height: 160%;
   color: #FF8700;
 }
 
-.rent-card-similar__link::after {
+.card-similar__link::after {
   background-color: #FF8700;
 }
 
-.rent-card-similar__card {
+.card-similar__card {
+  display: block;
   padding: 20px 20px 30px;
   background-color: #ffffff;
   border: 1px solid #EEEEFB;
-  border-radius: 7px;
+  border-radius: 10px;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  -o-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
-.rent-card-similar__card-pic {
+.card-similar__card-pic {
   width: 100%;
   height: 160px;
   position: relative;
   margin: 0 0 15px;
 }
 
-.rent-card-similar__card-pic img {
+.card-similar__card-pic img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -12399,7 +12514,7 @@ button,
   z-index: 1;
 }
 
-.rent-card-similar__card-title {
+.card-similar__card-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 122%;
@@ -12408,7 +12523,7 @@ button,
   color: #FF8700;
 }
 
-.rent-card-similar__card-model {
+.card-similar__card-model {
   display: inline-block;
   font-weight: 600;
   font-size: 16px;
@@ -12417,14 +12532,14 @@ button,
   margin: 0 0 25px;
 }
 
-.rent-card-similar__card-price {
+.card-similar__card-price {
   padding: 0 0 10px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 }
 
-.rent-card-similar__card-add {
+.card-similar__card-add {
   position: absolute;
   width: 56px;
   height: 44px;
@@ -12443,11 +12558,11 @@ button,
   transform: translateX(100%);
 }
 
-.rent-card-similar__card-add-text {
+.card-similar__card-add-text {
   display: none;
 }
 
-.rent-card-similar__card-add-icon {
+.card-similar__card-add-icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -12461,26 +12576,26 @@ button,
   justify-content: center;
 }
 
-.rent-card-similar__slider-nav {
+.card-similar__slider-nav {
   position: relative;
 }
 
-.rent-card-similar__slider-btns {
+.card-similar__slider-btns {
   position: absolute;
   width: 75px;
   left: 100px;
   bottom: 20px;
 }
 
-.rent-card-similar__slider-btn {
+.card-similar__slider-btn {
   color: #2D3142;
 }
 
-.rent-card-similar__slider-btn::after {
+.card-similar__slider-btn::after {
   display: none;
 }
 
-.rent-card-similar__slider-btn svg {
+.card-similar__slider-btn svg {
   color: #2D3142;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
@@ -12489,23 +12604,23 @@ button,
   height: 20px;
 }
 
-.rent-card-similar__slider-btn.swiper-button-disabled {
+.card-similar__slider-btn.swiper-button-disabled {
   opacity: 1;
 }
 
-.rent-card-similar__slider-btn.swiper-button-disabled svg {
+.card-similar__slider-btn.swiper-button-disabled svg {
   color: #D2D7E8;
 }
 
-.rent-card-similar__slider-btn--next {
+.card-similar__slider-btn--next {
   right: 0;
 }
 
-.rent-card-similar__slider-btn--prev {
+.card-similar__slider-btn--prev {
   left: 0;
 }
 
-.rent-card-similar .swiper-pagination-fraction {
+.card-similar .swiper-pagination-fraction {
   right: auto;
   bottom: 0;
   width: 70px;
@@ -12517,13 +12632,17 @@ button,
   color: #2D3142;
 }
 
-.rent-card-similar .swiper-pagination-current {
+.card-similar .swiper-pagination-current {
   display: inline-block;
   width: 33%;
 }
 
-.rent-card-similar .swiper-pagination-total {
+.card-similar .swiper-pagination-total {
   font-size: 16px;
+}
+
+.card-similar--sale .card-similar__card-title {
+  color: #74C447;
 }
 
 .vehicle-card__header {
@@ -14998,11 +15117,10 @@ button,
     transform: translateX(0);
   }
 
-  .rent-card-similar__card:hover .rent-catalog__card-add,
-  .rent-card-similar__card:focus-visible .rent-card-similar__card .rent-catalog__card-add {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+  .card-similar__card:hover,
+  .card-similar__card:focus-visible {
+    -webkit-box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
+    box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02), 0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175), 0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
   }
 
   .vehicle-card__btn-next:hover,
@@ -15245,17 +15363,17 @@ button,
     grid-column-gap: 20px;
   }
 
-  .rent-card__wrapper-col {
+  .card__wrapper-col {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
 
-  .rent-card__wrapper-col--01 {
+  .card__wrapper-col--01 {
     margin: 0 50px 0 0;
   }
 
-  .rent-card__equip-toggle .custom-toggle__label {
+  .card__equip-toggle .custom-toggle__label {
     padding: 10px 10px 10px 50px;
     line-height: 200%;
   }
@@ -16673,7 +16791,7 @@ button,
     display: none;
   }
 
-  .rent-card__wrapper {
+  .card__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -16683,24 +16801,28 @@ button,
     align-items: center;
   }
 
-  .rent-card__wrapper-col {
+  .card__wrapper-col {
     max-width: 768px;
   }
 
-  .rent-card__wrapper-col--01 {
+  .card__wrapper-col--01 {
     margin: 0 0 20px;
   }
 
-  .rent-card-similar__link {
+  .card-description--sale .card-description__text {
+    max-width: 90%;
+  }
+
+  .card-similar__link {
     display: none;
   }
 
-  .rent-card-similar__card {
+  .card-similar__card {
     border: 0;
     padding: 0;
   }
 
-  .rent-card-similar__card-pic::after {
+  .card-similar__card-pic::after {
     content: "";
     position: absolute;
     top: 0;
@@ -16710,20 +16832,20 @@ button,
     background-color: rgba(238, 238, 251, 0.5);
   }
 
-  .rent-card-similar__card-title {
+  .card-similar__card-title {
     display: none;
   }
 
-  .rent-card-similar__slider-nav {
+  .card-similar__slider-nav {
     margin: 50px 0 0 0;
   }
 
-  .rent-card-similar .swiper-pagination-fraction {
+  .card-similar .swiper-pagination-fraction {
     font-size: 20px;
     text-align: left;
   }
 
-  .rent-card-similar .swiper-pagination-total {
+  .card-similar .swiper-pagination-total {
     font-size: 14px;
   }
 
@@ -18450,7 +18572,7 @@ button,
     display: none;
   }
 
-  .rent-card__wrapper-col--02 {
+  .card__wrapper-col--02 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -18460,22 +18582,22 @@ button,
     flex-direction: column;
   }
 
-  .rent-card__title {
+  .card__title {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
   }
 
-  .rent-card__subtitle {
+  .card__subtitle {
     font-size: 14px;
     line-height: 17px;
   }
 
-  .rent-card__equip-title {
+  .card__equip-title {
     margin: 0 0 30px;
   }
 
-  .rent-card__equip-toggles {
+  .card__equip-toggles {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -18486,30 +18608,27 @@ button,
     align-items: flex-start;
   }
 
-  .rent-card__equip-toggles-item {
+  .card__equip-toggles-item {
     max-width: 50%;
   }
 
-  .rent-card__equip-toggles-item:not(:last-of-type) {
+  .card__equip-toggles-item:not(:last-of-type) {
     margin: 0 0 30px;
   }
 
-  .rent-card__price {
-    -webkit-box-ordinal-group: 0;
-    -ms-flex-order: -1;
-    order: -1;
-    padding: 0 0 10px;
+  .card-description--sale .card-description__text {
+    max-width: 100%;
   }
 
   .rent-card-characteristics {
     display: none;
   }
 
-  .rent-card-similar__card-model {
+  .card-similar__card-model {
     margin: 0 0 15px;
   }
 
-  .rent-card-similar__card-price-time {
+  .card-similar__card-price-time {
     font-weight: 400;
     font-size: 18px;
     line-height: 160%;
@@ -18953,18 +19072,44 @@ button,
     color: #2D3142;
   }
 
-  .rent-card__equip-toggles-item {
+  .card__wrapper-col--02 {
+    position: relative;
+    padding: 70px 0 0;
+  }
+
+  .card__equip-toggles-item {
     max-width: 350px;
   }
 
-  .rent-card__charact {
+  .card__charact {
     padding: 10px 0 0 0;
   }
 
-  .rent-card__charact-items {
+  .card__charact-items {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     grid-row-gap: 15px;
+  }
+
+  .card__row {
+    margin: 30px 0 0;
+  }
+
+  .card__price {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .card__add {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .card__counter {
+    margin: 0 0 0 8px;
   }
 
   .vehicle-card__acs {
@@ -19096,11 +19241,11 @@ button,
     color: #2D3142;
   }
 
-  .rent-card__slider {
+  .card__slider {
     height: 290px;
   }
 
-  .rent-card__slider--thumb {
+  .card__slider--thumb {
     height: 70px;
   }
 

@@ -1,0 +1,88 @@
+mixin card-similar(mods)
+	-
+		const data = {
+			rent: {
+				title: "Похожая техника",
+				link: {
+					href: "arenda-katalog.html",
+					text: "Посмотреть все",
+				},
+				items: [
+					{
+						title: "Техника",
+						img: "rent-technic-img-1",
+						alt: "rent-technic-img-1",
+						name: "Экскаватор-погрузчик Volvo BL71B",
+						price: {
+							num: "35 000",
+							currency: " ₽ ",
+							time: "/ смена",
+						},
+					},
+				],
+			},
+			sale: {
+				title: "Другие материалы",
+				link: {
+					href: "prodazha-katalog.html",
+					text: "Посмотреть все",
+				},
+				items: [
+					{
+						title: "Щебень",
+						img: "sale-card-img-1",
+						alt: "sale-card-img-1",
+						name: "Вторичный бетонный щебень, фракция 5-20",
+						price: {
+							num: "600",
+							currency: " ₽ ",
+							unit: "/ м",
+							sup: "3",
+						},
+					},
+				],
+			},
+		}
+
+	section.section.card-similar(class="card-similar--" + mods)
+		.container
+			.card-similar__heading
+				if mods === "rent"
+					h2.title.title--h3.card-similar__title=data.rent.title
+					a.link.card-similar__link(href=data.rent.link.href)=data.rent.link.text 
+			.swiper.card-similar__list.card-similar__slider
+				.swiper-wrapper
+					if mods === "rent"
+						- for (let i = 0; i < 4; i++)
+							each item in data.rent.items
+								.swiper-slide
+									a.card-similar__card(href="arenda-kartochka.html")
+										h4.title.card-similar__card-title=item.title
+										.card-similar__card-pic
+											+picture("content", item.img, "png", item.alt)
+										span.card-similar__card-model=item.name
+										.card-similar__card-price
+											span=item.price.num
+											span=item.price.currency
+											span.card-similar__card-price-time=item.price.time
+					if mods === "sale"
+						- for (let i = 0; i < 4; i++)
+							each item in data.sale.items
+								.swiper-slide
+									a.card-similar__card(href="prodazha-kartochka.html")
+										h4.title.card-similar__card-title=item.title
+										.card-similar__card-pic
+											+img("slides", item.img, "jpg", item.alt)
+										span.card-similar__card-model=item.name
+										.card-similar__card-price
+											span.card__price-num=item.price.num
+											span.card__price-currency=item.price.currency
+											span.card__price-unit=item.price.unit
+											sup.card__price-sup=item.price.sup						
+				.card-similar__slider-nav
+					.swiper-pagination.card-similar__slider-pag
+					.card-similar__slider-btns
+						.swiper-button-next.card-similar__slider-btn.card-similar__slider-btn--next
+							+icon("icon-chevron-right-black", 30, 30)
+						.swiper-button-prev.card-similar__slider-btn.card-similar__slider-btn--prev
+							+icon("icon-chevron-left-black", 30, 30)
