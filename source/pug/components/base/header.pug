@@ -9,12 +9,12 @@ mixin header(headerMods, currentUrl)
         links: [
           {
             itemClassMod: "header__top-list-item--01",
-            href: "vacancies.html",
+            href: "vakansii.html",
             text: "Вакансии",
           },
           {
             itemClassMod: "header__top-list-item--02",
-            href: "#",
+            href: "postavshikam.html",
             text: "Поставщикам",
           },
           {
@@ -26,28 +26,138 @@ mixin header(headerMods, currentUrl)
           },
         ],
       },
-      headerLinks: [
-        {
-          href: "about-us.html",
-          text: "О нас",
-        },
-        {
-          href: "projects.html",
-          text: "Проекты",
-        },
-        {
-          href: "technic.html",
-          text: "Техника",
-        },
-        {
-          href: "service.html",
-          text: "Услуги",
-        },
-        {
-          href: "contacts.html",
-          text: "Контакты",
-        },
-      ],
+      main: {
+        headerLinks: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "katalog-proektov.html",
+            text: "Все проекты",
+          },
+        ],
+        subLinks: [
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+          },
+          {
+            href: "recykling.html",
+            text: "Рециклинг",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
+      },
+      demolition: {
+        headerLinks: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+          },
+        ],
+        subLinks: [
+          {
+            href: "proekty.html",
+            text: "Рециклинг",
+          },
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
+      },
+      green: {
+        headerLinks: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+          },
+          {
+            href: "recykling.html",
+            text: "Рециклинг",
+          },
+        ],
+        subLinks: [
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
+      },
+      road: {
+        headerLinks: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+          },
+          {
+            href: "recykling.html",
+            text: "Рециклинг",
+          },
+        ],
+        subLinks: [
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
+        //- ac: {
+        //-   btn: "Строительство"
+        //-   list: [
+        //-     {
+        //-       href: ""
+        //-     }
+        //-   ]
+        //- }
+      },
       headerContacts: {
         href: "tel:74994306487",
         text: "7 (499) 430-64-87",
@@ -98,7 +208,7 @@ mixin header(headerMods, currentUrl)
             href: "#",
             text: "Контакты",
           },
-        ]
+        ],
       },
     } 
 
@@ -125,14 +235,75 @@ mixin header(headerMods, currentUrl)
             +icon("logo", 118, 32)
         nav.main-nav
           .main-nav__wrapper(data-burger-body)
-            ul.main-nav__list
-              each link in data.headerLinks
-                - const activeState = currentUrl === link.href
-                li.main-nav__item
-                  if(activeState)
-                    span.link.main-nav__link.is-active=link.text
-                  else
-                    a.link.main-nav__link(href=link.href)=link.text
+            if headerMods === "header--main"
+              ul.main-nav__list
+                each link in data.main.headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.link.main-nav__link.is-active=link.text
+                    else
+                      a.link.main-nav__link(href=link.href)=link.text
+              button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+                +icon("icon-dots", 20, 4)
+              ul.main-nav__sublist
+                each item in data.main.subLinks 
+                  li.main-nav__subitem
+                    if(activeState)
+                      span.link.main-nav__link.is-active=item.text
+                    else
+                      a.link.main-nav__link(href=item.href)=item.text
+            if headerMods === "header--demolition"
+              ul.main-nav__list
+                each link in data.demolition.headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.link.main-nav__link.is-active=link.text
+                    else
+                      a.link.main-nav__link(href=link.href)=link.text
+              button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+                +icon("icon-dots", 20, 4)
+              ul.main-nav__sublist
+                each item in data.demolition.subLinks 
+                  li.main-nav__subitem
+                    if(activeState)
+                      span.link.main-nav__link.is-active=item.text
+                    else
+                      a.link.main-nav__link(href=item.href)=item.text
+            if headerMods === "header--recycling" || headerMods === "header--sale"
+              ul.main-nav__list
+                each link in data.green.headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.link.main-nav__link.is-active=link.text
+                    else
+                      a.link.main-nav__link(href=link.href)=link.text
+              button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+                +icon("icon-dots", 20, 4)
+              ul.main-nav__sublist
+                each item in data.green.subLinks 
+                  li.main-nav__subitem
+                    if(activeState)
+                      span.link.main-nav__link.is-active=item.text
+                    else
+                      a.link.main-nav__link(href=item.href)=item.text
+            if headerMods === "header--road" || headerMods === "header--improvement" || headerMods === "header--pits"
+              ul.main-nav__list
+                each link in data.road.headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.link.main-nav__link.is-active=link.text
+                    else
+                      a.link.main-nav__link(href=link.href)=link.text
+              button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+                +icon("icon-dots", 20, 4)
+              ul.main-nav__sublist
+                each item in data.road.subLinks 
+                  li.main-nav__subitem
+                    a.link.main-nav__link(href=item.href)=item.text
 
         .header__contacts 
           a.link.header__contacts-link(href=data.headerContacts.href)
