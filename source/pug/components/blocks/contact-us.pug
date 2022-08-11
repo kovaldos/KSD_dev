@@ -6,8 +6,8 @@ mixin contact-us(mods)
 				name: {
 					inputPlaceholder: "Укажите имя...",
 					inputError: "Введите Ваше имя",
-					inputId: "first-name",
-					inputName: "first-name",
+					inputId: "firstname",
+					inputName: "firstname",
 					inputMinLength: 2,
 					inputMaxLength: 20,
 				},
@@ -87,7 +87,7 @@ mixin contact-us(mods)
 								+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
 								if mods === "main" || mods === "about-us" 
 									+btn(data.form.btn).btn--orange.contact-us__form-submit
-								if mods === "improvement" || mods === "pits"
+								if mods === "improvement" || mods === "pits" || mods === "road"
 									+btn(data.form.btn).btn--cobalt.contact-us__form-submit
 								if mods === "recycling"
 									+btn(data.form.btn).btn--apple.contact-us__form-submit
@@ -113,7 +113,7 @@ mixin contact-us(mods)
 						h3.title.title--h5.contact-us__modal-call-title=data.modalCall.title
 						if mods === "main" || mods === "about-us"
 							+btn(data.modalCall.btn).btn--drk-orange.contact-us__modal-call-btn(data-open-modal="contact-us")
-						if mods === "improvement" || mods === "pits"
+						if mods === "improvement" || mods === "pits" || mods === "road"
 							+btn(data.modalCall.btn).btn--cobalt.contact-us__modal-call-btn(data-open-modal="contact-us")
 						if mods === "recycling"
 							+btn(data.modalCall.btn).btn--apple.contact-us__modal-call-btn(data-open-modal="contact-us")

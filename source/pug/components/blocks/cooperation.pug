@@ -83,13 +83,17 @@ mixin cooperation(mods)
 			else 
 				h2.title.title--h3.cooperation__title=data.suppliers.title
 			p.text.text--sm.cooperation__text=data.text
-			.cooperation__form(data-validate data-callback="searchVacanciesForm")
-				form.cooperation__form-form(action="#")
-					if !mods
+			if !mods
+				.cooperation__form(data-validate data-callback="searchVacanciesForm")
+					form.cooperation__form-form(action="#")
 						+custom-input(data.form.input)(data-validate-type="text").cooperation__form-input
 						+custom-select(data.form.select)(data-select).custom-select.cooperation__form-select
-					else 
+						button.btn.btn--drk-orange.cooperation__form-submit(type="submit")
+							+icon(data.form.btn.icon, 26, 26)
+			else
+				.cooperation__form(data-validate data-callback="cooperationForm")
+					form.cooperation__form-form(action="#")
 						+custom-input(data.suppliers.form.input)(data-validate-type="text").cooperation__form-input
 						+custom-select(data.suppliers.form.select)(data-select).custom-select.cooperation__form-select
-					button.btn.btn--drk-orange.cooperation__form-submit(type="submit")
-						+icon(data.form.btn.icon, 26, 26)
+						button.btn.btn--drk-orange.cooperation__form-submit(type="submit")
+							+icon(data.form.btn.icon, 26, 26)
