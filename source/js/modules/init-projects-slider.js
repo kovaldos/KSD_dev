@@ -23,13 +23,16 @@ const initProjectsSlider = () => {
         type: 'fraction',
       },
     });
-    const nextBtn = projectSlider.el.closest('.projects__cols').querySelector('.next-title__subtitle');
-    nextBtn.textContent = projectSlider.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
+    const nextBtn = projectSlider.el.closest('.projects__cols').querySelector('.projects__slider-item-next');
+    const nextBtnNextProject = nextBtn.querySelector('.next-title__subtitle');
+    nextBtnNextProject.textContent = projectSlider.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
     projectSlider.on('slideChangeTransitionEnd', () => {
       if (projectSlider.activeIndex + 1 === projectSlider.slides.length) {
-        nextBtn.textContent = '';
+        nextBtnNextProject.textContent = '';
+        nextBtn.href = '#';
       } else {
-        nextBtn.textContent = projectSlider.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
+        nextBtnNextProject.textContent = projectSlider.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
+        nextBtn.href = projectSlider.el.querySelector('.swiper-slide-next .die-link-btn').href;
       }
     });
   }

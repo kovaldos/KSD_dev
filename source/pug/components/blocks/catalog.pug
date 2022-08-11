@@ -3,8 +3,9 @@ mixin catalog(mods)
 		const data = {
 			title: "Каталог",
 			select: {
+				class: "catalog__nav-select",
 				placeholder: "Сначала популярные",
-				name: "rent-catalog-sort-select",
+				name: "optsiya-filtra",
 				simplebar: "data-simplebar",
 				optionsList: [
 					{
@@ -36,25 +37,6 @@ mixin catalog(mods)
 						num: "12 ",
 						text: "материалов",
 					},
-					//- select: {
-					//- 	placeholder: "Сначала популярные",
-					//- 	name: "rent-catalog-sort-select",
-					//- 	simplebar: "data-simplebar",
-					//- 	optionsList: [
-					//- 		{
-					//- 			value: "option-01",
-					//- 			text: "Сначала популярные",
-					//- 		},
-					//- 		{
-					//- 			value: "option-02",
-					//- 			text: "Сначала подешевле",
-					//- 		},
-					//- 		{
-					//- 			value: "option-03",
-					//- 			text: "Сначала подороже",
-					//- 		},
-					//- 	],
-					//- },
 				},
 				filterTitle: "Фильтры",
 				btn: {
@@ -84,7 +66,7 @@ mixin catalog(mods)
 					if mods === "sale"
 						span.catalog__quantity-num=data.sale.navRow.quantity.num
 						span.catalog__quantity-text=data.sale.navRow.quantity.text
-				+custom-select(data.select).catalog__nav-select(data-select)
+				+custom-select(data.select)
 				.catalog__nav-view-btns 
 					button.btn.btn--reset.catalog__nav-btn.catalog__nav-btn--stripes.is-active(type="button")
 						span

@@ -1,28 +1,32 @@
 mixin custom-select(options = {})
-  - const selectLabel = options.label ? options.label : false
-  - const selectError = options.error ? options.error : false
-  - const selectName = options.name ? options.name : false
-  - const selectPlaceholder = options.placeholder ? options.placeholder : false
-  - const buttonAriaLabel = options.buttonAriaLabel ? options.buttonAriaLabel : "Выберите одну из опций"
-  -const simpleBar = options.simplebar ? options.simplebar : false
+  - var selectLabel = options.label ? options.label : false
+  - var selectError = options.error ? options.error : false
+  - var selectPlaceholder = options.placeholder ? options.placeholder : false
+  - var selectClass = options.class ? `custom-select ${options.class}` : "custom-select"
+  - var selectName = options.name ? options.name : false
+  - var selectMultiple = options.multiple ? "true" : false
+  - var selectId = options.id ? options.id : false
+  - var selectInsert = options.insert ? "true" : false
+  - var ariaLabel = options.ariaLabel ? options.ariaLabel : "Выберите одну из опций"
+  - var simpleBar = options.simplebar ? options.simplebar : false
 
-  .custom-select&attributes(attributes)
+  div(class=selectClass, data-select="", data-name=selectName, data-multiple=selectMultiple, data-id=selectId, data-insert=selectInsert)
     if selectLabel
-      span.custom-select__label=selectLabel
+      span.custom-select__label=options.label
     if selectError
-      span.custom-select__error=selectError
+      span.custom-select__error=options.error
     if selectPlaceholder
-      span.custom-select__placeholder=selectPlaceholder
-    button.custom-select__button(type="button", aria-label=buttonAriaLabel)
+      span.custom-select__placeholder=options.placeholder
+    button.custom-select__button(type="button", aria-label=ariaLabel)
       span.custom-select__text
       span.custom-select__icon
     if simpleBar
-      ul.custom-select__list(role="listbox" data-simplebar=simpleBar data-name=selectName)
-        each item in options.optionsList
-          - const ariaSelected = item.isActive ? "true" : "false"
-          li.custom-select__item(class=itemClass, tabindex="0", data-select-value=item.value, aria-selected=ariaSelected, role="option")=item.text
+      ul.custom-select__list(role="listbox" data-simplebar=simpleBar)
+        each option in options.optionsList
+          - var ariaSelected = option.isActive ? "true" : "false"
+          li.custom-select__item(class=itemClass, tabindex="0", data-select-value=option.value, aria-selected=ariaSelected, role="option")=option.text
     else
-      ul.custom-select__list(role="listbox" data-name=selectName)
-        each item in options.optionsList
-          - const ariaSelected = item.isActive ? "true" : "false"
-          li.custom-select__item(class=itemClass, tabindex="0", data-select-value=item.value, aria-selected=ariaSelected, role="option")=item.text
+      ul.custom-select__list(role="listbox")
+        each option in options.optionsList
+          - var ariaSelected = option.isActive ? "true" : "false"
+          li.custom-select__item(class=itemClass, tabindex="0", data-select-value=option.value, aria-selected=ariaSelected, role="option")=option.text

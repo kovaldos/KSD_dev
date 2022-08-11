@@ -12,8 +12,9 @@ mixin vacancies()
 					inputMinLength: 3,
 				},
 				select: {
+					class: "vacancies__form-select",
 					placeholder: "Категория",
-					name: "job-category",
+					name: "kategoriya",
 					simplebar: "data-simplebar",
 					optionsList: [
 						{
@@ -35,8 +36,9 @@ mixin vacancies()
 					],
 				},
 				select2: {
+					class: "vacancies__form-select",
 					placeholder: "Опыт работы",
-					name: "job-experience",
+					name: "opyt-raboty",
 					simplebar: "data-simplebar",
 					optionsList: [
 						{
@@ -133,10 +135,10 @@ mixin vacancies()
 								+icon(data.form.btn.icon, 26, 26)
 						.vacancies__form-field.vacancies__form-field--02
 							+icon("icon-suitcase", 26, 26).vacancies__form-field-icon
-							+custom-select(data.form.select)(data-select).custom-select.vacancies__form-select
+							+custom-select(data.form.select)
 						.vacancies__form-field.vacancies__form-field--03
 							+icon("icon-calendar", 26, 26).vacancies__form-field-icon
-							+custom-select(data.form.select2)(data-select).custom-select.vacancies__form-select
+							+custom-select(data.form.select2)
 				.vacancies__row 
 					.vacancies__available
 						span.vacancies__available-text=data.available.text

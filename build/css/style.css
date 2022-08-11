@@ -6432,6 +6432,7 @@ button,
   -ms-flex: 0 0 170px;
   flex: 0 0 170px;
   margin: 0 0 0 30px;
+  width: 170px;
 }
 
 .projects__slider {
@@ -16047,6 +16048,7 @@ button,
     -webkit-box-flex: 0;
     -ms-flex: 0 0 140px;
     flex: 0 0 140px;
+    width: 140px;
   }
 
   .projects__slider-item-subtitle {
