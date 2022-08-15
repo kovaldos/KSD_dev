@@ -140,10 +140,15 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			background: rgba($color-lavender, 0.3);
+			background-color: rgba($color-lavender, 0.3);
 			border: 1px dashed $color-lavender-grey;
 			border-radius: 7px;
 			padding: 33px 44px 37px;
+			transition: background-color $trans-default, box-shadow $trans-default;
+			&.highlight {
+				background-color: rgba($color-outrageous-orange, 0.5);
+				box-shadow: 0 0 5px 3px rgba($color-bunting, 0.5);
+			}
 			@include vp-767 {
 				padding: 15px 18px;
 			}
@@ -187,6 +192,9 @@
 				padding: 0;
 				margin: 0 0 15px;
 				position: relative;
+				@include vp-1023 {
+					margin: 0 0 30px;
+				}
 				label {
 					display: block;
 					text-align: center;
@@ -206,6 +214,18 @@
 						}
 					}
 				}
+				&.is-invalid {
+					.topical__form-dad-label {
+						border: 1px solid $color-torch-red;
+					}
+					input {
+						border: 0;
+						&:hover,
+						&:focus {
+							border: 0;
+						}
+					}
+				}
 			}
 			&-label {
 				// border: 1px solid $color-dark-orange;
@@ -215,6 +235,9 @@
 				line-height: 20px;
 				padding: 12.5px 48px;
 				// color: $color-dark-orange;
+				@include vp-1023 {
+					padding: 12.5px 30px;
+				}
 			}
 			&-type {
 				font-weight: 400;
@@ -222,6 +245,35 @@
 				line-height: 15px;
 				letter-spacing: -0.02em;
 				color: $color-manatee;
+				@include vp-1023 {
+					text-align: center;
+				}
+			}
+			&-del {
+				font-size: 12px;
+				line-height: 120%;
+				color: $color-bunting;
+				opacity: 1;
+				padding: 10px 0;
+				position: absolute;
+				right: -30px;
+				top: 50%;
+				transform: translateY(-50%);
+				visibility: visible;
+				pointer-events: all;
+				transition: opacity $trans-default, visibility $trans-default;
+				@include vp-1023 {
+					top: auto;
+					right: auto;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: -35px;
+				}
+				&.is-hidden {
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+				}
 			}
 		}
 		&-submit {
@@ -238,6 +290,10 @@
 		font-size: 13px;
 		line-height: 180%;
 		color: $color-waikawa-grey;
+		@include vp-1023 {
+			font-size: 12px;
+			line-height: 15px;
+		}
 		&-link {
 			font-size: 13px;
 			line-height: 180%;

@@ -44,6 +44,7 @@ mixin topical()
 							or: "или",
 							upload: "Прикрепить файл",
 							type: "Поддерживаемые форматы документа: Word, Excel, PDF",
+							del: "Удалить",
 						},
 						agree: "Оставляя свои контактные данные вы даете свое ",
 						linkAgree: {
@@ -56,9 +57,8 @@ mixin topical()
 							text: "Отправить",
 						},
 					},
-
-				}
-			}
+				},
+			},
 		}
 	section.section.topical
 		.container.topical__container
@@ -68,81 +68,85 @@ mixin topical()
 					span=data.quantity 
 					span )
 			.topical__acc(data-accordion="parent" data-single)
-				.topical__acc-el(data-accordion="element").is-active
-					.topical__acc-btn(data-accordion="button")
-						span.topical__acc-btn-text=data.acc.btn.text
-						span.topical__acc-btn-more
-							span.topical__acc-btn-more-text=data.acc.btn.more
-							+icon("icon-chevron-down", 12, 8).topical__acc-btn-icon
-					.topical__acc-content(data-accordion="content")
-						h2.title.title--h5.topical__acc-content-title=data.acc.content.title
-						.topical__form(data-validate data-callback="topicalForm")
-							form(action="#" enctype="multipart/form-data") 
-								.topical__acc-content-row.topical__acc-content-row--01
-									.topical__acc-content-col.topical__acc-content-col--01
-										+custom-input(data.acc.content.form.name).topical__form-field.topical__form-field--01(data-validate-type="text")
-										+custom-input(data.acc.content.form.company).topical__form-field.topical__form-field--02(data-validate-type="text")
-										+custom-input(data.acc.content.form.tel).topical__form-field.topical__form-field--03(data-validate-type="phone")
-										+custom-input(data.acc.content.form.email).topical__form-field.topical__form-field--04(data-validate-type="email")
-									.topical__acc-content-col.topical__acc-content-col--02
-										.topical__form-dad
-											+icon("icon-upload", 60, 60).topical__form-dad-icon
-											h3.title.title--h6.topical__form-dad-title=data.acc.content.form.dad.title
-											.topical__form-dad-or
-												hr
-												span=data.acc.content.form.dad.or
-												hr
-											.custom-input.topical__form-dad-input(data-validate-type="text")
-												label
-													span.btn.btn--stroke-drk-orange.topical__form-dad-label=data.acc.content.form.dad.upload
-													input.topical__form-dad-input#topical-file(type="file", name="topical-file")
-											span.topical__form-dad-type=data.acc.content.form.dad.type
-								.topical__acc-content-row.topical__acc-content-row--02
-									.topical__acc-content-col.topical__acc-content-col--01
-										.topical__agreement
-											span=data.acc.content.form.agree 
-											a.link.topical__agreement-link(href=data.acc.content.form.linkAgree.href)=data.acc.content.form.linkAgree.text 
-											span=data.acc.content.form.agree2
-									.topical__acc-content-col.topical__acc-content-col--02
-										+btn(data.acc.content.form.btn).btn--cobalt.topical__form-submit
-				- for(let i = 0; i < 9; i++)
-					.topical__acc-el(data-accordion="element")
-						.topical__acc-btn(data-accordion="button")
-							span.topical__acc-btn-text=data.acc.btn.text
-							span.topical__acc-btn-more
-								span.topical__acc-btn-more-text=data.acc.btn.more
-								+icon("icon-chevron-down", 12, 8).topical__acc-btn-icon
-						.topical__acc-content(data-accordion="content")
-							h2.title.title--h5.topical__acc-content-title=data.acc.content.title
-							.topical__form(data-validate data-callback="topicalForm")
-								form(action="#" enctype="multipart/form-data") 
-									.topical__acc-content-row.topical__acc-content-row--01
-										.topical__acc-content-col.topical__acc-content-col--01
-											+custom-input(data.acc.content.form.name).topical__form-field.topical__form-field--01(data-validate-type="text")
-											+custom-input(data.acc.content.form.company).topical__form-field.topical__form-field--02(data-validate-type="text")
-											+custom-input(data.acc.content.form.tel).topical__form-field.topical__form-field--03(data-validate-type="phone")
-											+custom-input(data.acc.content.form.email).topical__form-field.topical__form-field--04(data-validate-type="email")
-										.topical__acc-content-col.topical__acc-content-col--02
-											.topical__form-dad
-												+icon("icon-upload", 60, 60).topical__form-dad-icon
-												h3.title.title--h6.topical__form-dad-title=data.acc.content.form.dad.title
-												.topical__form-dad-or
-													hr
-													span=data.acc.content.form.dad.or
-													hr
-												.custom-input.topical__form-dad-input(data-validate-type="text")
-													label
-														span.btn.btn--stroke-drk-orange.topical__form-dad-label=data.acc.content.form.dad.upload
-														input.topical__form-dad-input#topical-file(type="file", name="topical-file")
-												span.topical__form-dad-type=data.acc.content.form.dad.type
-									.topical__acc-content-row.topical__acc-content-row--02
-										.topical__acc-content-col.topical__acc-content-col--01
-											.topical__agreement
-												span=data.acc.content.form.agree 
-												a.link.topical__agreement-link(href=data.acc.content.form.linkAgree.href)=data.acc.content.form.linkAgree.text 
-												span=data.acc.content.form.agree2
-										.topical__acc-content-col.topical__acc-content-col--02
-											+btn(data.acc.content.form.btn).btn--cobalt.topical__form-submit
+				- for(let i = 0; i < 10; i++)
+					if i === 0
+						.topical__acc-el(data-accordion="element").is-active
+							.topical__acc-btn(data-accordion="button")
+								span.topical__acc-btn-text=data.acc.btn.text
+								span.topical__acc-btn-more
+									span.topical__acc-btn-more-text=data.acc.btn.more
+									+icon("icon-chevron-down", 12, 8).topical__acc-btn-icon
+							.topical__acc-content(data-accordion="content")
+								h2.title.title--h5.topical__acc-content-title=data.acc.content.title
+								.topical__form(data-validate data-callback="topicalForm")
+									form(action="#" enctype="multipart/form-data") 
+										.topical__acc-content-row.topical__acc-content-row--01
+											.topical__acc-content-col.topical__acc-content-col--01
+												+custom-input(data.acc.content.form.name).topical__form-field.topical__form-field--01(data-validate-type="text")
+												+custom-input(data.acc.content.form.company).topical__form-field.topical__form-field--02(data-validate-type="text")
+												+custom-input(data.acc.content.form.tel).topical__form-field.topical__form-field--03(data-validate-type="phone")
+												+custom-input(data.acc.content.form.email).topical__form-field.topical__form-field--04(data-validate-type="email")
+											.topical__acc-content-col.topical__acc-content-col--02
+												.topical__form-dad#drop-area
+													+icon("icon-upload", 60, 60).topical__form-dad-icon
+													h3.title.title--h6.topical__form-dad-title=data.acc.content.form.dad.title
+													.topical__form-dad-or
+														hr
+														span=data.acc.content.form.dad.or
+														hr
+													.custom-input.topical__form-dad-input(data-validate-type="text")
+														label(data-input-file="label")
+															span.btn.btn--stroke-drk-orange.topical__form-dad-label=data.acc.content.form.dad.upload
+															input.topical__form-dad-input#topical-file(data-input-file="input" type="file" name="topical-file")
+														button.btn.btn--reset.topical__form-dad-del.is-hidden(type="button")=data.acc.content.form.dad.del
+													span.topical__form-dad-type=data.acc.content.form.dad.type
+										.topical__acc-content-row.topical__acc-content-row--02
+											.topical__acc-content-col.topical__acc-content-col--01
+												.topical__agreement
+													span=data.acc.content.form.agree 
+													a.link.topical__agreement-link(href=data.acc.content.form.linkAgree.href)=data.acc.content.form.linkAgree.text 
+													span=data.acc.content.form.agree2
+											.topical__acc-content-col.topical__acc-content-col--02
+												+btn(data.acc.content.form.btn).btn--cobalt.topical__form-submit
+					else
+						.topical__acc-el(data-accordion="element")
+							.topical__acc-btn(data-accordion="button")
+								span.topical__acc-btn-text=data.acc.btn.text
+								span.topical__acc-btn-more
+									span.topical__acc-btn-more-text=data.acc.btn.more
+									+icon("icon-chevron-down", 12, 8).topical__acc-btn-icon
+							.topical__acc-content(data-accordion="content")
+								h2.title.title--h5.topical__acc-content-title=data.acc.content.title
+								.topical__form(data-validate data-callback="topicalForm")
+									form(action="#" enctype="multipart/form-data") 
+										.topical__acc-content-row.topical__acc-content-row--01
+											.topical__acc-content-col.topical__acc-content-col--01
+												+custom-input(data.acc.content.form.name).topical__form-field.topical__form-field--01(data-validate-type="text")
+												+custom-input(data.acc.content.form.company).topical__form-field.topical__form-field--02(data-validate-type="text")
+												+custom-input(data.acc.content.form.tel).topical__form-field.topical__form-field--03(data-validate-type="phone")
+												+custom-input(data.acc.content.form.email).topical__form-field.topical__form-field--04(data-validate-type="email")
+											.topical__acc-content-col.topical__acc-content-col--02
+												.topical__form-dad#drop-area
+													+icon("icon-upload", 60, 60).topical__form-dad-icon
+													h3.title.title--h6.topical__form-dad-title=data.acc.content.form.dad.title
+													.topical__form-dad-or
+														hr
+														span=data.acc.content.form.dad.or
+														hr
+													.custom-input.topical__form-dad-input(data-validate-type="text")
+														label(data-input-file="label")
+															span.btn.btn--stroke-drk-orange.topical__form-dad-label=data.acc.content.form.dad.upload
+															input.topical__form-dad-input#topical-file(data-input-file="input" type="file" name="topical-file")
+														button.btn.btn--reset.topical__form-dad-del.is-hidden(type="button")=data.acc.content.form.dad.del
+													span.topical__form-dad-type=data.acc.content.form.dad.type
+										.topical__acc-content-row.topical__acc-content-row--02
+											.topical__acc-content-col.topical__acc-content-col--01
+												.topical__agreement
+													span=data.acc.content.form.agree 
+													a.link.topical__agreement-link(href=data.acc.content.form.linkAgree.href)=data.acc.content.form.linkAgree.text 
+													span=data.acc.content.form.agree2
+											.topical__acc-content-col.topical__acc-content-col--02
+												+btn(data.acc.content.form.btn).btn--cobalt.topical__form-submit
 
 
 

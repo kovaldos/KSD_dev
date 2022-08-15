@@ -15,21 +15,31 @@
 		&-item {
 			width: 170px;
 			height: 120px;
+			position: relative;
 			@include vp-767 {
 				width: 120px;
 				height: 80px;
 			}
-			svg {
+			picture {
 				width: 100%;
 				height: 100%;
-				path {
-					transition: fill $trans-default;
+				display: block;
+				transition: opacity $trans-default;
+				opacity: 1;
+				&:last-child {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
 				}
 			}
 			&:hover {
-				svg {
-					.path-hover {
-						fill: $color-transparent;
+				picture {
+					&:first-child {
+						opacity: 0;
+					}
+					&:last-child {
+						opacity: 1;
 					}
 				}
 			}

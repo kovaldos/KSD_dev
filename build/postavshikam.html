@@ -16,6 +16,7 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml" crossorigin="use-credentials">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=aaf0ec15-8970-4357-b2ef-1c76ab7adb11&amp;lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
@@ -750,7 +751,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -760,9 +761,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -816,7 +818,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -826,9 +828,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -882,7 +885,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -892,9 +895,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -948,7 +952,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -958,9 +962,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -1014,7 +1019,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -1024,9 +1029,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -1080,7 +1086,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -1090,9 +1096,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -1146,7 +1153,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -1156,9 +1163,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -1212,7 +1220,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -1222,9 +1230,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -1278,7 +1287,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -1288,9 +1297,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>
@@ -1344,7 +1354,7 @@
                           </div>
                         </div>
                         <div class="topical__acc-content-col topical__acc-content-col--02">
-                          <div class="topical__form-dad">
+                          <div class="topical__form-dad" id="drop-area">
                             <svg class="topical__form-dad-icon" width="60" height="60" aria-hidden="true">
                               <use xlink:href="#icon-upload"></use>
                             </svg>
@@ -1354,9 +1364,10 @@
                               <hr>
                             </div>
                             <div class="custom-input topical__form-dad-input" data-validate-type="text">
-                              <label><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
-                                <input class="topical__form-dad-input" id="topical-file" type="file" name="topical-file">
+                              <label data-input-file="label"><span class="btn btn--stroke-drk-orange topical__form-dad-label">Прикрепить файл</span>
+                                <input class="topical__form-dad-input" id="topical-file" data-input-file="input" type="file" name="topical-file">
                               </label>
+                              <button class="btn btn--reset topical__form-dad-del is-hidden" type="button">Удалить</button>
                             </div><span class="topical__form-dad-type">Поддерживаемые форматы документа: Word, Excel, PDF</span>
                           </div>
                         </div>

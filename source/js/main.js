@@ -39,6 +39,8 @@ import {initRentCatalogFilterMobile} from './modules/init-rent-catalog-filter-mo
 import {initCardSimilarSlider} from './modules/init-card-similar-slider';
 import {initGoodsSlider} from './modules/init-goods-slider';
 import {initEcologySlider} from './modules/init-ecology-slider';
+import {initCustomInputFile} from './modules/init-custom-input-file';
+import { initProjectsMap } from './modules/init-projects-map';
 
 
 // ---------------------------------
@@ -95,6 +97,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initCardSimilarSlider();
     initGoodsSlider();
     initEcologySlider();
+    initCustomInputFile();
+    initProjectsMap();
   });
 });
 
