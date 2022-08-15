@@ -28,7 +28,7 @@ const initProjectsMap = () => {
         // Необходимо указать данный тип макета.
         iconLayout: 'default#image',
         // Своё изображение иконки метки.
-        iconImageHref: './../../img/svg/custom-map-placemark.svg',
+        iconImageHref: './img/svg/custom-map-placemark.svg',
         // Размеры метки.
         iconImageSize: [40, 65],
         // Смещение левого верхнего угла иконки относительно
