@@ -7,7 +7,6 @@ const initPartnersSlider = () => {
     swiper04 = new Swiper(swiper04, {
       // Optional parameters
       loop: true,
-      // loopedSlides: 6,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
@@ -16,7 +15,6 @@ const initPartnersSlider = () => {
       freeMode: true,
       watchOverflow: true,
       slidesPerView: 'auto',
-      // slidesPerGroup: 1,
       spaceBetween: 0,
     });
   }

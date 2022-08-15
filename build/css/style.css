@@ -5701,6 +5701,7 @@ button,
 }
 
 .partners__slider-item {
+  display: block;
   width: 170px;
   height: 120px;
   position: relative;
