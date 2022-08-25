@@ -113,9 +113,9 @@
 		&-link {
 			font-size: 13px;
 			line-height: 180%;
-			color: $color-outrageous-orange;
+			color: $color-dark-orange;
 			&::after {
-				background-color: $color-outrageous-orange;
+				background-color: $color-dark-orange;
 			}
 		}
 	}
@@ -194,8 +194,8 @@
 			@media (hover: hover), screen and (min-width: 0\0) {
 				&:hover,
 				&:focus-visible {
-					background-color: $color-outrageous-orange;
-					border-color: $color-outrageous-orange;
+					background-color: $color-dark-orange;
+					border-color: $color-dark-orange;
 					svg {
 						color: $color-default-white;
 					}

@@ -5,7 +5,7 @@
   }
   &__top {
     border-top: 1px solid $color-hawkes-blue;
-    background-color: rgba($color-default-white, 0.6);
+    background-color: $color-ghost-white;
     @include vp-1023 {
       border: 0;
       padding: 0 0 50px;

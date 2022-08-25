@@ -4,17 +4,22 @@ mixin career()
 			title: "Карьера",
 			subtitle: "Работа в КСД – это",
 			link: {
-				href: "career.html",
+				href: "vakansii.html",
 				text: "Смотреть все вакансии",
 			},
 			items: [
 				{	
-					classModifier: "career__item--01",
+					classModifier: "career__item--",
 					title: "Карьерный рост",
 					text: "Реальные примеры: от мастера до главного механика; от экскаваторщика до начальника участка; от производителя работ до руководителя автоколонны;",
 				},
+				{	
+					classModifier: "career__item--",
+					title: "Высокие темпы развития",
+					text: "Мы совершенствуем нашу работу и развиваем новые направления",
+				},
 				{
-					classModifier: "career__item--02",
+					classModifier: "career__item--",
 					title: "Вовлеченность",
 					text: "Сотрудники вовлечены в разные процессы компании, а не только в процессы своих подразделений, обучаются у друг друга, работают сообща",
 				},
@@ -30,8 +35,8 @@ mixin career()
 				.career__heading-col.career__heading-col--02
 					+btn(data.link).btn--stroke-drk-orange.career__link-btn
 			.career__items.career__items--desktop
-				each item in data.items
-					.career__item(class=item.classModifier)
+				each item, index in data.items
+					.career__item(class=item.classModifier + (index + 1))
 						h4.title.career__item-title
 							span.career__item-title-span
 								+icon("icon-check-mark", 20, 20).career__item-icon
