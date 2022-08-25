@@ -97,14 +97,10 @@ const setSelectActiveState = (multiple, insert, item) => {
   const str = createMultiString(activeItems);
 
   buttonTextBlock.style.transition = '0s';
-  if (label) {
-    label.style.transition = '0s';
-  }
+  label.style.transition = '0s';
 
   setTimeout(() => {
-    if (label) {
-      label.style.transition = null;
-    }
+    label.style.transition = null;
     buttonTextBlock.style.transition = null;
   }, 300);
 
@@ -331,7 +327,7 @@ const setSelectAction = (item) => {
 
 // Класс CustomSelect
 
-export default class CustomSelect {
+class CustomSelect {
   constructor() {
     window.selectInit = this.init.bind(this);
   }
@@ -345,14 +341,25 @@ export default class CustomSelect {
     return item;
   }
 
-  init() {
+  initSelects() {
     const selects = document.querySelectorAll('[data-select]');
-    selects.forEach((select) => {
-      if (!select.classList.contains('is-initialized')) {
-        const newSelect = this.createSelect(select);
-        this.setAction(newSelect);
-        select.classList.add('is-initialized');
-      }
-    });
+    if (selects.length) {
+      selects.forEach((select) => {
+        if (!select.classList.contains('is-initialized')) {
+          const newSelect = this.createSelect(select);
+          this.setAction(newSelect);
+          select.classList.add('is-initialized');
+        }
+      });
+    }
+  }
+
+  init() {
+    this.initSelects();
   }
 }
+
+export default CustomSelect;
+// const select = new CustomSelect();
+
+// export default select.init();

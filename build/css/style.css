@@ -9491,6 +9491,7 @@ button,
 }
 
 .vacancies__card {
+  display: block;
   background-color: #ffffff;
   border: 1px solid #EEEEFB;
   border-radius: 10px;
@@ -14354,6 +14355,15 @@ button,
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   -o-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.directions-sup__dir-item.is-active {
+  background-color: #2D3142;
+  color: #ffffff;
+}
+
+.directions-sup__dir-item.is-active svg {
+  color: #ffffff;
 }
 
 .directions-sup__dir-item svg {

@@ -115,6 +115,37 @@ const searchVacanciesFormValidationErrorCallback = (e) => {
 };
 // Валидация и отправка формы поиска вакансий -- Конец --
 
+// Валидация и отправка формы отправки резюме -- Начало --
+const vacanciesFormValidationSuccessCallback = (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  for (let [name, value] of formData) {
+    data[name] = value;
+  }
+  console.log(data);
+  // В данном колбеке бэкендер будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки при отправке
+
+  // let response = await fetch ('', {
+  //   method: 'GET',
+  //   headers: { 'Content-Type': 'multipart/form-data' },
+  //   body: formData
+  // });
+
+  // let result = await response.json();
+  // console.log(result);
+
+  resetForm(e.target);
+  // eslint-disable-next-line no-console
+  console.log('Ваша форма успешна отправлена');
+};
+
+const vacanciesFormValidationErrorCallback = (e) => {
+  e.preventDefault();
+  // eslint-disable-next-line no-console
+  console.error('Отправка формы невозможна, заполните все обязательные поля');
+};
+// Валидация и отправка формы отправки резюме -- Конец --
+
 // Валидация и отправка формы поиска форм сотрудничества -- Начало --
 const cooperationFormValidationSuccessCallback = (e) => {
   e.preventDefault();
@@ -198,6 +229,11 @@ const callbacks = {
     validationSuccessCallback:
     searchVacanciesFormValidationSuccessCallback,
     validationErrorCallback: searchVacanciesFormValidationErrorCallback,
+  },
+  vacancyForm: {
+    validationSuccessCallback:
+    vacanciesFormValidationSuccessCallback,
+    validationErrorCallback: vacanciesFormValidationErrorCallback,
   },
   cooperationForm: {
     validationSuccessCallback:

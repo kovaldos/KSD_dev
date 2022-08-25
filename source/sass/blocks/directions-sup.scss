@@ -107,6 +107,13 @@
 		align-items: center;
 		background-color: $color-default-white;
 		transition: background-color $trans-default, color $trans-default;
+		&.is-active {
+			background-color: $color-bunting;
+			color: $color-default-white;
+			svg {
+				color: $color-default-white;
+			}
+		}
 		@media (hover: hover), screen and (min-width: 0\0) {
 			&:hover,
 			&:focus-visible {

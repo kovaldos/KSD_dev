@@ -278,6 +278,7 @@
 		}
 	}
 	&__card {
+		display: block;
 		background-color: $color-default-white;
 		border: 1px solid $color-lavender;
 		border-radius: 10px;

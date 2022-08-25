@@ -42,20 +42,20 @@ mixin vacancies()
 					simplebar: "data-simplebar",
 					optionsList: [
 						{
-							value: "option-01",
-							text: "Опция 01",
+							value: "0-1 лет",
+							text: "0-1 лет",
 						},
 						{
-							value: "option-02",
-							text: "Опция 02",
+							value: "1-3 года",
+							text: "1-3 года",
 						},
 						{
-							value: "option-03",
-							text: "Опция 03",
+							value: "3-5 лет",
+							text: "3-5 лет",
 						},
 						{
-							value: "option-04",
-							text: "Опция 04",
+							value: "более 5 лет",
+							text: "более 5 лет",
 						},
 					],
 				},
@@ -96,6 +96,7 @@ mixin vacancies()
 				],
 			},
 			card: {
+				href: "vacancy.html",
 				title: "Машинист экскаватора Kocurek KUHR-45-34",
 				date: "16 Октября",
 				expText: "Опыт работы: ",
@@ -153,7 +154,7 @@ mixin vacancies()
 			.vacancies__cols
 				.vacancies__col.vacancies__col--01
 					- for (let i = 0; i < 6; i++)
-						.vacancies__card
+						a.vacancies__card(href=data.card.href)
 							.vacancies__card-row.vacancies__card-row--01
 								h2.title.title--h4.vacancies__card-title=data.card.title
 								.vacancies__card-date=data.card.date
