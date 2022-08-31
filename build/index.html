@@ -628,34 +628,55 @@
       </header>
       <main>
         <section class="hero"> 
-          <div class="hero__bg">
-            <div class="swiper swiper--01 hero__slider">
-              <div class="swiper-wrapper"> 
-                <div class="swiper-slide"> 
-                  <div class="hero__slider-item"> <img src="img/slides/hero-bg-img-1.jpg" srcset="img/slides/hero-bg-img-1@2x.jpg 2x" alt="slide-img-1">
+          <div class="swiper swiper--01 hero__slider">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide"> 
+                <div class="hero__slider-item"> 
+                  <div class="hero__bg"><img src="img/slides/hero-bg-img-1.jpg" srcset="img/slides/hero-bg-img-1@2x.jpg 2x" alt="slide-img-1">
+                  </div>
+                  <div class="container hero__container">
+                    <div class="hero__heading">
+                      <h1 class="title title--h1 hero__title">Quis scelerisque suspendisse risus arcu.<span class="hero__subtitle">Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.</span></h1>
+                    </div>
                   </div>
                 </div>
-                <div class="swiper-slide"> 
-                  <div class="hero__slider-item"> <img src="img/slides/hero-bg-img-2.jpg" srcset="img/slides/hero-bg-img-2@2x.jpg 2x" alt="slide-img-2">
+              </div>
+              <div class="swiper-slide"> 
+                <div class="hero__slider-item"> 
+                  <div class="hero__bg"><img src="img/slides/hero-bg-img-2.jpg" srcset="img/slides/hero-bg-img-2@2x.jpg 2x" alt="slide-img-2">
+                  </div>
+                  <div class="container hero__container">
+                    <div class="hero__heading">
+                      <h1 class="title title--h1 hero__title">Lorem ipsum dolor sit.<span class="hero__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, earum!</span></h1>
+                    </div>
                   </div>
                 </div>
-                <div class="swiper-slide"> 
-                  <div class="hero__slider-item"> <img src="img/slides/hero-bg-img-3.jpg" srcset="img/slides/hero-bg-img-3@2x.jpg 2x" alt="slide-img-3">
+              </div>
+              <div class="swiper-slide"> 
+                <div class="hero__slider-item"> 
+                  <div class="hero__bg"><img src="img/slides/hero-bg-img-3.jpg" srcset="img/slides/hero-bg-img-3@2x.jpg 2x" alt="slide-img-3">
+                  </div>
+                  <div class="container hero__container">
+                    <div class="hero__heading">
+                      <h1 class="title title--h1 hero__title">Lorem ipsum dolor sit amet consectetur.<span class="hero__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></h1>
+                    </div>
                   </div>
                 </div>
-                <div class="swiper-slide"> 
-                  <div class="hero__slider-item"> <img src="img/slides/hero-bg-img-4.jpg" srcset="img/slides/hero-bg-img-4@2x.jpg 2x" alt="slide-img-4">
+              </div>
+              <div class="swiper-slide"> 
+                <div class="hero__slider-item"> 
+                  <div class="hero__bg"><img src="img/slides/hero-bg-img-4.jpg" srcset="img/slides/hero-bg-img-4@2x.jpg 2x" alt="slide-img-4">
+                  </div>
+                  <div class="container hero__container">
+                    <div class="hero__heading">
+                      <h1 class="title title--h1 hero__title">Lorem ipsum dolor sit amet consectetur.<span class="hero__subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam.</span></h1>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="hero__slider-pag"></div>
-          <div class="container hero__container">
-            <div class="hero__heading"> 
-              <h1 class="title title--h1 hero__title">Quis scelerisque suspendisse risus arcu.<span class="hero__subtitle">Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.</span></h1>
-            </div>
-          </div>
         </section>
         <section class="section directions directions--main">
           <div class="container directions__container"> 
@@ -1647,7 +1668,7 @@
                 <h3 class="title title--h3 blog__subtitle">Новости компании</h3>
               </div>
               <div class="blog__heading-col blog__heading-col--02">
-                <a class="btn btn--out-orange blog__link-btn" href="blog.html">Читать весь блог</a>
+                <a class="btn btn--stroke-drk-orange blog__link-btn" href="blog.html">Читать весь блог</a>
               </div>
             </div>
             <div class="blog__items"><a class="blog__item blog__item--01" href="#">
@@ -1863,7 +1884,7 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <div class="modal--contact-us-undefined">
+          <div class="modal--contact-us-main">
             <div class="contact-us__form" data-validate data-callback="contactUsForm">
               <form action="" method="post" enctype="multipart/form-data">
                 <fieldset class="contact-us__form-fieldset"> 
@@ -1886,7 +1907,6 @@
                     </label>
                     <div class="custom-textarea__error">Введите Ваше сообщение</div>
                   </div>
-                  <button class="btn btn--drk-orange contact-us__form-submit" type="submit">Отправить</button>
                 </fieldset>
               </form>
               <div class="contact-us__agreement"> <span>Оставляя свои контактные данные вы даете свое </span><a class="link contact-us__agreement-link" href="#">согласие на обработку</a><span> персональных данных</span></div>

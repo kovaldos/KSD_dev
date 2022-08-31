@@ -1886,8 +1886,10 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-300.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/montserrat-v25-latin_cyrillic-300.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-300.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-300.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-300.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-300.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 /* montserrat-regular - latin_cyrillic */
@@ -1896,8 +1898,10 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/montserrat-v25-latin_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-regular.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-regular.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 /* montserrat-500 - latin_cyrillic */
@@ -1906,18 +1910,10 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-500.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* montserrat-700 - latin_cyrillic */
-
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-700.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/montserrat-v25-latin_cyrillic-500.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-500.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-500.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-500.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 /* montserrat-600 - latin_cyrillic */
@@ -1926,8 +1922,22 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-600.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/montserrat-v25-latin_cyrillic-600.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-600.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-600.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-600.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+
+/* montserrat-700 - latin_cyrillic */
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v25-latin_cyrillic-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-700.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-700.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 /* montserrat-800 - latin_cyrillic */
@@ -1936,8 +1946,10 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-800.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-800.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/montserrat-v25-latin_cyrillic-800.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-800.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-800.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-800.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-800.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-800.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 /* montserrat-300italic - latin_cyrillic */
@@ -1946,8 +1958,10 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat";
   font-style: italic;
   font-weight: 300;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-300italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-300italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/montserrat-v25-latin_cyrillic-300italic.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-300italic.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-300italic.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-300italic.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-300italic.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-300italic.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 /* montserrat-italic - latin_cyrillic */
@@ -1956,8 +1970,10 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat";
   font-style: italic;
   font-weight: 400;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/montserrat-v25-latin_cyrillic-italic.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-italic.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-italic.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-italic.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-italic.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 /* montserrat-800italic - latin_cyrillic */
@@ -1966,8 +1982,10 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat";
   font-style: italic;
   font-weight: 800;
-  src: local(""), url("../fonts/montserrat-v24-latin_cyrillic-800italic.woff2") format("woff2"), url("../fonts/montserrat-v24-latin_cyrillic-800italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/montserrat-v25-latin_cyrillic-800italic.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v25-latin_cyrillic-800italic.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin_cyrillic-800italic.woff2") format("woff2"), url("../fonts/montserrat-v25-latin_cyrillic-800italic.woff") format("woff"), url("../fonts/montserrat-v25-latin_cyrillic-800italic.ttf") format("truetype"), url("../fonts/montserrat-v25-latin_cyrillic-800italic.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 *,
@@ -2428,6 +2446,22 @@ button,
   display: none;
 }
 
+.modal--vacancy-form .vacancy__form-title {
+  font-size: 16px;
+}
+
+.modal--vacancy-form .vacancy__form-form {
+  padding: 0;
+}
+
+.modal--vacancy-form .vacancy__form-field {
+  padding: 10px 0;
+}
+
+.modal--vacancy-form .vacancy__form-field label input {
+  padding: 15px;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2838,6 +2872,7 @@ button,
 
 .custom-select__item {
   padding: 5px;
+  font-size: 0.9em;
   outline: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
@@ -3058,6 +3093,10 @@ button,
   font-size: 16px;
   line-height: 160%;
   color: #2D3142;
+}
+
+.wrapper--demolition .title--h2 {
+  color: #FE603A;
 }
 
 .wrapper--rent-catalog .title--h2 {
@@ -3370,6 +3409,7 @@ button,
 }
 
 .header__bottom {
+  position: static;
   padding: 20px 0;
   top: 0;
   left: 0;
@@ -4169,7 +4209,9 @@ button,
 
 .directions__slider-item {
   width: calc(100% - 40px);
-  overflow: hidden;
+}
+
+.directions__slider-item img {
   border-radius: 5px;
 }
 
@@ -6653,6 +6695,8 @@ button,
 }
 
 .projects__slider-item-next .next-title {
+  width: 100%;
+  max-width: 390px;
   -webkit-box-flex: 1;
   -ms-flex: auto;
   flex: auto;
@@ -6941,7 +6985,7 @@ button,
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid #EEEEFB;
   border-radius: 5px;
-  margin: 0 0 40px;
+  margin: 0 0 50px;
 }
 
 .projects-page__ac-el.is-active .projects-page__ac-btn-text--closed {
@@ -7012,6 +7056,51 @@ button,
 .projects-page__ac-map {
   width: 100%;
   height: 500px;
+}
+
+.projects-page__dir {
+  margin: 0 0 30px;
+}
+
+.projects-page__dir-title {
+  margin: 0 0 30px;
+}
+
+.projects-page__dir-wrap {
+  padding: 0 0 20px;
+}
+
+.projects-page__dir-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects-page__dir-item:not(:last-of-type) {
+  margin: 0 30px 0 0;
+}
+
+.projects-page__dir-link {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3142;
+  padding: 16px 32px;
+  background-color: #F7F7FD;
+  border-radius: 10px;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.projects-page__dir-link.is-active {
+  background-color: #FF8700;
+  color: #ffffff;
 }
 
 .projects-page__catalog {
@@ -7213,6 +7302,7 @@ button,
 
 .catalog__nav-select .custom-select__item,
 .catalog__nav-select .custom-select__text,
+.catalog__nav-select .custom-select__label,
 .catalog__nav-select .custom-select__placeholder {
   font-weight: 500;
   font-size: 14px;
@@ -8342,7 +8432,7 @@ button,
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  padding: 6px 6px 25px 25px;
+  padding: 6px 15px 25px 25px;
 }
 
 .our-vision__benefits-item.is-active .our-vision__benefits-item-acc-icon {
@@ -8709,17 +8799,13 @@ button,
   display: none;
 }
 
-.reviews__slider-item {
+.reviews__slider img {
   width: 100%;
   height: 100%;
   border-radius: 0;
   border: 1px solid #EEEEFB;
   overflow: hidden;
   background-color: rgba(238, 238, 251, 0.3);
-}
-
-.reviews__slider-item img {
-  width: 100%;
 }
 
 .cooperation {
@@ -8841,6 +8927,7 @@ button,
   padding: 0;
 }
 
+.cooperation__form-select .custom-select__label,
 .cooperation__form-select .custom-select__placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -9126,9 +9213,11 @@ button,
 }
 
 .work-with-us__questionnaire {
+  width: 100%;
+  max-width: 970px;
   position: relative;
-  padding: 38px 40px 40px 40px;
-  margin: 140px 0 0;
+  padding: 38px 40px 40px;
+  margin: 140px auto 0;
   border-radius: 20px;
   background-color: #FF8700;
 }
@@ -9137,7 +9226,7 @@ button,
   font-weight: 800;
   line-height: 46px;
   color: #ffffff;
-  width: 49%;
+  width: 57%;
   margin: 0 0 38px;
 }
 
@@ -9318,6 +9407,7 @@ button,
   border-radius: 5px;
 }
 
+.vacancies__form-select .custom-select__label,
 .vacancies__form-select .custom-select__placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -9571,9 +9661,17 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.vacancies__card-tags-wrapper {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .vacancies__card-tag {
@@ -9598,6 +9696,11 @@ button,
 
 .vacancies__card-tag:not(:last-of-type) {
   margin: 0 20px 0 0;
+}
+
+.vacancies__card-payment {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .vacancies__card-payment-value {
@@ -9689,6 +9792,9 @@ button,
 
 .vacancy__col--01 {
   margin: 0 116px 0 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .vacancy__col--02 {
@@ -9890,6 +9996,8 @@ button,
 }
 
 .vacancy__form-field--file label svg {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   margin: 0 26px 0 0;
 }
 
@@ -10111,6 +10219,51 @@ button,
   margin: 0 0 50px;
 }
 
+.vehicle-park__dir {
+  margin: 0 0 30px;
+}
+
+.vehicle-park__dir-title {
+  margin: 0 0 30px;
+}
+
+.vehicle-park__dir-wrap {
+  padding: 0 0 20px;
+}
+
+.vehicle-park__dir-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vehicle-park__dir-item:not(:last-of-type) {
+  margin: 0 30px 0 0;
+}
+
+.vehicle-park__dir-link {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3142;
+  padding: 16px 32px;
+  background-color: #F7F7FD;
+  border-radius: 10px;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.vehicle-park__dir-link.is-active {
+  background-color: #FF8700;
+  color: #ffffff;
+}
+
 .vehicle-park__catalog-title {
   margin: 0 0 30px;
 }
@@ -10170,7 +10323,7 @@ button,
 
 .vehicle-park__catalog-link--current {
   color: #ffffff;
-  background-color: #FE603A;
+  background-color: #FF8700;
 }
 
 .vehicle-park__catalog-items {
@@ -11409,6 +11562,7 @@ button,
 
 .catalog__nav-select .custom-select__item,
 .catalog__nav-select .custom-select__text,
+.catalog__nav-select .custom-select__label,
 .catalog__nav-select .custom-select__placeholder {
   font-weight: 500;
   font-size: 14px;
@@ -16645,12 +16799,22 @@ button,
     display: none;
   }
 
+  .vacancies__cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .vacancies__col--01 {
-    margin: 0;
+    margin: 0 0 30px;
   }
 
   .vacancies__col--02 {
-    display: none;
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    width: 100%;
   }
 
   .vacancy__col--01 {
@@ -18201,6 +18365,7 @@ button,
 
   .catalog__nav-select .custom-select__item,
   .catalog__nav-select .custom-select__text,
+  .catalog__nav-select .custom-select__label,
   .catalog__nav-select .custom-select__placeholder {
     font-weight: 400;
   }
@@ -18784,6 +18949,7 @@ button,
 
   .catalog__nav-select .custom-select__item,
   .catalog__nav-select .custom-select__text,
+  .catalog__nav-select .custom-select__label,
   .catalog__nav-select .custom-select__placeholder {
     font-weight: 400;
   }
@@ -19460,6 +19626,30 @@ button,
 }
 
 @media (max-width: 424px) {
+  .modal--vacancy-form .modal__close-btn {
+    top: 16px;
+    right: 4px;
+    color: #0452A0;
+  }
+
+  .modal--vacancy-form .modal__wrapper {
+    padding: 0;
+  }
+
+  .modal--vacancy-form .modal__content {
+    padding: 20px 15px;
+  }
+
+  .modal--vacancy-form .vacancy__form-field--file label {
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .modal--vacancy-form .vacancy__form-agree {
+    text-align: center;
+    padding: 20px 0;
+  }
+
   .hero-section__slider {
     height: 250px;
   }

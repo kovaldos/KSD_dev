@@ -13,5 +13,5 @@ mixin vehicle-card-tabs-nav()
 		}
 	nav.tabs__controls.vehicle-card__tabs-controls(data-tabs="controls")
 		each item in data.tabsNav
-			button.btn.btn--reset.vehicle-card__tabs-control(data-tabs="control", class!=item.className)
+			button.btn.btn--reset.vehicle-card__tabs-control(data-tabs="control")
 				span.vehicle-card__tabs-control-value=item.text

@@ -60,6 +60,13 @@
 	}
 
 }
+.wrapper--demolition {
+	.title {
+		&--h2 {
+			color: $color-outrageous-orange;
+		}
+	}
+}
 .wrapper--rent-catalog {
 	.title {
 		&--h2 {

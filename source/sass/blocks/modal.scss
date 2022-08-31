@@ -219,4 +219,51 @@
       }
     }
   }
+  &--vacancy-form & {
+    @include vp-424 {
+      &__close-btn {
+        top: 16px;
+        right: 4px;
+        color: $color-cobalt;
+      }
+      &__wrapper {
+        padding: 0;
+      }
+      &__content {
+        padding: 20px 15px;
+      }
+    }
+  }
+  &--vacancy-form {
+    .vacancy__form {
+      &-title {
+        font-size: 16px;
+      }
+      &-form {
+        padding: 0;
+      }
+      &-field {
+        padding: 10px 0;
+        label {
+          input {
+            padding: 15px;
+          }
+        }
+        &--file {
+          label {
+            @include vp-424 {
+              width: 100%;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      &-agree {
+        @include vp-424 {
+          text-align: center;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
 }

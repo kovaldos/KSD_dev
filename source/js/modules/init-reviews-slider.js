@@ -12,6 +12,9 @@ const initReviewsSlider = () => {
       speed: 800,
       slidesPerView: 1.2,
       spaceBetween: 10,
+      zoom: {
+        maxRatio: 2,
+      },
       breakpoints: {
         425: {
           slidesPerView: 1.3,
@@ -20,11 +23,14 @@ const initReviewsSlider = () => {
         768: {
           loop: true,
           slidesPerView: 2.5,
-          spaceBetween: 30,
+          spaceBetween: 25,
         },
         1024: {
           slidesPerView: 3,
           spaceBetween: 30,
+        },
+        1280: {
+          slidesPerView: 4,
         },
       },
       navigation: {

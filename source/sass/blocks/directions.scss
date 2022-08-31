@@ -80,10 +80,11 @@
 		}
 		&-item {
 			width: calc(100% - 40px);
-			overflow: hidden;
-			border-radius: 5px;
 			@include vp-767 {
 				width: 100%;
+			}
+			img {
+				border-radius: 5px;
 			}
 		}
 		&-nav {

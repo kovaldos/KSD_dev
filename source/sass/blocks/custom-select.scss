@@ -8,11 +8,8 @@
     position: absolute;
     top: 50%;
     left: 10px;
-
     transform: translateY(-50%);
-
     transition: transform $trans-default, opacity $trans-default;
-
     pointer-events: none;
   }
 
@@ -20,27 +17,20 @@
     position: absolute;
     top: 50%;
     left: 10px;
-
     transform: translateY(-50%);
-
     transition: transform $trans-default, opacity $trans-default;
-
     pointer-events: none;
   }
 
   select {
     position: absolute;
-
     width: 1px;
     height: 1px;
     margin: -1px;
     padding: 0;
     overflow: hidden;
-
     white-space: nowrap;
-
     border: 0;
-
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
   }
@@ -93,7 +83,7 @@
 
   &__item {
     padding: 5px;
-
+    font-size: 0.9em;
     outline: none;
     cursor: pointer;
 

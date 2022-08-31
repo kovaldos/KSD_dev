@@ -10,6 +10,26 @@ mixin projects-page()
 				textOpen: "Скрыть",
 			},
 			acTitle: "Объекты на карте",
+			navTitle: "Направления",
+			nav: [
+				{
+					href: "snos-zdaniy.html",
+					text: "Демонтаж",
+				},
+				{
+					href: "blagoustroystvo.html",
+					text: "Благоустройство",
+				},
+				{
+					classMod: "is-active",
+					href: "kotlovany.html",
+					text: "Земляные работы",
+				},
+				{
+					href: "stroitelstvo-dorog.html",
+					text: "Строительство дорог",
+				},
+			],
 			items: [
 				{
 					img: "projects-catalog-img-1",
@@ -40,7 +60,7 @@ mixin projects-page()
 				.projects-page__ac-el(data-accordion="element")
 					.projects-page__ac-btn(data-accordion="button")
 						span.projects-page__ac-btn-text=data.acBtn.btnText
-						button.btn.btn--orange(type="button")
+						button.btn.btn--drk-orange(type="button")
 							+icon(data.acBtn.btnIcon, 25, 25).projects-page__ac-btn-icon
 							span.projects-page__ac-btn-text.projects-page__ac-btn-text--closed=data.acBtn.textClose
 							span.projects-page__ac-btn-text.projects-page__ac-btn-text--opened=data.acBtn.textOpen
@@ -48,6 +68,13 @@ mixin projects-page()
 						.projects-page__ac-content-wrap
 							h4.title.title--h4.projects-page__ac-content-title=data.acTitle
 							.projects-page__ac-map#map01
+			.projects-page__dir
+				h2.title.title--h4.projects-page__dir-title=data.navTitle
+				.projects-page__dir-wrap(data-simplebar)
+					ul.projects-page__dir-nav
+						each item in data.nav
+							li.projects-page__dir-item 
+								a.projects-page__dir-link(href=item.href class!=item.classMod)=item.text 
 			.projects-page__catalog
 				- for(let i = 0; i < 10; i++)
 					each item in data.items
@@ -57,11 +84,11 @@ mixin projects-page()
 							.projects-page__catalog-card-title=item.title
 							.projects-page__catalog-card-subtitle=item.subtitle
 							.projects-page__catalog-card-row
-								a.btn.btn--orange.projects-page__catalog-card-link(href=item.link.href)
+								a.btn.btn--drk-orange.projects-page__catalog-card-link(href=item.link.href)
 									span=item.link.text 
 									+icon(item.link.icon, 16, 16).projects-page__catalog-card-link-icon
 								.projects-page__catalog-card-vol 
 									span.projects-page__catalog-card-vol-text=item.volume.text
 									span.projects-page__catalog-card-vol-num=item.volume.num
-			+btn(data.btn).btn--orange.projects-page__btn-more.catalog__btn-more
+			+btn(data.btn).btn--drk-orange.projects-page__btn-more.catalog__btn-more
 

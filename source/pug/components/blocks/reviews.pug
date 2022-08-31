@@ -42,6 +42,6 @@ mixin reviews()
 					- for (let i = 0; i < 2; i++)
 						each item in data.items
 							.swiper-slide
-								.reviews__slider-item
+								.swiper-zoom-container
 									+img(item.src, item.img, "jpg", item.alt)
 				.swiper-pagination.reviews__slider-pag

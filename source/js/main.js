@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
+import {initHeaderFixed} from './modules/init-header-fixed';
 import {initSubmenu} from './modules/init-submenu';
 import {initBurgerMenu} from './modules/init-burger-menu';
 import {initHeroSlider} from './modules/init-hero-slider';
@@ -40,7 +41,8 @@ import {initCardSimilarSlider} from './modules/init-card-similar-slider';
 import {initGoodsSlider} from './modules/init-goods-slider';
 import {initEcologySlider} from './modules/init-ecology-slider';
 import {initCustomInputFile} from './modules/init-custom-input-file';
-import { initProjectsMap } from './modules/init-projects-map';
+import {initProjectsMap} from './modules/init-projects-map';
+import {initContactsMap} from './modules/init-contacts-map';
 
 
 // ---------------------------------
@@ -51,6 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initHeaderFixed();
   initSubmenu();
   initBurgerMenu();
   initHeroSlider();
@@ -99,6 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initEcologySlider();
     initCustomInputFile();
     initProjectsMap();
+    initContactsMap();
   });
 });
 

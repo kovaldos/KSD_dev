@@ -1,25 +1,31 @@
 mixin hero()
 	-
 		const data = {
-			title: "Quis scelerisque suspendisse risus arcu.",
-			subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
 			items: [
 				{
+					title: "Quis scelerisque suspendisse risus arcu.",
+					subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
 					src: "slides",
 					img: "hero-bg-img-1",
 					alt: "slide-img-1",
-				},
+				},				
 				{
+					title: "Lorem ipsum dolor sit.",
+					subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, earum!",
 					src: "slides",
 					img: "hero-bg-img-2",
 					alt: "slide-img-2",
 				},
 				{
+					title: "Lorem ipsum dolor sit amet consectetur.",
+					subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 					src: "slides",
 					img: "hero-bg-img-3",
 					alt: "slide-img-3",
 				},
 				{
+					title: "Lorem ipsum dolor sit amet consectetur.",
+					subtitle: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam.",
 					src: "slides",
 					img: "hero-bg-img-4",
 					alt: "slide-img-4",
@@ -27,15 +33,15 @@ mixin hero()
 			],
 		}
 	section.hero 
-		.hero__bg
-			.swiper.swiper--01.hero__slider
-				.swiper-wrapper 
-					each item in data.items 
-						.swiper-slide 
-							.hero__slider-item 
+		.swiper.swiper--01.hero__slider
+			.swiper-wrapper 
+				each item in data.items 
+					.swiper-slide 
+						.hero__slider-item 
+							.hero__bg
 								+img(item.src, item.img, "jpg", item.alt)
+							.container.hero__container
+								.hero__heading
+									h1.title.title--h1.hero__title=item.title
+										span.hero__subtitle=item.subtitle
 		.hero__slider-pag
-		.container.hero__container
-			.hero__heading 
-				h1.title.title--h1.hero__title=data.title
-					span.hero__subtitle=data.subtitle

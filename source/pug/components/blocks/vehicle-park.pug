@@ -39,6 +39,30 @@ mixin vehicle-park()
 					text: "Кран",
 				},
 			],
+			navTitle: "Направления",
+			nav: [
+				{
+					href: "snos-zdaniy.html",
+					text: "Демонтаж",
+				},
+				{
+					href: "#",
+					text: "Перевозка материалов",
+				},
+				{
+					classMod: "is-active",
+					href: "blagoustroystvo.html",
+					text: "Благоустройство",
+				},
+				{
+					href: "stroitelstvo-dorog.html",
+					text: "Строительство дорог",
+				},
+				{
+					href: "kotlovany.html",
+					text: "Земляные работы",
+				},
+			],
 			items: [
 				{
 					img: "technic-catalog-img-1",
@@ -83,6 +107,13 @@ mixin vehicle-park()
 			h1.title.title--h2.vehicle-park__title=data.title
 			h2.title.title--h3.vehicle-park__subtitle=data.subtitle
 			p.text.vehicle-park__head-text=data.headText
+			.vehicle-park__dir
+				h2.title.title--h4.vehicle-park__dir-title=data.navTitle
+				.vehicle-park__dir-wrap(data-simplebar)
+					ul.vehicle-park__dir-nav
+						each item in data.nav
+							li.vehicle-park__dir-item 
+								a.vehicle-park__dir-link(href=item.href class!=item.classMod)=item.text 
 			.vehicle-park__catalog 
 				h3.title.title--h4.vehicle-park__catalog-title=data.title2
 				nav.vehicle-park__catalog-nav(data-simplebar) 

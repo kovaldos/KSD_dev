@@ -5,7 +5,7 @@ const initProjectsMap = () => {
   let projectsMap = document.getElementById('map01');
   // В этот массив передавать данные для отображения меток на карте
   const locationIcon = [
-    {coordinates: [55.781028, 37.626493], balloonContentHeader: '<span>Россия. Москва,<br>Олимпийский проспект, 16с1</span>'}
+    {coordinates: [55.781028, 37.626493], balloonContentHeader: '<a href="proekt.html">Россия. Москва,<br>Олимпийский проспект, 16с1</a>'}
   ];
   if (projectsMap) {
     ymaps.ready(init);

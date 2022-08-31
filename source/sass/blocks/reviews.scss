@@ -48,16 +48,13 @@
 				}
 			}
 		}
-		&-item {
+		img {
 			width: 100%;
 			height: 100%;
 			border-radius: 0;
 			border: 1px solid $color-lavender;
 			overflow: hidden;
 			background-color: rgba($color-lavender, 0.3);
-			img {
-				width: 100%;
-			}
 		}
 	}
 }

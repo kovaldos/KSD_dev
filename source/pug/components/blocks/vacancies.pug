@@ -13,6 +13,7 @@ mixin vacancies()
 				},
 				select: {
 					class: "vacancies__form-select",
+					label: "Категория",
 					placeholder: "Категория",
 					name: "kategoriya",
 					simplebar: "data-simplebar",
@@ -37,6 +38,7 @@ mixin vacancies()
 				},
 				select2: {
 					class: "vacancies__form-select",
+					label: "Опыт работы",
 					placeholder: "Опыт работы",
 					name: "opyt-raboty",
 					simplebar: "data-simplebar",
@@ -69,6 +71,8 @@ mixin vacancies()
 			},
 			sortText: "Сортировать по ",
 			sort: {
+				class: "vacancies__sort-select",
+				label: "новизне",
 				placeholder: "новизне",
 				name: "vacancies-sort",
 				simplebar: "data-simplebar",
@@ -78,20 +82,8 @@ mixin vacancies()
 						text: "новизне",
 					},
 					{
-						value: "option-02",
-						text: "опции 02",
-					},
-					{
-						value: "option-03",
-						text: "опции 03",
-					},
-					{
-						value: "option-04",
-						text: "опции 04",
-					},
-					{
 						value: "option-05",
-						text: "длинному слову",
+						text: "популярности",
 					},
 				],
 			},
