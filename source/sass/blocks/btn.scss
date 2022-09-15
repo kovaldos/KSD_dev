@@ -9,7 +9,7 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  transition: opacity $trans-default, background-color $trans-default, border-color $trans-default, color $trans-default, transform $trans-default;
+  transition: opacity $trans-default, background-color $trans-default, border-color $trans-default, color $trans-default, transform $trans-default, box-shadow $trans-default;
   &--out-orange {
     border: 1px solid $color-outrageous-orange;
     color: $color-outrageous-orange;

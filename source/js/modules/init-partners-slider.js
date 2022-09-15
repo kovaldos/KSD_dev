@@ -10,6 +10,7 @@ const initPartnersSlider = () => {
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
       speed: 2000,
       freeMode: true,

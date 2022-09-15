@@ -79,4 +79,9 @@
 		color: $color-default-white;
 		border-radius: 7px;
 	}
+	&-popular {
+		&__subtitle {
+			margin: 0 0 30px;
+		}
+	}
 }

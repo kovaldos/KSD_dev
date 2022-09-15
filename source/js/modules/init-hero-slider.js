@@ -8,13 +8,17 @@ const initHeroSlider = () => {
     swiper01 = new Swiper('.swiper--01', {
       watchOverflow: true,
       loop: true,
-      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       speed: 800,
       effect: 'fade',
       slidesPerView: 1,
       spaceBetween: 10,
       lazy: false,
       pagination: {
+        clickable: true,
         el: '.hero__slider-pag',
         type: 'bullets',
         renderBullet(index, className) {

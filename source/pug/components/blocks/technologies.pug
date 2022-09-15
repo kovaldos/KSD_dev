@@ -5,24 +5,28 @@ mixin technologies()
 			items: [
 				{					
 				icon: "technologies-icon-1",
+				iconHover: "technologies-icon-hover-2",
 				num: "01",
 				title: "Механизированный снос строений",
 				text: "Facilisi risus viverra integer mi sagittis, aliquam nisl. Eget pellentesque orci quis amet.",
 				},
 				{					
 				icon: "technologies-icon-2",
+				iconHover: "technologies-icon-hover-2",
 				num: "02",
 				title: "Технология умного сноса строений",
 				text: "Sodales nunc enim felis scelerisque nibh sed ornare egestas. Nulla donec eleifend.",
 				},
 				{					
 				icon: "technologies-icon-3",
+				iconHover: "technologies-icon-hover-2",
 				num: "03",
 				title: "Индивидуальная разработка сноса",
 				text: "Donec est justo, donec nulla. Dolor ultricies elementum sit vulputate tristique quam.",
 				},
 				{					
 				icon: "technologies-icon-4",
+				iconHover: "technologies-icon-hover-2",
 				num: "04",
 				title: "Вторичное использование",
 				text: "Elementum vulputate tempor proin nisl in faucibus mattis diam ipsum. Elit dignissim.",
@@ -37,7 +41,8 @@ mixin technologies()
 				each item in data.items 
 					.technologies__item(data-accordion="element")
 						.technologies__item-row(data-accordion="button")
-							+icon(item.icon, 60, 60).technologies__item-icon
+							img(src=`img/svg/${item.icon}.svg`, alt=`${item.icon}`).technologies__item-icon
+							img(src=`img/svg/${item.iconHover}.svg`, alt=`${item.iconHover}`).technologies__item-icon.technologies__item-icon--hover
 							img(src="./img/content/icon-touch.png" alt="иконка тачскрин").technologies__item-acc-icon
 							span.technologies__item-num=item.num
 						.technologies__item-content(data-accordion="content")

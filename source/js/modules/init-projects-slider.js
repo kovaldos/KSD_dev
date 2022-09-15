@@ -28,8 +28,8 @@ const initProjectsSlider = () => {
     nextBtnNextProject.textContent = projectSlider.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
     projectSlider.on('slideChangeTransitionEnd', () => {
       if (projectSlider.activeIndex + 1 === projectSlider.slides.length) {
-        nextBtnNextProject.textContent = '';
-        nextBtn.href = '#';
+        nextBtnNextProject.textContent = projectSlider.slides[0].querySelector('.projects__slider-item-subtitle').textContent;
+        nextBtn.href = projectSlider.slides[0].querySelector('.die-link-btn').href;
       } else {
         nextBtnNextProject.textContent = projectSlider.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
         nextBtn.href = projectSlider.el.querySelector('.swiper-slide-next .die-link-btn').href;

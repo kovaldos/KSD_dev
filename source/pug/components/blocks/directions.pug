@@ -60,22 +60,27 @@ mixin directions(mods)
 				contentTitle: "",
 				textItems: [
 					{
+						title: "Переработка строительных отходов",
 						text: "В 2022 году в Московской области открыт завод по переработке строительных отходов.",
 						text1: "Собственный комплекс по производству материалов из вторсырья дает возможность работать с объемом свыше 5 тыс. тонн строительных отходов ежедневно.",
 					},
 					{
+						title: "Переработка строительных отходов 2",
 						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam pariatur rerum tenetur harum sapiente porro autem perspiciatis impedit quo. Maxime?",
 						text1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam pariatur rerum tenetur harum sapiente porro autem perspiciatis impedit quo. Maxime?",
 					},
 					{
+						title: "Переработка строительных отходов 3",
 						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam pariatur rerum tenetur harum sapiente porro autem perspiciatis impedit quo. Maxime?",
 						text1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis eum maxime rem explicabo ad a repellat necessitatibus, consequatur eveniet deserunt quo tenetur, accusamus porro quis iusto nostrum, ipsum eius similique!",
 					},
 					{
+						title: "Переработка строительных отходов 4",
 						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores alias iste delectus itaque possimus maxime pariatur recusandae, velit est ex cumque maiores. Illo optio ipsam eos consequatur ab molestias officiis repellendus, temporibus, velit magni, omnis aperiam esse nulla dolore ex!",
 						text1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores alias iste delectus itaque possimus maxime pariatur recusandae, velit est ex cumque maiores. Illo optio ipsam eos consequatur ab molestias officiis repellendus, temporibus, velit magni, omnis aperiam esse nulla dolore ex!",
 					},
 					{
+						title: "Переработка строительных отходов 5",
 						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores alias iste delectus itaque possimus maxime pariatur recusandae, velit est ex cumque maiores. Illo optio ipsam eos consequatur ab molestias officiis repellendus, temporibus, velit magni, omnis aperiam esse nulla dolore ex!",
 						text1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur numquam tenetur unde doloremque? Quisquam ducimus vitae totam. Optio repudiandae eaque fuga unde illo neque suscipit minus reiciendis quisquam? Rem accusamus doloribus nemo sed dignissimos veniam eum, magni aperiam obcaecati nam, minima dolorem quibusdam sapiente quis explicabo qui voluptatibus. Doloremque, fugiat.",
 					},
@@ -112,6 +117,9 @@ mixin directions(mods)
 						alt: "экскаватор-разрушитель",
 					},
 				],
+				btn: {
+						text: "Получить КП",
+				},
 			},
 		}
 
@@ -138,6 +146,7 @@ mixin directions(mods)
 								each item in data.recycling.textItems
 									.swiper-slide
 										.directions__text-slider-item
+											h4.title.title--h4.directions__content-title=item.title
 											p.text.text--lg.directions__text=item.text
 											p.text.text--lg.directions__text=item.text1
 					.directions__slider-nav
@@ -160,3 +169,5 @@ mixin directions(mods)
 									.swiper-slide
 										.directions__slider-item
 											+img(item.src, item.img, "jpg", item.alt)
+			if mods === "recycling"
+				+btn(data.recycling.btn).btn--apple.tech__btn(data-open-modal="offer")

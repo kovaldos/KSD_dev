@@ -63,12 +63,28 @@ mixin hero-section(mods)
 			road: {
 				title: "Строительство дорог из вторичных материалов",
 				subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
-				pic: {
-					src: "slides",
-					img: "hero-bg-img-1",
-					alt: "slide-img-1",
-				},
-
+				items: [
+					{
+						src: "slides",
+						img: "recycling-hero-img-1",
+						alt: "slide-img-1",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-2",
+						alt: "slide-img-2",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-3",
+						alt: "slide-img-3",
+					},
+					{
+						src: "slides",
+						img: "hero-bg-img-4",
+						alt: "slide-img-4",
+					},
+				],
 				numbers: [
 					{
 						num: "5000 км",
@@ -267,8 +283,13 @@ mixin hero-section(mods)
 				.hero-section__pic 
 					+img(data.sale.pic.src, data.sale.pic.img, "jpg", data.sale.pic.alt)
 			if mods === "road"
-				.hero-section__pic 
-					+img(data.road.pic.src, data.road.pic.img, "jpg", data.road.pic.alt)
+				.swiper.hero-section__slider
+					.swiper-wrapper 
+						each item in data.road.items
+							.swiper-slide 
+								.hero-section__slider-item 
+									+img(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.hero-section__slider-pag
 			if mods === "recycling"
 				.swiper.hero-section__slider(class="hero-section__slider--" + mods)
 					.swiper-wrapper 

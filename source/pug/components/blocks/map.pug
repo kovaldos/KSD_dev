@@ -1,13 +1,21 @@
 mixin map(mods)
 	-
 		const data = {
-			title: "Карта",
-			subtitle: "География обслуживания",
+			recycling: {
+				title: "Карта",
+				subtitle: "География обслуживания",
+			},
+			contacts: {
+				title: "Карта"
+			}
 		}
 	section.section.map(class="map--" + mods)
 		.container.map__container
 			.map__wrapper 
-				h2.title.title--h2.map__title=data.title
-				if !mods
-					h3.title.title--h3.map__subtitle=data.subtitle
-				.map__map#contacts-map
+				if mods === "recycling"
+					h2.title.title--h2.map__title=data.recycling.title
+					h3.title.title--h3.map__subtitle=data.recycling.subtitle
+					.map__map#recycling-map
+				if mods === "contacts"
+					h2.title.title--h2.map__title=data.contacts.title
+					.map__map#contacts-map

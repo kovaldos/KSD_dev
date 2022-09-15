@@ -40,6 +40,11 @@
 			z-index: 2;
 		}
 	}
+	&__container {
+		@include vp-767 {
+			background-color: $color-bunting;
+		}
+	}
 	&__slider {
 		height: 100%;
 		&-item {
@@ -56,6 +61,7 @@
 			position: absolute;
 			bottom: 30px;
 			text-align: center;
+			z-index: 5;
 			@include vp-767 {
 				width: calc(100% - 2 * 22px);
 				bottom: 22px;

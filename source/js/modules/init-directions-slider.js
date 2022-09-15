@@ -18,7 +18,7 @@ const initDirectionsSlider = () => {
     directionSlider = new Swiper(directionSlider, {
       watchOverflow: true,
       loop: false,
-      speed: 800,
+      speed: 1200,
       controller: {
         control: directionsTextSlider,
         by: 'slide',

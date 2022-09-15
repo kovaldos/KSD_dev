@@ -263,15 +263,37 @@ mixin header(headerMods, currentUrl)
                 span.header__top-list-item-icon!=link.icon
                 a.link.header__top-link(href=link.href)=link.text
 
-    .header__bottom
+    .header__bottom(data-fix-block)
       .container.header__container.header__container--bottom
-        if(currentUrl === "index.html")
-          //- lighthouse снимает 10 баллов SEO за <a> без href
-          span.header__logo
-            +icon("logo", 118, 32)
-        else
-          a.header__logo(href="index.html" aria-label="Переход на главную")
-            +icon("logo", 118, 32)
+        if headerMods === "header--main"
+          if(currentUrl === "index.html")
+            //- lighthouse снимает 10 баллов SEO за <a> без href
+            span.header__logo
+              +img("content", "logo-ksd-black", "png", "logo-ksd-black")
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +img("content", "logo-ksd-black", "png", "logo-ksd-black")
+        if headerMods === "header--demolition"
+          if(currentUrl === "index.html")
+            span.header__logo
+              +img("content", "ksd-demolition-logo", "png", "ksd-demolition-logo")
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +img("content", "ksd-demolition-logo", "png", "ksd-demolition-logo")
+        if headerMods === "header--road"
+          if(currentUrl === "index.html")
+            span.header__logo
+              +img("content", "ksd-construction-logo", "png", "ksd-construction-logo")
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +img("content", "ksd-construction-logo", "png", "ksd-construction-logo")
+        if headerMods === "header--recycling" || headerMods === "header--sale" 
+          if(currentUrl === "index.html")
+            span.header__logo
+              +img("content", "ksd-recycling-logo", "png", "ksd-recycling-logo")
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +img("content", "ksd-recycling-logo", "png", "ksd-recycling-logo")
         nav.main-nav
           .main-nav__wrapper
             if headerMods === "header--main"
@@ -283,14 +305,12 @@ mixin header(headerMods, currentUrl)
                       span.link.main-nav__link.is-active=link.text
                     else
                       a.link.main-nav__link(href=link.href)=link.text
-              button.btn.btn--reset.main-nav__submenu-toggle(type="button")
-                +icon("icon-dots", 20, 4)
-              ul.main-nav__sublist
-                each item in data.main.subLinks 
-                  li.main-nav__subitem
-                    if(activeState)
-                      span.link.main-nav__link.is-active=item.text
-                    else
+              .main-nav__sublist-wrap(tabindex=0)
+                button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+                  +icon("icon-dots", 20, 4)
+                ul.main-nav__sublist
+                  each item in data.main.subLinks 
+                    li.main-nav__subitem
                       a.link.main-nav__link(href=item.href)=item.text
             if headerMods === "header--demolition"
               ul.main-nav__list
@@ -301,14 +321,12 @@ mixin header(headerMods, currentUrl)
                       span.link.main-nav__link.is-active=link.text
                     else
                       a.link.main-nav__link(href=link.href)=link.text
-              button.btn.btn--reset.main-nav__submenu-toggle(type="button")
-                +icon("icon-dots", 20, 4)
-              ul.main-nav__sublist
-                each item in data.demolition.subLinks 
-                  li.main-nav__subitem
-                    if(activeState)
-                      span.link.main-nav__link.is-active=item.text
-                    else
+              .main-nav__sublist-wrap(tabindex=0)
+                button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+                  +icon("icon-dots", 20, 4)
+                ul.main-nav__sublist
+                  each item in data.demolition.subLinks 
+                    li.main-nav__subitem
                       a.link.main-nav__link(href=item.href)=item.text
             if headerMods === "header--recycling" || headerMods === "header--sale"
               ul.main-nav__list
@@ -319,14 +337,12 @@ mixin header(headerMods, currentUrl)
                       span.link.main-nav__link.is-active=link.text
                     else
                       a.link.main-nav__link(href=link.href)=link.text
-              button.btn.btn--reset.main-nav__submenu-toggle(type="button")
-                +icon("icon-dots", 20, 4)
-              ul.main-nav__sublist
-                each item in data.green.subLinks 
-                  li.main-nav__subitem
-                    if(activeState)
-                      span.link.main-nav__link.is-active=item.text
-                    else
+              .main-nav__sublist-wrap(tabindex=0)
+                button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+                  +icon("icon-dots", 20, 4)
+                ul.main-nav__sublist
+                  each item in data.green.subLinks 
+                    li.main-nav__subitem
                       a.link.main-nav__link(href=item.href)=item.text
             if headerMods === "header--road" || headerMods === "header--improvement" || headerMods === "header--pits"
               ul.main-nav__list
@@ -337,12 +353,13 @@ mixin header(headerMods, currentUrl)
                       span.link.main-nav__link.is-active=link.text
                     else
                       a.link.main-nav__link(href=link.href)=link.text
-              button.btn.btn--reset.main-nav__submenu-toggle(type="button")
-                +icon("icon-dots", 20, 4)
-              ul.main-nav__sublist
-                each item in data.road.subLinks 
-                  li.main-nav__subitem
-                    a.link.main-nav__link(href=item.href)=item.text
+              .main-nav__sublist-wrap(tabindex=0)
+                button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+                  +icon("icon-dots", 20, 4)
+                ul.main-nav__sublist
+                  each item in data.road.subLinks 
+                    li.main-nav__subitem
+                      a.link.main-nav__link(href=item.href)=item.text
           .burger(data-burger-body)
             ul.burger__list(data-accordion="parent" data-single)
               each item in data.burger.items 

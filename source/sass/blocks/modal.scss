@@ -266,4 +266,131 @@
       }
     }
   }
+  &--offer & {
+    &__close-btn {
+      top: 16px;
+      right: 4px;
+      color: $color-cobalt;
+      @include vp-1023 {
+        top: 0;
+        right: 0;
+      }
+    }
+    &__wrapper {
+      padding: 0;
+    }
+    &__content {
+      padding: 30px 20px;
+      @include vp-639 {
+        padding: 30px 15px;
+      }
+    }
+  }
+  &--offer {
+    .offer__form {
+      &-title {
+        font-size: 20px;
+        margin: 0 0 15px;
+        @include vp-424 {
+          font-size: 18px;
+        }
+      }
+      &-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        margin: 0 0 15px;
+        @include vp-424 {
+          font-size: 14px;
+        }
+      }
+      &-form {
+        padding: 0;
+      }
+      &-row {
+        display: flex;
+        gap: 1rem;
+        @include vp-1023 {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+      &-field {
+        max-width: 100%;
+        padding: 10px 0;
+        label {
+          input {
+            padding: 15px;
+          }
+        }
+        &--file {
+          label {
+            max-width: fit-content;
+            @include vp-424 {
+              width: 100%;
+              white-space: nowrap;
+            }
+            input {
+              border: 0;
+              position: absolute;
+              width: 0;
+              height: 0;
+              min-height: 0;
+              padding: 0;
+              -webkit-box-flex: 1;
+              -ms-flex: auto;
+              flex: auto;
+              &:hover,
+              &:focus,
+              &:focus-visible {
+                outline: none;
+                border: 0;
+              }
+            }
+            svg {
+              margin: 0 1rem 0 0;
+            }
+          }
+          &.is-invalid {
+            label {
+              box-shadow: 0 0 5px 2px rgba($color-torch-red, 0.5);
+            }
+          }
+        }
+      }
+      &-btn-del {
+        color: $color-outrageous-orange;
+        font-size: 1rem;
+        padding: 1rem;
+        &.is-hidden {
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          user-select: none;
+        }
+      }
+      &-submit {
+        display: flex;
+        margin: 1rem 0;
+        padding: 16px 48px;
+        border-radius: 7px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        @include vp-374 {
+          padding: 1rem;
+        }
+      }
+      &-limit {
+        @include vp-424 {
+          text-align: center;
+          padding: 20px 0;
+        }
+        &-text {
+          font-size: 0.8rem;
+          line-height: 1.25;
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import {modals} from '../modals/init-modals';
 import FormsValidate from './form-validate';
+import { initCustomInputFile } from '../init-custom-input-file';
 const formWrappers = document.querySelectorAll('[data-validate]');
 
 const data = {};
@@ -180,7 +181,11 @@ const cooperationFormValidationErrorCallback = (e) => {
 // Валидация и отправка формы для поставщиков -- Начало --
 const topicalFormValidationSuccessCallback = (e) => {
   e.preventDefault();
+
   const formData = new FormData(e.target);
+
+  formData.append('file', file);
+  console.log(...formData);
   for (let [name, value] of formData) {
     data[name] = value;
   }

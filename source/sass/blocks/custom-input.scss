@@ -45,7 +45,8 @@
   }
 
   &.is-invalid {
-    input {
+    input,
+    textarea {
       border: 1px solid $color-torch-red;
 
       &:focus,

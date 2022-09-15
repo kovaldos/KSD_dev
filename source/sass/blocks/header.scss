@@ -37,7 +37,7 @@
           font-weight: 600;
           font-size: 14px;
           line-height: 160%;
-          margin: 0 7px 0 0;
+          margin: 0 5px 0 0;
         }
         @include vp-1023 {
           &:not(.header__top-list-item--03) {
@@ -50,7 +50,6 @@
       color: $color-default-white;
       font-size: 14px;
       line-height: 160%;
-      margin: -5px;
       @include vp-767 {
         font-size: 12px;
       }
@@ -64,7 +63,7 @@
     padding: 20px 0;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 10;
     background-color: $color-default-white;
     width: 100%;
     box-shadow: 0px 5px 26px -8px rgba($color-bunting, 0.102);

@@ -9,6 +9,8 @@ const initHeroSectionSlider = () => {
       watchOverflow: true,
       loop: true,
       autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
         delay: 5000,
       },
       effect: 'fade',
@@ -19,6 +21,7 @@ const initHeroSectionSlider = () => {
 
       //  },
       pagination: {
+        clickable: true,
         el: '.hero-section__slider-pag',
         type: 'bullets',
         renderBullet(index, className) {

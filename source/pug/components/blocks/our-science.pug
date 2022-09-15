@@ -82,6 +82,8 @@ mixin our-science(mods)
 								li.our-science__list-item(data-accordion="element")
 									button.btn.btn--reset.our-science__list-btn(type="button" data-accordion="button")
 										+icon(item.icon, 60, 60).our-science__list-icon
+										//- img(src=`/local/templates/constructiv/img/svg/${item.icon}.svg`, alt=`${item.icon}`).our-science__list-icon
+										//- img(src=`img/svg/${item.icon}.svg`, alt=`${item.icon}`).our-science__list-icon
 										span.our-science__list-title=item.title
 										+icon("icon-chevron-down", 12, 7).our-science__acc-icon
 									p.text.our-science__list-text(data-accordion="content")=item.text
@@ -90,6 +92,8 @@ mixin our-science(mods)
 								li.our-science__list-item(data-accordion="element")
 									button.btn.btn--reset.our-science__list-btn(type="button" data-accordion="button")
 										+icon(item.icon, 60, 60).our-science__list-icon
+										//- img(src=`/local/templates/constructiv/img/svg/${item.icon}.svg`, alt=`${item.icon}`).our-science__list-icon
+										//- img(src=`img/svg/${item.icon}.svg`, alt=`${item.icon}`).our-science__list-icon
 										span.our-science__list-title=item.title
 										+icon("icon-chevron-down", 12, 7).our-science__acc-icon
 									p.text.our-science__list-text(data-accordion="content")=item.text

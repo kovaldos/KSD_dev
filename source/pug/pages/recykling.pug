@@ -15,12 +15,14 @@ block main
 		//- на странице запрещен "голый" код
 		//- все блоки вставляются из папки pug/components/blocks
 		+hero-section("recycling")
-		+partners()
+		+partners("recycling")
 		+directions("recycling")
 		+numbers()
 		+services()
-		+map()
+		+map("recycling")
 		+technic("recycling")
 		+blog-recycling()
 		+contact-us("recycling")
 block modals
+	+modal("modal--offer modal--fit-content")(data-modal="offer")
+		+modal-offer("recycling")

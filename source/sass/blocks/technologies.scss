@@ -38,6 +38,7 @@
 			align-items: center;
 			margin: 0 0 7px;
 			pointer-events: none;
+			position: relative;
 			@include vp-1023 {
 				pointer-events: all;
 				margin: 0;
@@ -55,9 +56,18 @@
 			color: $color-bunting;
 			transition: color $trans-default;
 			flex-shrink: 0;
+			opacity: 1;
+			transition: opacity $trans-default;
 			@include vp-1023 {
 				width: 50px;
 				height: 50px;
+			}
+			&--hover {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				opacity: 0;
 			}
 		}
 		&-num {
@@ -95,7 +105,10 @@
 					color: rgba($color-default-white, 0.05);
 				}
 				&-icon {
-					color: $color-default-white;
+					opacity: 0;
+					&--hover {
+						opacity: 1;
+					}
 				}
 				&-title {
 					color: $color-default-white;
