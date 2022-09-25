@@ -340,8 +340,15 @@
               -webkit-box-flex: 1;
               -ms-flex: auto;
               flex: auto;
-              &:hover,
-              &:focus,
+              &:hover {
+                outline: none;
+                border: 0;
+              }
+              &:focus {
+                outline: none;
+                outline: none;
+                border: 0;
+              }
               &:focus-visible {
                 outline: none;
                 border: 0;

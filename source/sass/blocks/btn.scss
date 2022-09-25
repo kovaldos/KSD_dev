@@ -68,8 +68,18 @@
       outline: none;
     }
     &--out-orange {
-      &:hover,
+      &:hover {
+        background-color: rgba($color-outrageous-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
       &:focus-visible {
+        outline: none;
+        background-color: rgba($color-outrageous-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:focus {
         background-color: rgba($color-outrageous-orange, 0.1);
         border-color: $color-orange-red;
         color: $color-orange-red;
@@ -81,8 +91,18 @@
       }
     }
     &--stroke-drk-orange {
-      &:hover,
+      &:hover {
+        background-color: rgba($color-dark-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
       &:focus-visible {
+        outline: none;
+        background-color: rgba($color-dark-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:focus {
         background-color: rgba($color-dark-orange, 0.1);
         border-color: $color-orange-red;
         color: $color-orange-red;
@@ -94,8 +114,16 @@
       }
     }
     &--stroke-cobalt {
-      &:hover,
+      &:hover {
+        background-color: rgba($color-cobalt, 0.5);
+        color: $color-default-white;
+      }
       &:focus-visible {
+        outline: none;
+        background-color: rgba($color-cobalt, 0.5);
+        color: $color-default-white;
+      }
+      &:focus {
         background-color: rgba($color-cobalt, 0.5);
         color: $color-default-white;
       }
@@ -105,8 +133,16 @@
       }
     }
     &--stroke-apple {
-      &:hover,
+      &:hover {
+        background-color: rgba($color-apple, 0.5);
+        color: $color-default-white;
+      }
       &:focus-visible {
+        outline: none;
+        background-color: rgba($color-apple, 0.5);
+        color: $color-default-white;
+      }
+      &:focus {
         background-color: rgba($color-apple, 0.5);
         color: $color-default-white;
       }
@@ -116,8 +152,14 @@
       }
     }
     &--orange {
-      &:hover,
+      &:hover {
+        background-color: $color-orange-red;
+      }
       &:focus-visible {
+        outline: none;
+        background-color: $color-orange-red;
+      }
+      &:focus {
         background-color: $color-orange-red;
       }
       &:active {
@@ -125,8 +167,14 @@
       }
     }
     &--apple {
-      &:hover,
+      &:hover {        
+        background-color: rgba($color-apple, 0.8);
+      }
       &:focus-visible {
+        outline: none;
+        background-color: rgba($color-apple, 0.8);
+      }
+      &:focus {
         background-color: rgba($color-apple, 0.8);
       }
       &:active {
@@ -134,8 +182,14 @@
       }
     }
     &--cobalt {
-      &:hover,
+      &:hover {
+        background-color: rgba($color-cobalt, 0.8);
+      }
       &:focus-visible {
+        outline: none;
+        background-color: rgba($color-cobalt, 0.8);
+      }
+      &:focus {
         background-color: rgba($color-cobalt, 0.8);
       }
       &:active {
@@ -143,8 +197,14 @@
       }
     }
     &--drk-orange {
-      &:hover,
+      &:hover {
+        background-color: $color-outrageous-orange;
+      }
       &:focus-visible {
+        outline: none;
+        background-color: $color-outrageous-orange;
+      }
+      &:focus {
         background-color: $color-outrageous-orange;
       }
       &:active {

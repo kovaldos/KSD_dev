@@ -96,12 +96,28 @@
       &::after {
         display: none;
       }
-      &:hover,
-      &:focus-visible {
+      &:hover {
         color: $color-orange-red;
       }
-      &:hover &,
+      &:focus-visible {
+        outline: none;
+        color: $color-orange-red;
+      }
+      &:focus {
+        outline: none;
+        color: $color-orange-red;
+      }
+      &:hover & {
+        &-wrap-icon {
+          background-color: $color-orange-red;
+        }
+      }
       &:focus-visible & {
+        &-wrap-icon {
+          background-color: $color-orange-red;
+        }
+      }
+      &:focus & {
         &-wrap-icon {
           background-color: $color-orange-red;
         }

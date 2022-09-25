@@ -65,16 +65,52 @@
 			padding: 20px;
 			height: 125px;
 		}
-		&:hover, 
+		&:hover {
+			background-color: $color-transparent;
+			&::before {
+				visibility: visible;
+				opacity: 1;
+			}
+		} 
 		&:focus-visible {
+			outline: none;
 			background-color: $color-transparent;
 			&::before {
 				visibility: visible;
 				opacity: 1;
 			}
 		}
-		&:hover &, 
+		&:focus {
+			outline: none;
+			background-color: $color-transparent;
+			&::before {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+		&:hover & {
+			&-date {
+				color: $color-default-white;
+			}
+			&-title {
+				color: $color-default-white;
+			}
+			&-text {
+				color: $color-default-white;
+			}
+		}
 		&:focus-visible & {
+			&-date {
+				color: $color-default-white;
+			}
+			&-title {
+				color: $color-default-white;
+			}
+			&-text {
+				color: $color-default-white;
+			}
+		}
+		&:focus & {
 			&-date {
 				color: $color-default-white;
 			}

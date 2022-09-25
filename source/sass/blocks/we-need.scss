@@ -95,12 +95,44 @@
 			transition: color $trans-default;
 		}
 		@media (hover: hover), screen and (min-width: 0\0) {
-			&:hover,
-			&:focus-visible {
+			&:hover {
 				background-color: $color-bunting;
 			}
-			&:hover &,
+			&:focus-visible {
+				outline: none;
+				background-color: $color-bunting;
+			}
+			&:focus {
+				outline: none;
+				background-color: $color-bunting;
+			}
+			&:hover & {
+				&-row {
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&-title {
+					color: $color-default-white;
+				}
+				&-available {
+					color: rgba($color-default-white, 0.6);
+				}
+			}
 			&:focus-visible & {
+				&-row {
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&-title {
+					color: $color-default-white;
+				}
+				&-available {
+					color: rgba($color-default-white, 0.6);
+				}
+			}
+			&:focus & {
 				&-row {
 					svg {
 						color: $color-default-white;

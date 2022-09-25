@@ -19,13 +19,11 @@
       border: 1px solid rgba($color-default-black, 0.2);
       border-radius: 5px;
       outline: none;
-
       transition: border $trans-default;
-
       &:hover {
         border: 1px solid rgba($color-default-black, 0.5);
       }
-
+      &:focus-visible,
       &:focus {
         border: 1px solid rgba($color-default-black, 0.8);
       }
@@ -48,13 +46,18 @@
     input,
     textarea {
       border: 1px solid $color-torch-red;
-
-      &:focus,
+      &:focus {
+        outline: none;
+        border: 1px solid rgba($color-torch-red, 0.5);
+      }
+      &:focus-visible {
+        outline: none;
+        border: 1px solid rgba($color-torch-red, 0.5);
+      }
       &:hover {
         border: 1px solid rgba($color-torch-red, 0.5);
       }
     }
-
     .custom-input__error {
       opacity: 1;
     }

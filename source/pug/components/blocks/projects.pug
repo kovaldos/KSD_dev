@@ -4,7 +4,7 @@ mixin projects(mods)
 			title: "Проекты",
 			subtitle: "Наши последние объекты",
 			next: {
-				href: "proekt2.html",
+				//- href: "proekt2.html",
 				icon: "icon-arrow-right-50x25",
 				title: "Следующий проект",
 				subtitle: "",
@@ -268,7 +268,7 @@ mixin projects(mods)
 				.projects__col.projects__col--01
 					.swiper.projects__slider 
 						.swiper-wrapper 
-							if mods === "main" || mods === "demolition" 
+							if mods === "main"
 								- for(let i = 0; i < 10; i++)
 									each item in data.main.slides 
 										.swiper-slide 
@@ -295,6 +295,33 @@ mixin projects(mods)
 														span.die-term__text=item.die.term.text
 														span.die-term__value=item.die.term.value
 													a.btn.btn--drk-orange.die-link-btn(href=item.die.btn.href)=item.die.btn.text
+							if mods === "demolition" 
+								- for(let i = 0; i < 10; i++)
+									each item in data.main.slides 
+										.swiper-slide 
+											.projects__slider-item
+												+img("slides", item.img, "jpg", item.alt)
+												.projects__slider-item-row
+													.projects__slider-item-heading
+														h4.title.projects__slider-item-title=item.title
+														h5.title.projects__slider-item-subtitle=item.subtitle
+													.projects__slider-item-volume
+														span.volume-text=item.volume.text
+														span.volume-value=item.volume.num
+												.projects__slider-item-die
+													.die-title
+														+icon(item.die.icon, 20, 20).die-title__icon
+														span.die-title__text=item.die.title
+													.die-address
+														span.die-address__text=item.die.address.text
+														span.die-address__value=item.die.address.value
+													.die-work
+														span.die-work__text=item.die.work.text
+														span.die-work__value=item.die.work.value
+													.die-term
+														span.die-term__text=item.die.term.text
+														span.die-term__value=item.die.term.value
+													a.btn.btn--orange.die-link-btn(href=item.die.btn.href)=item.die.btn.text
 							if mods === "road"
 								- for(let i = 0; i < 10; i++)
 									each item in data.road.slides
@@ -387,7 +414,7 @@ mixin projects(mods)
 								.swiper-button-prev.projects__slider-btn.projects__slider-btn--prev
 									+icon("icon-chevron-left-black", 30, 30)
 				.projects__col.projects__col--02
-					a.projects__slider-item-next(href=data.next.href)
+					.projects__slider-item-next
 						+icon(data.next.icon, 50, 25)
 						h4.title.next-title
 							span.next-title__title=data.next.title

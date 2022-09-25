@@ -70,12 +70,13 @@
 			}
 		}
 		&-pag {
-			padding: 12px 65px;
 			position: absolute;
 			&.swiper-pagination-horizontal.swiper-pagination-bullets {
+				left: 65px;
 				text-align: left;
 				bottom: 41px;
-				width: fit-content;
+				width: 100%;
+				max-width: 150px;
 				@include vp-1023 {
 					padding: 0 15px;
 					bottom: 26px;

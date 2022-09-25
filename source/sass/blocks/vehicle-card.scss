@@ -28,8 +28,15 @@
 		min-width: 270px;
 		justify-content: space-between;
 		@media (hover: hover), screen and (min-width: 0\0) {
-			&:hover,
+			&:hover {
+				background-color: $color-dark-orange;
+			}
 			&:focus-visible {
+				outline: none;
+				background-color: $color-dark-orange;
+			}
+			&:focus {
+				outline: none;
 				background-color: $color-dark-orange;
 			}
 		}
@@ -57,8 +64,15 @@
 			color: $color-logan;
 			cursor: pointer;
 			@media (hover: hover), screen and (min-width: 0\0) {
-				&:hover,
+				&:hover {
+					color: $color-orange-red;
+				}
 				&:focus-visible {
+					outline: none;
+					color: $color-orange-red;
+				}
+				&:focus {
+					outline: none;
 					color: $color-orange-red;
 				}
 			}
@@ -84,6 +98,7 @@
 			&--02 {
 				.vehicle-card__col {
 					&--01 {
+						flex-shrink: 0;
 						max-width: 470px;
 						padding: 0;
 						@include vp-1023 {

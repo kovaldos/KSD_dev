@@ -11,6 +11,7 @@ const initVehicleCardSlider = () => {
       slidesPerView: 3.84,
       freeMode: true,
       watchSlidesProgress: true,
+      observeParents: true,
       observer: true,
       breakpoints: {
         1024: {
@@ -24,6 +25,7 @@ const initVehicleCardSlider = () => {
     vehicleCardSlider = new Swiper(vehicleCardSlider, {
       spaceBetween: 10,
       slidesPerView: 1,
+      observeParents: true,
       observer: true,
       thumbs: {
         swiper: vehicleCardSliderThumbs,

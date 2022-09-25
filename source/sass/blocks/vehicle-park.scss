@@ -82,8 +82,17 @@
 			border-radius: 10px;
 			background-color: $color-ghost-white;
 			transition: background-color $trans-default, color $trans-default;
-			&:hover,
+			&:hover {
+				background-color: $color-orange-red;
+				color: $color-default-white;
+			}
 			&:focus-visible {
+				outline: none;
+				background-color: $color-orange-red;
+				color: $color-default-white;
+			}
+			&:focus {
+				outline: none;
 				background-color: $color-orange-red;
 				color: $color-default-white;
 			}
@@ -116,6 +125,7 @@
 				height: 248px;
 				position: relative;
 				margin: 0 0 20px;
+				overflow: hidden;
 				img {
 					position: absolute;
 					top: 50%;

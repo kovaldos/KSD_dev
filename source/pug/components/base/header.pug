@@ -305,8 +305,8 @@ mixin header(headerMods, currentUrl)
                       span.link.main-nav__link.is-active=link.text
                     else
                       a.link.main-nav__link(href=link.href)=link.text
-              .main-nav__sublist-wrap(tabindex=0)
-                button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+              .main-nav__sublist-wrap(tabindex=0 onclick="")
+                .main-nav__submenu-toggle
                   +icon("icon-dots", 20, 4)
                 ul.main-nav__sublist
                   each item in data.main.subLinks 
@@ -321,8 +321,8 @@ mixin header(headerMods, currentUrl)
                       span.link.main-nav__link.is-active=link.text
                     else
                       a.link.main-nav__link(href=link.href)=link.text
-              .main-nav__sublist-wrap(tabindex=0)
-                button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+              .main-nav__sublist-wrap(tabindex=0 onclick="")
+                .main-nav__submenu-toggle
                   +icon("icon-dots", 20, 4)
                 ul.main-nav__sublist
                   each item in data.demolition.subLinks 
@@ -337,8 +337,8 @@ mixin header(headerMods, currentUrl)
                       span.link.main-nav__link.is-active=link.text
                     else
                       a.link.main-nav__link(href=link.href)=link.text
-              .main-nav__sublist-wrap(tabindex=0)
-                button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+              .main-nav__sublist-wrap(tabindex=0 onclick="")
+                .main-nav__submenu-toggle
                   +icon("icon-dots", 20, 4)
                 ul.main-nav__sublist
                   each item in data.green.subLinks 
@@ -353,8 +353,8 @@ mixin header(headerMods, currentUrl)
                       span.link.main-nav__link.is-active=link.text
                     else
                       a.link.main-nav__link(href=link.href)=link.text
-              .main-nav__sublist-wrap(tabindex=0)
-                button.btn.btn--reset.main-nav__submenu-toggle(type="button")
+              .main-nav__sublist-wrap(tabindex=0 onclick="")
+                .main-nav__submenu-toggle
                   +icon("icon-dots", 20, 4)
                 ul.main-nav__sublist
                   each item in data.road.subLinks 

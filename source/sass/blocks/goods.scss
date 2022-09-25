@@ -21,6 +21,18 @@
 						transform: translateX(0);
 					}
 				}
+				&:focus-visible {
+					outline: none;
+					.goods__slider-item-add {
+						transform: translateX(0);
+					}
+				}
+				&:focus {
+					outline: none;
+					.goods__slider-item-add {
+						transform: translateX(0);
+					}
+				}
 			}
 			&-pic {
 				width: 100%;

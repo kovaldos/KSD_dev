@@ -204,6 +204,7 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
+				flex-direction: column;
 				background-color: $color-bunting;
 				border-radius: 5px;
 				padding: 48px 37px 37px;
@@ -212,8 +213,8 @@
 				max-height: 500px;
 				min-height: 440px;
 				color: $color-default-white;
-				writing-mode: vertical-rl;
 				transition: background-color $trans-default;
+				cursor: pointer;
 				@include vp-1023 {
 					padding: 25px;
 				}
@@ -224,8 +225,15 @@
 					flex-direction: row-reverse;
 				}
 				@media (hover: hover), screen and (min-width: 0\0) {
-					&:hover,
+					&:hover {
+						background-color: $color-dark-orange;
+					}
 					&:focus-visible {
+						outline: none;
+						background-color: $color-dark-orange;
+					}
+					&:focus {
+						outline: none;
 						background-color: $color-dark-orange;
 					}
 				}
@@ -241,9 +249,9 @@
 				.next-title {
 					width: 100%;
 					max-height: 390px;
-					flex: auto;
+					flex-grow: 1;
+					writing-mode: vertical-rl;
 					transform: rotate(180deg);
-					padding: 0 0 20px 0;
 					@include vp-767 {
 						transform: none;
 						padding: 0 20px 0 0;
@@ -257,14 +265,16 @@
 					}
 					&__subtitle {
 						display: block;
+						width: 52px;
+						height: 370px;
 						font-weight: 800;
 						font-size: 2rem;
 						line-height: 160%;
-						color: #ffffff;
-						display: -webkit-box;
-						-webkit-line-clamp: 1;
-						-webkit-box-orient: vertical;
+						text-overflow: ellipsis;
 						overflow: hidden;
+						white-space: nowrap;
+						color: #ffffff;
+						writing-mode: vertical-rl;
 						@include vp-767 {
 							font-size: 18px;
 						}
@@ -350,29 +360,70 @@
 		font-size: 16px;
 		line-height: 26px;
 	}
-	&--road,
-	&--pits {
-		.projects {
-			&__slider {
-				&-item {
-					&-next {
-						background-color: $color-cobalt;
+	&--demolition & {
+		&__slider {
+			&-item {
+				&-die {
+					.die-title {
+						&__icon {
+							color: $color-outrageous-orange;
+						}
+					}
+				}
+				&-next {
+					@media (hover: hover), screen and (min-width: 0\0) {
+						&:hover {
+							background-color: $color-outrageous-orange;
+						}
+						&:focus-visible {
+							outline: none;
+							background-color: $color-outrageous-orange;
+						}
+						&:focus {
+							outline: none;
+							background-color: $color-outrageous-orange;
+						}
 					}
 				}
 			}
 		}
-		.die {
-			&-title {
-				&__icon {
-					color: $color-cobalt;
+	}
+	&--road &,
+	&--pits & {
+		&__slider {
+			&-item {
+				&-die {
+					.die {
+						&-title {
+							&__icon {
+								color: $color-cobalt;
+							}
+						}
+						&-link-btn {
+							color: $color-cobalt;
+							padding: 7px;
+							margin: -7px;
+							&::after {
+								background-color: $color-cobalt;
+							}
+						}
+					}
 				}
-			}
-			&-link-btn {
-				color: $color-cobalt;
-				padding: 7px;
-				margin: -7px;
-				&::after {
+				&-next {
 					background-color: $color-cobalt;
+					@media (hover: hover), screen and (min-width: 0\0) {
+						&:hover {
+							background-color: rgba($color-cobalt, 0.8);
+						}
+						&:focus-visible {
+							outline: none;
+							background-color: rgba($color-cobalt, 0.8);
+						}
+						&:focus {
+							outline: none;
+							background-color: rgba($color-cobalt, 0.8);
+						}
+					}
 				}
 			}
 		}

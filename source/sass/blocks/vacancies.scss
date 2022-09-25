@@ -84,8 +84,15 @@
 						line-height: 26px;
 						color: $color-waikawa-grey;
 					}
-					&:hover,
+					&:hover {
+						border: 0;
+					}
 					&:focus-visible {
+						outline: none;
+						border: 0;
+					}
+					&:focus {
+						outline: none;
 						border: 0;
 					}
 				}
@@ -93,9 +100,15 @@
 			&.is-invalid {
 				input {
 					border: 0;
-					&:hover,
-					&:focus,
+					&:hover {
+						border: 0;
+					}
+					&:focus {
+						outline: none;
+						border: 0;
+					}
 					&:focus-visible {
+						outline: none;
 						border: 0;
 					}
 				}

@@ -25,8 +25,23 @@
 		outline: none;
 	}
 	@media (hover: hover), screen and (min-width: 0\0) {
-		&:hover &,
+		&:hover {
+			&__span {
+				color: $color-dark-orange;
+			}
+			&__icon {
+				color: $color-dark-orange;
+			}
+		}
 		&:focus-visible & {
+			&__span {
+				color: $color-dark-orange;
+			}
+			&__icon {
+				color: $color-dark-orange;
+			}
+		}
+		&:focus & {
 			&__span {
 				color: $color-dark-orange;
 			}
@@ -39,8 +54,28 @@
 .wrapper--road {
 	.btn-to-top {
 		@media (hover: hover), screen and (min-width: 0\0) {
-			&:hover ,
+			&:hover {
+				.btn-to-top {
+					&__span {
+						color: $color-cobalt;
+					}
+					&__icon {
+						color: $color-cobalt;
+					}
+				}
+			}
 			&:focus-visible {
+				outline: none;
+				.btn-to-top {
+					&__span {
+						color: $color-cobalt;
+					}
+					&__icon {
+						color: $color-cobalt;
+					}
+				}
+			}
+			&:focus {
 				.btn-to-top {
 					&__span {
 						color: $color-cobalt;

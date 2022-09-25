@@ -70,8 +70,15 @@
 				font-size: 37px;
 			}
 			@media (hover: hover), screen and (min-width: 0\0) {
-				&:hover,
+				&:hover {
+					color: $color-dark-orange;
+				}
 				&:focus-visible {
+					outline: none;
+					color: $color-dark-orange;
+				}
+				&:focus {
+					outline: none;
 					color: $color-dark-orange;
 				}
 			}
@@ -117,8 +124,15 @@
 			color: $color-waikawa-grey;
 			transition: color $trans-default;
 			@media (hover: hover), screen and (min-width: 0\0) {
-				&:hover,
+				&:hover {
+					color: $color-dark-orange;
+				}
 				&:focus-visible {
+					outline: none;
+					color: $color-dark-orange;
+				}
+				&:focus {
+					outline: none;
 					color: $color-dark-orange;
 				}
 			}
@@ -172,8 +186,15 @@
 					font-size: 20px;
 				}
 				@media (hover: hover), screen and (min-width: 0\0) {
-					&:hover,
+					&:hover {
+						color: $color-dark-orange;
+					}
 					&:focus-visible {
+						outline: none;
+						color: $color-dark-orange;
+					}
+					&:focus {
+						outline: none;
 						color: $color-dark-orange;
 					}
 				}

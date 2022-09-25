@@ -53,8 +53,12 @@
     &:hover {
       border: 2px solid rgba($color-default-black, 0.5);
     }
-
+    &:focus-visible {
+      outline: none;
+      border: 2px solid rgba($color-default-black, 0.8);
+    }
     &:focus {
+      outline: none;
       border: 2px solid rgba($color-default-black, 0.8);
     }
   }
@@ -93,16 +97,30 @@
       background-color: rgba($color-default-white, 0.2);
 
       @media (hover: hover), screen and (min-width: 0\0) {
-        &:hover,
+        &:hover {
+          background-color: rgba($color-default-white, 0.2);
+        }
+        &:focus-visible {
+          outline: none;
+          background-color: rgba($color-default-white, 0.2);
+        }
         &:focus {
+          outline: none;
           background-color: rgba($color-default-white, 0.2);
         }
       }
     }
 
     @media (hover: hover), screen and (min-width: 0\0) {
-      &:hover,
+      &:hover {
+        background-color: rgba($color-default-white, 0.4);
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: rgba($color-default-white, 0.4);
+      }
       &:focus {
+        outline: none;
         background-color: rgba($color-default-white, 0.4);
       }
     }
@@ -196,7 +214,14 @@
     .custom-select__button {
       border: 2px solid $color-torch-red;
 
-      &:focus,
+      &:focus-visible {
+        outline: none;
+        border: 2px solid rgba($color-torch-red, 0.5);
+      }
+      &:focus {
+        outline: none;
+        border: 2px solid rgba($color-torch-red, 0.5);
+      }
       &:hover {
         border: 2px solid rgba($color-torch-red, 0.5);
       }

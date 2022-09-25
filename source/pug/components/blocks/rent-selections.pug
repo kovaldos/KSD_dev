@@ -74,7 +74,9 @@ mixin rent-selections()
 						li.rent-selections__tabs-controls-item
 							button.tabs__control.rent-selections__tabs-control(type="button" data-index=index, data-tabs="control",)
 								span.rent-selections__tabs-control-title=item.title
-								+icon(item.icon, 80, 80)
+								span.rent-selections__tabs-control-pic
+									img(src=`img/sprite/${item.icon}.svg`, alt="Картинка для подборки").rent-selections__tabs-control-img
+									img(src=`img/sprite/${item.icon}.svg`, alt="Картинка для подборки").rent-selections__tabs-control-img.rent-selections__tabs-control-img--hover
 				label.rent-selections__label(for="load-more")
 					span.unloaded=data.more
 					span.loaded=data.less

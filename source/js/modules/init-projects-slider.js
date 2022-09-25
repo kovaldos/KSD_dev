@@ -8,7 +8,7 @@ const initProjectsSlider = () => {
   if (projectSlider) {
     projectSlider = new Swiper(projectSlider, {
       watchOverflow: true,
-      loop: false,
+      loop: true,
       speed: 800,
       slidesPerView: 1,
       spaceBetween: 30,
@@ -29,11 +29,14 @@ const initProjectsSlider = () => {
     projectSlider.on('slideChangeTransitionEnd', () => {
       if (projectSlider.activeIndex + 1 === projectSlider.slides.length) {
         nextBtnNextProject.textContent = projectSlider.slides[0].querySelector('.projects__slider-item-subtitle').textContent;
-        nextBtn.href = projectSlider.slides[0].querySelector('.die-link-btn').href;
+        // nextBtn.href = projectSlider.slides[0].querySelector('.die-link-btn').href;
       } else {
         nextBtnNextProject.textContent = projectSlider.el.querySelector('.swiper-slide-next .projects__slider-item-subtitle').textContent;
-        nextBtn.href = projectSlider.el.querySelector('.swiper-slide-next .die-link-btn').href;
+        // nextBtn.href = projectSlider.el.querySelector('.swiper-slide-next .die-link-btn').href;
       }
+    });
+    nextBtn.addEventListener('click', () => {
+      projectSlider.slideNext(800, true);
     });
   }
 };

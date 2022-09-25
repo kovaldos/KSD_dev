@@ -55,8 +55,15 @@
 						line-height: 26px;
 						color: $color-waikawa-grey;
 					}
-					&:hover,
+					&:hover {
+						border: 0;
+					}
 					&:focus-visible {
+						outline: none;
+						border: 0;
+					}
+					&:focus {
+						outline: none;
 						border: 0;
 					}
 				}
@@ -64,9 +71,15 @@
 			&.is-invalid {
 				input {
 					border: 0;
-					&:hover,
-					&:focus,
+					&:hover {
+						border: 0;
+					}
 					&:focus-visible {
+						outline: none;
+						border: 0;
+					}
+					&:focus {
+						outline: none;
 						border: 0;
 					}
 				}
@@ -103,6 +116,14 @@
 				&__item {
 					padding: 5px 5px 5px 15px;
 					&:hover {
+						background-color: rgba($color-waikawa-grey, 0.1);
+					}
+					&:focus-visible {
+						outline: none;
+						background-color: rgba($color-waikawa-grey, 0.1);
+					}
+					&:focus {
+						outline: none;
 						background-color: rgba($color-waikawa-grey, 0.1);
 					}
 				}

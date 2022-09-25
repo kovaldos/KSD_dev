@@ -113,8 +113,15 @@
 // ❗ обязательно используйте @media для отключения ховеров на тач устройствах
 // но не используем для текстовых полей ( input, textarea )
 /* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
+  &:hover {
+    color: $color-default-white;
+  }
+  &:focus-visible {
+    outline: none;
+    color: $color-default-white;
+  }
   &:focus {
+    outline: none;
     color: $color-default-white;
   }
 } */

@@ -44,8 +44,15 @@
 						border: 0.5px solid $color-lavender-grey;
 						border-radius: 7px;
 						padding: 16px;
-						&:hover,
+						&:hover {
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
 						&:focus-visible {
+							outline: none;
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
+						&:focus {
+							outline: none;
 							border: 0.5px solid rgba($color-default-black, 0.5);
 						}
 					}
@@ -53,8 +60,15 @@
 				&.is-invalid {
 					input {
 						border: 0.5px solid $color-torch-red;
-						&:hover,
+						&:hover {
+							border: 0.5px solid rgba($color-torch-red, 0.5);
+						}
 						&:focus-visible {
+							outline: none;
+							border: 0.5px solid rgba($color-torch-red, 0.5);
+						}
+						&:focus {
+							outline: none;
 							border: 0.5px solid rgba($color-torch-red, 0.5);
 						}
 					}
@@ -77,8 +91,15 @@
 						border: 0.5px solid $color-lavender-grey;
 						border-radius: 7px;
 						padding: 16px;
-						&:hover,
+						&:hover {
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
 						&:focus-visible {
+							outline: none;
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
+						&:focus {
+							outline: none;
 							border: 0.5px solid rgba($color-default-black, 0.5);
 						}
 					}
@@ -192,8 +213,23 @@
 				outline: none;
 			}
 			@media (hover: hover), screen and (min-width: 0\0) {
-				&:hover,
+				&:hover {
+					background-color: $color-dark-orange;
+					border-color: $color-dark-orange;
+					svg {
+						color: $color-default-white;
+					}
+				}
 				&:focus-visible {
+					outline: none;
+					background-color: $color-dark-orange;
+					border-color: $color-dark-orange;
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&:focus {
+					outline: none;
 					background-color: $color-dark-orange;
 					border-color: $color-dark-orange;
 					svg {
@@ -237,8 +273,17 @@
 		&__socials {
 			&-link {
 				@media (hover: hover), screen and (min-width: 0\0) {
-					&:hover,
+					&:hover {
+						background-color: $color-cobalt;
+						border-color: $color-cobalt;
+					}
 					&:focus-visible {
+						outline: none;
+						background-color: $color-cobalt;
+						border-color: $color-cobalt;
+					}
+					&:focus {
+						outline: none;
 						background-color: $color-cobalt;
 						border-color: $color-cobalt;
 					}
@@ -259,8 +304,25 @@
 	&--pits {
 		.btn-to-top {
 			@media (hover: hover), screen and (min-width: 0\0) {
-				&:hover,
+				&:hover {
+					.btn-to-top__icon {
+						color: $color-cobalt;
+					}
+					.btn-to-top__span {
+						color: $color-cobalt;
+					}
+				}
 				&:focus-visible {
+					outline: none;
+					.btn-to-top__icon {
+						color: $color-cobalt;
+					}
+					.btn-to-top__span {
+						color: $color-cobalt;
+					}
+				}
+				&:focus {
+					outline: none;
 					.btn-to-top__icon {
 						color: $color-cobalt;
 					}
@@ -276,8 +338,15 @@
 			&-submit {
 				background-color: $color-apple;
 				@media (hover: hover), screen and (min-width: 0\0) {
-					&:hover,
+					&:hover {
+						background-color: rgba($color-apple, 0.8);
+					}
 					&:focus-visible {
+						outline: none;
+						background-color: rgba($color-apple, 0.8);
+					}
+					&:focus {
+						outline: none;
 						background-color: rgba($color-apple, 0.8);
 					}
 					&:active {
@@ -289,8 +358,17 @@
 		&__socials {
 			&-link {
 				@media (hover: hover), screen and (min-width: 0\0) {
-					&:hover,
+					&:hover {
+						background-color: $color-apple;
+						border-color: $color-apple;
+					}
 					&:focus-visible {
+						outline: none;
+						background-color: $color-apple;
+						border-color: $color-apple;
+					}
+					&:focus {
+						outline: none;
 						background-color: $color-apple;
 						border-color: $color-apple;
 					}
@@ -309,8 +387,25 @@
 	&--recycling {
 		.btn-to-top {
 			@media (hover: hover), screen and (min-width: 0\0) {
-				&:hover,
+				&:hover {
+					.btn-to-top__icon {
+						color: $color-apple;
+					}
+					.btn-to-top__span {
+						color: $color-apple;
+					}
+				}
 				&:focus-visible {
+					outline: none;
+					.btn-to-top__icon {
+						color: $color-apple;
+					}
+					.btn-to-top__span {
+						color: $color-apple;
+					}
+				}
+				&:focus {
+					outline: none;
 					.btn-to-top__icon {
 						color: $color-apple;
 					}

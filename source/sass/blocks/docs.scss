@@ -93,6 +93,18 @@
 						color: $color-default-black;
 					}
 				}
+				&:focus-visible {
+					outline: none;
+					.docs__item-list-icon svg {
+						color: $color-default-black;
+					}
+				}
+				&:focus {
+					outline: none;
+					.docs__item-list-icon svg {
+						color: $color-default-black;
+					}
+				}
 			}
 			&-icon {
 				width: 30px;
