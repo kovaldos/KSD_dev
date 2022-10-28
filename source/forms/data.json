@@ -1,0 +1,21 @@
+{
+	"status": "OK",
+	"code": 200,
+	"total": 1,
+	"data": [
+		 {
+			  "id": 1,
+			  "uuid": "cc2edd8c-b09a-33f2-b8e5-a465809a9b57",
+			  "firstname": "Americo",
+			  "lastname": "Keeling",
+			  "username": "jammie52",
+			  "password": "}W+6PwyU",
+			  "email": "",
+			  "ip": "183.28.132.51",
+			  "macAddress": "0A:FA:01:B3:36:7D",
+			  "website": "http://homenick.com",
+			  "image": "http://placeimg.com/640/480/people",
+			  "message": ""
+		 }
+	]
+}

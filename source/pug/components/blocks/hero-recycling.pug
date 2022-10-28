@@ -1,0 +1,61 @@
+mixin hero-recycling()
+	-
+		const data = {
+			title: "Вывоз и утилизация строительных отходов",
+			subtitle: "Транспортировка, сбор, размещение и утилизация отходов строительства и сноса",
+			items: [
+				{
+					src: "slides",
+					img: "hero-bg-img-1",
+					alt: "slide-img-1",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-2",
+					alt: "slide-img-2",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-3",
+					alt: "slide-img-3",
+				},
+				{
+					src: "slides",
+					img: "hero-bg-img-4",
+					alt: "slide-img-4",
+				},
+			],
+			numbers: [
+				{
+					num: "1",
+					text: "Завод по сортировке ",
+				},
+				{
+					num: "!",
+					text: "АИС ОССиГ",
+				},
+				{
+					num: "34",
+					text: "Самосвала",
+				},
+			],
+		}
+	section.hero-section.hero-section--recycling.hero-recycling
+		.container.hero-section__container
+			.hero-section__col.hero-section__col--01
+				.hero-section__heading 
+					h1.title.title--h1.hero-section__title=data.title
+						span.hero-section__subtitle=data.subtitle
+				.hero-section__numbers
+					each item in data.numbers
+						.hero-section__numbers-item
+							strong.hero-section__numbers-num=item.num 
+							p.text.hero-section__numbers-text=item.text
+		.hero-section__col.hero-section__col--02
+			.swiper.swiper--01.hero-section__slider
+				.swiper-wrapper 
+					each item in data.items 
+						.swiper-slide 
+							.hero-section__slider-item 
+								+img(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.hero__slider-pag

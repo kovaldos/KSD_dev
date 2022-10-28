@@ -1,0 +1,22 @@
+extends ../components/base/layout
+
+block variables
+	- const title = "KSD - Продажа материалов. Карточка" //- на страницах кроме главной используйте О нас — ProjectName
+	- const wrapperMods = "wrapper--sale"
+	- const hasHeader = true
+	- const headerMods = "header--sale"
+	- const hasFooter = true
+	- const footerMods = "footer--sale"
+	- const currentUrl = "prodazha-kartochka.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+	main
+		//- на странице запрещен "голый" код
+		//- все блоки вставляются из папки pug/components/blocks
+		+breadcrumbs("Главная", "Каталог", "Вторичные строительные материалы", "Вторичный бетонный щебень, фракция 20-40")
+		+card("sale")
+		+card-description("sale")
+		//- +rent-card-characteristics()
+		+card-similar("sale")
+
+block modals

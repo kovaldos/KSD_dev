@@ -1,0 +1,266 @@
+.project-hero {
+	padding: 20px 0 40px;
+	&__container {
+		width: 100%;
+		height: 100%;
+	}
+	&__heading {
+		margin: 0 0 30px;
+	}
+	&__subtitle {
+		display: block;
+		margin: 7px 0 0;
+	}
+	&__head-wrap {
+		position: relative;
+		padding: 0;
+		transition: padding $trans-default;
+	}
+	&__head {
+		display: flex;
+		width: 100%;
+		height: 250px;
+		@include vp-1023 {
+			margin: 0 0 15px;
+			position: relative;
+		}
+		&-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			border-radius: 5px;
+			overflow: hidden;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(180deg, rgba(45, 49, 66, 0.4) -4.4%, rgba(45, 49, 66, 0.1) 100%),
+					linear-gradient(0deg, rgba(45, 49, 66, 0.2), rgba(45, 49, 66, 0.2));
+				border-radius: 5px;
+			}
+			img {
+				object-position: 0 146px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: 0 90%;
+			}
+		}
+		&-row {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			margin: 0 0 22px;
+			position: relative;
+			flex-grow: 1;
+			@include vp-1023 {
+				flex-direction: column;
+			}
+		}
+		&-title {
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 160%;
+			margin: 0 0 6px;
+			@include vp-639 {
+				font-size: 12px;
+			}
+		}
+		&-subtitle {
+			font-weight: 800;
+			font-size: 24px;
+			line-height: 160%;
+			@include vp-639 {
+				font-size: 18px;
+				line-height: 140%;
+			}
+		}
+		&-volume {
+			color: $color-default-white;
+			.volume-text {
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 160%;
+				@include vp-639 {
+					font-size: 12px;
+				}
+			}
+			.volume-value {
+				font-weight: 800;
+				font-size: 24px;
+				line-height: 160%;
+				@include vp-639 {
+					font-size: 18px;
+				}
+			}
+			@include vp-639 {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+		&-list {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			@include vp-1023 {
+				position: static;
+				width: 100%;
+				height: 80px;
+				max-width: 100%;
+				min-width: 100%;
+			}
+			&-item {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				padding: 14px 20px;
+				background: rgba(45, 49, 66, 0.3);
+				backdrop-filter: blur(27px);
+				border-radius: 7px;
+				&:not(:last-of-type) {
+					margin: 0 30px 0 0;
+					@include vp-1279 {
+						margin: 0 20px 0 0;
+					}
+					@include vp-1023 {
+						margin: 0 15px 0 0;
+					}
+				}
+				@include vp-1023 {
+					min-width: fit-content;
+					background-color: $color-bunting;
+					padding: 15px 20px;
+				}
+				svg {
+					flex-shrink: 0;
+					margin: 0 20px 0 0;
+				}
+			}
+			&-text {
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 160%;
+				color: $color-default-white;
+				@include vp-1023 {
+					white-space: nowrap;
+				}
+				span {
+					&:first-child {
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+	&__list-wrap {
+		width: 100%;
+		max-width: calc(100% - 260px);
+		position: absolute;
+		left: 30px;
+		bottom: 30px;
+		@include vp-1023 {
+			position: relative;
+			left: 0;
+			bottom: 0;
+			margin: 15px 0 0 0;
+			max-width: 100%;
+			padding: 0 0 20px;
+			margin: 0 0 20px;
+		}
+	}
+	&__col {
+		width: 100%;
+		height: 100%;
+		&--01 {
+			flex: 1;
+			height: 100%;
+			position: relative;
+			padding: 22px 40px 30px 30px;
+			display: flex;
+			flex-direction: column;
+			@include vp-1279 {
+				padding: 20px;
+			}
+		}
+		&--02 {
+			flex: 0 0 170px;
+			margin: 0 0 0 30px;
+			padding: 0;
+			@include vp-1023 {
+				margin: 0 0 0 10px;
+			}
+			@include vp-767 {
+				position: absolute;
+				max-width: 94px;
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+	&__next {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $color-bunting;
+		border-radius: 5px;
+		padding: 48px 37px 37px;
+		width: 100%;
+		height: 100%;
+		color: $color-default-white;
+		transition: background-color $trans-default;
+		@include vp-767 {
+			padding: 34px 20px;
+		}
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover {
+				background-color: $color-dark-orange;
+			}
+			&:focus-visible {
+				outline: none;
+				background-color: $color-dark-orange;
+			}
+			&:focus {
+				outline: none;
+				background-color: $color-dark-orange;
+			}
+		}
+		svg {
+			margin: 0 0 auto;
+		}
+		.next-title {
+			align-self: flex-end;
+			width: 100%;
+			text-align: center;
+			display: block;
+			font-weight: 700;
+			font-size: 32px;
+			line-height: 160%;
+			color: $color-default-white;
+			@include vp-767 {
+				font-size: 14px;
+			}
+		}
+	}
+	&__text {
+		margin: 50px 0 0;
+		line-height: 200%;
+		max-width: 969px;
+		@include vp-1023 {
+			margin: 0;
+		}
+		&-item {
+			&:not(:last-of-type) {
+				margin: 0 0 35px;
+			}
+		}
+	}
+}

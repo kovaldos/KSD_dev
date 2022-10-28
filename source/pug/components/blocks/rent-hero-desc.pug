@@ -1,0 +1,55 @@
+mixin rent-hero-desc()
+	-
+		const data = {
+			desc: [
+				{
+					icon: "icon-rent-hero-desc-1",
+					text1: "Аренда ",
+					link1: {
+						href: "#",
+						text: "“под ключ” ",
+					},
+					text2: "с топливом, оператором и тд. ",
+					link2: {
+						href: "#",
+						text: "Скорая помощь ",
+					},
+					text3: "в случае поломки выезд механиков за 1 час", 
+				},
+				{
+					icon: "icon-rent-hero-desc-2",
+					text1: "Все машины ",
+					link1: {
+						href: "#",
+						text: "новые ",
+					},
+					text2: "и имеют паспорт технического осмотра. В наличии ",
+					link2: {
+						href: "#",
+						text: "редкие ",
+					},
+					text3: "модели спецтехники.", 
+				},
+			]
+		}
+	.rent-hero-desc
+		.container.rent-hero__container.rent-hero__container--rel
+			.swiper.rent-hero-desc__slider
+				.swiper-wrapper
+					each item in data.desc
+						.swiper-slide
+							.rent-hero-desc__item
+								+icon(item.icon, 60, 60).rent-hero-desc__item-icon
+								p.text.rent-hero-desc__item-text
+									span=item.text1 
+									a.link.rent-hero-desc__item-link(href=item.link1.href)=item.link1.text 
+									span=item.text2
+									a.link.rent-hero-desc__item-link(href=item.link2.href)=item.link2.text
+									span=item.text3
+				.rent-hero-desc__slider-nav
+					.swiper-pagination.rent-hero-desc__slider-pag
+					.rent-hero-desc__slider-btns
+						.swiper-button-next.rent-hero-desc__slider-btn.rent-hero-desc__slider-btn--next
+							+icon("icon-chevron-right-black", 30, 30)
+						.swiper-button-prev.rent-hero-desc__slider-btn.rent-hero-desc__slider-btn--prev
+							+icon("icon-chevron-left-black", 30, 30)

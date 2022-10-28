@@ -1,0 +1,90 @@
+.ecology {
+	background-color: $color-ghost-white;
+	border-radius: 5px;
+	padding: 64px 0 60px;
+	margin: 0 0 50px;
+	@include vp-1023 {
+		margin: 0 0 25px;
+	}
+	&__heading {
+		position: relative;
+		z-index: 1;
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			max-width: 33.3333vw;
+			height: 138px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			right: auto;
+			background-color: $color-apple;
+			z-index: 0;
+			@include vp-1279 {
+				max-width: 16vw;
+			}
+			@include vp-1023 {
+				display: none;
+			}
+		}
+		&-container {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__pic {
+		max-width: 270px;
+		max-height: 186px;
+		flex-shrink: 0;
+		margin: 0 30px 0 100px;
+		z-index: 1;
+		@include vp-1279 {
+			margin: 0 25px 0 0;
+		}
+		@include vp-1023 {
+			display: none;
+		}
+	}
+	&__titles {
+		z-index: 1;
+	}
+	&__list {
+		margin: 0;
+		padding: 38px 0 0;
+		list-style: none;
+		&-item {
+			display: flex;
+			align-items: flex-start;
+			&:not(:last-of-type) {
+				margin: 0 0 30px;
+			}
+			&-icon {
+				flex-shrink: 0;
+				color: $color-apple;
+				margin: 0 14px 0 0;
+			}
+		}
+	}
+	&__slider {
+		&-pag {
+			text-align: center;
+			margin: 15px 0 0;
+			&.swiper-pagination-bullets {
+				.swiper-pagination-bullet {
+					width: 5px;
+					height: 5px;
+					margin: 0 2.5px;
+					background-color: $color-lavender-grey;
+					opacity: 1;
+					border-radius: 5px;
+					transition: width $trans-default;
+					&-active {
+						width: 16px;
+					}
+				}
+			}
+		}
+	}
+}

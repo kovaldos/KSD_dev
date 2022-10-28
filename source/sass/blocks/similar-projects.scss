@@ -1,0 +1,133 @@
+.similar-projects {
+	&__container {
+		position: relative;
+	}
+	&__heading {
+		margin: 0 0 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__slider {
+		height: 240px;
+		@include vp-1023 {
+			height: 236px;
+			padding: 0 0 56px;
+		}
+		&-pag {
+			display: none;
+			@include vp-1023 {
+				width: 50px;
+				display: block;
+				margin: 22px 0 0;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 160%;
+				.swiper-pagination-current {
+					display: inline-block;
+					width: 30%;
+				}
+				.swiper-pagination-total {
+					font-size: 14px;
+				}
+			}
+		}
+		&-btns {
+			position: relative;
+			width: 82px;
+			@include vp-1023 {
+				position: absolute;
+				top: auto;
+				bottom: 0;
+				left: 85px;
+				height: 36px;
+			}
+		}
+		&-btn {
+			top: 0;
+			color: $color-bunting;
+			@include vp-1023 {
+				width: 36px;
+				height: 36px;
+				margin: 0;
+			}
+			&::after {
+				display: none;
+			}
+			&--next {
+				right: 0;
+			}
+			&--prev {
+				left: 0;
+			}
+		}
+		&-item {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			padding: 25px;
+			&-bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+				border-radius: 5px;
+				overflow: hidden;
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					z-index: 0;
+					background: linear-gradient(180deg, rgba(45, 49, 66, 0.4) -4.4%, rgba(45, 49, 66, 0.1) 100%),
+						linear-gradient(0deg, rgba(45, 49, 66, 0.2), rgba(45, 49, 66, 0.2));
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			&-title {
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 160%;
+				color: $color-default-white;
+				margin: 0 0 5px;
+				@include vp-767 {
+					font-size: 12px;
+				}
+			}
+			&-subtitle {
+				font-weight: 800;
+				font-size: 22px;
+				line-height: 160%;
+				color: $color-default-white;
+				flex-grow: 1;
+				@include vp-767 {
+					font-size: 18px;
+				}
+			}
+			&-link {
+				display: flex;
+				max-width: fit-content;
+				align-items: center;
+				border-radius: 7px;
+				padding: 14px 14px 14px 28px;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 17px;
+				margin: 0;
+				&-icon {
+					margin: 0 0 0 14px;
+				}
+			}
+		}
+	}
+}

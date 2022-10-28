@@ -1,0 +1,27 @@
+mixin card-description(mods)
+	-
+		const data = {
+			title: "Описание",
+			rent: {
+				text: [
+					"Volutpat elementum, leo eleifend dui. Elit dictumst at laoreet velit sed ornare scelerisque aliquam velit. Hendrerit tortor, magna aenean porttitor eu. Semper vel tincidunt pellentesque natoque volutpat integer leo quam. Consectetur neque sit non turpis ridiculus mi massa mattis adipiscing. Mi felis arcu aliquet tincidunt. Ut in dictum amet id sem interdum tempus porta. Blandit tempus, purus adipiscing elementum magna nisi adipiscing arcu. Tempor massa lectus velit mauris. Egestas nunc curabitur diam eget a.",
+
+					"Pretium tortor consectetur id et. Eget nibh viverra mattis venenatis in eleifend. Id et elementum duis pretium amet habitant. Imperdiet enim sed consequat purus, enim. Nisi sed tellus orci commodo sodales platea sollicitudin vel. Sapien nibh erat pretium nisl diam ut.",
+				],
+			},
+			sale: {
+				text: [
+					"Щебень средних фракций 20-40 мм находит применение в изготовлении тротуаров, аллей, велодорожек, фундаментов и столбиков для заборов, спортивных площадок, автостоянок возле домов. Его используют для строительства фундаментов гаражей, складов, беседок, площадок под летние кафе др.",
+				],
+			}
+		}
+
+	section.section.card-description(class="card-description--" + mods) 
+		.container
+			h2.title.title--h3.card-description__title=data.title
+			if mods === "rent"
+				each item in data.rent.text
+					p.text.text--md.card-description__text=item
+			if mods === "sale"
+				each item in data.sale.text
+					p.text.text--md.card-description__text=item

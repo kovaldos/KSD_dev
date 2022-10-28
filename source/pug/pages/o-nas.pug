@@ -1,0 +1,26 @@
+extends ../components/base/layout
+
+block variables
+	- const title = "KSD - О нас" //- на страницах кроме главной используйте О нас — ProjectName
+	- const wrapperMods = ""
+	- const hasHeader = true
+	- const headerMods = "header--main"
+	- const hasFooter = true
+	- const footerMods = ""
+	- const currentUrl = "o-nas.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+	main
+		//- на странице запрещен "голый" код
+		//- все блоки вставляются из папки pug/components/blocks
+		+breadcrumbs("Главная", "О нас")
+		+our-history()
+		+our-vision()
+		+achievements()
+		+recycling()
+		+technic-and-methods()
+		+reviews()
+		+contact-us("about-us")
+block modals
+	+modal("modal--contact-us")(data-modal="contact-us")
+		+modal-contact-us()

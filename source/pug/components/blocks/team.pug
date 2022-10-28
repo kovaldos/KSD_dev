@@ -1,0 +1,69 @@
+mixin team()
+	-
+		const data = {
+			title: "Команда",
+			subtitle: "Компания = Люди",
+			items: [
+				{					
+				src: "slides",
+				img: "team-img-1",
+				alt: "slide-img",
+				title: "Лев Логинов",
+				exp: "Опыт работы: 7 лет",
+				},
+				{					
+				src: "slides",
+				img: "team-img-2",
+				alt: "slide-img",
+				title: "Валерий Сазонов",
+				exp: "Опыт работы: 6 лет",
+				},
+				{					
+				src: "slides",
+				img: "team-img-1",
+				alt: "slide-img",
+				title: "Лев Сазонов",
+				exp: "Опыт работы: 5 лет",
+				},
+				{					
+				src: "slides",
+				img: "team-img-2",
+				alt: "slide-img",
+				title: "Валерий Логинов",
+				exp: "Опыт работы: 8 лет",
+				},
+				{					
+				src: "slides",
+				img: "team-img-1",
+				alt: "slide-img",
+				title: "Лев Сидорович",
+				exp: "Опыт работы: 7 лет",
+				},
+				{					
+				src: "slides",
+				img: "team-img-2",
+				alt: "slide-img",
+				title: "Валерий Стрелок",
+				exp: "Опыт работы: 10 лет",
+				},
+			],
+		}
+
+	section.section.team 
+		.container.team__container 
+			.team__heading 
+				h2.title.title--h2.team__title=data.title
+				h3.title.title--h3.team__subtitle=data.subtitle
+				.team__slider-btns
+					.swiper-button-next.team__slider-btn.team__slider-btn--next
+						+icon("icon-chevron-right-black", 25, 25)
+					.swiper-button-prev.team__slider-btn.team__slider-btn--prev
+						+icon("icon-chevron-left-black", 25, 25)
+			.swiper.swiper--03.team__slider
+				.swiper-wrapper
+					each item in data.items
+						.swiper-slide
+							.team__slider-item
+								+picture-swiper-lazy(item.src, item.img, "png", item.alt)
+								h4.title.team__slider-item-title=item.title
+								span.text.team__slider-item-text=item.exp

@@ -1,0 +1,61 @@
+mixin blog(mods)
+	-
+		const data = {
+			title: "Блог",
+			subtitle: "Новости компании",
+			link: {
+				href: "blog.html",
+				text: "Читать весь блог",
+			},
+			items: [
+				{
+					href: "#",	
+					classModifier: "blog__item--01",
+					date: "21 Сентября 2022",
+					title: "Стройплощадки Москвы будут проверять на соблюдение переполнение",
+					text: "Пресс-служба Мосгосстройнадзора сообщает, что застройщикам поручено соблюдать противокоронавирусные переполнение",
+					img: "blog-img-1",
+					imgHover: "blog-img-hover-1",
+				},
+				{
+					href: "#",
+					classModifier: "blog__item--02",
+					date: "11 Сентября 2022",
+					title: "На месте бывшего НИИ в Сочи построят жильё от ГК ПИК",
+					text: "Один из крупнейших девелоперов, компания «ПИК-инвестпроект» теперь является владельцем «Парсанг системс»",
+					img: "blog-img-1",
+					imgHover: "blog-img-hover-1",
+				},
+				{
+					href: "#",
+					classModifier: "blog__item--02",
+					date: "02 Августа 2022",
+					title: "Россияне смогут сократить расходы на вывоз мусора",
+					text: "Уже в следующем году россияне смогут платить за вывоз мусора на 10-15 процентов меньше текущих расценок.",
+					img: "blog-img-1",
+					imgHover: "blog-img-hover-1",
+				},
+			]
+		}
+
+	section.section.blog(class="blog--" + mods)
+		.container.blog__container
+			.blog__heading
+				.blog__heading-col.blog__heading-col--01
+					h2.title.title--h2.blog__title=data.title
+					h3.title.title--h3.blog__subtitle=data.subtitle
+				.blog__heading-col.blog__heading-col--02
+					if mods === "main" || mods === "demolition"
+						+btn(data.link).btn--stroke-drk-orange.blog__link-btn
+					else if mods === "pits"
+						+btn(data.link).btn--stroke-cobalt.blog__link-btn
+			.blog__items
+				each item in data.items
+					a.blog__item(href=item.href class=item.classModifier)
+						.blog__item-bg
+							// почему два фото в макете?
+							//- +picture("content", item.img, "jpg", "Черно-белое фото НИИ").blog__item-pic.blog__item-pic--main
+							+img("content", item.imgHover, "jpg", "Фото жилого комплекса").blog__item-pic.blog__item-pic--hover
+						small.blog__item-date=item.date
+						h4.title.blog__item-title=item.title
+						p.text.blog__item-text=item.text

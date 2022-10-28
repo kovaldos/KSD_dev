@@ -1,0 +1,237 @@
+.projects-page {
+	padding: 20px 0 40px;
+	&__heading {
+		margin: 0 0 30px;
+	}
+	&__ac {
+		@include vp-767 {
+			margin: 0 -15px;
+		}
+		&-el {
+			background-color: rgba($color-default-white, 0.5);
+			border: 2px solid $color-lavender;
+			border-radius: 5px;
+			margin: 0 0 50px;
+			&.is-active {
+				.projects-page__ac-btn {
+					&-text {
+						&--closed {
+							display: none;
+						}
+						&--opened {
+							display: inline;
+						}
+					}
+				}
+			}
+		}
+		&-btn {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+			border-radius: 5px;
+			background-color: $color-ghost-white;
+			cursor: pointer;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 23px;
+			color: $color-waikawa-grey;
+			@include vp-767 {
+				padding: 10px 15px;
+			}
+			.btn {
+				margin: 0;
+				width: 156px;
+				border-radius: 7px;
+				align-items: center;
+				justify-content: space-between;
+				padding: 10px 28px 10px 16px;
+			}
+			&-text {
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+				visibility: visible;
+				opacity: 1;
+				margin: 0 0 0 20px;
+				transition: visibility $trans-default, opacity $trans-default;
+				@include vp-767 {
+					margin: 0;
+				}
+				&--opened {
+					display: none;
+				}
+			}
+		}
+		&-content {
+			&-wrap {
+				padding: 30px;
+				@include vp-767 {
+					padding: 15px 0 0 0;
+				}
+			}
+			&-title {
+				margin: 0 0 20px;
+				@include vp-767 {
+					padding: 0 15px;
+				}
+			}
+		}
+		&-map {
+			width: 100%;
+			height: 500px;
+		}
+	}
+	&__dir {
+		margin: 0 0 30px;
+		&-title {
+			margin: 0 0 30px;
+		}
+		&-wrap {
+			padding: 0 0 20px;
+		}
+		&-nav {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+		}
+		&-item {
+			&:not(:last-of-type) {
+				margin: 0 30px 0 0;
+			}
+		}
+		&-link {
+			display: block;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			color: $color-bunting;
+			padding: 16px 32px;
+			background-color: $color-ghost-white;
+			border-radius: 10px;
+			transition: background-color $trans-default, color $trans-default;
+			white-space: nowrap;
+			&.is-active {
+				background-color: $color-dark-orange;
+				color: $color-default-white;
+			}
+		}
+	}
+	&__catalog {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		@include vp-767 {
+			grid-template-columns: auto;
+			grid-row-gap: 15px;
+		}
+		&-card {
+			max-width: 570px;
+			min-height: 240px;
+			position: relative;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			@include vp-767 {
+				max-width: 100%;
+			}
+			@include vp-374 {
+				min-height: 180px;
+				padding: 20px;
+			}
+			&-bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+				border-radius: 5px;
+				overflow: hidden;
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					z-index: 0;
+					background: linear-gradient(180deg, rgba(45, 49, 66, 0.4) -4.4%, rgba(45, 49, 66, 0.1) 100%),
+						linear-gradient(0deg, rgba(45, 49, 66, 0.2), rgba(45, 49, 66, 0.2));
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			&-title {
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 160%;
+				margin: 0 0 5px;
+				color: $color-default-white;
+				@include vp-767 {
+					font-size: 12px;
+					margin: 0 0 7px;
+				}
+			}
+			&-subtitle {
+				font-weight: 800;
+				font-size: 22px;
+				line-height: 160%;
+				color: $color-default-white;
+				flex: 1;
+				@include vp-767 {
+					font-size: 18px;
+				}
+			}
+			&-row {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			&-link {
+				align-items: center;
+				justify-content: flex-end;
+				padding: 14.5px 14px 14.5px 28px;
+				border-radius: 7px;
+				margin: 0;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 17px;
+				&-icon {
+					margin: 0 0 0 14px;
+				}
+			}
+			&-vol {
+				color: $color-default-white;
+				&-text {
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 160%;
+				}
+				&-num {
+					font-weight: 800;
+					font-size: 18px;
+					line-height: 160%;
+				}
+				@include vp-1023 {
+					display: none;
+				}
+			}
+		}
+	}
+	&__btn-more {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		padding: 16px 48px;
+		display: flex;
+		border-radius: 7px;
+		margin: 60px auto 0 auto;
+	}
+}

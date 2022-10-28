@@ -1,0 +1,120 @@
+.promo {
+	width: 100%;
+	height: 440px;
+	margin: 90px 0 0;
+	@include vp-1023 {
+		height: 395px;
+	}
+	@include vp-767 {
+		height: 480px;
+	}
+	&__container {
+		height: 100%;
+	}
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		border-radius: 20px;
+		background-color: $color-bunting;
+		padding: 50px;
+		position: relative;
+		@include vp-1023 {
+			padding: 30px;
+		}
+		@include vp-767 {
+			flex-direction: column-reverse;
+		}
+		&::after {
+			width: calc(100% - 485px);
+			content: "";
+			position: absolute;
+			top: 0;
+			left: auto;
+			right: 0;
+			bottom: 0;
+			background-color: rgba($color-default-white, 0.1);
+			clip-path: polygon(33% 0%, 100% 0%, 100% 100%, 0% 100%);
+		}
+		&-col {
+			width: 50%;
+			height: 100%;
+			@include vp-767 {
+				width: 100%;
+			}
+			&--01 {
+				max-width: 435px;
+				@include vp-767 {
+					max-width: 100%;
+				}
+			}
+			&--02 {
+				position: relative;
+				flex-grow: 1;
+			}
+		}
+	}
+	&__title {
+		color: $color-default-white;
+		font-weight: 900;
+		font-size: 34px;
+		line-height: 56px;
+		margin: 0 0 22px;
+		@include vp-1023 {
+			font-size: 28px;
+			line-height: 150%;
+		}
+		@include vp-767 {
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+			line-height: 32px;
+			margin: 0 0 10px;
+		}
+	}
+	&__text {
+		font-size: 18px;
+		line-height: 24px;
+		color: rgba($color-default-white, 0.5);
+		margin: 0 0 50px;
+		@include vp-767 {
+			width: 100%;
+			text-align: center;
+			margin: 0 0 30px;
+		}
+	}
+	&__btn {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		padding: 16px 48px;
+		border-radius: 7px;
+		margin: 0;
+		@include vp-767 {
+			display: flex;
+			margin: 0 auto;
+			font-size: 14px;
+			line-height: 17px;
+			max-width: 350px;
+		}
+	}
+	&__pic {
+		img {
+			position: absolute;
+			right: -50px;
+			bottom: -20px;
+			z-index: 1;
+			@include vp-1023 {
+				right: -30px;
+				top: 0;
+			}
+			@include vp-767 {
+				max-width: 350px;
+				top: -60px;
+			}
+			@include vp-424 {
+				max-width: 275px;
+			}
+		}
+	}
+}

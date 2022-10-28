@@ -1,0 +1,57 @@
+mixin technic-recycling()
+	-
+		const data = {
+			title: "Техника",
+			name: "",
+			items: [
+				{
+					subtitle: "Первичный двухдековый грохот",
+					name: "McCloskey R155",
+					text: "",
+					src: "slides",
+					img: "technic-recycling-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+				{					
+					subtitle: "Самосвал",
+					name: "MAN TGS 41.440",
+					text: "",
+					src: "slides",
+					img: "technic-img-1",
+					alt: "Гусеничный Экскаватор",
+				},
+				{
+					subtitle: "Экскаватор - Погрузчик",
+					name: "540 - I70",
+					text: "",
+					src: "slides",
+					img: "technic-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+			],
+		}
+	section.section.technic.technic--recycling
+		.container.technic__container
+			.technic__heading
+				h2.title.title--h2=data.title 
+			.swiper.swiper--06.technic__slider
+				.swiper-wrapper
+					- for (let i = 0; i < 2; i++)
+						each item in data.items
+							.swiper-slide
+								.technic__slider-item
+									.technic__slider-item-col.technic__slider-item-col--01
+										h3.title.title--h3.technic__subtitle=item.subtitle
+										h4.title.technic__slider-name=item.name
+										p.text.technic__slider-text=item.text
+									.technic__slider-item-col.technic__slider-item-col--02
+										+picture(item.src, item.img, "png", item.alt).technic__slider-pic
+				.technic__slider-nav
+					button.swiper-button-prev.btn.btn--apple.technic__slider-btn.technic__slider-btn--prev(type="button")
+						span.technic__slider-btn-text.technic__slider-btn-text--prev
+						+icon("icon-arrow-left", 35, 20)
+					button.swiper-button-next.btn.btn--apple.technic__slider-btn.technic__slider-btn--next(type="button")
+						span.technic__slider-btn-text.technic__slider-btn-text--next=data.name
+						+icon("icon-arrow-right", 35, 20)
+					.custom-pagination.technic__slider-pag
+

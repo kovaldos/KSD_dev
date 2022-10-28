@@ -1,0 +1,21 @@
+extends ../components/base/layout
+
+block variables
+	- const title = "KSD - Вакансия" //- на страницах кроме главной используйте О нас — ProjectName
+	- const wrapperMods = ""
+	- const hasHeader = true
+	- const headerMods = "header--main"
+	- const hasFooter = true
+	- const footerMods = ""
+	- const currentUrl = "vakansiya.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+	main
+		//- на странице запрещен "голый" код
+		//- все блоки вставляются из папки pug/components/blocks
+		+breadcrumbs("Главная", "Вакансии", "Машинисты экскаваторов", "Машинист экскаватора Kocurek KUHR-45-34")
+		+vacancy()
+
+block modals
+	+modal("modal--vacancy-form")(data-modal="vacancy-form")
+		+modal-vacancy-form()

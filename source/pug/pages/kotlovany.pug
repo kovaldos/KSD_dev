@@ -1,0 +1,22 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "KSD - Котлованы" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = "wrapper--pits"
+  - const hasHeader = true
+  - const headerMods = "header--pits"
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "kotlovany.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    +hero-section("pits")
+    +partners("pits")
+    +tech("pits")
+    +projects("pits")
+    +blog("pits")
+    +technic("pits")
+    +contact-us("pits")
+
+block modals

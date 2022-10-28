@@ -2,6 +2,49 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
+import {initHeaderFixed} from './modules/init-header-fixed';
+// import {initSubmenu} from './modules/init-submenu';
+import {initBurgerMenu} from './modules/init-burger-menu';
+import {initHeroSlider} from './modules/init-hero-slider';
+import {initAccordions} from './modules/init-accordion';
+import {initDirectionsSlider} from './modules/init-directions-slider';
+import {initTabs} from './modules/init-tabs';
+import {initTeamSlider} from './modules/init-team-slider';
+import {initBtnToTop} from './modules/scroll-to-top';
+import {initPartnersSlider} from './modules/init-partners-slider';
+import {initTechSlider} from './modules/init-tech-slider';
+import {initVideoBtn} from './modules/init-video-btn';
+import {initTechnicSlider} from './modules/init-technic-slider';
+import {initProjectsSlider} from './modules/init-projects-slider';
+import {initProjTechSlider} from './modules/init-proj-tech-slider';
+import {initSimilarProjectsSlider} from './modules/init-similar-projects-slider';
+import {initReviewsSlider} from './modules/init-reviews-slider';
+import {initScrollToAnchor} from './modules/scroll-to-anchor';
+import {initRentHeroSlider} from './modules/init-rent-hero-slider';
+import {initRentDescSlider} from './modules/init-rent-desc-slider';
+import {initRentAboutUsSlider} from './modules/init-rent-about-us-slider';
+import {initRentCatalogViewSwitch} from './modules/init-rent-catalog-view-switch';
+import {initRangeSlider} from './modules/init-range-slider';
+import {initRentCardSlider} from './modules/init-rent-card-slider';
+import {initCount} from './modules/init-count';
+import {initCalcRangeSlider} from './modules/init-calc-range-slider';
+import {initTechparkSlider} from './modules/init-techpark-slider';
+import {initHeroSectionSlider} from './modules/init-hero-section-slider';
+import {initVehicleCardSlider} from './modules/init-vehicle-card-slider';
+import {initVideoSlider} from './modules/init-video-slider';
+import {initRecyclingItemsSlider} from './modules/init-recycling-items-slider';
+import {initWeNeedSlider} from './modules/we-need-slider';
+import {initWorkWithUsSlider} from './modules/init-work-with-us-slider';
+import {initDirectionsSupSlider} from './modules/init-directions-sup-slider';
+import {initRentCatalogFilterMobile} from './modules/init-rent-catalog-filter-mobile.js';
+import {initCardSimilarSlider} from './modules/init-card-similar-slider';
+import {initGoodsSlider} from './modules/init-goods-slider';
+import {initEcologySlider} from './modules/init-ecology-slider';
+import {initCustomInputFile} from './modules/init-custom-input-file';
+import {initProjectsMap} from './modules/init-projects-map';
+import {initContactsMap} from './modules/init-contacts-map';
+import {initRecyclingMap} from './modules/init-recycling-map';
+
 
 // ---------------------------------
 
@@ -11,7 +54,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-
+  initHeaderFixed();
+  // initSubmenu();
+  initBurgerMenu();
+  initHeroSlider();
+  initHeroSectionSlider();
   // Modules
   // ---------------------------------
 
@@ -21,6 +68,43 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
+    initDirectionsSlider();
+    initAccordions();
+    initTabs();
+    initTeamSlider();
+    initBtnToTop();
+    initPartnersSlider();
+    initTechSlider();
+    initVideoBtn();
+    initTechnicSlider();
+    initProjectsSlider();
+    initProjTechSlider();
+    initSimilarProjectsSlider();
+    initReviewsSlider();
+    initScrollToAnchor();
+    initRentHeroSlider();
+    initRentDescSlider();
+    initRentAboutUsSlider();
+    initRentCatalogViewSwitch();
+    initRangeSlider();
+    initRentCardSlider();
+    initCount();
+    initCalcRangeSlider();
+    initTechparkSlider();
+    initVehicleCardSlider();
+    initVideoSlider();
+    initRecyclingItemsSlider();
+    initWeNeedSlider();
+    initWorkWithUsSlider();
+    initDirectionsSupSlider();
+    initRentCatalogFilterMobile();
+    initCardSimilarSlider();
+    initGoodsSlider();
+    initEcologySlider();
+    initCustomInputFile();
+    initProjectsMap();
+    initContactsMap();
+    initRecyclingMap();
   });
 });
 
@@ -37,7 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // выносим все в дата атрибуты
 // url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
 
-// для адаптивного JS используейтся matchMedia и addListener
+// для адаптивного JS используется matchMedia и addListener
 // const breakpoint = window.matchMedia(`(min-width:1024px)`);
 // const breakpointChecker = () => {
 //   if (breakpoint.matches) {

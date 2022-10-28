@@ -1,0 +1,45 @@
+mixin footer-top()
+	-
+		const data = {
+			title: "Дополнительные услуги",
+			items: [
+				{
+					href: "#",
+					icon: "footer-items-icon-1",
+					title: "«Конструктив-СД»",
+					text: "In donec elementum faucibus euismod sit vitae. Id ut tempus vitae pellentesque fermentum.",
+					classModifier: "footer__list-item--01"
+				},
+				{
+					href: "#",
+					icon: "footer-items-icon-2",
+					title: "Аренда техники",
+					text: "In donec elementum faucibus euismod sit vitae. Id ut tempus vitae pellentesque fermentum.",
+					classModifier: "footer__list-item--02"
+				},
+				{
+					href: "#",
+					icon: "footer-items-icon-3",
+					title: "Строительство дорог",
+					text: "In donec elementum faucibus euismod sit vitae. Id ut tempus vitae pellentesque fermentum.",
+					classModifier: "footer__list-item--03"
+				},
+				{
+					href: "#",
+					icon: "footer-items-icon-4",
+					title: "Продажа материалов",
+					text: "In donec elementum faucibus euismod sit vitae. Id ut tempus vitae pellentesque fermentum.",
+					classModifier: "footer__list-item--04"
+				},
+			],
+		}
+	.footer__top
+		.container.footer__container
+			h2.title.footer__top-title=data.title
+			ul.footer__list 
+				each item in data.items
+					li.footer__list-item(class=item.classModifier)
+						a.footer__list-link(href=item.href)
+							+icon(item.icon, 60, 60).footer__list-icon
+							h2.footer__list-title=item.title 
+							p.footer__list-text=item.text

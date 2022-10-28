@@ -1,0 +1,59 @@
+mixin recycling()
+	-
+		const data = {
+			title: "Переработка",
+			subtitle: "Вторичное сырье",
+			text1: "Мы всецело поддерживаем уже ставшую мировой практику переработки мусора во вторичное сырье. И, в первую очередь, строительных отходов. При сносе объектов высвобождаются тонны строительного «мусора».",
+			text2: "Наша цель — его максимальная утилизация, дальнейшая переработка и получение огромного количества вторичного сырья, пригодного для нового, полноценного использования.",
+			title2: "Готовые вторичные материалы позволяют достигать нескольких целей:",
+			items: [
+				{
+					icon: "icon-check",
+					title: "Сохранять ресурсы ",
+					text: "Сохранять природные ресурсы в виде качественного камня и песка",
+				},
+				{
+					icon: "icon-check",
+					title: "Уменьшать отходы",
+					text: "А иногда и ликвидировать свалки твердых строительных и производственных отходов",
+				},
+				{
+					icon: "icon-check",
+					title: "Беречь экологию",
+					text: "Снизить экологическую нагрузку на окружающую среду",
+				},
+				{
+					icon: "icon-check",
+					title: "Получить материалы",
+					text: "На строительство новых объектов quisque leo fames penatibus rhoncus",
+				},
+				{
+					icon: "icon-check",
+					title: "Уменьшать расценки",
+					text: "Делать цены на наши услуги меньше neque nunc porttitor. In purus gravida at in.",
+				},
+				{
+					icon: "icon-check",
+					title: "6 цель компании",
+					text: "Нужна для ровной сетки и более презентабельного общего вида",
+				},
+			]
+		}
+	section.section.recycling
+		.container.recycling__container 
+			.recycling__heading
+				h2.title.title--h2.recycling__title=data.title
+				h3.title.title--h3.recycling__subtitle=data.subtitle
+			p.text.recycling__text=data.text1
+			p.text.recycling__text=data.text2
+			.recycling__items-title=data.title2
+			.swiper.recycling__items
+				.swiper-wrapper
+					each item in data.items
+						.swiper-slide
+							.recycling__item
+								.recycling__item-row
+									+icon(item.icon, 26, 26).recycling__item-icon
+									h2.title.title--h2.recycling__item-title=item.title
+								p.text.text--sm.recycling__item-text=item.text
+				.swiper-pagination.recycling__items-pag

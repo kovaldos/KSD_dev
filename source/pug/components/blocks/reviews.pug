@@ -1,0 +1,47 @@
+mixin reviews()
+	-
+		const data = {
+			title: "Что о нас говорят",
+			subtitle: "Отзывы и рекомендации",
+			items: [
+				{					
+				src: "slides",
+				img: "reviews-img-1",
+				alt: "slide-img",
+				},
+				{					
+				src: "slides",
+				img: "reviews-img-2",
+				alt: "slide-img",
+				},
+				{					
+				src: "slides",
+				img: "reviews-img-3",
+				alt: "slide-img",
+				},
+				{					
+				src: "slides",
+				img: "reviews-img-4",
+				alt: "slide-img",
+				},
+			],
+		}
+
+	section.section.reviews 
+		.container.reviews__container 
+			.reviews__heading 
+				h2.title.title--h2.reviews__title=data.title
+				h3.title.title--h3.reviews__subtitle=data.subtitle
+				.reviews__slider-btns
+					.swiper-button-next.reviews__slider-btn.reviews__slider-btn--next
+						+icon("icon-chevron-right-black", 25, 25)
+					.swiper-button-prev.reviews__slider-btn.reviews__slider-btn--prev
+						+icon("icon-chevron-left-black", 25, 25)
+			.swiper.swiper--10.reviews__slider
+				.swiper-wrapper
+					- for (let i = 0; i < 2; i++)
+						each item in data.items
+							.swiper-slide
+								.swiper-zoom-container
+									+img(item.src, item.img, "jpg", item.alt)
+				.swiper-pagination.reviews__slider-pag

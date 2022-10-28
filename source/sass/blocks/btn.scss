@@ -1,18 +1,60 @@
 .btn {
   display: inline-flex;
-  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  // margin: 10px 0;
   padding: 10px 20px;
-
   color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  background-color: $color-bunting;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
+  transition: opacity $trans-default, background-color $trans-default, border-color $trans-default, color $trans-default, transform $trans-default, box-shadow $trans-default;
+  &--out-orange {
+    border: 1px solid $color-outrageous-orange;
+    color: $color-outrageous-orange;
+    background-color: $color-transparent;
+  }
+  &--stroke-drk-orange {
+    border: 1px solid $color-dark-orange;
+    color: $color-dark-orange;
+    background-color: $color-transparent;
+  }
+  &--stroke-cobalt {
+    border: 1px solid $color-cobalt;
+    color: $color-cobalt;
+    background-color: $color-transparent;
+  }
+  &--stroke-apple {
+    border: 1px solid $color-apple;
+    color: $color-apple;
+    background-color: $color-transparent;
+  }
+  &--drk-orange {
+    background-color: $color-dark-orange;
+  }
+  &--orange {
+    background-color: $color-outrageous-orange;
+  }
+  &--apple {
+    background-color: $color-apple;
+  }
+  &--cobalt {
+    background-color: $color-cobalt;
+  }
+  &--transp {
+    background-color: $color-transparent;
+  }
+  &--reset {
+    border: 0;
+    background-color: $color-transparent;
+    padding: 0;
+    margin: 0;
+  }
+  &--cntrd {
+    margin: 0 auto;
+    display: flex;
+    width: fit-content;
   }
 
   &:disabled {
@@ -22,9 +64,152 @@
   }
 
   @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
     &:focus {
-      opacity: 0.8;
+      outline: none;
+    }
+    &--out-orange {
+      &:hover {
+        background-color: rgba($color-outrageous-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: rgba($color-outrageous-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:focus {
+        background-color: rgba($color-outrageous-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:active {
+        background-color: rgba($color-outrageous-orange, 0.2);
+        color: $color-harley-davidson-orange;
+        border-color: $color-harley-davidson-orange;
+      }
+    }
+    &--stroke-drk-orange {
+      &:hover {
+        background-color: rgba($color-dark-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: rgba($color-dark-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:focus {
+        background-color: rgba($color-dark-orange, 0.1);
+        border-color: $color-orange-red;
+        color: $color-orange-red;
+      }
+      &:active {
+        background-color: rgba($color-dark-orange, 0.2);
+        color: $color-harley-davidson-orange;
+        border-color: $color-harley-davidson-orange;
+      }
+    }
+    &--stroke-cobalt {
+      &:hover {
+        background-color: rgba($color-cobalt, 0.5);
+        color: $color-default-white;
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: rgba($color-cobalt, 0.5);
+        color: $color-default-white;
+      }
+      &:focus {
+        background-color: rgba($color-cobalt, 0.5);
+        color: $color-default-white;
+      }
+      &:active {
+        background-color: rgba($color-cobalt, 0.3);
+        color: $color-default-white;
+      }
+    }
+    &--stroke-apple {
+      &:hover {
+        background-color: rgba($color-apple, 0.5);
+        color: $color-default-white;
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: rgba($color-apple, 0.5);
+        color: $color-default-white;
+      }
+      &:focus {
+        background-color: rgba($color-apple, 0.5);
+        color: $color-default-white;
+      }
+      &:active {
+        background-color: rgba($color-apple, 0.3);
+        color: $color-default-white;
+      }
+    }
+    &--orange {
+      &:hover {
+        background-color: $color-orange-red;
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: $color-orange-red;
+      }
+      &:focus {
+        background-color: $color-orange-red;
+      }
+      &:active {
+        background-color: $color-harley-davidson-orange;
+      }
+    }
+    &--apple {
+      &:hover {        
+        background-color: rgba($color-apple, 0.8);
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: rgba($color-apple, 0.8);
+      }
+      &:focus {
+        background-color: rgba($color-apple, 0.8);
+      }
+      &:active {
+        background-color: rgba($color-apple, 0.5);
+      }
+    }
+    &--cobalt {
+      &:hover {
+        background-color: rgba($color-cobalt, 0.8);
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: rgba($color-cobalt, 0.8);
+      }
+      &:focus {
+        background-color: rgba($color-cobalt, 0.8);
+      }
+      &:active {
+        background-color: rgba($color-cobalt, 0.5);
+      }
+    }
+    &--drk-orange {
+      &:hover {
+        background-color: $color-outrageous-orange;
+      }
+      &:focus-visible {
+        outline: none;
+        background-color: $color-outrageous-orange;
+      }
+      &:focus {
+        background-color: $color-outrageous-orange;
+      }
+      &:active {
+        background-color: $color-harley-davidson-orange;
+      }
     }
   }
 }

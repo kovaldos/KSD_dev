@@ -1,0 +1,150 @@
+.we-need {
+	padding: 80px 0 50px;
+	background-color: rgba($color-lavender, 0.3);
+	margin: 0 0 50px;
+	@include vp-1023 {
+		margin: 0;
+	}
+	&__title {
+		text-align: center;
+		margin: 0 0 20px;
+	}
+	&__items {
+		padding: 30px 0;
+		@include vp-1023 {
+			padding: 0;
+		}
+		&-nav-wrapper {
+			display: none;
+			@include vp-1023 {
+				display: block;
+			}
+		}
+		&-nav {
+			display: flex;
+			justify-content: flex-start;
+			padding: 20px 0 25px;
+		}
+		&-pag {
+			width: 50px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 160%;
+			.swiper-pagination-current {
+				display: inline-block;
+				width: 30%;
+			}
+			.swiper-pagination-total {
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 160%;
+			}
+		}
+		&-btns {
+			display: flex;
+			width: 87px;
+			height: 36px;
+			justify-content: space-between;
+			margin: 0 0 0 25px;
+		}
+		&-btn {
+			width: 36px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: color $trans-default;
+			flex-shrink: 0;
+			color: $color-bunting;
+			&.swiper-button-disabled {
+				color: $color-hawkes-blue;
+			}
+		}
+	}
+	&__item {
+		display: block;
+		background-color: $color-default-white;
+		box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+		border-radius: 10px;
+		padding: 15px;
+		transition: background-color $trans-default;
+		&-row {
+			display: flex;
+			align-items: center;
+			margin: 0 0 15px;
+			svg {
+				flex: 0 0 50px;
+				color: $color-bunting;
+				margin: 0 15px 0 0;
+				transition: color $trans-default;
+			}
+		}
+		&-title {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 24px;
+			color: $color-bunting;
+			transition: color $trans-default;
+		}
+		&-available {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 180%;
+			color: $color-waikawa-grey;
+			transition: color $trans-default;
+		}
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover {
+				background-color: $color-bunting;
+			}
+			&:focus-visible {
+				outline: none;
+				background-color: $color-bunting;
+			}
+			&:focus {
+				outline: none;
+				background-color: $color-bunting;
+			}
+			&:hover & {
+				&-row {
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&-title {
+					color: $color-default-white;
+				}
+				&-available {
+					color: rgba($color-default-white, 0.6);
+				}
+			}
+			&:focus-visible & {
+				&-row {
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&-title {
+					color: $color-default-white;
+				}
+				&-available {
+					color: rgba($color-default-white, 0.6);
+				}
+			}
+			&:focus & {
+				&-row {
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&-title {
+					color: $color-default-white;
+				}
+				&-available {
+					color: rgba($color-default-white, 0.6);
+				}
+			}
+		}
+	}
+}

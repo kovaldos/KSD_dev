@@ -1,0 +1,86 @@
+mixin footer-middle()
+	-
+		const data = {
+			items: [
+				{
+					title: "Компания",
+					href: "#",
+					link1: "История",
+					link2: "Новости",
+					link3: "Вакансии",
+					link4: "Контакты",
+					classModifier: "footer__col--01",
+				},
+				{
+					title: "Направления",
+					href: "#",
+					link1: "Снос и Демонтаж",
+					link2: "Вывоз и утилизация",
+					link3: "Строительство дорог",
+					link4: "Аренда спецтехники",
+					classModifier: "footer__col--02",
+				},
+				{
+					title: "Блог",
+					href: "#",
+					link1: "Техника",
+					link2: "Объекты",
+					link3: "Галерея",
+					link4: "Видео",
+					classModifier: "footer__col--03",
+				},
+			],
+			subs: {
+				title: "Подписка на Новости & Акции:",
+				input: {
+					inputPlaceholder: "Ваш email...",
+					inputError: "Пожалуйста введите корректный email",
+					inputType: "email",
+					inputId: "subscribe-email",
+					inputName: "email_dlya_podpiski",
+				},
+				btn: {
+					icon: "icon-chevron-right",
+					type: "submit",
+				}
+			},
+			icon: "icon-whatsapp",
+			href: "tel:+79672117171",
+			text: "+7 967 211-71-71",
+			address: "105318, г. Москва, ул. Ибрагимова, 31",
+		}
+	.footer__middle
+		.container.footer__container
+			.footer__columns(data-accordion='parent' data-single)
+				each item in data.items
+					.footer__col(class=item.classModifier data-accordion='element')
+						.footer__col-accordion-btn(data-accordion='button')
+							span.footer__col-heading=item.title
+							span.footer__col-accordion-btn-icon
+								+icon("icon-chevron-down", 14, 14)
+						ul.footer__col-list(data-accordion='content')
+							li.footer__col-list-item
+								a.footer__col-link(href=item.href)=item.link1
+							li.footer__col-list-item
+								a.footer__col-link(href=item.href)=item.link2
+							li.footer__col-list-item
+								a.footer__col-link(href=item.href)=item.link3
+							li.footer__col-list-item
+								a.footer__col-link(href=item.href)=item.link4
+				.footer__col.footer__col--04
+					.footer__subscribe.subscribe-block
+						.subscribe-block__wrapper
+							.subscribe-block__text-wrapper
+								p.subscribe-block__text=data.subs.title
+							.subscribe-block__form-wrapper(data-validate data-callback="subscribeForm")
+								form.subscribe-block__form
+									+custom-input(data.subs.input).subscribe-block__form-input(data-validate-type="email")
+									button.btn.subscribe-block__form-submit(type=data.subs.btn)
+										+icon(data.subs.btn.icon, 14, 14)
+					.footer__contact-us-wrapper
+						.footer__contact-us
+							a.footer__contact-us-social.footer__contact-us-social--whatsapp(href='#')
+								+icon(data.icon, 26, 26)
+							a.link.footer__contact-us-link(href=data.href)=data.text 
+						.footer__address 
+							span=data.address

@@ -1,0 +1,156 @@
+.blog-article {
+	&__heading {
+		padding: 0 0 15px;
+		border-bottom: 1px solid $color-hawkes-blue;
+	}
+	&__title {
+		color: $color-dark-orange;
+	}
+	&__cols {
+		display: flex;
+		@include vp-1023 {
+			flex-direction: column;
+		}
+	}
+	&__col {
+		&--01 {
+			flex: 1 1 auto;
+			margin: 0 130px 0 0;
+			@include vp-1023 {
+				margin: 0 0 40px;
+			}
+		}
+		&--02 {
+			flex: 0 0 270px;
+		}
+	}
+	&__info {
+		padding: 15px 0;
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+		line-height: 180%;
+		color: $color-waikawa-grey;
+		@include vp-767 {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&-author {
+			&-name {
+				color: $color-bunting;
+			}
+		}
+	}
+	&__article {
+		&-title {
+			line-height: 160%;
+			margin: 0 0 20px;
+		}
+		&-subtitle {
+			margin: 20px 0;
+		}
+		&-text {
+			padding: 0 0 20px 0;
+		}
+		&-pic {
+			margin: 10px 0;
+			width: fit-content;
+			min-height: 280px;
+			background-color: $color-gainsboro;
+			border-radius: 10px;
+			@include vp-639 {
+				min-height: auto;
+			}
+			img {
+				border-radius: 10px;
+			}
+			&-author {
+				display: inline-block;
+				font-size: 12px;
+				line-height: 24px;
+				padding: 0 0 20px;
+			}
+		}
+		&-list {
+			margin: 20px 0 30px;
+			@include vp-767 {
+				padding: 0;
+				list-style-position: inside;
+			}
+			&-item {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 34px;
+				@include vp-767 {
+					font-size: 14px;
+					line-height: 32px;
+				}
+			}
+			&-title {
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 160%;
+			}
+		}
+	}
+}
+.similar-articles {
+	margin: 0 0 40px;
+	@include vp-1023 {
+		display: flex;
+		margin: 0 0 30px;
+	}
+	&__title {
+		margin: 0 0 30px;
+	}
+	&__item {
+		display: block;
+		transition: box-shadow $trans-default;
+		border-radius: 5px;
+		min-width: 250px;
+		max-width: 270px;
+		&:not(:last-of-type) {
+			margin: 0 0 30px;
+			@include vp-1023 {
+				margin: 0 15px 0 0;
+			}
+		}
+		img {
+			width: 100%;
+			height: 180px;
+			object-fit: cover;
+			border-radius: 5px;
+			margin: 0 0 15px;
+		}
+		&-title {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 150%;
+			margin: 0 0 10px;
+			@include vp-1023 {
+				min-height: 48px;
+			}
+		}
+		&-text {
+			color: $color-waikawa-grey;
+			margin: 0 0 20px;
+		}
+		&-date {
+			font-size: 14px;
+			line-height: 22px;
+			color: rgba($color-waikawa-grey, 0.5);
+		}
+	}
+	&__btn {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		border-radius: 7px;
+		padding: 16px;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 300px;
+	}
+}

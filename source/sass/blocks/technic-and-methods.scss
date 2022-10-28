@@ -1,0 +1,131 @@
+.technic-and-methods {
+	&__heading {
+		margin: 0 0 40px;
+		&__text {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 200%;
+			color: $color-waikawa-grey;
+		}
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 200%;
+		color: $color-waikawa-grey;
+		max-width: 870px;
+		margin: 0 0 40px;
+	}
+	&__row {
+		display: flex;
+		padding: 0 0 20px;
+		@include vp-767 {
+			flex-direction: column;
+		}
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		background-color: $color-bunting;
+		border-radius: 5px;
+		margin: 0 30px 0 0;
+		padding: 20px 0;
+		@include vp-1023 {
+			grid-template-columns: auto;
+		}
+		@include vp-767 {
+			margin: 0 -16px 15px -16px;
+			border-radius: 0;
+		}
+		&-title {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 200%;
+			color: $color-bunting;
+			margin: 0 0 30px;
+		}
+	}
+	&__item {
+		position: relative;
+		padding: 10px 30px;
+		@include vp-767 {
+			padding: 20px 15px 5px 15px;
+		}
+		&:not(:last-of-type) {
+			border-right: 1px solid rgba($color-default-white, 0.1);
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 26px;
+			color: $color-default-white;
+			margin: 0 0 20px;
+			max-width: 70%;
+			min-height: 52px;
+			@include vp-1023 {
+				min-height: unset;
+			}
+		}
+		&-num {
+			position: absolute;
+			top: -13px;
+			right: 30px;
+			font-weight: 800;
+			font-size: 46px;
+			line-height: 160%;
+			color: $color-dark-orange;
+			@include vp-767 {
+				top: 10px;
+				right: 15px;
+				font-size: 40px;
+			}
+		}
+		&-text {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 24px;
+			color: rgba($color-default-white, 0.6);
+			@include vp-767 {
+				border-bottom: 1px solid rgba($color-default-white, 0.1);
+				padding: 0 0 20px;
+				&--last {
+					border: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+	&__all-link {
+		flex: 0 0 270px;
+		padding: 25px 40px 25px 30px;
+		color: $color-default-white;
+		font-weight: 800;
+		font-size: 28px;
+		line-height: 160%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: $color-dark-orange;
+		border-radius: 5px;
+		@include vp-767 {
+			flex: auto;
+			padding: 15px 20px;
+			font-size: 24px;
+			.link-icon01 {
+				width: 36px;
+				height: 36px;
+			}
+			.link-icon02 {
+				width: 36px;
+				height: 18px;
+				transform: translateY(100%);
+			}
+		}
+
+		&-row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+}

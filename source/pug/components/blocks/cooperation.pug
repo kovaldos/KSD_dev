@@ -1,0 +1,99 @@
+mixin cooperation(mods)
+	-
+		const data = {
+			title: "Вакансии",
+			subtitle: "Работа в «Конструктив-СД»",
+			text: "Работай с нами и стань лучше нас!",
+			form: {
+				input: {
+					inputPlaceholder: "Поиск...",
+					inputError: "Не менее 3 знаков!",
+					inputId: "search-vacancies",
+					inputName: "search-vacancies",
+					inputMinLength: 3,
+				},
+				select: {
+					class: "cooperation__form-select",
+					label: "Категория",
+					placeholder: "Категория",
+					name: "kategoriya",
+					simplebar: "data-simplebar",
+					optionsList: [
+						{
+							value: "Руководители",
+							text: "Руководители",
+						},
+						{
+							value: "Рабочие специальности",
+							text: "Рабочие специальности",
+						},
+						{
+							value: "Инженерные специальности",
+							text: "Инженерные специальности",
+						},
+					],
+				},
+				btn: {
+					icon: "icon-chevron-right"
+				},
+			},
+			suppliers: {	
+				title: "Сотрудничество с КСД",
+				form: {
+					input: {
+						inputPlaceholder: "Поиск...",
+						inputError: "Не менее 3 знаков!",
+						inputId: "search-cooperation",
+						inputName: "search-cooperation",
+						inputMinLength: 3,
+					},
+					select: {
+						class: "cooperation__form-select",
+						label: "Категория",
+						placeholder: "Категория",
+						name: "kategoriya",
+						simplebar: "data-simplebar",
+						optionsList: [
+							{
+								value: "Запчасти",
+								text: "Запчасти",
+							},
+							{
+								value: "Строительные инструменты",
+								text: "Строительные инструменты",
+							},
+							{
+								value: "Электрика",
+								text: "Электрика",
+							},
+							{
+								value: "Обслуживание и ремонт",
+								text: "Обслуживание и ремонт",
+							},
+						],
+					},
+				}
+			}
+		}
+	section.section.cooperation(class="cooperation--" + mods)
+		.container.cooperation__container
+			if !mods
+				h2.title.title--h2.cooperation__title=data.title
+				h3.title.title--h3.cooperation__subtitle=data.subtitle
+			else 
+				h2.title.title--h3.cooperation__title=data.suppliers.title
+			p.text.text--sm.cooperation__text=data.text
+			if !mods
+				.cooperation__form(data-validate data-callback="searchVacanciesForm")
+					form.cooperation__form-form(action="#")
+						+custom-input(data.form.input)(data-validate-type="text").cooperation__form-input
+						+custom-select(data.form.select)
+						button.btn.btn--drk-orange.cooperation__form-submit(type="submit")
+							+icon(data.form.btn.icon, 26, 26)
+			else
+				.cooperation__form(data-validate data-callback="cooperationForm")
+					form.cooperation__form-form(action="#")
+						+custom-input(data.suppliers.form.input)(data-validate-type="text").cooperation__form-input
+						+custom-select(data.suppliers.form.select)
+						button.btn.btn--drk-orange.cooperation__form-submit(type="submit")
+							+icon(data.form.btn.icon, 26, 26)

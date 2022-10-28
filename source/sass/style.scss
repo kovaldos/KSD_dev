@@ -3,8 +3,11 @@
 
 @import "vendor/normalize";
 // Swiper 7.4.1
-// @import "vendor/swiper";
-
+@import "vendor/swiper";
+// Simplebar
+@import "vendor/simplebar";
+// Nouislider
+@import "vendor/nouislider";
 // Global
 // ---------------------------------
 
@@ -19,14 +22,89 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/header";
-@import "blocks/main-nav";
-@import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/btn";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
+@import "blocks/link";
+@import "blocks/title";
+@import "blocks/text";
+@import "blocks/data-accordion";
+@import "blocks/btn-to-top";
+@import "blocks/data-tabs";
+@import "blocks/tabs";
+@import "blocks/breadcrumbs";
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/burger";
+@import "blocks/hero";
+@import "blocks/hero-section";
+@import "blocks/directions";
+@import "blocks/techpark";
+@import "blocks/about-company";
+@import "blocks/history";
+@import "blocks/numbers";
+@import "blocks/principles";
+@import "blocks/team";
+@import "blocks/career";
+@import "blocks/blog";
+@import "blocks/contact-us";
+@import "blocks/partners";
+@import "blocks/tech";
+@import "blocks/services";
+@import "blocks/technic";
+@import "blocks/projects";
+@import "blocks/our-science";
+@import "blocks/projects-page";
+@import "blocks/catalog";
+@import "blocks/project-hero";
+@import "blocks/technologies";
+@import "blocks/project-technic";
+@import "blocks/video";
+@import "blocks/gallery";
+@import "blocks/similar-projects";
+@import "blocks/our-history";
+@import "blocks/our-vision";
+@import "blocks/achievements";
+@import "blocks/recycling";
+@import "blocks/technic-and-methods";
+@import "blocks/reviews";
+@import "blocks/cooperation";
+@import "blocks/we-need";
+@import "blocks/work-with-us";
+@import "blocks/vacancies";
+@import "blocks/vacancy";
+@import "blocks/vehicle-park";
+@import "blocks/promo";
+@import "blocks/blog-page";
+@import "blocks/blog-article";
+@import "blocks/rent-hero";
+@import "blocks/rent-hero-desc";
+@import "blocks/rent-technic";
+@import "blocks/rent-selections";
+@import "blocks/rent-about-us";
+@import "blocks/catalog";
+@import "blocks/catalog-filter";
+@import "blocks/catalog-items";
+@import "blocks/card";
+@import "blocks/card-description";
+@import "blocks/rent-card-characteristics";
+@import "blocks/card-similar";
+@import "blocks/vehicle-card";
+@import "blocks/sale-goods-types";
+@import "blocks/goods";
+@import "blocks/delivery-calc";
+@import "blocks/sale-selections";
+@import "blocks/ecology";
+@import "blocks/sale-about-us";
+@import "blocks/road-build-hero";
+@import "blocks/map";
+@import "blocks/docs";
+@import "blocks/contacts";
+@import "blocks/directions-sup";
+@import "blocks/topical";
+@import "blocks/footer";
 
 // ---------------------------------
 
@@ -35,8 +113,15 @@
 // ❗ обязательно используйте @media для отключения ховеров на тач устройствах
 // но не используем для текстовых полей ( input, textarea )
 /* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
+  &:hover {
+    color: $color-default-white;
+  }
+  &:focus-visible {
+    outline: none;
+    color: $color-default-white;
+  }
   &:focus {
+    outline: none;
     color: $color-default-white;
   }
 } */

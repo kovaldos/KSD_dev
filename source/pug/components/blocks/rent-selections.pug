@@ -1,0 +1,92 @@
+mixin rent-selections()
+	-
+		const data = {
+			title: "Подборки",
+			subtitle: "Группы и категории техники",
+			navItems: [
+				{
+					href: "#",
+					icon: "rent-selections-icon-1",
+					title: "Строительство домов",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-2",
+					title: "Перевоз материалов",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-3",
+					title: "Облагораживание территории",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-4",
+					title: "Строительство домов",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-5",
+					title: "Перевоз материалов",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-6",
+					title: "Облагораживание территории",
+				},
+			],
+			more: "Показать еще",
+			less: "Свернуть",
+			wrapClassMod: "rent-selections__tabs-wrap--",
+			items: [
+				{
+					title: "Самосвалы",
+					text: "Egestas lorem ac ipsum tortor neque congue. Nisi, faucibus mi scelerisque",
+					img: "rent-selections-img-1",
+					alt: "Самосвал",
+					classMod: "rent-selections__item--vert",
+					
+				},
+				{
+					title: "Экскаваторы",
+					text: "Tempus montes, facilisis nisi, nullam pharetra tellus. Donec scelerisque sed in ornare. Aliquam aenean egestas interdum in feugiat nec mollis ullamcorper. Orci amet amet, et elit. ",
+					img: "rent-selections-img-2",
+					alt: "Экскаватор",
+					classMod: "rent-selections__item--hor rent-selections__item--hor-reverse",
+				},
+				{
+					title: "Бульдозеры",
+					text: "Egestas lorem ac ipsum tortor neque congue. Nisi, faucibus mi scelerisque lacus malesuada lacus. Sem etiam volutpat odio vulputate mi sed purus. Vel luctus congue nisl.",
+					img: "rent-selections-img-3",
+					alt: "Бульдозер",
+					classMod: "rent-selections__item--hor",
+				},
+			]
+		}
+	section.section.rent-selections
+		.container.rent-selections__container 
+			h2.title.title--h2.rent-selections__title=data.title
+			h3.title.title--h3.rent-selections__title=data.subtitle
+			.tabs.rent-selections__tabs(data-tabs="parent" data-delay="300")
+				input.rent-selections__toggle#load-more(type="checkbox", name="more-less")
+				ul.tabs__controls.rent-selections__tabs-controls(data-tabs="controls")
+					each item in data.navItems
+						li.rent-selections__tabs-controls-item
+							button.tabs__control.rent-selections__tabs-control(type="button" data-index=index, data-tabs="control",)
+								span.rent-selections__tabs-control-title=item.title
+								span.rent-selections__tabs-control-pic
+									img(src=`img/sprite/${item.icon}.svg`, alt="Картинка для подборки").rent-selections__tabs-control-img
+									img(src=`img/sprite/${item.icon}.svg`, alt="Картинка для подборки").rent-selections__tabs-control-img.rent-selections__tabs-control-img--hover
+				label.rent-selections__label(for="load-more")
+					span.unloaded=data.more
+					span.loaded=data.less
+				.tabs__content.rent-selections__tabs-content(data-tabs="content")
+					- for (let i = 0; i < 6; i++)
+						.rent-selections__tabs-wrap(class=data.wrapClassMod + (i + 1), data-tabs="element")
+							each item in data.items
+								.rent-selections__item(class=item.classMod)
+									.rent-selections__item-desc
+										h2.title.title--h2.rent-selections__item-title=item.title
+										p.text.text--sm.rent-selections__item-text=item.text
+									.rent-selections__item-pic
+										+picture("content", item.img, "png", item.alt)

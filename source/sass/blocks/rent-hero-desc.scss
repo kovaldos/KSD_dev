@@ -1,0 +1,112 @@
+.rent-hero-desc {
+	padding: 0 0 40px;
+	&__item {
+		padding: 22px 30px 22px 40px;
+		border-radius: 7px;
+		background-color: rgba($color-lavender, 0.3);
+		display: flex;
+		align-items: center;
+		position: relative;
+		@include vp-1023 {
+			padding: 19px 15px;
+			min-height: 130px;
+		}
+		&-icon {
+			flex-shrink: 0;
+			margin: 0 40px 0 0;
+			color: $color-bunting;
+			@include vp-767 {
+				position: absolute;
+				left: auto;
+				right: 15px;
+				margin: 0;
+				color: rgba($color-dark-orange, 0.5);
+				z-index: -1;
+			}
+		}
+		&-text {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 180%;
+			@include vp-1023 {
+				font-weight: 400;
+				font-size: 13px;
+			}
+		}
+		&-link {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 180%;
+			color: $color-bunting;
+			margin: -5px 0 -5px -5px;
+			@include vp-1023 {
+				font-weight: 600;
+				font-size: 13px;
+				line-height: 180%;
+			}
+		}
+	}
+	&__slider {
+		&-nav {
+			position: relative;
+			@include vp-1023 {
+				margin: 50px 0 0 0;
+			}
+		}
+		&-btns {
+			position: absolute;
+			width: 75px;
+			left: 100px;
+			bottom: 20px;
+		}
+		&-btn {
+			color: $color-bunting;
+			&::after {
+				display: none;
+			}
+			svg {
+				color: $color-bunting;
+				transition: color $trans-default;
+				width: 20px;
+				height: 20px;
+			}
+			&.swiper-button-disabled {
+				opacity: 1;
+				svg {
+					color: $color-hawkes-blue;
+				}
+			}
+			&--next {
+				right: 0;
+			}
+			&--prev {
+				left: 0;
+			}
+		}
+	}
+	.swiper-pagination-fraction {
+		right: auto;
+		bottom: 0;
+		width: 70px;
+		left: 0;
+		text-align: center;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 160%;
+		color: $color-bunting;
+		@include vp-1023 {
+			font-size: 20px;
+			text-align: left;
+		}
+	}
+	.swiper-pagination-current {
+		display: inline-block;
+		width: 33%;
+	}
+	.swiper-pagination-total {
+		font-size: 16px;
+		@include vp-1023 {
+			font-size: 14px;
+		}
+	}
+}

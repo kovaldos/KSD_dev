@@ -1,0 +1,147 @@
+mixin catalog-items(mods)
+	-
+		const data = {
+			//- tags: [
+			//- 	"Бульдозеры",
+			//- 	"Измельчители",
+			//- 	"Цена",
+			//- ],
+			cards: [
+				{
+					title: "Техника",
+					img: "rent-technic-img-1",
+					alt: "rent-technic-img-1",
+					name: "Экскаватор-погрузчик Volvo BL71B",
+					price: {
+						num: "35 000",
+						currency: " ₽ ",
+						time: "/ смена",
+					},
+					desc: [
+						{
+							name: "Грузоподъемность: ",
+							value: "25 тонн",
+						},
+						{
+							name: "Грузоподъемность: ",
+							value: "25 тонн",
+						},
+						{
+							name: "Объем кузова: ",
+							value: "20 кубов",
+						},
+						{
+							name: "Объем кузова: ",
+							value: "20 кубов",
+						},
+						{
+							name: "Колесная формула: ",
+							value: "6x4",
+						},
+					],
+					btn: {
+						text: "Арендовать",
+					}
+				},
+			],
+			sale: {
+				cards: [
+					{
+						title: "Щебень",
+						img: "catalog-sale-card-img-1",
+						alt: "Щебень",
+						name: "Вторичный бетонный щебень, фракция 20-40",
+						price: {
+							num: "600",
+							currency: " ₽ ",
+							unit: "/ м",
+							sup: "3",
+						},
+						desc: [
+							{
+								name: "Фракция: ",
+								value: "20 - 40",
+							},
+							{
+								name: "Морозостойкость: ",
+								value: "F300",
+							},
+							{
+								name: "Вид: ",
+								value: "Вторичный",
+							},
+							{
+								name: "Марка дробимости: ",
+								value: "М600",
+							},
+							{
+								name: "Класс: ",
+								value: "1",
+							},
+						],
+						btn: {
+							text: "Заказать",
+						}
+					},
+				],
+			}
+		}
+	.catalog__items(class="catalog__items--" + mods)
+		.catalog__tags-wrapper(data-simplebar)
+			ul.catalog__tags-list
+				//- each tag in data.tags 
+				//- 	li.catalog__tags-list-item 
+				//- 		span=tag
+				//- 		span 🗙
+		.catalog__cards.catalog__cards--rows
+			if mods === "sale"
+				- for (let i = 0; i < 10; i++)
+					each item in data.sale.cards
+						.catalog__card
+							.catalog__card-col.catalog__card-col--01
+								h2.title.catalog__card-title=item.title
+								.catalog__card-pic
+									+picture("content", item.img, "png", item.alt)
+							.catalog__card-col.catalog__card-col--02
+								h3.title.catalog__card-model=item.name
+								ul.catalog__card-desc
+									each descItem in item.desc 
+										li.catalog__card-desc-item 
+											span.catalog__card-desc-name=descItem.name
+											span &nbsp;
+											span.catalog__card-desc-value=descItem.value
+							.catalog__card-col.catalog__card-col--03
+								.catalog__card-price
+									span.catalog__card-price-num=item.price.num
+									span.catalog__card-price-currency=item.price.currency
+									span.catalog__card-price-time=item.price.unit
+									sup.catalog__card-price-sup=item.price.sup
+								button(type="button").btn.btn--apple.catalog__card-add
+									span.catalog__card-add-text=item.btn.text
+									span.catalog__card-add-icon
+										+icon("icon-plus", 23, 23)
+			else
+				- for (let i = 0; i < 10; i++)
+					each item in data.cards
+						.catalog__card
+							.catalog__card-col.catalog__card-col--01
+								h2.title.catalog__card-title=item.title
+								.catalog__card-pic
+									+picture("content", item.img, "png", item.alt)
+							.catalog__card-col.catalog__card-col--02
+								h3.title.catalog__card-model=item.name
+								ul.catalog__card-desc
+									each descItem in item.desc 
+										li.catalog__card-desc-item 
+											span.catalog__card-desc-name=descItem.name
+											span &nbsp;
+											span.catalog__card-desc-value=descItem.value
+							.catalog__card-col.catalog__card-col--03
+								.catalog__card-price
+									span.catalog__card-price-num=item.price.num
+									span.catalog__card-price-currency=item.price.currency
+									span.catalog__card-price-time=item.price.time
+								button(type="button").btn.btn--drk-orange.catalog__card-add
+									span.catalog__card-add-text=item.btn.text
+									span.catalog__card-add-icon
+										+icon("icon-plus", 23, 23)

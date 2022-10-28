@@ -1,0 +1,26 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "KSD - Снос зданий" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = "wrapper--demolition"
+  - const hasHeader = true
+  - const headerMods = "header--demolition"
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "snos-zdaniy.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +hero-section("demolition")
+    +partners("demolition")
+    +tech("demolition")
+    +projects("demolition")
+    +blog("demolition")
+    +technic("demolition")
+    +our-science("demolition")
+
+block modals
+  +modal("modal--offer modal--fit-content")(data-modal="offer")
+    +modal-offer("demolition")

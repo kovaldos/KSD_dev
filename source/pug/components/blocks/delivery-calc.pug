@@ -1,0 +1,47 @@
+mixin delivery-calc()
+	-
+		const data = {
+			title: "Калькулятор",
+			subtitle: "Расчет стоимости доставки материала",
+			calc: {
+				title: "Расчет онлайн",
+				label1: "Объем", 
+				label2: "Index",
+			},
+			input: {
+				inputPlaceholder: "≈4 000 рублей"
+			},
+			btn: {
+				text: "Рассчитать стоимость",
+			},
+			disclaimer: "Указывается примерная стоимость доставки. Оставьте заявку для получения информации точной стоимости",
+		}
+	section.section.delivery-calc
+		.container 
+			.delivery-calc__heading
+				h2.title.title--h2.delivery-calc__title=data.title
+				h3.title.title--h3.delivery-calc__subtitle=data.subtitle
+		.delivery-calc__wrapper 
+			.container.container--row.delivery-calc__container
+				.delivery-calc__pic 
+					img(src="../img/svg/delivery-calc-img.svg" alt="Рисунок человека с большим калькулятором")
+				.delivery-calc__calc
+					h4.title.title--h4.delivery-calc__calc-title=data.calc.title
+					.delivery-calc__label.delivery-calc__label--01
+						.delivery-calc__label-row
+							span.delivery-calc__label-text=data.calc.label1
+							span.delivery-calc__label-text.delivery-calc__label-text--b=data.calc.label2
+						.delivery-calc__calc-range#delivery-calc-1
+					.delivery-calc__label.delivery-calc__label--02
+						.delivery-calc__label-row
+							span.delivery-calc__label-text=data.calc.label1
+							span.delivery-calc__label-text.delivery-calc__label-text--b=data.calc.label2
+						.delivery-calc__calc-range#delivery-calc-2
+				.delivery-calc__result 
+					+custom-input(data.input).delivery-calc__result-input
+					+btn(data.btn).btn--apple.delivery-calc__result-btn
+		.delivery-calc__disclaimer 
+			.container.container--row-aic
+				span.delivery-calc__disclaimer-icon
+					+icon("icon-info", 20, 20)
+				span.text.text--sm.delivery-calc__disclaimer-text=data.disclaimer

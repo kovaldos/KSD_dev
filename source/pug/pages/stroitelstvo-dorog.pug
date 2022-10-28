@@ -1,0 +1,29 @@
+extends ../components/base/layout
+
+block variables
+	- const title = "KSD - Строительство дорог" //- на страницах кроме главной используйте О нас — ProjectName
+	- const wrapperMods = "wrapper--road"
+	- const hasHeader = true
+	- const headerMods = "header--road"
+	- const sectionClassMode = ""
+	- const hasFooter = true
+	- const footerMods = ""
+	- const currentUrl = "stroitelstvo-dorog.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+	main
+		//- на странице запрещен "голый" код
+		//- все блоки вставляются из папки pug/components/blocks
+		+hero-section("road")
+		+partners("road")
+		+tech("road")
+		+projects("road")
+		+blog-road()
+		+technic-road()
+		+our-science("road")
+		+contact-us("road")
+block modals
+	+modal("modal--contact-us")(data-modal="contact-us")
+		+modal-contact-us("road")
+	+modal("modal--offer modal--fit-content")(data-modal="offer")
+		+modal-offer("road")

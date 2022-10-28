@@ -1,0 +1,33 @@
+mixin sale-selections()
+	-
+		const data = {
+			title: "Подборки",
+			subtitle: "Сортировка материалов по категориям",
+			navItems: [
+				{
+					href: "#",
+					icon: "rent-selections-icon-1",
+					title: "Строительство домов",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-2",
+					title: "Перевоз материалов",
+				},
+				{
+					href: "#",
+					icon: "rent-selections-icon-3",
+					title: "Облагораживание территории",
+				},
+			],
+		}
+	section.section.sale-selections
+		.container.sale-selections__container 
+			h2.title.title--h2.sale-selections__title=data.title
+			h3.title.title--h3.sale-selections__subtitle=data.subtitle
+			ul.sale-selections__items
+				each item in data.navItems
+					li.sale-selections__item
+						span.sale-selections__item-title=item.title
+						+icon(item.icon, 80, 80)
+

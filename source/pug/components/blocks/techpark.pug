@@ -1,0 +1,71 @@
+mixin techpark()
+	-
+		const data = {
+			title: "Технопарк",
+			subtitle: "Высокотехнологичная площадка по переработке строительных отходов",
+			contentTitle: "",
+			//- text: "В 2022 году в Московской области открыт завод по переработке строительных отходов.",
+			//- text1: "Собственный комплекс по производству материалов из вторсырья дает возможность работать с объемом свыше 5 тыс. тонн строительных отходов ежедневно.",
+			items: [
+				{				
+					text: "В 2022 году в Московской области открыт завод по переработке строительных отходов.",
+					text1: "Собственный комплекс по производству материалов из вторсырья дает возможность работать с объемом свыше 5 тыс. тонн строительных отходов ежедневно.",
+					src: "slides",
+					img: "directions-img-1",
+					alt: "экскаватор-разрушитель",
+				},
+				{		
+					text: "В 2022 году в Московской области открыт завод по переработке строительных отходов.",
+					text1: "Собственный комплекс по производству материалов из вторсырья дает возможность работать с объемом свыше 5 тыс. тонн строительных отходов ежедневно.",
+					src: "slides",
+					img: "directions-img-1",
+					alt: "экскаватор-разрушитель",
+				},
+				{	
+					text: "В 2022 году в Московской области открыт завод по переработке строительных отходов.",
+					text1: "Собственный комплекс по производству материалов из вторсырья дает возможность работать с объемом свыше 5 тыс. тонн строительных отходов ежедневно.",
+					src: "slides",
+					img: "directions-img-1",
+					alt: "экскаватор-разрушитель",
+				},
+				{
+					text: "В 2022 году в Московской области открыт завод по переработке строительных отходов.",
+					text1: "Собственный комплекс по производству материалов из вторсырья дает возможность работать с объемом свыше 5 тыс. тонн строительных отходов ежедневно.",
+					src: "slides",
+					img: "directions-img-1",
+					alt: "экскаватор-разрушитель",
+				},
+				{	
+					text: "В 2022 году в Московской области открыт завод по переработке строительных отходов.",
+					text1: "Собственный комплекс по производству материалов из вторсырья дает возможность работать с объемом свыше 5 тыс. тонн строительных отходов ежедневно.",
+					src: "slides",
+					img: "directions-img-1",
+					alt: "экскаватор-разрушитель",
+				},
+			],
+		}
+
+	section.section.techpark 
+		.container.techpark__container 
+			.techpark__heading 
+				h2.title.title--h2.techpark__title=data.title
+				h3.title.title--h3.techpark__subtitle=data.subtitle
+			.swiper.swiper--02-01.techpark__slider
+				.swiper-wrapper
+					each item in data.items
+						.swiper-slide
+							.techpark__cols
+								.techpark__col.techpark__col--01
+									.techpark__text-wrap
+										p.text.text--lg.techpark__text=item.text
+										p.text.text--lg.techpark__text=item.text1
+								.techpark__col.techpark__col--02
+									.techpark__slider-item
+										+img(item.src, item.img, "jpg", item.alt)
+				.techpark__slider-nav
+					.techpark__slider-pag
+					.techpark__slider-btns
+						.swiper-button-next.techpark__slider-btn.techpark__slider-btn--next
+							+icon("icon-chevron-right-black", 30, 30)
+						.swiper-button-prev.techpark__slider-btn.techpark__slider-btn--prev
+							+icon("icon-chevron-left-black", 30, 30)

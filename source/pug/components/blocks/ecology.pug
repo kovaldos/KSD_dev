@@ -1,0 +1,28 @@
+mixin ecology()
+	-
+		const data = {
+			title: "Экология",
+			subtitle: "Переработка отходов для их вторичного использования помогает уменьшить:",
+			list: [
+				"Неблагоприятное воздействие на территорию города и его пригородов за счет уменьшения кол-ва и объемов свалок;",
+				"Снизить количество отходов для захоронения до 1/3 — 1/4 от их общей массы;",
+				"Уровень экологической нагрузки и энергозатрат за счет уже проведенных работ по добыче, доставке и переработке сырья в стройматериалы;",
+				"Снизить экологический налог на предприятие.",
+			],
+		}
+	section.section.ecology
+		.ecology__heading
+			.container.ecology__heading-container
+				.ecology__pic
+					+picture("content", "ecology-img-1", "png", "Зеленые листья")
+				.ecology__titles
+					h2.title.title--h2.ecology__item-title=data.title
+					h3.title.title--h3.ecology__item-subtitle=data.subtitle
+		.container.ecology__container
+			.swiper.ecology__slider
+				ul.swiper-wrapper.ecology__list
+					each item in data.list
+						li.swiper-slide.ecology__list-item
+							+icon("icon-check", 26, 26).ecology__list-item-icon
+							span.ecology__list-item-text=item
+				.ecology__slider-pag

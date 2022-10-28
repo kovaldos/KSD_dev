@@ -1,0 +1,75 @@
+.sale-goods-types {
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 30px;
+		@include vp-1023 {
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 10px;
+		}
+	}
+	&__link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 20px;
+		background-color: rgba($color-lavender, 0.3);
+		border-radius: 7px;
+		transition: background-color $trans-default, box-shadow $trans-default, border-radius $trans-default;
+		box-shadow: none;
+		@include vp-639 {
+			padding: 20px 10px 7px;
+		}
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover {
+				border-radius: 10px;
+				background-color: $color-default-white;
+				box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02),
+					0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175),
+					0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
+			}
+			&:focus-visible {
+				outline: none;
+				border-radius: 10px;
+				background-color: $color-default-white;
+				box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02),
+					0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175),
+					0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
+			}
+			&:focus {
+				outline: none;
+				border-radius: 10px;
+				background-color: $color-default-white;
+				box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02),
+					0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175),
+					0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
+			}
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 140%;
+			color: $color-bunting;
+			margin: 0 0 18px;
+			hyphens: none;
+			@include vp-639 {
+				font-size: 12px;
+			}
+			@include vp-374 {
+				&--desktop {
+					display: none;
+				}
+			}
+			&--mobile {
+				display: none;
+				@include vp-374 {
+					display: block;
+					hyphens: manual;
+				}
+			}
+		}
+	}
+}

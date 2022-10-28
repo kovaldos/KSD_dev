@@ -1,0 +1,99 @@
+mixin our-science(mods)
+	-
+		const data = {
+			title: "Наша наука",
+			subtitle: "Демонтаж сооружений",
+			text: "Высокотехнологичный подход с использованием современного оборудования",
+			text2: "Мы заботимся об экологии. Группа компаний КСД имеет собственные процессы рециклинга и регламенты для защиты окружающей среды",
+			text3: "Более 150 сертифицированных специалистов КСД имеют многолетний опыт для качественного решения поставленных задач",
+			items: [
+				{
+					icon: "icon-our-science-1",
+					title: "1. Документация на снос",
+					text: "Разработка исходно разрешительной документации. Согласование с департаментом строительства",
+				},
+				{
+					icon: "icon-our-science-2",
+					title: "2. Организация",
+					text: "Мобилизация, временные постройки на объекте, распределение рабочих процессов",
+				},
+				{
+					icon: "icon-our-science-3",
+					title: "3. Снос и демонтаж",
+					text: "Механизированный и ручной демонтаж зданий. С расчетом мер безопасности для окружения",
+				},
+				{
+					icon: "icon-our-science-4",
+					title: "4. Вывоз и переработка",
+					text: "КСД Групп имеет собственный перерабатывающий завод, что позволяет переиспользовать до 99% строительного мусора",
+				},
+			],
+			road: {
+				subtitle: "Обновление дорожного полотна",
+				text: "Высокотехнологичный подход с использованием современного оборудования",
+				text2: "Мы заботимся об экологии. Группа компаний КСД имеет собственные процессы рециклинга и регламенты для защиты окружающей среды",
+				text3: "Более 150 сертифицированных специалистов КСД имеют многолетний опыт для качественного решения поставленных задач",
+				items: [
+					{
+						icon: "icon-our-science-1",
+						title: "Документация на снос",
+						text: "Разработка исходно разрешительной документации. Согласование с департаментом строительства",
+					},
+					{
+						icon: "icon-our-science-2",
+						title: "Организация",
+						text: "Мобилизация, временные постройки на объекте, распределение рабочих процессов",
+					},
+					{
+						icon: "icon-our-science-3",
+						title: "Снос и демонтаж",
+						text: "Механизированный и ручной демонтаж зданий. С расчетом мер безопасности для окружения",
+					},
+					{
+						icon: "icon-our-science-4",
+						title: "Вывоз и переработка",
+						text: "КСД Групп имеет собственный перерабатывающий завод, что позволяет переиспользовать до 99% строительного мусора",
+					},
+				],
+			},
+		}
+	section.section.our-science(class="our-science--" + mods)
+		.container.our-science__container 
+			.our-science__heading
+				h2.title.title--h2.our-science__title=data.title
+				if !mods
+					h3.title.title--h3.our-science__subtitle=data.subtitle
+				if mods === "road"
+					h3.title.title--h3.our-science__subtitle=data.road.subtitle
+			.our-science__cols
+				.our-science__col.our-science__col--01
+					if !mods
+						p.text.our-science__head-text=data.text
+						p.text.our-science__text=data.text2
+						p.text.our-science__text=data.text3
+					if mods === "road"
+						p.text.our-science__head-text=data.road.text
+						p.text.our-science__text=data.road.text2
+						p.text.our-science__text=data.road.text3
+				.our-science__col.our-science__col--02
+					ol.our-science__list(data-accordion="parent" data-single)
+						if !mods
+							each item in data.items
+								li.our-science__list-item(data-accordion="element")
+									button.btn.btn--reset.our-science__list-btn(type="button" data-accordion="button")
+										+icon(item.icon, 60, 60).our-science__list-icon
+										//- img(src=`/local/templates/constructiv/img/svg/${item.icon}.svg`, alt=`${item.icon}`).our-science__list-icon
+										//- img(src=`img/svg/${item.icon}.svg`, alt=`${item.icon}`).our-science__list-icon
+										span.our-science__list-title=item.title
+										+icon("icon-chevron-down", 12, 7).our-science__acc-icon
+									p.text.our-science__list-text(data-accordion="content")=item.text
+						if mods === "road"
+							each item in data.road.items
+								li.our-science__list-item(data-accordion="element")
+									button.btn.btn--reset.our-science__list-btn(type="button" data-accordion="button")
+										+icon(item.icon, 60, 60).our-science__list-icon
+										//- img(src=`/local/templates/constructiv/img/svg/${item.icon}.svg`, alt=`${item.icon}`).our-science__list-icon
+										//- img(src=`img/svg/${item.icon}.svg`, alt=`${item.icon}`).our-science__list-icon
+										span.our-science__list-title=item.title
+										+icon("icon-chevron-down", 12, 7).our-science__acc-icon
+									p.text.our-science__list-text(data-accordion="content")=item.text

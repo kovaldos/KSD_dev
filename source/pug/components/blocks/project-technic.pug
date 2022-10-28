@@ -1,0 +1,68 @@
+mixin proj-tech()
+	-
+		const data = {
+			title: "Техника",
+			items: [
+				{
+					title: "Экскаватор - Погрузчик",
+					model: "4CX ECO",
+					src: "slides",
+					img: "proj-tech-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+				{
+					title: "Гусеничный Экскаватор",
+					model: "JS 305",
+					src: "slides",
+					img: "proj-tech-img-2",
+					alt: "Гусеничный Экскаватор",
+				},
+				{
+					title: "Телескопические Погрузчики",
+					model: "540 - I70",
+					src: "slides",
+					img: "proj-tech-img-3",
+					alt: "Телескопический Погрузчики",
+				},
+				{
+					title: "Экскаватор - Погрузчик",
+					model: "4CX ECO",
+					src: "slides",
+					img: "proj-tech-img-1",
+					alt: "Экскаватор - Погрузчик",
+				},
+				{
+					title: "Гусеничный Экскаватор",
+					model: "JS 305",
+					src: "slides",
+					img: "proj-tech-img-2",
+					alt: "Гусеничный Экскаватор",
+				},
+				{
+					title: "Телескопические Погрузчики",
+					model: "540 - I70",
+					src: "slides",
+					img: "proj-tech-img-3",
+					alt: "Телескопический Погрузчики",
+				},
+			],
+		}
+	section.section.proj-tech 
+		.container.proj-tech__container
+			.proj-tech__heading
+				h2.title.title--h3=data.title 
+				.proj-tech__slider-btns
+					.swiper-button-next.proj-tech__slider-btn.proj-tech__slider-btn--next
+						+icon("icon-chevron-right-black", 25, 25)
+					.swiper-button-prev.proj-tech__slider-btn.proj-tech__slider-btn--prev
+						+icon("icon-chevron-left-black", 25, 25)
+			.swiper.proj-tech__slider
+				.swiper-wrapper
+					each item in data.items
+						.swiper-slide
+							.proj-tech__slider-item
+								.proj-tech__slider-item-pic
+									+picture(item.src, item.img, "png", item.alt)
+								h4.title.proj-tech__slider-item-title=item.title
+								span.proj-tech__slider-item-model=item.model
+

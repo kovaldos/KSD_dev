@@ -1,0 +1,54 @@
+mixin career()
+	-
+		const data = {
+			title: "Карьера",
+			subtitle: "Работа в КСД – это",
+			link: {
+				href: "vakansii.html",
+				text: "Смотреть все вакансии",
+			},
+			items: [
+				{	
+					classModifier: "career__item--",
+					title: "Карьерный рост",
+					text: "Реальные примеры: от мастера до главного механика; от экскаваторщика до начальника участка; от производителя работ до руководителя автоколонны;",
+				},
+				{	
+					classModifier: "career__item--",
+					title: "Высокие темпы развития",
+					text: "Мы совершенствуем нашу работу и развиваем новые направления",
+				},
+				{
+					classModifier: "career__item--",
+					title: "Вовлеченность",
+					text: "Сотрудники вовлечены в разные процессы компании, а не только в процессы своих подразделений, обучаются у друг друга, работают сообща",
+				},
+			]
+		}
+
+	section.section.career 
+		.container.career__container
+			.career__heading
+				.career__heading-col.career__heading-col--01
+					h2.title.title--h2.career__title=data.title
+					h3.title.title--h3.career__subtitle=data.subtitle
+				.career__heading-col.career__heading-col--02
+					+btn(data.link).btn--stroke-drk-orange.career__link-btn
+			.career__items.career__items--desktop
+				each item, index in data.items
+					.career__item(class=item.classModifier + (index + 1))
+						h4.title.career__item-title
+							span.career__item-title-span
+								+icon("icon-check-mark", 20, 20).career__item-icon
+							span.career__item-title-text=item.title
+						p.text.career__item-text=item.text
+			.career__items.career__items--mobile.career__ac(data-accordion='parent' data-single)
+				each item in data.items
+					.career__ac-el(data-accordion='element')
+						.career__ac-btn(data-accordion='button')
+							span.career__ac-btn-text=item.title
+							span.career__ac-btn-icon
+								+icon("icon-chevron-down-circle", 30, 30)
+						.career__ac-content(data-accordion='content')
+							.career__ac-wrap
+								p.text.text--lg.career__ac-text=item.text

@@ -1,0 +1,109 @@
+.principles {
+	&__title {
+		@include vp-767 {
+			text-align: center;
+		}
+	}
+	&__subtitle {
+		margin: 0 0 22px;
+		text-align: center;
+	}
+	&__tabs {
+		display: flex;
+		flex-direction: row-reverse;
+		padding: 27px 0 0 0;
+		margin: -27px 0 0 0;
+		&-controls {
+			flex-direction: column;
+			flex: 0 0 400px;
+			margin: 0 0 0 25px;
+			transform: translateY(-27px);
+		}
+		&-control {
+			margin: 0;
+			background: #ffffff;
+			box-shadow: 0px 38px 128px rgba(45, 49, 66, 0.025), 0px 15.0165px 53.4753px rgba(45, 49, 66, 0.02),
+				0px 8.57474px 28.5905px rgba(45, 49, 66, 0.015), 0px 5.32214px 16.0276px rgba(45, 49, 66, 0.0175),
+				0px 3.15228px 8.51213px rgba(45, 49, 66, 0.01), 0px 1.45895px 3.54209px rgba(45, 49, 66, 0.0075);
+			border-radius: 15px 0px 15px 15px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 160%;
+			color: $color-waikawa-grey;
+			transition: all $trans-default;
+			&:not(:last-of-type) {
+				margin: 0 0 25px;
+			}
+			&.is-active {
+				background-color: $color-dark-orange;
+				color: $color-default-white;
+				font-weight: 600;
+				transform: translateX(-30px);
+			}
+		}
+		&-content {
+			flex-shrink: 0;
+			flex-grow: 1;
+			margin-bottom: 23px;
+		}
+		&-title {
+			margin: 0 0 40px;
+			@include vp-1023 {
+				font-size: 26px;
+			}
+		}
+		&-text {
+			max-width: 670px;
+			color: $color-waikawa-grey;
+		}
+	}
+	&__container {
+		&--desktop {
+			@include vp-767 {
+				display: none;
+			}
+		}
+		&--mobile {
+			display: none;
+			@include vp-767 {
+				display: block;
+			}
+		}
+	}
+	&__ac {
+		&-el {
+			&:not(:last-of-type) {
+				margin: 0 0 16px;
+			}
+			&.is-active {
+				.principles__ac-btn-icon {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		&-btn {
+			border-radius: 10px;
+			background-color: $color-ghost-white;
+			padding: 12px 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			&-text {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+				color: $color-east-bay;
+			}
+			&-icon {
+				width: 30px;
+				height: 30px;
+				transition: transform $trans-default;
+				transform: rotate(0);
+			}
+		}
+		&-wrap {
+			padding: 20px 0 25px;
+		}
+	}
+}

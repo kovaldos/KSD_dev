@@ -1,0 +1,170 @@
+.vehicle-park {
+	&__subtitle {
+		margin: 0 0 20px;
+	}
+	&__head-text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 200%;
+		margin: 0 0 50px;
+		@include vp-767 {
+			font-size: 16px;
+			line-height: 220%;
+		}
+	}
+	&__dir {
+		margin: 0 0 30px;
+		&-title {
+			margin: 0 0 30px;
+		}
+		&-wrap {
+			padding: 0 0 20px;
+		}
+		&-nav {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+		}
+		&-item {
+			&:not(:last-of-type) {
+				margin: 0 30px 0 0;
+			}
+		}
+		&-link {
+			display: block;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			color: $color-bunting;
+			padding: 16px 32px;
+			background-color: $color-ghost-white;
+			border-radius: 10px;
+			transition: background-color $trans-default, color $trans-default;
+			white-space: nowrap;
+			&.is-active {
+				background-color: $color-dark-orange;
+				color: $color-default-white;
+			}
+		}
+	}
+	&__catalog {
+		&-title {
+			margin: 0 0 30px;
+		}
+		&-nav {
+			width: 100%;
+			max-width: 100%;
+			overflow-x: auto;
+			padding: 0 0 15px;
+			margin: 0 0 15px;
+		}
+		&-list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			&-item {
+				&:not(:last-of-type) {
+					margin: 0 30px 0 0;
+				}
+			}
+		}
+		&-link {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			color: $color-bunting;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 16px 32px;
+			border-radius: 10px;
+			background-color: $color-ghost-white;
+			transition: background-color $trans-default, color $trans-default;
+			&:hover {
+				background-color: $color-orange-red;
+				color: $color-default-white;
+			}
+			&:focus-visible {
+				outline: none;
+				background-color: $color-orange-red;
+				color: $color-default-white;
+			}
+			&:focus {
+				outline: none;
+				background-color: $color-orange-red;
+				color: $color-default-white;
+			}
+			&:active {
+				background-color: $color-harley-davidson-orange;
+			}
+			&--current {
+				color: $color-default-white;
+				background-color: $color-dark-orange;
+			}
+		}
+		&-items {
+			padding: 30px 0;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-column-gap: 30px;
+			grid-row-gap: 60px;
+			@include vp-1023 {
+				grid-template-columns: 1fr 1fr;
+				grid-row-gap: 30px;
+			}
+			@include vp-639 {
+				grid-template-columns: auto;
+			}
+		}
+		&-item {
+			background-color: $color-default-white;
+			&-pic {
+				width: 100%;
+				height: 248px;
+				position: relative;
+				margin: 0 0 20px;
+				overflow: hidden;
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 1;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					width: 50%;
+					height: 100%;
+					top: 0;
+					left: auto;
+					right: 0;
+					background-color: rgba($color-lavender, 0.5);
+					z-index: 0;
+				}
+			}
+			&-title {
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 24px;
+				color: $color-bunting;
+				margin: 0 0 10px;
+				@include vp-767 {
+					font-size: 16px;
+				}
+			}
+			&-model {
+				font-weight: 800;
+				font-size: 24px;
+				line-height: 29px;
+				color: $color-bunting;
+				@include vp-767 {
+					font-size: 22px;
+					line-height: 32px;
+				}
+			}
+		}
+	}
+}

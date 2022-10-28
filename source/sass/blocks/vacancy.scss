@@ -1,0 +1,360 @@
+.vacancy {
+	padding: 20px 0 0;
+	&__subtitle {
+		margin: 0 0 40px;
+		@include vp-1279 {
+			max-width: 500px;
+		}
+		@include vp-767 {
+			margin: 0 0 15px;
+		}
+	}
+	&__cols {
+		display: flex;
+	}
+	&__col {
+		&--01 {
+			margin: 0 116px 0 0;
+			flex-grow: 1;
+			@include vp-1023 {
+				margin: 0 30px 0 0;
+			}
+			@include vp-767 {
+				margin: 0;
+			}
+		}
+		&--02 {
+			transform: translateY(-80px);
+			@include vp-767 {
+				transform: translateY(0);
+			}
+		}
+	}
+	&__head {
+		&-text {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 200%;
+			margin: 0 0 30px;
+			@include vp-767 {
+				font-size: 16px;
+			}
+		}
+		&-subtext {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 200%;
+			color: $color-waikawa-grey;
+			margin: 0 0 50px;
+			@include vp-767 {
+				margin: 0 0 30px;
+			}
+		}
+	}
+	&__desc {
+		&-title {
+			margin: 0 0 20px;
+		}
+		&-list {
+			margin: 0 0 50px;
+			padding: 0;
+			list-style-position: inside;
+			&-item {
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 26px;
+				display: flex;
+				align-items: center;
+				color: $color-waikawa-grey;
+				@include vp-767 {
+					font-size: 16px;
+					line-height: 28px;
+				}
+				&::marker {
+					color: $color-transparent;
+				}
+				&::before {
+					content: "";
+					display: block;
+					flex-shrink: 0;
+					margin: 0 5px 0 0;
+					width: 18px;
+					height: 1px;
+					background-color: $color-waikawa-grey;
+				}
+				&:not(:last-of-type) {
+					margin: 0 0 20px;
+				}
+			}
+			&--skills {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				@include vp-767 {
+					margin: 0;
+				}
+			}
+			&--skills & {
+				&-item {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 8px 16px;
+					background: rgba($color-navy-blue, 0.1);
+					border-radius: 5px;
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 20px;
+					color: $color-navy-blue;
+					white-space: nowrap;
+					margin: 0 20px 15px 0;
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	&__form {
+		max-width: 670px;
+		padding: 40px 0 0;
+		@include vp-767 {
+			display: none;
+		}
+		&-form {
+			width: 100%;
+			background-color: $color-default-white;
+			padding: 40px;
+			box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+			border-radius: 10px;
+		}
+		&-title {
+			font-size: 26px;
+			margin: 0 0 15px;
+		}
+		&-row {
+			display: flex;
+		}
+		&-field {
+			max-width: 100%;
+			padding: 15px 0;
+			&:not(:last-of-type) {
+				margin: 0 30px 0 0;
+			}
+			label {
+				input {
+					padding: 16px;
+					border-color: $color-lavender-grey;
+					border-width: 0.5px;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 20px;
+					color: $color-bunting;
+					&::placeholder {
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 20px;
+						color: $color-waikawa-grey;
+					}
+				}
+			}
+			&--message {
+				label {
+					textarea {
+						min-height: 132px;
+						border-color: $color-lavender-grey;
+						border-width: 0.5px;
+					}
+				}
+			}
+			&--file {
+				label {
+					width: fit-content;
+					display: flex;
+					align-items: center;
+					padding: 14px 22px 14px 14px;
+					border-radius: 5px;
+					background-color: rgba($color-lavender, 0.5);
+					cursor: pointer;
+					svg {
+						flex-shrink: 0;
+						margin: 0 26px 0 0;
+					}
+					input {
+						position: absolute;
+						width: 0;
+						font-size: 0;
+						visibility: hidden;
+					}
+				}
+				&.is-invalid {
+					label {
+						border: 0.5px solid $color-torch-red;
+					}
+				}
+			}
+			.custom-input {
+				&__error {
+					font-size: 12px;
+				}
+			}
+		}
+		&-btn-del {
+			color: $color-bunting;
+			visibility: visible;
+			opacity: 1;
+			transition: visibility $trans-default;
+			&.is-hidden {
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
+		&-submit {
+			display: flex;
+			margin: 35px 0 0;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			width: 100%;
+			border-radius: 7px;
+			padding: 16px;
+			align-items: center;
+			justify-content: center;
+		}
+		&-agree {
+			padding: 20px 40px;
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 180%;
+			color: $color-waikawa-grey;
+			&-link {
+				font-size: 13px;
+				line-height: 180%;
+				color: $color-outrageous-orange;
+				font-weight: 600;
+				&::after {
+					background-color: $color-outrageous-orange;
+				}
+			}
+		}
+	}
+	&__die {
+		min-width: 270px;
+		background-color: $color-default-white;
+		box-shadow: 0px 0px 20px rgba(45, 49, 66, 0.05);
+		border-radius: 10px;
+		padding: 30px 20px 20px;
+		position: sticky;
+		top: 100px;
+		@include vp-767 {
+			display: none;
+		}
+		&-payment {
+			margin: 0 0 25px;
+			&-value {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 160%;
+				color: $color-bunting;
+			}
+			&-currency {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 160%;
+				color: $color-bunting;
+			}
+			&-time {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 160%;
+				color: $color-logan;
+			}
+		}
+		&-experience {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 0 12px 0;
+			font-size: 14px;
+			line-height: 23px;
+			&-text {
+				font-weight: 400;
+			}
+			&-value {
+				font-weight: 500;
+			}
+			&--mobile {
+				display: none;
+				@include vp-767 {
+					display: block;
+				}
+			}
+		}
+		&-employment {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 0 40px 0;
+			font-size: 14px;
+			line-height: 23px;
+			&-text {
+				font-weight: 400;
+			}
+			&-value {
+				font-weight: 500;
+			}
+			&--mobile {
+				display: none;
+				@include vp-767 {
+					display: block;
+					margin: 0 0 30px;
+				}
+			}
+		}
+		&-btn {
+			padding: 16px;
+			align-items: center;
+			justify-content: center;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			border-radius: 7px;
+			width: 100%;
+		}
+	}
+	&__response {
+		width: 100%;
+		z-index: 10;
+		position: fixed;
+		top: auto;
+		bottom: 0;
+		left: 0;
+		background-color: $color-default-white;
+		box-shadow: 0px -5px 26px -8px rgba(45, 49, 66, 0.1);
+		padding: 13px 15px;
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		@include vp-767 {
+			display: flex;
+		}
+		&-payment {
+			&-value {
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 160%;
+				color: $color-bunting;
+			}
+			&-currency {
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 160%;
+				color: $color-bunting;
+			}
+			&-time {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 160%;
+				color: $color-logan;
+			}
+		}
+	}
+}

@@ -1,0 +1,120 @@
+mixin contact-us(mods)
+	-
+		const data = {
+			form: {
+				title: "Свяжитесь с нами",
+				name: {
+					inputPlaceholder: "Укажите имя...",
+					inputError: "Введите Ваше имя",
+					inputId: "firstname",
+					inputName: "firstname",
+					inputMinLength: 2,
+					inputMaxLength: 20,
+				},
+				email: {
+					inputPlaceholder: "Укажите email...",
+					inputError: "Введите корректный email",
+					inputId: "email",
+					inputName: "email",
+				},
+				message: {
+					inputPlaceholder: "Сообщение",
+					inputError: "Введите Ваше сообщение",
+					inputId: "message",
+					inputName: "message",
+					inputMinLength: 10,
+				},
+				btn: {
+					type: "submit",
+					text: "Отправить",
+				},
+				agree: "Оставляя свои контактные данные вы даете свое ",
+				linkAgree: {
+					href: "#",
+					text: "согласие на обработку",
+				},
+				agree2: " персональных данных",
+			},
+			title: "Контакты",
+			text: "Lectus morbi etiam et nulla blandit. Amet in egestas dictumst molestie. Scelerisque enim mattis.",
+			phone: "Телефон:",
+			linkTel: {
+				href: "tel:+74994306487",
+				text: "+7 (499) 430-64-87",
+			},
+			email: "Email:",
+			linkEmail: {
+				href: "mailto:info@ksd.msk.ru",
+				text: "info@ksd.msk.ru",
+			},
+			socials: [
+				{
+					icon: "icon-fb",
+					href: "#",
+				},
+				{
+					icon: "icon-insta",
+					href: "#",
+				},
+				{
+					icon: "icon-twitter",
+					href: "#",
+				},
+				{
+					icon: "icon-whatsapp-2",
+					href: "#",
+				},
+			],
+			modalCall: {
+				title: "Свяжитесь с нами",
+				btn: {
+					href: "#",
+					text: "Связаться",
+				},
+			},
+		}
+
+	section.section.contact-us(class="contact-us--" + mods)
+		.container.contact-us__container
+			.contact-us__cols 
+				.contact-us__col.contact-us__col--01
+					.contact-us__form(data-validate data-callback="contactUsForm")
+						form(action="" method="post" enctype="multipart/form-data")
+							fieldset.contact-us__form-fieldset 
+								legend.contact-us__form-title=data.form.title
+								+custom-input(data.form.name).contact-us__form-field.contact-us__form-field--input(data-validate-type="text")
+								+custom-input(data.form.email).contact-us__form-field.contact-us__form-field--input(data-validate-type="email")
+								+custom-textarea(data.form.message).contact-us__form-field.contact-us__form-field--message
+								if mods === "main" || mods === "about-us" 
+									+btn(data.form.btn).btn--drk-orange.contact-us__form-submit
+								if mods === "improvement" || mods === "pits" || mods === "road"
+									+btn(data.form.btn).btn--cobalt.contact-us__form-submit
+								if mods === "recycling"
+									+btn(data.form.btn).btn--apple.contact-us__form-submit
+					.contact-us__agreement 
+						span=data.form.agree 
+						a.link.contact-us__agreement-link(href=data.form.linkAgree.href)=data.form.linkAgree.text 
+						span=data.form.agree2
+				.contact-us__col.contact-us__col--02
+					h2.title.contact-us__title=data.title
+					p.text.contact-us__text=data.text
+					.contact-us__item.contact-us__item--phone
+						small.contact-us__item-title=data.phone 
+						a.link.contact-us__item-link(href=data.linkTel.href)=data.linkTel.text 
+					.contact-us__item.contact-us__item--email
+						small.contact-us__item-title=data.email 
+						a.link.contact-us__item-link(href=data.linkEmail.href)=data.linkEmail.text
+					ul.contact-us__socials-list
+						each item in data.socials 
+							li.contact-us__socials-list-item 
+								a.contact-us__socials-link(href=item.href target="_blank" rel="noopener noreferrer")
+									+icon(item.icon, 16, 16)
+					.contact-us__modal-call
+						h3.title.title--h5.contact-us__modal-call-title=data.modalCall.title
+						if mods === "main" || mods === "about-us"
+							+btn(data.modalCall.btn).btn--drk-orange.contact-us__modal-call-btn(data-open-modal="contact-us")
+						if mods === "improvement" || mods === "pits" || mods === "road"
+							+btn(data.modalCall.btn).btn--cobalt.contact-us__modal-call-btn(data-open-modal="contact-us")
+						if mods === "recycling"
+							+btn(data.modalCall.btn).btn--apple.contact-us__modal-call-btn(data-open-modal="contact-us")
+					+btn-to-top()

@@ -1,0 +1,51 @@
+mixin hero()
+	-
+		const data = {
+			items: [
+				{
+					href: "snos-zdaniy.html",
+					title: "Quis scelerisque suspendisse risus arcu.",
+					subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
+					src: "slides",
+					img: "hero-bg-img-1",
+					alt: "slide-img-1",
+				},				
+				{
+					href: "snos-zdaniy.html",
+					title: "Lorem ipsum dolor sit.",
+					subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, earum!",
+					src: "slides",
+					img: "hero-bg-img-2",
+					alt: "slide-img-2",
+				},
+				{
+					href: "stroitelstvo-dorog.html",
+					title: "Lorem ipsum dolor sit amet consectetur.",
+					subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+					src: "slides",
+					img: "hero-bg-img-3",
+					alt: "slide-img-3",
+				},
+				{
+					href: "recykling.html",
+					title: "Lorem ipsum dolor sit amet consectetur.",
+					subtitle: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam.",
+					src: "slides",
+					img: "hero-bg-img-4",
+					alt: "slide-img-4",
+				},
+			],
+		}
+	section.hero 
+		.swiper.swiper--01.hero__slider
+			.swiper-wrapper 
+				each item in data.items 
+					.swiper-slide 
+						a(href=item.href).hero__slider-item 
+							.hero__bg
+								+img(item.src, item.img, "jpg", item.alt)
+							.container.hero__container
+								.hero__heading
+									h1.title.title--h1.hero__title=item.title
+										span.hero__subtitle=item.subtitle
+		.hero__slider-pag

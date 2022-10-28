@@ -1,0 +1,49 @@
+mixin rent-hero()
+	-
+		const data = {
+			title: "Аренда спецтехники от ведущих экспертов",
+			subtitle: "Весь спектр профессиональной строительной техники «ООО Конструктив — СД»",
+			btn: {
+				href: "arenda-catalog.html",
+				text: "Смотреть каталог",
+			},
+			items: [
+				{
+					src: "slides",
+					img: "rent-hero-img-1",
+					alt: "slide-img-1",
+				},
+				{
+					src: "slides",
+					img: "rent-hero-img-1",
+					alt: "slide-img-2",
+				},
+				{
+					src: "slides",
+					img: "rent-hero-img-1",
+					alt: "slide-img-3",
+				},
+				{
+					src: "slides",
+					img: "rent-hero-img-1",
+					alt: "slide-img-4",
+				},
+			],
+		}
+	section.rent-hero
+		.container.rent-hero__container.rent-hero__container--rel
+			.rent-hero__col.rent-hero__col--01
+				.rent-hero__heading 
+					h1.title.title--h1.rent-hero__title=data.title
+						span.rent-hero__subtitle=data.subtitle
+				+btn(data.btn).btn.btn--orange.rent-hero__btn
+			.swiper-pagination.rent-hero__slider-pag
+		.rent-hero__col.rent-hero__col--02
+			.rent-hero__col-bg 
+				+img("slides", "rent-bg-img-1", "jpg", "rent-bg-img")
+			.swiper.rent-hero__slider
+				.swiper-wrapper 
+					each item in data.items 
+						.swiper-slide 
+							.rent-hero__slider-item 
+								+picture(item.src, item.img, "png", item.alt)

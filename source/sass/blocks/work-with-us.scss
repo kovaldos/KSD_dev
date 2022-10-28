@@ -1,0 +1,163 @@
+.work-with-us {
+	&__heading {
+		margin: 0 0 30px;
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 200%;
+		color: $color-waikawa-grey;
+		max-width: 870px;
+		&:not(:last-of-type) {
+			margin: 0 0 30px;
+		}
+		&-head {
+			max-width: 770px;
+			margin: 0 0 30px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 200%;
+			color: $color-bunting;
+		}
+	}
+	&__items {
+		padding: 30px 0 20px;
+		&-title {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 200%;
+			color: $color-bunting;
+			margin: 60px 0 0;
+		}
+		&-pag {
+			text-align: center;
+			margin: 15px 0 0;
+			&.swiper-pagination-bullets {
+				.swiper-pagination-bullet {
+					width: 5px;
+					height: 5px;
+					margin: 0 2.5px;
+					background-color: $color-lavender-grey;
+					opacity: 1;
+					border-radius: 5px;
+					transition: width $trans-default;
+					&-active {
+						width: 16px;
+					}
+				}
+			}
+		}
+	}
+	&__item {
+		&-row {
+			display: flex;
+			align-items: flex-start;
+			margin: 0 0 10px;
+		}
+		&-icon {
+			margin: 0 10px 0 0;
+			color: $color-dark-orange;
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 26px;
+			color: $color-bunting;
+			margin: 0;
+		}
+		&-text {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 24px;
+			color: $color-waikawa-grey;
+			padding: 0 0 0 36px;
+			@include vp-1023 {
+				padding: 0;
+			}
+		}
+	}
+	&__questionnaire {
+		width: 100%;
+		max-width: 970px;
+		position: relative;
+		padding: 38px 40px 40px;
+		margin: 140px auto 0;
+		border-radius: 20px;
+		background-color: $color-dark-orange;
+		@include vp-1279 {
+			margin: 100px 0 0;
+		}
+		@include vp-1023 {
+			margin: 30px 0 0;
+		}
+		&-title {
+			font-weight: 800;
+			line-height: 46px;
+			color: $color-default-white;
+			width: 57%;
+			margin: 0 0 38px;
+			@include vp-767 {
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 200%;
+				width: 100%;
+				max-width: 400px;
+			}
+			@include vp-424 {
+				text-align: center;
+			}
+		}
+		&-btn {
+			padding: 16px 48px;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			color: $color-bunting;
+			border-radius: 7px;
+			background-color: $color-default-white;
+			margin: 0;
+			@media (hover: hover), screen and (min-width: 0\0) {
+				&:hover {
+					color: $color-orange-red;
+				}
+				&:focus-visible {
+					outline: none;
+					color: $color-orange-red;
+				}
+				&:focus {
+					outline: none;
+					color: $color-orange-red;
+				}
+			}
+			@include vp-767 {
+				font-size: 14px;
+				padding: 14px 47px;
+			}
+			@include vp-424 {
+				display: flex;
+				padding: 14px;
+				margin: 0 auto;
+			}
+		}
+		&-sheet {
+			position: absolute;
+			bottom: 0;
+			right: 70px;
+			left: auto;
+			width: 230px;
+			height: 300px;
+			background-color: $color-lavender;
+			border-radius: 10px 10px 0px 0px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 26px;
+			color: $color-bunting;
+			@include vp-1023 {
+				display: none;
+			}
+		}
+	}
+}

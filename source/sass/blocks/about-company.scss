@@ -1,0 +1,167 @@
+.about-company {
+	margin: 30px 0;
+	padding: 80px 0;
+	background-color: rgba($color-lavender, 0.3);
+	@include vp-767 {
+		margin: 0;
+	}
+	&__title {
+		@include vp-767 {
+			text-align: center;
+		}
+	}
+	&__subtitle {
+		@include vp-767 {
+			text-align: center;
+		}
+	}
+	&__desc {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 200%;
+		color: $color-bunting;
+		margin: 0 0 64px;
+		padding: 0 0 0 30px;
+		position: relative;
+		@include vp-1279 {
+			font-size: 15px;
+		}
+		@include vp-1023 {
+			margin: 0 0 30px;
+		}
+		@include vp-767 {
+			padding: 0 0 0 20px;
+			font-size: 14px;
+			color: $color-waikawa-grey;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 3px;
+			height: 100%;
+			background-color: $color-navy-blue;
+		}
+	}
+	&__cols {
+		display: flex;
+		@include vp-1023 {
+			flex-direction: column;
+		}
+		@include vp-767 {
+			align-items: center;
+		}
+	}
+	&__col {
+		&--01 {
+			flex: 0 0 370px;
+			@include vp-1023 {
+				flex: 0 0 463px;
+			}
+			@include vp-767 {
+				width: 100%;
+				flex: 0 0 435px;
+			}
+			@include vp-424 {
+				flex: auto;
+			}
+		}
+		&--02 {
+			flex: auto;
+		}
+	}
+	&__subtitle {
+		margin: 0 0 60px;
+		@include vp-1023 {
+			margin: 0 0 30px;
+		}
+	}
+	&__pic-wrap {
+		position: relative;
+		border-radius: 5px;
+		overflow: hidden;
+		width: 100%;
+		max-width: 370px;
+		height: 100%;
+		max-height: 320px;
+		@include vp-767 {
+			margin: 0 auto;
+		}
+		@include vp-424 {
+			height: 320px;
+			margin: 0 auto 24px;
+		}
+		@include vp-374 {
+			height: 220px;
+		}
+		&:hover {
+			.about-company {
+				&__pic {
+					&--main {
+						visibility: hidden;
+						opacity: 0;
+					}
+					&--hover {
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&__pic {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all $trans-default;
+		img {
+			border-radius: 5px;
+			@include vp-424 {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&--main {
+			visibility: visible;
+			opacity: 1;
+		}
+		&--hover {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 200%;
+		margin: 0 0 30px 100px;
+		@include vp-1279 {
+			margin: 0 0 0 50px;
+		}
+		@include vp-1023 {
+			margin: 0;
+		}
+		@include vp-767 {
+			font-size: 14px;
+			margin: 0 0 20px;
+		}
+	}
+	&__list {
+		margin: 0 0 0 100px;
+		padding: 0;
+		list-style: none;
+		@include vp-1279 {
+			margin: 0 0 0 50px;
+		}
+		@include vp-1023 {
+			margin: 0;
+		}
+		&-item {
+			&:not(:last-of-type) {
+				margin: 0 0 20px;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+extends ../components/base/layout
+
+block variables
+	- const title = "KSD - Продажа материалов. Каталог" //- на страницах кроме главной используйте О нас — ProjectName
+	- const wrapperMods = "wrapper--sale"
+	- const hasHeader = true
+	- const headerMods = "header--sale"
+	- const hasFooter = true
+	- const footerMods = "footer--sale"
+	- const currentUrl = "prodazha-katalog.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+	main
+		//- на странице запрещен "голый" код
+		//- все блоки вставляются из папки pug/components/blocks
+		+breadcrumbs("Главная", "Каталог", "Вторичные строительные материалы")
+		+catalog("sale")
+
+block modals

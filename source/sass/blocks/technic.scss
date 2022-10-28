@@ -1,0 +1,200 @@
+.technic {
+	&__slider {
+		height: 520px;
+		@include vp-1023 {
+			height: auto;
+		}
+		&-item {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			@include vp-1023 {
+				flex-direction: column;
+				position: static;
+			}
+			&-col {
+				width: 55%;
+				height: 100%;
+				@include vp-1023 {
+					width: 100%;
+				}
+				&--02 {
+					width: calc(100% - 430px);
+					position: absolute;
+					right: 0;
+					left: auto;
+					padding: 50px 0 0;
+					&::after {
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+						max-width: 370px;
+						width: 100%;
+						height: 100%;
+						background-color: rgba($color-lavender, 0.5);
+						z-index: -1;
+					}
+					@include vp-1023 {
+						position: relative;
+						padding: 15px 0;
+						&::after {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+		&-pic {
+			img {
+				@include vp-1023 {
+					width: 100%;
+				}
+			}
+		}
+		&-name {
+			font-weight: 800;
+			font-size: 80px;
+			line-height: 100%;
+			color: rgba($color-lavender, 0.7);
+			@include vp-767 {
+				font-size: 40px;
+			}
+		}
+		&-text {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 200%;
+			color: $color-waikawa-grey;
+			max-width: 320px;
+			margin: 1em 0 0;
+			&--mobile {
+				display: none;
+			}
+			@include vp-1023 {
+				&--desktop {
+					display: none;
+				}
+				&--mobile {
+					display: block;
+				}
+			}
+			@include vp-767 {
+				font-size: 14px;
+			}
+		}
+		&-nav {
+			width: 100%;
+			height: 52px;
+			position: absolute;
+			top: auto;
+			bottom: 50px;
+			z-index: 5;
+			display: flex;
+			align-items: center;
+			@include vp-1023 {
+				position: static;
+				margin: 25px 0 0;
+			}
+		}
+		&-btn {
+			position: initial;
+			transform: none;
+			margin: 0;
+			padding: 16px;
+			justify-content: center;
+			border-radius: 5px;
+			width: 100%;
+			height: 100%;
+			max-width: 250px;
+			transition: width $trans-600, max-width $trans-600, background-color $trans-600, color $trans-600;
+			overflow: hidden;
+			&--prev {
+				flex-shrink: 0;
+				margin: 0 30px 0 0;
+				width: 52px;
+				padding: 0;
+				@include vp-767 {
+					margin: 0 20px 0 0;
+				}
+				.technic__slider-btn-text {
+					display: none;
+				}
+			}
+			&--next {
+				svg {
+					margin: 0 0 0 20px;
+				}
+				&.swiper-button-disabled {
+					svg {
+						margin: 0;
+					}
+				}
+			}
+			&-text {
+				width: 100%;
+				max-width: 131px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				flex-shrink: 0;
+				flex-grow: 1;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 20px;
+				transition: all $trans-600;
+			}
+			svg {
+				color: $color-default-white;
+				pointer-events: none;
+				transition: color $trans-600;
+				flex-shrink: 0;
+			}
+			&::after {
+				display: none;
+			}
+			&.swiper-button-disabled {
+				background-color: $color-lavender;
+				padding: 16px 8.5px;
+				max-width: fit-content;
+				.technic__slider-btn-text {
+					margin: 0;
+					max-width: 0;
+					font-size: 0;
+				}
+				svg {
+					color: $color-logan;
+				}
+			}
+		}
+	}
+	&--recycling {
+		.technic {
+			&__slider {
+				&-pag {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					text-align: center;
+					&.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+						margin: 0 14px;
+						background-color: $color-hawkes-blue;
+						width: 12px;
+						height: 12px;
+						opacity: 1;
+						box-shadow: none;
+						transition: background-color 0.3s ease, box-shadow 0.3s ease;
+					}
+					&.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+						background-color: $color-bunting;
+						box-shadow: 0px 0px 0px 7px $color-hawkes-blue;
+					}
+					@include vp-1023 {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

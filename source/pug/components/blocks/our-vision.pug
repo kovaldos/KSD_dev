@@ -1,0 +1,52 @@
+mixin our-vision()
+	-
+		const data = {
+			title: "Наше видение",
+			subtitle: "Цели и преимущества",
+			textHead: "Компания в самом начале своей деятельности определила для себя благородную гуманную миссию. Она заключается в том, чтобы благоустраивать города, создавать удобства, комфорт и красоту населенных пунктов, тем самым повышать уровень жизни людей.",
+			text1: "А еще у нас две главных стратегических цели: экономия природных ресурсов и улучшение экологической обстановки в стране.",
+			text2: "Для осуществления нашей миссии и целей мы собираем коллектив профессионалов, создали парк собственной спецтехники, при необходимости, обучаем людей и требуем от сотрудников только высокого качества выполнения работ.",
+			title2: "Свой парк тяжелой строительной техники дает нам большие преимущества:",
+			items: [
+				{
+					icon: "our-vision-icon-1",
+					num: "01",
+					title: "Скорость",
+					text: "Мы включаемся в работу сразу же, как только готова документация, нам не нужно искать и оформлять аренду механизмов",
+				},
+				{
+					icon: "our-vision-icon-2",
+					num: "02",
+					title: "Собственная техника",
+					text: "Экскаваторы, дробильные установки, погрузчики, самосвалы — все, что нужно в работе мы можем задействовать быстро",
+				},
+				{
+					icon: "our-vision-icon-3",
+					num: "03",
+					title: "Низкие цены",
+					text: "У нас нет лишних накладных расходов, нет переплат за аренду техники и вывоз строительного мусора",
+				},
+			]
+
+		}
+	section.section.our-vision 
+		.container.our-vision__container 
+			.our-vision__heading
+				h2.title.title--h2.our-vision__title=data.title
+				h3.title.title--h3.our-vision__subtitle=data.subtitle
+			.our-vision__text 
+				p.text.our-vision__text-head=data.textHead
+				p.text.our-vision__text-item=data.text1
+				p.text.our-vision__text-item=data.text2
+			.our-vision__benefits 
+				h4.title.our-vision__benefits-title=data.title2
+				.our-vision__benefits-items(data-accordion="parent" data-single)
+					each item in data.items
+						.our-vision__benefits-item(data-accordion="element")
+							.our-vision__benefits-item-row(data-accordion="button")
+								+icon(item.icon, 60, 60).our-vision__benefits-item-icon
+								img(src="./img/content/icon-touch.png" alt="иконка тачскрин").our-vision__benefits-item-acc-icon
+								span.our-vision__benefits-item-num=item.num
+							.our-vision__benefits-item-content(data-accordion="content")
+								h3.title.our-vision__benefits-item-title=item.title
+								p.text.text--sm.our-vision__benefits-item-text=item.text

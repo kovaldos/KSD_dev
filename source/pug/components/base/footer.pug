@@ -1,3 +1,7 @@
-mixin footer(footerMods)
+mixin footer(footerMods, currentUrl)
+
   footer.footer(class=footerMods)
-    .container
+    +footer-top()
+    +footer-middle()
+    +footer-bottom()
+

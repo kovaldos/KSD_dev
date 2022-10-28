@@ -1,0 +1,149 @@
+mixin history()
+	-
+		const data = {
+			title: "История компании",
+			subtitle: "На рынке с 2015 года",
+			tabsNav: [
+				{
+					text: "2015",
+					classMode: "history__tabs-control--odd",
+				},
+				{
+					text: "2016",
+					classMode: "history__tabs-control--even",
+				},
+				{
+					text: "2017",
+					classMode: "history__tabs-control--odd",
+				},
+				{
+					text: "2018",
+					classMode: "history__tabs-control--even is-active",
+				},
+				{
+					text: "2019",
+					classMode: "history__tabs-control--odd",
+				},
+				{
+					text: "2020",
+					classMode: "history__tabs-control--even",
+				},
+				{
+					text: "2021",
+					classMode: "history__tabs-control--odd",
+				},
+			],
+			tabsContent: [
+				{
+					title: "2015",
+					text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque molestias aut, cum eligendi quae in quas sint ab dignissimos officia.",
+					numb1: "70 +",
+					numb2: "15 +",
+					numb3: "1.5м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "2016",
+					text: "Libero nihil aperiam, non nisi voluptates, at fuga illo temporibus laborum perspiciatis nesciunt optio consectetur eveniet amet aliquid, facere officia!",
+					numb1: "80 +",
+					numb2: "20 +",
+					numb3: "1.75м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "2017",
+					text: "Esse dolores corrupti ab expedita laborum, quibusdam officiis ex consequuntur vel, deleniti sed laudantium rerum nobis provident numquam mollitia suscipit quos ipsa repellat dolore ipsum unde veritatis.",
+					numb1: "90 +",
+					numb2: "25 +",
+					numb3: "2 м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "2018",
+					text: "Компания приобрела свой первый экскаватор-разрушитель с высотой поднятия стрелы — 21 метр. Снос зданий и сооружений в рамках проектов: ЖК «Шереметьевский», ЖК «Лучи», ЖК «Резиденции Композиторов», выполнены работы по вертикальной планировке и благоустройству в рамках строительства парка развлечений «Остров Мечты».",
+					numb1: "100 +",
+					numb2: "30 +",
+					numb3: "2.5м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "2019",
+					text: "Recusandae inventore nesciunt sed non nihil odit at est perspiciatis debitis molestiae eum quidem, vitae amet tempora porro velit quae similique temporibus?",
+					numb1: "110 +",
+					numb2: "35 +",
+					numb3: "3 м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "2020",
+					text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusantium similique adipisci eveniet! Soluta nostrum eligendi laboriosam eaque odio?",
+					numb1: "120 +",
+					numb2: "40 +",
+					numb3: "3.5м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+				{
+					title: "2021",
+					text: "Soluta recusandae saepe qui incidunt cumque voluptatum est quae blanditiis voluptates? Accusantium.",
+					numb1: "130 +",
+					numb2: "50 +",
+					numb3: "5м +",
+					numbText1: "Зданий снесено в Москве",
+					numbText2: "Объектов прошли процесс реновации",
+					numbText3: "Тонн строительного мусора переработано",
+				},
+			]
+		}
+	
+	section.section.history 
+		.container.history__container 
+			.history__heading 
+				h2.title.title--h2.history__title=data.title
+				h3.title.title--h3.history__subtitle=data.subtitle
+		.history__wrapper 
+			.container.history__container.history__container--rel
+				.tabs.history__tabs(data-tabs="parent" data-delay="300")
+					.history__tabs-nav-wrapper#history-nav(data-simplebar)
+						.history__tabs-progressbar
+							.history__tabs-progress
+						nav.tabs__controls.history__tabs-controls(data-tabs="controls")
+							each item, index in data.tabsNav
+								button.btn.history__tabs-control(data-index=index data-tabs="control" class=item.classMode)
+									span.history__tabs-control-value=item.text
+					.tabs__content.history__tabs-content(data-tabs="content")
+						each item in data.tabsContent
+							.history__tabs-cols(data-tabs="element")
+								.history__tabs-col.history__tabs-col--01
+									h4.title.history__tabs-title=item.title
+									p.text.text--sm.history__tabs-text=item.text
+								.history__tabs-col.history__tabs-col--02
+									.history__numbers 
+										.history__numbers-item
+											.history__numbers-num
+												span=item.numb1
+											.history__numbers-text
+												span=item.numbText1
+										.history__numbers-item
+											.history__numbers-num
+												span=item.numb2
+											.history__numbers-text
+												span=item.numbText2
+										.history__numbers-item
+											.history__numbers-num
+												span=item.numb3
+											.history__numbers-text
+												span=item.numbText3
+
+

@@ -1,0 +1,335 @@
+.card {
+	padding: 20px 0 40px;
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		@include vp-1023 {
+			flex-direction: column;
+			align-items: center;
+		}
+		&-col {
+			width: 100%;
+			@include vp-1279 {
+				flex-grow: 1;
+			}
+			@include vp-1023 {
+				max-width: 768px;
+			}
+			&--01 {
+				max-width: 370px;
+				margin: 0 131px 0 0;
+				@include vp-1279 {
+					margin: 0 50px 0 0;
+				}
+				@include vp-1023 {
+					margin: 0 0 20px;
+				}
+			}
+			&--02 {
+				display: flex;
+				flex-direction: column;
+				@include vp-767 {
+					display: flex;
+					flex-direction: column;
+				}
+				@include vp-639 {
+					position: relative;
+					padding: 70px 0 0;
+				}
+			}
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 140%;
+		color: $color-bunting;
+		@include vp-767 {
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+	&__subtitle {
+		display: block;
+		margin: 15px 0 0;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 200%;
+		color: $color-bunting;
+		@include vp-767 {
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+	&__equip {
+		padding: 30px 0;
+		&-title {
+			margin: 0 0 15px;
+			@include vp-767 {
+				margin: 0 0 30px;
+			}
+		}
+		&-toggles {
+			height: 60px;
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			@include vp-767 {
+				flex-direction: column;
+				height: auto;
+				align-items: flex-start;
+			}
+			&-item {
+				width: 100%;
+				height: 50px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				@include vp-767 {
+					max-width: 50%;
+				}
+				@include vp-639 {
+					max-width: 350px;
+				}
+				&:not(:last-of-type) {
+					margin: 0 20px 0 0;
+					@include vp-767 {
+						margin: 0 0 30px;
+					}
+				}
+				img {
+					position: absolute;
+					top: -10px;
+					left: 0;
+					width: 60px;
+					height: 60px;
+					flex-shrink: 0;
+					z-index: 1;
+				}
+			}
+		}
+		&-toggle {
+			width: 100%;
+			height: 100%;
+			flex: auto;
+			padding: 0;
+			&:not(:last-of-type) {
+				margin: 0 20px 0 0;
+			}
+			label {
+				padding-left: 0;
+				width: 100%;
+			}
+			.custom-toggle {
+				&__icon {
+					display: none;
+				}
+				&__label {
+					display: block;
+					padding: 15px 15px 15px 70px;
+					width: 100%;
+					height: 100%;
+					font-size: 14px;
+					line-height: 140%;
+					color: $color-waikawa-grey;
+					background: $color-default-white;
+					border: 1px solid $color-lavender;
+					border-radius: 7px;
+					transition: border-color $trans-default;
+					@include vp-1279 {
+						padding: 10px 10px 10px 50px;
+						line-height: 200%;
+					}
+				}
+			}
+			input {
+				&:checked {
+					& ~ .custom-toggle__label {
+						border-color: $color-navy-blue;
+					}
+				}
+			}
+		}
+	}
+	&__charact {
+		padding: 10px 0 30px;
+		@include vp-639 {
+			padding: 10px 0 0 0;
+		}
+		&-head {
+			margin: 0 0 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&-link {
+			color: $color-dark-orange;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 160%;
+			&::after {
+				background-color: $color-dark-orange;
+			}
+		}
+		&-items {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 30px;
+			grid-row-gap: 25px;
+			@include vp-639 {
+				grid-template-columns: auto;
+				grid-row-gap: 15px;
+			}
+			&-item {
+				display: flex;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 140%;
+				color: $color-waikawa-grey;
+			}
+			&-border {
+				display: block;
+				flex-grow: 1;
+				border-bottom: 1px dashed $color-lavender-grey;
+				margin: 0 10px 6px;
+			}
+			&-value {
+				color: $color-bunting;
+			}
+		}
+	}
+	&__slider {
+		height: 370px;
+		@include vp-424 {
+			height: 290px;
+		}
+		&--thumb {
+			margin: 15px 0 0;
+			height: 70px;
+			@include vp-424 {
+				height: 70px;
+			}
+		}
+		&--thumb & {
+			&-item {
+				border: 1px solid $color-lavender;
+			}
+		}
+		&-item {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 0 0;
+		@include vp-639 {
+			margin: 30px 0 0;
+		}
+	}
+	&__price {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 160%;
+		color: $color-bunting;
+		flex-grow: 1;
+		margin: 0 20px 0 0;
+		@include vp-639 {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&-time {
+			font-weight: 400;
+			font-size: 18px;
+			color: $color-logan;
+		}
+	}
+	&__add {
+		display: flex;
+		@include vp-639 {
+			flex-direction: row-reverse;
+		}
+	}
+	&__counter {
+		flex-shrink: 0;
+		margin: 0 20px 0 0;
+		display: flex;
+		width: 140px;
+		height: 45px;
+		position: relative;
+		@include vp-639 {
+			margin: 0 0 0 8px;
+		}
+		&-btn {
+			flex-shrink: 0;
+			width: 45px;
+			height: 100%;
+			border-radius: 7px;
+			background-color: $color-lavender;
+			font-size: 36px;
+			line-height: 100%;
+			color: $color-bunting;
+			padding: 0;
+		}
+		&-input {
+			padding: 0;
+			flex-grow: 1;
+			margin: 0 -10px;
+			label {
+				input {
+					border: 0;
+					padding: 0 10px;
+					width: 100%;
+					height: 100%;
+					font-weight: 600;
+					font-size: 22px;
+					line-height: 27px;
+					color: $color-bunting;
+					background-color: rgba($color-lavender, 0.5);
+					text-align: center;
+					&:hover {
+						border: 0;
+					}
+					&:focus {
+						border: 0;
+					}
+				}
+			}
+		}
+	}
+	&--sale & {
+		&__charact {
+			padding: 50px 0;
+			flex-grow: 1;
+		}
+		&__row {
+			margin: 0;
+		}
+		&__price {
+			&-unit {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 160%;
+				color: $color-logan;
+			}
+			&-sup {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 160%;
+				color: $color-logan;
+			}
+		}
+	}
+}

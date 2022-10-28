@@ -1,0 +1,133 @@
+.delivery-calc {
+	&__heading {
+		margin: 0 0 30px;
+		@include vp-1023 {
+			margin: 0 0 25px;
+		}
+	}
+	&__wrapper {
+		border-radius: 5px;
+		background-color: $color-ghost-white;
+		padding: 40px 0;
+		@include vp-1023 {
+			background-color: $color-default-white;
+			padding: 0 0 15px;
+		}
+	}
+	&__container {
+		@include vp-1023 {
+			flex-direction: column;
+		}
+	}
+	&__pic {
+		flex: 0 0 270px;
+		height: 190px;
+		position: relative;
+		margin: 0 30px 0 0;
+		@include vp-1023 {
+			margin: 0 0 24px;
+			flex: auto;
+			height: 150px;
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&__calc {
+		flex-grow: 1;
+		margin: 0 130px 0 0;
+		@include vp-1023 {
+			margin: 0 0 20px;
+		}
+		&-title {
+			line-height: 160%;
+			margin: 0 0 30px;
+		}
+	}
+	&__label {
+		&--01 {
+			margin: 0 0 37px;
+		}
+		&-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 0 0 16px;
+		}
+		&-text {
+			display: inline-block;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 17px;
+			&--b {
+				font-weight: 700;
+			}
+		}
+		.noUi-horizontal {
+			height: 3px;
+		}
+		.noUi-target {
+			background: $color-lavender;
+			border-radius: 1.5px;
+			border: 0;
+		}
+		.noUi-handle {
+			border: 0;
+			width: 15px;
+			height: 15px;
+			right: -7.5px;
+			border-radius: 50%;
+			background: none;
+			box-shadow: none;
+			background-color: $color-apple;
+		}
+		.noUi-handle:after,
+		.noUi-handle:before {
+			display: none;
+		}
+		.noUi-connect {
+			background-color: $color-apple;
+		}
+	}
+	&__result {
+		&-input {
+			@include vp-1023 {
+				margin: 0 0 10px;
+			}
+			label {
+				input {
+					font-size: 16px;
+					line-height: 20px;
+					padding: 16px;
+					&::placeholder {
+						color: $color-waikawa-grey;
+					}
+				}
+			}
+		}
+		&-btn {
+			padding: 16px 48px;
+			border-radius: 7px;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+	&__disclaimer {
+		padding: 15px 0 13px 0;
+		background-color: rgba($color-navy-blue, 0.1);
+		&-icon {
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin: 0 10px 0 0;
+		}
+		&-text {
+			display: block;
+			font-weight: 500;
+		}
+	}
+}

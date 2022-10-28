@@ -1,0 +1,51 @@
+mixin partners(mods)
+	-
+		const data = {
+			slides: [
+				{
+					href: "https://vwfs.ru/",
+					img: "partners-img-1",
+					alt: "partners-img-1",
+					imgHover: "partners-img-hover-1",
+					imgHoverAlt: "partners-img-hover-1",
+				},
+				{
+					href: "https://www.cat.com/ru_RU.html",
+					img: "partners-img-2",
+					alt: "partners-img-2",
+					imgHover: "partners-img-hover-2",
+					imgHoverAlt: "partners-img-hover-2",
+				},
+				{
+					href: "https://www.pik.ru/",
+					img: "partners-img-3",
+					alt: "partners-img-3",
+					imgHover: "partners-img-hover-3",
+					imgHoverAlt: "partners-img-hover-3",
+				},
+				{
+					href: "https://www.cnhindustrial.com/en-us",
+					img: "partners-img-4",
+					alt: "partners-img-4",
+					imgHover: "partners-img-hover-4",
+					imgHoverAlt: "partners-img-hover-4",
+				},
+				{
+					href: "https://donstroy.moscow/",
+					img: "partners-img-5",
+					alt: "partners-img-5",
+					imgHover: "partners-img-hover-5",
+					imgHoverAlt: "partners-img-hover-5",
+				},
+			],
+		}
+
+	.partners(class="partners--" + mods)
+		.swiper.swiper--04.partners__slider 
+			.swiper-wrapper
+				- for(let i = 0; i < 5; i++)
+					each slide in data.slides
+						.swiper-slide
+							a.partners__slider-item(href=slide.href target="_blank" rel="noopener noreferrer")
+								+picture("slides", slide.img, "png", slide.alt)
+								+picture("slides", slide.imgHover, "png", slide.imgHoverAlt)

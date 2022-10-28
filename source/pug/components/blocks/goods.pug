@@ -1,0 +1,95 @@
+mixin goods(mods)
+	-
+		const data = {
+			title: "Товары",
+			pop: {
+				subtitle: "Популярное",
+				link: {
+					href: "sale-katalog.html",
+					text: "Смотреть все товары",
+				},
+				items: [
+					{
+						img: "goods-popular-img-1",
+						alt: "goods-popular-img-1",
+						title: "Вторичный бетонный щебень фракция 20-40",
+						price: {
+							num: "600",
+							currency: " ₽",
+							capacity: "/м",
+							sup: "3"
+						},
+					},
+					{
+						img: "goods-popular-img-2",
+						alt: "goods-popular-img-2",
+						title: "Вторичный бетонный щебень фракция 20-40",
+						price: {
+							num: "600",
+							currency: " ₽",
+							capacity: "/м",
+							sup: "3"
+						},
+					},
+					{
+						img: "goods-popular-img-3",
+						alt: "goods-popular-img-3",
+						title: "Вторичный бетонный щебень фракция 20-40",
+						price: {
+							num: "600",
+							currency: " ₽",
+							capacity: "/м",
+							sup: "3"
+						},
+					},
+					{
+						img: "goods-popular-img-4",
+						alt: "goods-popular-img-4",
+						title: "Вторичный бетонный щебень фракция 20-40",
+						price: {
+							num: "600",
+							currency: " ₽",
+							capacity: "/м",
+							sup: "3"
+						},
+					},
+				],
+			},
+			road: {
+				subtitle: "Для строительства дорог",
+				link: {
+					href: "sale-katalog.html",
+					text: "Перейти в каталог",
+				},
+			},
+		}
+
+	section.section.goods(class="goods--" + mods)
+		.container
+			.goods-popular__heading
+				h2.title.title--h2.goods-popular__title=data.title
+				if mods === "popular"
+					h3.title.title--h3.goods-popular__subtitle=data.pop.subtitle
+				if mods === "road"
+					h3.title.title--h3.goods-popular__subtitle=data.road.subtitle
+			.swiper.goods__slider(class="goods__slider--" + mods)
+				.swiper-wrapper
+					if mods === "popular" || mods === "road"
+						each item in data.pop.items
+							.swiper-slide
+								a.goods__slider-item(href="#")
+									.goods__slider-item-pic
+										+img("slides", item.img, "jpg", item.alt)
+									span.goods__slider-item-title=item.title
+									.goods__slider-item-price
+										span=item.price.num
+										span=item.price.currency
+										span=item.price.capacity
+										sup
+											small=item.price.sup
+									button(type="button").btn.btn--apple.goods__slider-item-add
+										+icon("icon-plus", 23, 23)
+			if mods === "popular"
+				a.btn.btn--apple.btn--cntrd.goods__slider-btn(href=data.pop.link.href)=data.pop.link.text 
+			if mods === "road"
+				a.btn.btn--apple.btn--cntrd.goods__slider-btn(href=data.road.link.href)=data.road.link.text 

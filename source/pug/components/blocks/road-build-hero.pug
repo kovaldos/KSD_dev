@@ -1,0 +1,36 @@
+mixin road-build-hero()
+	-
+		const data = {
+			title: "Строительство дорог из вторичных материалов",
+			subtitle: "Consectetur nec tristique massa est nibh magna ac duis justo. Fermentum amet amet vitae sagittis congue nisi erat lectus.",
+			pic: {
+					src: "slides",
+					img: "hero-bg-img-1",
+					alt: "slide-img-1",
+			},
+			
+			numbers: [
+				{
+					num: "5000 км",
+					text: "Дорог обновлено",
+				},
+				{
+					num: "80 000",
+					text: "Кг. пластика использовано",
+				},
+			],
+		}
+	section.hero-section.hero-section--road.road-build-hero
+		.container.hero-section__container
+			.hero-section__col.hero-section__col--01
+				.hero-section__heading 
+					h1.title.title--h1.hero-section__title=data.title
+						span.hero-section__subtitle=data.subtitle
+				.hero-section__numbers
+					each item in data.numbers
+						.hero-section__numbers-item
+							strong.hero-section__numbers-num=item.num 
+							p.text.hero-section__numbers-text=item.text
+		.hero-section__col.hero-section__col--02
+			.hero-section__pic 
+				+img(data.pic.src, data.pic.img, "jpg", data.pic.alt)

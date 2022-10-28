@@ -1,0 +1,42 @@
+mixin rent-card-characteristics()
+	-
+		const data = {
+			title: "Характеристики",
+			items: [
+				{
+					name: "Грузоподъемность: ",
+					value: "25 тонн",
+				},
+				{
+					name: "Грузоподъемность: ",
+					value: "25 тонн",
+				},
+				{
+					name: "Объем кузова: ",
+					value: "20 кубов",
+				},
+				{
+					name: "Объем кузова: ",
+					value: "20 кубов",
+				},
+				{
+					name: "Колесная формула: ",
+					value: "6x4",
+				},
+				{
+					name: "Колесная формула: ",
+					value: "6x4",
+				},
+			],
+		}
+
+	section.section.rent-card-characteristics#characteristics
+		.container
+			h2.title.title--h3.rent-card-characteristics__title=data.title
+			ul.rent-card-characteristics__list
+				- for (let i = 0; i < 3; i++)
+					each item in data.items 
+						li.rent-card-characteristics__list-item
+							span.rent-card-characteristics__list-name=item.name
+							span.rent-card-characteristics__list-border
+							span.rent-card-characteristics__list-value=item.value

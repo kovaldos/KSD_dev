@@ -1,0 +1,69 @@
+.partners {
+	margin: 0 0 30px;
+	background-color: rgba($color-lavender, 0.3);
+	@include vp-767 {
+		margin: 0 0 25px;
+	}
+	&__slider {
+		height: 120px;
+		@include vp-767 {
+			height: 80px;
+		}
+		.swiper-wrapper {
+			transition-timing-function: linear;
+		}
+		&-item {
+			display: block;
+			width: 170px;
+			height: 120px;
+			position: relative;
+			@include vp-767 {
+				width: 120px;
+				height: 80px;
+			}
+			picture {
+				width: 100%;
+				height: 100%;
+				display: block;
+				transition: opacity $trans-default;
+				opacity: 1;
+				&:last-child {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+				}
+			}
+			&:hover {
+				picture {
+					&:first-child {
+						opacity: 0;
+					}
+					&:last-child {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.swiper-slide {
+			width: auto;
+		}
+	}
+	&--demolition {
+		margin: 0 0 30px;
+		@include vp-1023 {
+			margin: 0 0 5px;
+		}
+	}
+	&--pits,
+	&--road {
+		margin: 0;
+	}
+}
+.wrapper {
+	&--sale {
+		.partners {
+			margin: 60px 0 0 0;
+		}
+	}
+}

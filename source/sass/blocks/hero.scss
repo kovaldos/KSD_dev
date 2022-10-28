@@ -1,0 +1,139 @@
+.hero {
+	height: 648px;
+	position: relative;
+	background-color: $color-bunting;
+	@include vp-1279 {
+		height: 550px;
+	}
+	@include vp-1023 {
+		height: 450px;
+	}
+	@include vp-767 {
+		height: auto;
+	}
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 0;
+		@include vp-767 {
+			position: relative;
+			height: 260px;
+		}
+		@include vp-374 {
+			height: 200px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: linear-gradient(0deg, rgba(27, 29, 40, 0.35), rgba(27, 29, 40, 0.35));
+			z-index: 2;
+		}
+	}
+	&__container {
+		@include vp-767 {
+			background-color: $color-bunting;
+		}
+	}
+	&__slider {
+		height: 100%;
+		&-item {
+			width: 100%;
+			height: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				vertical-align: top;
+			}
+		}
+		&-pag.swiper-pagination-bullets.swiper-pagination-horizontal {
+			position: absolute;
+			bottom: 30px;
+			text-align: center;
+			z-index: 5;
+			@include vp-767 {
+				width: calc(100% - 2 * 22px);
+				bottom: 22px;
+				left: 15px;
+				text-align: left;
+			}
+			.swiper-pagination-bullet {
+				margin: 0 14px;
+				background-color: rgba($color-default-white, 0.6);
+				width: 12px;
+				height: 12px;
+				opacity: 1;
+				box-shadow: none;
+				transition: background-color $trans-default, box-shadow $trans-default;
+				.progress-ring {
+					display: none;
+				}
+				@include vp-767 {
+					position: relative;
+					.progress-ring {
+						display: block;
+						color: transparent;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						&__circle {
+							stroke-dasharray: 212px;
+							stroke-dashoffset: 212px;
+						}
+					}
+					&-active {
+						background-color: $color-default-white;
+						box-shadow: none;
+						.progress-ring {
+							&__circle {
+								transition: stroke-dashoffset 4000ms linear;
+								stroke-dashoffset: 106px;
+							}
+						}
+					}
+				}
+			}
+			.swiper-pagination-bullet-active {
+				background-color: $color-default-white;
+				box-shadow: 0 0 0 6px rgba($color-default-white, 0.5);
+			}
+		}
+	}
+	&__heading {
+		position: relative;
+		z-index: 1;
+		padding: 70px 0 30px;
+		text-align: center;
+		@include vp-767 {
+			padding: 26px 0 56px;
+			text-align: left;
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		margin: 10px auto 0;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 200%;
+		max-width: 770px;
+		@include vp-767 {
+			margin: 10px 0 0 0;
+			font-weight: 400;
+			font-size: 14px;
+			color: rgba($color-default-white, 0.5);
+		}
+	}
+}

@@ -1,0 +1,107 @@
+mixin modal-offer(mods)
+	-
+		const data = {
+			form: {
+				title: "Получите наше коммерческое предложение",
+				subtitle: "Пожалуйста, укажите следующие данные:",
+				name: {
+					inputPlaceholder: "Имя",
+					//- inputError: "Не менее 2-х знаков!",
+					inputId: "first-name",
+					inputName: "first-name",
+					inputMinLength: 2,
+				},
+				email: {
+					inputType: "email",
+					inputPlaceholder: "Эл. почта",
+					//- inputError: "Пожалуйста введите корректный email",
+					inputId: "email",
+					inputName: "email",
+				},
+				phone: {
+					inputType: "tel",
+					inputPlaceholder: "Телефон",
+					//- inputError: "Пожалуйста введите номер телефона",
+					inputId: "phone-number",
+					inputName: "phone-number",
+				},
+				messages: [
+					{
+						inputPlaceholder: "Состав и объем работ",
+						inputId: "work-scope",
+						inputName: "sostav-i-ob'yom-rabot",
+						valType: "text",
+					},
+					{
+						inputPlaceholder: "Адрес объекта, его характеристики (габариты, материал, любая другая информация)",
+						inputId: "addres-and-description",
+						inputName: "adres-i-kharakteristiki-ob'yekta",
+						valType: "text",
+					},
+					{
+						inputPlaceholder: "Имеющаяся объекта, его характеристики (габариты, материал, любая другая информация)",
+						inputId: "addres-and-description",
+						inputName: "adres-i-kharakteristiki-ob'yekta",
+						valType: "text",
+					},
+					{
+						inputPlaceholder: "Желаемые сроки выполнения работ",
+						inputId: "terms",
+						inputName: "zhelaemye-sroki",
+						valType: "text",
+					},
+					{
+						inputPlaceholder: "Дополнительные комментарии",
+						inputId: "comments",
+						inputName: "kommentarii",
+					},
+					],
+				upload: {
+					icon: "icon-clip",
+					text: "Прикрепить файл",
+					del: "⮿"
+				},
+				btn: {
+					type: "submit",
+					text: "Получить коммерческое предложение",
+				},
+				limit: "Размер файла не должен превышать 25 мб",
+			},
+		}
+
+	.modal-offer(class="modal-offer--" + mods)
+		.offer__form#offer-form(data-validate data-callback="offerForm")
+			form.offer__form-form(action="#" method="post" enctype="multipart/form-data")
+				h2.title.title--h3.offer__form-title=data.form.title
+				h3.title.title--h3.offer__form-subtitle=data.form.subtitle
+				.offer__form-row
+					+custom-input(data.form.name)(data-validate-type="text").offer__form-field.offer__form-field--name
+					+custom-input(data.form.email)(data-validate-type="email").offer__form-field.offer__form-field--email
+					+custom-input(data.form.phone)(data-validate-type="phone").offer__form-field.offer__form-field--phone
+				each item in data.form.messages
+					+custom-textarea(item)(data-validate-type!=item.valType).offer__form-field.offer__form-field--message
+				.custom-input.offer__form-field.offer__form-field--file(data-validate-type='text')
+					if mods === "demolition"
+						label.btn.btn--out-orange.input-type-file-download(data-input-file="label")
+							input.input-type-file#input-type-file(type='file' name='doc-upload' data-input-file="input" multiple)
+							+icon(data.form.upload.icon, 24, 24)
+							span=data.form.upload.text
+					if mods === "road"
+						label.btn.btn--stroke-cobalt.input-type-file-download(data-input-file="label")
+							input.input-type-file#input-type-file(type='file' name='doc-upload' data-input-file="input")
+							+icon(data.form.upload.icon, 24, 24)
+							span=data.form.upload.text
+					if mods === "recycling"
+						label.btn.btn--stroke-apple.input-type-file-download(data-input-file="label")
+							input.input-type-file#input-type-file(type='file' name='doc-upload' data-input-file="input")
+							+icon(data.form.upload.icon, 24, 24)
+							span=data.form.upload.text
+					button.btn.btn--reset.offer__form-btn-del.is-hidden(type='button')=data.form.upload.del
+				if mods === "demolition"
+					+btn(data.form.btn).btn--orange.offer__form-submit
+				if mods === "road"
+					+btn(data.form.btn).btn--cobalt.offer__form-submit
+				if mods === "recycling"
+					+btn(data.form.btn).btn--apple.offer__form-submit
+			.offer__form-limit
+				span.offer__form-limit-text=data.form.limit

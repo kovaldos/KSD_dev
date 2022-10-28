@@ -1,0 +1,320 @@
+.topical {
+	&__title {
+		text-align: center;
+		width: 100%;
+		margin: 0 0 50px;
+		@include vp-767 {
+			margin: 0 0 30px;
+		}
+	}
+	&__quantity {
+		color: $color-dark-orange;
+	}
+	&__acc {
+		&-el {
+			background-color: $color-default-white;
+			border: 1px solid $color-lavender-grey;
+			border-radius: 10px;
+			padding: 60px 45px;
+			@include vp-1023 {
+				padding: 20px;
+			}
+			@include vp-767 {
+				padding: 15px;
+			}
+			&:not(:last-of-type) {
+				margin: 0 0 40px;
+			}
+			&.is-active {
+				.topical__acc-btn-icon {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+		&-btn {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			&-text {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 29px;
+				color: $color-black-magic;
+				@include vp-1023 {
+					font-size: 20px;
+				}
+				@include vp-767 {
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 17px;
+					width: 100%;
+				}
+			}
+			&-more {
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 20px;
+				color: $color-dark-orange;
+				display: flex;
+				align-items: center;
+				&-text {
+					@include vp-639 {
+						display: none;
+					}
+				}
+			}
+			&-icon {
+				flex-shrink: 0;
+				margin: 0 0 0 10px;
+				transform: rotate(0);
+				transition: transform $trans-default;
+			}
+		}
+		&-content {
+			@include vp-767 {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			&-title {
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 24px;
+				margin: 20px 0 30px;
+			}
+			&-row {
+				display: flex;
+				@include vp-767 {
+					flex-direction: column;
+				}
+				&--01 {
+					margin: 0 0 40px;
+					@include vp-767 {
+						margin: 0 0 15px;
+					}
+				}
+				&--02 {
+					align-items: center;
+				}
+			}
+			&-col {
+				width: 100%;
+				max-width: 470px;
+				&--01 {
+					margin: 0 30px 0 0;
+					@include vp-767 {
+						margin: 0 0 20px;
+					}
+				}
+			}
+		}
+	}
+	&__form {
+		&-field {
+			padding: 0;
+			max-width: 471px;
+			&:not(:last-of-type) {
+				margin: 0 0 30px;
+			}
+			label {
+				input {
+					background-color: $color-default-white;
+					border: 1px solid $color-lavender-grey;
+					border-radius: 7px;
+					padding: 14px 15px;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 20px;
+					color: $color-bunting;
+					&::placeholder {
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 20px;
+						color: $color-waikawa-grey;
+					}
+				}
+			}
+		}
+		&-dad {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgba($color-lavender, 0.3);
+			border: 1px dashed $color-lavender-grey;
+			border-radius: 7px;
+			padding: 33px 44px 37px;
+			transition: background-color $trans-default, box-shadow $trans-default;
+			&.highlight {
+				background-color: rgba($color-outrageous-orange, 0.5);
+				box-shadow: 0 0 5px 3px rgba($color-bunting, 0.5);
+			}
+			@include vp-767 {
+				padding: 15px 18px;
+			}
+			&-icon {
+				flex-shrink: 0;
+				margin: 0 0 5px;
+				@include vp-767 {
+					display: none;
+				}
+			}
+			&-title {
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 160%;
+				margin: 0 0 10px;
+				@include vp-767 {
+					display: none;
+				}
+			}
+			&-or {
+				width: 100%;
+				max-width: 204px;
+				display: flex;
+				align-items: center;
+				margin: 0 0 15px;
+				@include vp-767 {
+					display: none;
+				}
+				hr {
+					flex-grow: 1;
+				}
+				span {
+					flex-shrink: 0;
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 160%;
+					color: $color-manatee;
+				}
+			}
+			&-input {
+				padding: 0;
+				margin: 0 0 15px;
+				position: relative;
+				@include vp-1023 {
+					margin: 0 0 30px;
+				}
+				label {
+					display: block;
+					text-align: center;
+					cursor: pointer;
+					input {
+						border: 0;
+						position: absolute;
+						width: 0;
+						height: 0;
+						min-height: 0;
+						padding: 0;
+						flex: auto;
+						&:hover {
+							border: 0;
+						}
+						
+						&:focus-visible {
+							outline: none;
+							border: 0;
+						}
+						&:focus {
+							outline: none;
+							border: 0;
+						}
+					}
+				}
+				&.is-invalid {
+					.topical__form-dad-label {
+						border: 1px solid $color-torch-red;
+					}
+					input {
+						border: 0;
+						&:hover {
+							border: 0;
+						}
+						&:focus-visible {
+							outline: none;
+							border: 0;
+						}
+						&:focus {
+							outline: none;
+							border: 0;
+						}
+					}
+				}
+			}
+			&-label {
+				// border: 1px solid $color-dark-orange;
+				border-radius: 7px;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 20px;
+				padding: 12.5px 48px;
+				// color: $color-dark-orange;
+				@include vp-1023 {
+					padding: 12.5px 30px;
+				}
+			}
+			&-type {
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 15px;
+				letter-spacing: -0.02em;
+				color: $color-manatee;
+				@include vp-1023 {
+					text-align: center;
+				}
+			}
+			&-del {
+				font-size: 12px;
+				line-height: 120%;
+				color: $color-bunting;
+				opacity: 1;
+				padding: 10px 0;
+				position: absolute;
+				right: -30px;
+				top: 50%;
+				transform: translateY(-50%);
+				visibility: visible;
+				pointer-events: all;
+				transition: opacity $trans-default, visibility $trans-default;
+				@include vp-1023 {
+					top: auto;
+					right: auto;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: -35px;
+				}
+				&.is-hidden {
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+				}
+			}
+		}
+		&-submit {
+			margin: 0;
+			width: 100%;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			padding: 15px;
+		}
+	}
+	&__agreement {
+		text-align: center;
+		font-size: 13px;
+		line-height: 180%;
+		color: $color-waikawa-grey;
+		@include vp-1023 {
+			font-size: 12px;
+			line-height: 15px;
+		}
+		&-link {
+			font-size: 13px;
+			line-height: 180%;
+			color: $color-cobalt;
+			&::after {
+				background-color: $color-cobalt;
+			}
+		}
+	}
+}

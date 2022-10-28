@@ -1,36 +1,389 @@
 mixin header(headerMods, currentUrl)
   -
-    const headerLinks = [
-      {
-        href: "index.html",
-        text: "Главная"
+    const data = {
+      headerTop: {
+        link1: {
+          href: "#",
+          text: "Группа компаний КСД",
+        },
+        links: [
+          {
+            itemClassMod: "header__top-list-item--01",
+            href: "vakansii.html",
+            text: "Вакансии",
+          },
+          {
+            itemClassMod: "header__top-list-item--02",
+            href: "postavshikam.html",
+            text: "Поставщикам",
+          },
+          {
+            itemClassMod: "header__top-list-item--03",
+            icon: "@",
+            href: "mailto:info@ksd.msk.ru",
+            text: "info@ksd.msk.ru",
+            classModifier: "header__top-link--email",
+          },
+        ],
       },
-      {
-        href: "#",
-        text: "Страница 2"
+      main: {
+        headerLinks: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "katalog-proektov.html",
+            text: "Все проекты",
+          },
+        ],
+        subLinks: [
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+          },
+          {
+            href: "recykling.html",
+            text: "Рециклинг",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
       },
-      {
-        href: "#",
-        text: "Страница 3"
+      demolition: {
+        headerLinks: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+          },
+        ],
+        subLinks: [
+          {
+            href: "recykling.html",
+            text: "Рециклинг",
+          },
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
       },
-    ]
+      green: {
+        headerLinks: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+          },
+          {
+            href: "recykling.html",
+            text: "Рециклинг",
+          },
+        ],
+        subLinks: [
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
+      },
+      road: {
+        headerLinks: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+          },
+          {
+            href: "recykling.html",
+            text: "Рециклинг",
+          },
+        ],
+        subLinks: [
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
+        //- ac: {
+        //-   btn: "Строительство"
+        //-   list: [
+        //-     {
+        //-       href: ""
+        //-     }
+        //-   ]
+        //- }
+      },
+      headerContacts: {
+        href: "tel:74994306487",
+        text: "7 (499) 430-64-87",
+        icon: "icon-call",
+      },
+      burger: {
+        items: [
+          {
+            href: "o-nas.html",
+            text: "О компании",
+          },
+          {
+            href: "snos-zdaniy.html",
+            text: "Демонтаж",
+            subItems: [
+              {
+                href: "katalog-proektov.html",
+                text: "Проекты",
+              }, 
+              {
+                href: "katalog-techniki.html",
+                text: "Каталог спецтехники",
+              },
+              {
+                href: "arenda-speztechniki.html",
+                text: "Аренда техники",
+              },
+            ],
+          },
+          {
+            href: "stroitelstvo-dorog.html",
+            text: "Строительство",
+            subItems: [
+              {
+                href: "blagoustroystvo.html",
+                text: "Благоустройство",
+              },
+              {
+                href: "stroitelstvo-dorog.html",
+                text: "Строительство дорог",
+              },
+              {
+                href: "kotlovany.html",
+                text: "Разработка котлованов",
+              },
+              {
+                href: "katalog-proektov",
+                text: "Проекты",
+              },
+              {
+                href: "katalog-techniki.html",
+                text: "Каталог спецтехники",
+              },
+              {
+                href: "arenda-speztechniki.html",
+                text: "Аренда спецтехники",
+              },
+            ],
+          },
+          {
+            href: "recykling.html",
+            text: "Рециклинг",
+            subItems: [
+              {
+                href: "#",
+                text: "Утилизация и переработка",
+              },
+              {
+                href: "prodazha-materialov.html",
+                text: "Продажа материалов",
+              },
+              {
+                href: "katalog-techniki.html",
+                text: "Каталог спецтехники", 
+              },
+              {
+                href: "arenda-speztechniki.html",
+                text: "Аренда спецтехники",
+              },
+            ],
+          },
+          {
+            href: "blog.html",
+            text: "Блог",
+          },
+          {
+            href: "kontakty.html",
+            text: "Контакты",
+          },
+        ],
+      },
+    } 
 
   header.header(class=headerMods)
-    .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
+    .header__top
+      .container.header__container.header__container--top
+        .header__top-col.header__top-col--01
+          a.link.header__top-link(href=data.headerTop.link1.href)=data.headerTop.link1.text
+        .header__top-col.header__top-col--02
+          ul.header__top-list
+            each link in data.headerTop.links
+              li.header__top-list-item(class=link.itemClassMod)
+                span.header__top-list-item-icon!=link.icon
+                a.link.header__top-link(href=link.href)=link.text
+
+    .header__bottom(data-fix-block)
+      .container.header__container.header__container--bottom
+        if headerMods === "header--main"
+          if(currentUrl === "index.html")
+            //- lighthouse снимает 10 баллов SEO за <a> без href
+            span.header__logo
+              +img("content", "logo-ksd-black", "png", "logo-ksd-black")
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +img("content", "logo-ksd-black", "png", "logo-ksd-black")
+        if headerMods === "header--demolition"
+          if(currentUrl === "index.html")
+            span.header__logo
+              +img("content", "ksd-demolition-logo", "png", "ksd-demolition-logo")
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +img("content", "ksd-demolition-logo", "png", "ksd-demolition-logo")
+        if headerMods === "header--road"
+          if(currentUrl === "index.html")
+            span.header__logo
+              +img("content", "ksd-construction-logo", "png", "ksd-construction-logo")
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +img("content", "ksd-construction-logo", "png", "ksd-construction-logo")
+        if headerMods === "header--recycling" || headerMods === "header--sale" 
+          if(currentUrl === "index.html")
+            span.header__logo
+              +img("content", "ksd-recycling-logo", "png", "ksd-recycling-logo")
+          else
+            a.header__logo(href="index.html" aria-label="Переход на главную")
+              +img("content", "ksd-recycling-logo", "png", "ksd-recycling-logo")
+        nav.main-nav
+          .main-nav__wrapper
+            if headerMods === "header--main"
+              ul.main-nav__list
+                each link in data.main.headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.link.main-nav__link.is-active=link.text
+                    else
+                      a.link.main-nav__link(href=link.href)=link.text
+              .main-nav__sublist-wrap(tabindex=0 onclick="")
+                .main-nav__submenu-toggle
+                  +icon("icon-dots", 20, 4)
+                ul.main-nav__sublist
+                  each item in data.main.subLinks 
+                    li.main-nav__subitem
+                      a.link.main-nav__link(href=item.href)=item.text
+            if headerMods === "header--demolition"
+              ul.main-nav__list
+                each link in data.demolition.headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.link.main-nav__link.is-active=link.text
+                    else
+                      a.link.main-nav__link(href=link.href)=link.text
+              .main-nav__sublist-wrap(tabindex=0 onclick="")
+                .main-nav__submenu-toggle
+                  +icon("icon-dots", 20, 4)
+                ul.main-nav__sublist
+                  each item in data.demolition.subLinks 
+                    li.main-nav__subitem
+                      a.link.main-nav__link(href=item.href)=item.text
+            if headerMods === "header--recycling" || headerMods === "header--sale"
+              ul.main-nav__list
+                each link in data.green.headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.link.main-nav__link.is-active=link.text
+                    else
+                      a.link.main-nav__link(href=link.href)=link.text
+              .main-nav__sublist-wrap(tabindex=0 onclick="")
+                .main-nav__submenu-toggle
+                  +icon("icon-dots", 20, 4)
+                ul.main-nav__sublist
+                  each item in data.green.subLinks 
+                    li.main-nav__subitem
+                      a.link.main-nav__link(href=item.href)=item.text
+            if headerMods === "header--road" || headerMods === "header--improvement" || headerMods === "header--pits"
+              ul.main-nav__list
+                each link in data.road.headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.link.main-nav__link.is-active=link.text
+                    else
+                      a.link.main-nav__link(href=link.href)=link.text
+              .main-nav__sublist-wrap(tabindex=0 onclick="")
+                .main-nav__submenu-toggle
+                  +icon("icon-dots", 20, 4)
+                ul.main-nav__sublist
+                  each item in data.road.subLinks 
+                    li.main-nav__subitem
+                      a.link.main-nav__link(href=item.href)=item.text
+          .burger(data-burger-body)
+            ul.burger__list(data-accordion="parent" data-single)
+              each item in data.burger.items 
+                if item.subItems
+                  li.burger__list-item(data-accordion="element")
+                    span.burger__subList-row
+                      a.burger__link(href!=item.href)=item.text
+                      button.btn.btn--reset.burger__ac-btn(type="button" data-accordion="button")
+                        +icon("icon-chevron-down", 15, 15)
+                    ul.burger__subList(data-accordion="content")
+                      each subItem in item.subItems
+                        li.burger__subList-item
+                          a.burger__link.burger__subList-link(href=subItem.href)=subItem.text 
                 else
-                  a.main-nav__link(href=link.href)=link.text
+                  li.burger__list-item
+                    a.burger__link(href!=item.href)=item.text
+
+        .header__contacts 
+          a.link.header__contacts-link(href=data.headerContacts.href)
+            span.header__contacts-link-text=data.headerContacts.text
+            span.header__contacts-link-wrap-icon
+              +icon(data.headerContacts.icon, 22, 22).header__contacts-link-icon
+        button.main-nav__toggle.btn.btn--reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger-btn)
+          svg(width='100' height='100' viewBox='0 0 100 100')
+            path.line.line1(d='M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058')
+            path.line.line2(d='M 20,50 H 80')
+            path.line.line3(d='M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942')

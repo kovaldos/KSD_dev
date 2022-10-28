@@ -1,0 +1,74 @@
+mixin blog-page()
+	-
+		const data = {
+			title: "Блог",
+			subtitle: "Новости компании",
+			items: [
+				{
+					href: "blog-statya.html",
+					img: "blog-page-img-1",
+					alt: "blog-page-img-1",
+					title: "Вторичный щебень",
+					text: "Для многих строителей стало естественным использовать в работе вторичный материал. Наиболее показательным примером есть переполнение",
+					date: "11 Сентября 2022",
+				},
+				{
+					href: "blog-statya.html",
+					img: "blog-page-img-2",
+					alt: "blog-page-img-2",
+					title: "Экскаватор-разрушитель",
+					text: "Сложный процесс по сносу здания невозможен без применения тяжелой крупногабаритной техники. Это экскаваторы-разрушители переполнение",
+					date: "11 Сентября 2022",
+				},
+				{
+					href: "blog-statya.html",
+					img: "blog-page-img-3",
+					alt: "blog-page-img-3",
+					title: "Переработка строительных отходов",
+					text: "Природные ресурсы Земли далеко не безграничны. Общество к этому пониманию пришло давно и осмыслило возможности переполнение",
+					date: "11 Сентября 2022",
+				},
+				{
+					href: "blog-statya.html",
+					img: "blog-page-img-2",
+					alt: "blog-page-img-2",
+					title: "Экскаватор-разрушитель",
+					text: "Сложный процесс по сносу здания невозможен без применения тяжелой крупногабаритной техники. Это экскаваторы-разрушители переполнение",
+					date: "11 Сентября 2022",
+				},
+				{
+					href: "blog-statya.html",
+					img: "blog-page-img-3",
+					alt: "blog-page-img-3",
+					title: "Переработка строительных отходов",
+					text: "Природные ресурсы Земли далеко не безграничны. Общество к этому пониманию пришло давно и осмыслило возможности переполнение",
+					date: "11 Сентября 2022",
+				},
+				{
+					href: "blog-statya.html",
+					img: "blog-page-img-1",
+					alt: "blog-page-img-1",
+					title: "Вторичный щебень",
+					text: "Для многих строителей стало естественным использовать в работе вторичный материал. Наиболее показательным примером есть переполнение",
+					date: "11 Сентября 2022",
+				},
+			],
+			btn: {
+				text: "<span>Еще<span/><span class='more-num'> 18 <span/><span>статей<span/>",
+			}
+		}
+	section.section.blog-page
+		.container.blog-page__container 
+			.blog-page__heading 
+				h2.title.title--h2.blog-page__title=data.title
+				h3.title.title--h3.blog-page__subtitle=data.subtitle
+			.blog-page__items
+				- for (let i = 0; i < 2; i++)
+					each item in data.items 
+						a(href=item.href).blog-page__item
+							+img("content", item.img, "jpg", item.alt)
+							h4.title.title--h5.blog-page__item-title=item.title
+							p.text.text--sm.blog-page__item-text=item.text
+							span.blog-page__item-date=item.date
+			+btn(data.btn).blog-page__btn-more.catalog__btn-more
+

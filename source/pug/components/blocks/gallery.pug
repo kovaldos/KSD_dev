@@ -1,0 +1,42 @@
+mixin gallery()
+	-
+		const data = {
+			title: "Галерея",
+			items: [
+				{
+					src: "gallery-img-1",
+					alt: "gallery-img-1",
+					classModifier: "gallery__item--01",
+				},
+				{
+					src: "gallery-img-2",
+					alt: "gallery-img-2",
+					classModifier: "gallery__item--02",
+				},
+				{
+					src: "gallery-img-3",
+					alt: "gallery-img-3",
+					classModifier: "gallery__item--03",
+				},
+				{
+					src: "gallery-img-4",
+					alt: "gallery-img-4",
+					classModifier: "gallery__item--04",
+				},
+				{
+					src: "gallery-img-5",
+					alt: "gallery-img-5",
+					classModifier: "gallery__item--05",
+				},
+			],
+		}
+	section.section.gallery
+		.container.gallery__container 
+			.h2.title.title--h3.gallery__title=data.title
+			.gallery__wrap(data-simplebar)
+				.gallery__wrapper
+					each item in data.items 
+						.gallery__item(class=item.classModifier)
+							+img("content", item.src, "jpg", item.alt)
+
+

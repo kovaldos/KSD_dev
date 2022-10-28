@@ -1,0 +1,420 @@
+.contact-us {
+	&__cols {
+		display: flex;
+	}
+	&__col {
+		width: 50%;
+		@include vp-1023 {
+			width: 100%;
+		}
+		&--01 {
+			margin: 0 30px 0 0;
+			padding: 0 70px;
+			@include vp-1023 {
+				padding: 0;
+			}
+			@include vp-767 {
+				display: none;
+			}
+		}
+		&--02 {
+			padding: 30px 0 0;
+		}
+	}
+	&__form {
+		box-shadow: 0px 17px 80px rgba(45, 49, 66, 0.05), 0px 8.29496px 41.3609px rgba(45, 49, 66, 0.0303),
+			0px 3.91436px 23.9131px rgba(45, 49, 66, 0.0217), 0px 2.03139px 13.5159px rgba(45, 49, 66, 0.015),
+			0px 1.05939px 6.86048px rgba(45, 49, 66, 0.0083), 0px 0.45007px 2.59013px rgba(45, 49, 66, 0.015);
+		border-radius: 5px;
+		background-color: $color-default-white;
+		max-width: 430px;
+		&-fieldset {
+			margin: 0;
+			padding: 50px 40px 40px;
+			border: 0;
+		}
+		&-field {
+			&--input {
+				padding: 0;
+				margin: 0 0 30px;
+				label {
+					input {
+						margin-left: 0;
+						background-color: $color-default-white;
+						border: 0.5px solid $color-lavender-grey;
+						border-radius: 7px;
+						padding: 16px;
+						&:hover {
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
+						&:focus-visible {
+							outline: none;
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
+						&:focus {
+							outline: none;
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
+					}
+				}
+				&.is-invalid {
+					input {
+						border: 0.5px solid $color-torch-red;
+						&:hover {
+							border: 0.5px solid rgba($color-torch-red, 0.5);
+						}
+						&:focus-visible {
+							outline: none;
+							border: 0.5px solid rgba($color-torch-red, 0.5);
+						}
+						&:focus {
+							outline: none;
+							border: 0.5px solid rgba($color-torch-red, 0.5);
+						}
+					}
+				}
+				.custom-input {
+					&__error {
+						bottom: -25px;
+						font-size: 14px;
+					}
+				}
+			}
+			&--message {
+				padding: 0;
+				margin: 0 0 40px;
+				label {
+					textarea {
+						min-height: 136px;
+						margin-left: 0;
+						background-color: $color-default-white;
+						border: 0.5px solid $color-lavender-grey;
+						border-radius: 7px;
+						padding: 16px;
+						&:hover {
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
+						&:focus-visible {
+							outline: none;
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
+						&:focus {
+							outline: none;
+							border: 0.5px solid rgba($color-default-black, 0.5);
+						}
+					}
+				}
+			}
+		}
+		&-title {
+			padding: 50px 0 0 0;
+			display: block;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			color: $color-bunting;
+			text-align: center;
+		}
+		&-submit {
+			margin: 0;
+			padding: 14px 42px;
+			border-radius: 7px;
+			color: $color-default-white;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+	&__agreement {
+		text-align: center;
+		margin: 20px 0 0 0;
+		font-size: 13px;
+		line-height: 180%;
+		color: $color-waikawa-grey;
+		&-link {
+			font-size: 13px;
+			line-height: 180%;
+			color: $color-dark-orange;
+			&::after {
+				background-color: $color-dark-orange;
+			}
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 160%;
+		color: $color-bunting;
+		margin: 0 0 10px;
+		@include vp-767 {
+			font-size: 20px;
+		}
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 180%;
+		color: $color-waikawa-grey;
+		margin: 0 0 40px;
+		@include vp-767 {
+			margin: 0 0 25px;
+		}
+	}
+	&__item {
+		&:not(:last-of-type) {
+			margin: 0 0 20px;
+		}
+		&-title {
+			display: block;
+			margin: 0 0 5px;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 180%;
+			color: $color-waikawa-grey;
+		}
+		&-link {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 160%;
+			color: $color-bunting;
+			margin: -5px;
+		}
+	}
+	&__socials {
+		&-list {
+			padding: 80px 0;
+			display: flex;
+			margin: 0;
+			list-style: none;
+			@include vp-767 {
+				padding: 40px 0;
+			}
+			&-item {
+				flex-shrink: 0;
+				&:not(:last-of-type) {
+					margin: 0 20px 0 0;
+				}
+			}
+		}
+		&-link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: 1.5px solid $color-bunting;
+			transition: background-color $trans-default, border-color $trans-default;
+			svg {
+				color: $color-bunting;
+				transition: color $trans-default;
+			}
+			&:focus {
+				outline: none;
+			}
+			@media (hover: hover), screen and (min-width: 0\0) {
+				&:hover {
+					background-color: $color-dark-orange;
+					border-color: $color-dark-orange;
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&:focus-visible {
+					outline: none;
+					background-color: $color-dark-orange;
+					border-color: $color-dark-orange;
+					svg {
+						color: $color-default-white;
+					}
+				}
+				&:focus {
+					outline: none;
+					background-color: $color-dark-orange;
+					border-color: $color-dark-orange;
+					svg {
+						color: $color-default-white;
+					}
+				}
+			}
+		}
+	}
+	&__modal {
+		&-call {
+			display: none;
+			@include vp-767 {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 30px;
+				border-radius: 10px;
+				background-color: rgba($color-lavender, 0.5);
+				margin: 10px 0 25px;
+			}
+			&-title {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 20px;
+			}
+			&-btn {
+				border-radius: 7px;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+				padding: 14px 42px;
+				margin: 20px 0 0;
+			}
+		}
+	}
+	&--road &,
+	&--improvement &,
+	&--pits & {
+		&__socials {
+			&-link {
+				@media (hover: hover), screen and (min-width: 0\0) {
+					&:hover {
+						background-color: $color-cobalt;
+						border-color: $color-cobalt;
+					}
+					&:focus-visible {
+						outline: none;
+						background-color: $color-cobalt;
+						border-color: $color-cobalt;
+					}
+					&:focus {
+						outline: none;
+						background-color: $color-cobalt;
+						border-color: $color-cobalt;
+					}
+				}
+			}
+		}
+		&__agreement {
+			&-link {
+				color: $color-cobalt;
+				&::after {
+					background-color: $color-cobalt;
+				}
+			}
+		}
+	}
+	&--road,
+	&--improvement,
+	&--pits {
+		.btn-to-top {
+			@media (hover: hover), screen and (min-width: 0\0) {
+				&:hover {
+					.btn-to-top__icon {
+						color: $color-cobalt;
+					}
+					.btn-to-top__span {
+						color: $color-cobalt;
+					}
+				}
+				&:focus-visible {
+					outline: none;
+					.btn-to-top__icon {
+						color: $color-cobalt;
+					}
+					.btn-to-top__span {
+						color: $color-cobalt;
+					}
+				}
+				&:focus {
+					outline: none;
+					.btn-to-top__icon {
+						color: $color-cobalt;
+					}
+					.btn-to-top__span {
+						color: $color-cobalt;
+					}
+				}
+			}
+		}
+	}
+	&--recycling & {
+		&__form {
+			&-submit {
+				background-color: $color-apple;
+				@media (hover: hover), screen and (min-width: 0\0) {
+					&:hover {
+						background-color: rgba($color-apple, 0.8);
+					}
+					&:focus-visible {
+						outline: none;
+						background-color: rgba($color-apple, 0.8);
+					}
+					&:focus {
+						outline: none;
+						background-color: rgba($color-apple, 0.8);
+					}
+					&:active {
+						background-color: rgba($color-apple, 0.5);
+					}
+				}
+			}
+		}
+		&__socials {
+			&-link {
+				@media (hover: hover), screen and (min-width: 0\0) {
+					&:hover {
+						background-color: $color-apple;
+						border-color: $color-apple;
+					}
+					&:focus-visible {
+						outline: none;
+						background-color: $color-apple;
+						border-color: $color-apple;
+					}
+					&:focus {
+						outline: none;
+						background-color: $color-apple;
+						border-color: $color-apple;
+					}
+				}
+			}
+		}
+		&__agreement {
+			&-link {
+				color: $color-apple;
+				&::after {
+					background-color: $color-apple;
+				}
+			}
+		}
+	}
+	&--recycling {
+		.btn-to-top {
+			@media (hover: hover), screen and (min-width: 0\0) {
+				&:hover {
+					.btn-to-top__icon {
+						color: $color-apple;
+					}
+					.btn-to-top__span {
+						color: $color-apple;
+					}
+				}
+				&:focus-visible {
+					outline: none;
+					.btn-to-top__icon {
+						color: $color-apple;
+					}
+					.btn-to-top__span {
+						color: $color-apple;
+					}
+				}
+				&:focus {
+					outline: none;
+					.btn-to-top__icon {
+						color: $color-apple;
+					}
+					.btn-to-top__span {
+						color: $color-apple;
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,72 @@
+mixin tech-road()
+	-
+		const data = {
+			title: "Технологии",
+			subtitle: "Строительство дорог",
+			title2: "В чем преимущества данной технологии ?",
+			text: "Дороги — это артерии государства. Да, они часто обходятся очень дорого. Но есть возможность делать их значительно дешевле, если использовать для их укладки вторичные материалы, полученные при переработке строительных отходов.",
+			items: [
+				{					
+				src: "slides",
+				img: "tech-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "tech-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "tech-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "tech-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+				{					
+				src: "slides",
+				img: "tech-img-1",
+				alt: "экскаватор-разрушитель",
+				},
+			],
+			title3: "Строительство проселочных дорог",
+			text2: "Строительство дороги, как всякая серьезная деятельность, имеет несколько разделенных во времени этапов:",
+
+		}
+	section.section.tech.tech--road
+		.container.tech__container
+			.tech__heading
+				h2.title.title--h2=data.title 
+				h3.title.title--h3=data.subtitle
+			.tech__cols 
+				.tech__col.tech__col--01
+					.swiper.swiper--05.tech__slider
+						.swiper-wrapper
+							each item in data.items
+								.swiper-slide
+									.tech__slider-item
+										+img(item.src, item.img, "jpg", item.alt)
+				.tech__col.tech__col--02
+					h4.title.title--h4.tech__content-title=data.title2
+					p.text.text--lg.tech__text=data.text
+					.tech__slider-nav
+						.swiper-pagination.tech__slider-pag
+						.tech__slider-btns
+							.swiper-button-next.tech__slider-btn.tech__slider-btn--next
+								+icon("icon-chevron-right-black", 30, 30)
+							.swiper-button-prev.tech__slider-btn.tech__slider-btn--prev
+								+icon("icon-chevron-left-black", 30, 30)
+		.tech__bottom 
+			.container.tech__container.tech__container--bottom
+				.tech__bottom-cols
+					.tech__bottom-col.tech__bottom-col--01
+						h3.title.title--h3.tech__bottom-title=data.title3 
+						p.text.text--lg.tech__bottom-text=data.text2
+					.tech__bottom-col.tech__bottom-col--02
+						.tech__bottom-video(data-video-block)
+							button(type="button" data-video-btn).btn.btn--cobalt.tech__bottom-video-btn
+								+icon("icon-play", 14, 14)
+							video(src="https://cdn.videvo.net/videvo_files/video/premium/video0237/large_watermarked/02_day_Stockholm_99_rotate_sun_crane_preview.mp4", type="video/mp4", controls muted preload="none" poster="./img/content/tech-video-poster.jpg")
