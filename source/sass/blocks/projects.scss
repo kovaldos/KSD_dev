@@ -248,13 +248,18 @@
 				}
 				.next-title {
 					width: 100%;
+					height: 100%;
 					max-height: 390px;
 					flex-grow: 1;
 					writing-mode: vertical-rl;
 					transform: rotate(180deg);
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
 					@include vp-767 {
 						transform: none;
 						padding: 0 20px 0 0;
+						writing-mode: initial;
 					}
 					&__title {
 						display: block;
@@ -270,13 +275,11 @@
 						font-weight: 800;
 						font-size: 2rem;
 						line-height: 160%;
-						text-overflow: ellipsis;
-						overflow: hidden;
-						white-space: nowrap;
 						color: #ffffff;
-						writing-mode: vertical-rl;
 						@include vp-767 {
 							font-size: 18px;
+							width: 100%;
+							height: auto;
 						}
 					}
 				}
